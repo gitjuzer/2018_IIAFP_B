@@ -1,13 +1,24 @@
 1. Jelenlegi helyzet leírása
+
 2. Vágyálom rendszer
+
 A végcél egy olyan mûködõ keretrendszer, amely segítségével a megrendelõ képes néhány, általa megjelölt oktatási folyamatot online és játékos keretek között átadni a tanulóinak.
 Amennyiben sikeresnek tekinthetõ a project, késõbb elképzelhetõ, hogy további tananyagokat is fel kell vinni a rendszerbe. (Erre a project késõbbi változataiban kerülhet sor.)
-A végsõ rendszerben a felhasználó a tanulás legszimpatikusabb módját választhatja ki. Erre a  a játékok sokszínûségének és 
-változatosságának köszönhetõen van lehetõsége.
+A végsõ rendszerben a felhasználó a tanulás legszimpatikusabb módját választhatja ki. Erre a játékok sokszínûségének és 
+változatosságának köszönhetõen van lehetõsége. Azonban a projekt elsõ változatában még nem az összes játéktípust építenénk be, ezt a késõbbiekben pótolnánk patch-ek formájában.
+Az elsõ verziónak legalább két egyszerû játékot kell tartalmaznia, melyek alatt egy feleletválasztós kérdésekre válaszolós és egy memóriajátékot értünk.
+A megrendelõ profilja az elemi matematika oktatása, célcsoportja a 6-12 éves korosztály. Emiatt a feladatok tartalmát a megrendelõ adja meg.
+A programnak Android rendszerrel rendelkezõ okostelefonnal és asztali számítógépen vagy laptopon indított egyszerû böngészõvel is elérhetõnek kell lennie.
 
 3. Jogi háttér
+
 4. Jelenlegi üzleti folyamatok modellje
+
 5. Igényelt üzleti folyamatok modellje
+
 6. Követelmény lista
+
 7. Irányított és szabad szöveges riportok szövege
+
 8. Fogalom szótár
+
