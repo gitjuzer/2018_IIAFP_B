@@ -31,6 +31,16 @@ A programnak Android rendszerrel rendelkezõ okostelefonnal és asztali számítógép
 
 6. Követelmény lista
 
+K1: Memóriajáték - A programnak tartalmaznia kell egy memóriajátékot. A memóriajátéknak három nehézségi szintje van: Könnyû, közepes és nehéz.
+	Különbség nehézségi szintek között a kártyák mennyiségében mutatkozik meg. Értelemszerûen minél nehezebb, annál több kártya van ugyanannyi idõre.
+K2: Találd meg a párját - A program másik alapjátéka a párkeresõ játék. A gyerekeknek a fogalmakhoz tartozó definíciót vagy az egyenlethez tartozó eredményt kell
+	párosítanijuk a defínicókkal, illetve egyenletekkel.
+K3: Jogkörök - A program tartalmazza az oktatók, illetve a diákok jogkörét is. Az oktatók képesek új feladatokat létrehozni a játékokhoz.
+K4: Feladat management - Az oktatók tudják törölni az általuk létrehozott feladatokat. Természetesen újakat is hozhatnak létre, melyeknek kérdéseit, megoldásait õk definiálják.
+K5: Statisztika - A feladatokhoz tartozzon statisztika, amely képes szûrés(egyéni, osztály/évfolyam) alapján is dolgozni.
+K6: Jutalomrendszer - A diákok a megfelelõ motiváltság érdekében jutalmazásban részesülnek. A jutalmakat a rendszer tárolja.
+K7: Párbaj - A diákok képesek online versenyezni egymás ellen párbaj formában. A feltett kérdésre leghamarabban válaszoló nyer. Opcionális.
+
 7. Irányított és szabad szöveges riportok szövege
 
 Szabad szöveges riport szövege
