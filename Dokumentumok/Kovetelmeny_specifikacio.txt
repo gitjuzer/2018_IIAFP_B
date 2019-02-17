@@ -1,5 +1,7 @@
 1. Jelenlegi helyzet leírása
 
+Jelenleg az oktatás különbözõ módszerekkel zajlik. A diák ül az iskolapadban a tanár pedig magyaráz. Ez a legelterjedtebb formája az oktatásnak. Azonban ahol az infrastruktúra lehetõve teszi ott nem csak ennyirõl szól az oktatás. Azokon a helyeken a tanár prezentációt készít, videókkal készül az órára, ábrákat mutat be és még sok-sok internetes információt gyûjt össze és mutatja ezt be különféle módszerekkel. Ezzel pedig az oktatás már sokkal sokszínûbb. Ugyanis az elsõ említett esetben sok diák még csak nem is figyel azokra a dolgokra, amelyek idegenek tõlük. Az IKT megjelenésével ez azonban kissé háttérbe szorult, ugyanis, ha a tanár egy érdekes ábrát mutat be, egy érdekes videót, vagy éppen a prezentációját izgalmasan készíti el, akkor a diák már az eddig idegennek számító dolgokat is figyelembe veszi és elkezd érdeklõni iránta, legalább alapszinten.
+
 2. Vágyálom rendszer
 
 A végcél egy olyan mûködõ keretrendszer, amely segítségével a megrendelõ képes néhány, általa megjelölt oktatási folyamatot online és játékos keretek között átadni a tanulóinak.
