@@ -27,6 +27,14 @@ A programnak Android rendszerrel rendelkezõ okostelefonnal és asztali számítógép
 
 4. Jelenlegi üzleti folyamatok modellje
 
+	1. Egy intézmény megkeresi aa cégüket, céljuk az intézmény diákjainak matematikai tudásuk bovítése, felzárkóztatása
+	2. Kiküldenek egy munkatársat egyeztetni az ügyféllel
+	3. AZ ügyfél igényei szerint napi/heti/havi idobeosztással, illetve a munkatársaik beosztható idejevel számolva kialakítanak az intézmény számára egy munkarendet a munkatársuknak, akit az intézményhez rendeltek
+	4. A munkatársuk megkezdi a munkarendjét, intézménytol illetve beosztható idovel függoen
+	5. Az idoszak alatt a gyerekeknek órákat tart, iskolaidon belül-illetve igény szerint kívül
+	6. Az idoszak végén számonkérés következik, amelybol egyértelmuen kiderül, hogy egyes diákok mennyire sajátították el a tananyagot, illetve a tanabyag mely részen vannak problémái a gyermeknek.
+	7. Miután a számonkérés lezajlott, a munkatársat beosztják egy másik intézményhez, és kezdodik a folyamat elorol. 
+
 5. Igényelt üzleti folyamatok modellje
 
 6. Követelmény lista
