@@ -1,5 +1,3 @@
-					Funckionális specifikáció
-1)
 A rendszer céljai, és nem céljai.
 
 Sok mindent lehetne errõl mondani, de rövidre fogom, mert annyi idõm nincs, a ranked nem nyeri meg saját magát. Feltehetnénk magunknak a kérdést, hogy "mégis melyik rendszerrõl van itt szó?" na hát igen. Ez egy nagyon jó kérdés. Melyik rendszerek jöhetnek egyáltalán szóba? A tejút rendszer? Számítógépes rendszer? Kommunizmus? Rendszerváltás? Igazából bármelyik. Utálok dokumentálni, nemtudom látszódik-e. Pláne, hogy ennyire overkill az egész.
