@@ -1,5 +1,10 @@
 1. Jelenlegi helyzet leírása
 2. Vágyálom rendszer
+A végcél egy olyan mûködõ keretrendszer, amely segítségével a megrendelõ képes néhány, általa megjelölt oktatási folyamatot online és játékos keretek között átadni a tanulóinak.
+Amennyiben sikeresnek tekinthetõ a project, késõbb elképzelhetõ, hogy további tananyagokat is fel kell vinni a rendszerbe. (Erre a project késõbbi változataiban kerülhet sor.)
+A végsõ rendszerben a felhasználó a tanulás legszimpatikusabb módját választhatja ki. Erre a  a játékok sokszínûségének és 
+változatosságának köszönhetõen van lehetõsége.
+
 3. Jogi háttér
 4. Jelenlegi üzleti folyamatok modellje
 5. Igényelt üzleti folyamatok modellje
