@@ -65,7 +65,8 @@ K9: online ranglista:
 	A rendszer az összes diák eredményét rangsorba állítja ami publikusan elérhetõ.
 
 K10:Gyerek design:
-	A játékok kizárólag családbarát elveknek megfelelõ anyagot tartalmazhatnak.
+	A játékok és a design kizárólag családbarát elveknek megfelelõ anyagot tartalmazhatnak.
+	Színes, játékos kialakítás web, android és windows felületen is.
 
 
 7. Irányított és szabad szöveges riportok szövege
