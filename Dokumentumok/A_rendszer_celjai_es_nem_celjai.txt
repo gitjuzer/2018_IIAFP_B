@@ -1,0 +1,7 @@
+A rendszer céljai, és nem céljai.
+
+Sok mindent lehetne errõl mondani, de rövidre fogom, mert annyi idõm nincs, a ranked nem nyeri meg saját magát. Feltehetnénk magunknak a kérdést, hogy "mégis melyik rendszerrõl van itt szó?" na hát igen. Ez egy nagyon jó kérdés. Melyik rendszerek jöhetnek egyáltalán szóba? A tejút rendszer? Számítógépes rendszer? Kommunizmus? Rendszerváltás? Igazából bármelyik. Utálok dokumentálni, nemtudom látszódik-e. Pláne, hogy ennyire overkill az egész.
+
+A mi rendszerünk, ami érdekel bennünket, az az a rendszer, amivel megvalósítjuk a célunkat. Nyilván nem egy scrum vagy egy kanban, hanem egy saját, elég speciális rendszer. Tartja a mondás is, "kicsi, savanyú, de a miénk". Nem másról, mint a csoportos munkáról van szó. A csoportos munka célja, hogy felkészítsen bennünket a jövõbeli akadályokra, hogy azokat majdnem gondmentesen átléphessük, ugyanis a programozók csapatban dolgoznak, mindenki kap egy kis részt, amit meg kell valósítania, aztán amint készen van vele, jön a következõ. Ez a folyamat addig ismétlõdik, amíg az aktuális célunkat el nem érjük. Ez nem csak a programozásban, de más iparágban is jellemzõ tevékenység. A csoportos munka nagyon jó hatással van a kommunikációs készségre, az emberi kapcsolatok kialakulására, az együttmûködésre, és sok egyéb más szociális tulajdonságra. Csoportban dolgozni jó.
+
+A rendszer nem céljai közé tartozik az elbukás, a teljes megsemmisülés, a projekt létrejövésének hátráltatása és az Anschluss.
