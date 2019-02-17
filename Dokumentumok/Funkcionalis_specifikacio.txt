@@ -8,8 +8,8 @@ A rendszer nem céljai közé tartozik az elbukás, a teljes megsemmisülés, a projek
 
 3. A vágyálomrendszer leírása
 
-A program elindításakor választhatunk, hogy oktatói, illetve tanulói felületre szeretnénk belépni. Ezt kiválasztva lehetoségünk van regisztrálni,
-de míg diákként ez teljesen ingyenes és akadálymentes, oktatóként regisztrálni csak érvényes iskolai licenszel lehet, így megakadályozva hogy
+A program elindításakor választhatunk, hogy oktatói, illetve tanulói felületre szeretnénk-e belépni. Ezt kiválasztva lehetõségünk van regisztrálni,
+de míg diákként ez teljesen ingyenes és akadálymentes, oktatóként regisztrálni csak érvényes iskolai licenccel lehet, így megakadályozva, hogy
 bárki használja a szoftvert. Az oktatói felületre belépve több funkciót is észrevehetünk: 
 	1. Osztályok menedzselése
 		1.1 Osztály létrehozása
@@ -19,16 +19,16 @@ bárki használja a szoftvert. Az oktatói felületre belépve több funkciót is észre
 		1.4 Diákok gyakorlásainak eredményei
 	2. Játékok listája
 		2.1 Játék módosítása
-			2.1.1 Kérdés/lehetoség hozzadása
-			2.1.2 Kérdés/lehetoség törlése
-			2.1.3 Kérdés/lehetoség módosítása
+			2.1.1 Kérdés/lehetõség hozzadása
+			2.1.2 Kérdés/lehetõség törlése
+			2.1.3 Kérdés/lehetõség módosítása
 			2.1.4 Játék aktiválása/deaktiválása
 		2.2 Játékok statisztikái
 Oktatóként képesek vagyunk osztályokat létrehozni, ezekbe diákokat invitálni, így képesek elindítani a gyakorló feladatokat, ezek mellett 
 képesek vagyunk diákokat eltávolítani az osztályokból. Ezeknek az osztályoknak az aktivitását is követni lehet, illetve az egyes diákok 
 eredményeit is képesek vagyunk megtekinteni.
-A játékokban szereplo kérdéshalmazt képesek vagyunk bovíteni, ebbol kérdéseket törölni, vagy éppen módosítani. Ha szükséges, egyes játékokat
-ki is tudunk kapcsolni, ha az nem túl népszeru a diákoknál, vagy egy hosszadalmasabb kérdésreformot hajtanánk végre, és amint végeztünk ezzel, újra
+A játékokban szereplõ kérdéshalmazt képesek vagyunk bovíteni, ebbol kérdéseket törölni, vagy éppen módosítani. Ha szükséges, egyes játékokat
+ki is tudunk kapcsolni, ha az nem túl népszerû a diákoknál, vagy egy hosszadalmasabb kérdésreformot hajtanánk végre, és amint végeztünk ezzel, újra
 élesbe helyezhetjük a játékot. Meg tudjuk tekinteni az egyes játékok statisztikáit, például hogy mely játékot játsszák a legtöbben, melyben a legmagasabb 
 a hibázási arány stb. 
 Ha tanulói felületbe jelentkezünk be, és még nem vagyunk beinvitálva egyetlen osztályba sem, akkor a programban nem vagyunk képesek semmit
