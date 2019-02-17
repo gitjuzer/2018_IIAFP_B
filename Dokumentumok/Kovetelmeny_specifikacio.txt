@@ -20,5 +20,25 @@ A programnak Android rendszerrel rendelkezõ okostelefonnal és asztali számítógép
 
 7. Irányított és szabad szöveges riportok szövege
 
+Szabad szöveges riport szövege
+Kivitelezõ: Legyen szíves írja le nekem, hogy pontosan mire is van szükségük!
+Megrendelõ: Tehát mi egy olyan programot szeretnénk, amivel a tananyagaink egy része az interneten is elérhetõ. Gondolok itt az okostelefonokra is persze, nem csak a számítógépekre.
+Kivitelezõ: Mivel foglalkozik a cégük konkrétan?
+Megrendelõ: Elemi matematikai ismereteket oktatunk a 6-12 éves korosztálynak. Ügyfeleink között ezért általános iskolák, egyházi iskolák, de magánintézmények is szerepelnek. Eddig az volt a bevett szokás, hogy óraadóként voltunk jelen ezekben az intézményekben, mint ún. harmadik fél, de az utóbbi idõben annyira megnõtt az igény a szolgáltatásaink iránt, hogy kénytelenek vagyunk más, a hatékonyságunkat növelõ irányokba is tapogatózni. Így jött szóba a vezetésben az, hogy erre az online irány lenne a legmegfelelõbb. Ha sikerülne egy vállalható online oktatási rendszert összeraknunk, akkor azzal csökkenteni tudnánk a kollégák vállát nyomó terheket.
+Kivitelezõ: Van már pontos elképzelésük arról, hogy mit akarnak, vagy csak az ötlet merült fel, hogy "de jó lenne, ha lenne egy ilyenünk"?
+Megrendelõ: Õõõõõ... Konkrétan ez így még nincs meg, de egyeztetek a vezetõséggel, hogy hogyan gondolják. Folytathatjuk ezt a megbeszélést 2 nap múlva?
+Kivitelezõ: Hogyne!
+
+2 nap múlva:
+Kivitelezõ: Üdv, sikerült kideríteni, hogy mi a konkrét elvárás?
+Megrendelõ: Hello, igen, egyeztettem az illetékesekkel. Úgy gondoljuk, hogy az eddigi offline bevált módszereinket kellene átkonvertálni az online felületre is. Az eddigi gyakorlatunk az volt, hogy a tanár leadta az anyagot, majd a számonkéréskor papír alapon feleletválasztós kérdésekkel ellenõrizte a megszerzett tudást. Illetve bizonyos konkrét matematikai tételeknél pontos definíciót várt el. Erre azt találtuk ki, hogy lehetne ilyen összekötõs játék, vagy ennek a keresd meg az azonos ábrákat játéknak az átdolgozott verziója, ahol a fogalomhoz kellene párosítani a definíciót vagy fordítva.
+Kivitelezõ: Világos. Akkor ha jól értem nekünk a programszintû megoldást kell szállítanunk, amibe Önök pakolják majd bele a tartalmat?
+Megrendelõ: Pontosan így van, hiszen Önök ahhoz értenek, hogy egy rendszert tegyenek alá, mi meg ahhoz, hogy ezt feltöltsük a saját tananyagunkkal.
+Kivitelezõ: Arról van már elképzelésük, hogy hogyan nézzen ki az alkalmazás, illetve a webes felület? Kell-e regisztráció? Hányan használják majd egyszerre? Milyen funkciók kellenek bele?
+Megrendelõ: Tekintve, hogy a célcsoportunk a 6-12 éves korosztály, jó lenne, ha az õ ízlésüknek megfelelõ lenne a design. Mivel itt a tanulók tudását ellenõrizzük, jó lenne, ha a kérdésre adott válaszokat tanulónként lehetne csoportosítani, hogy ki tudjuk értékelni az adott gyerkõc tudását. Esetleg lehetne egy rekordtábla is, ami inspirálja õket, hogy jobban teljesítsenek. Ugyebár nekünk kell feltölteni tartalommal az alkalmazást, ezért kellene egy oktatói felület is, amit csak mi érünk el, a tanulók nem.
+Kivitelezõ: Világos. A használt technológiákra és eszközökre van valamilyen megkötésük?
+Megrendelõ: Hát mi ezekhez a programozós dolgokhoz nem igazán értünk, úgyhogy az Önök szakértelmére bízzuk a dolognak ezt a részét. Használjanak olyat, amit Önök megfelelõnek látnak.
+Kivitelezõ: Rendben van, elsõ körben ennyi információ elegendõ, hogy felépítsük a specifikációt. Mihelyt készen vagyunk vele, továbbítjuk Önök felé, ezt majd tüzetesen olvassák át, hogy valóban és pontosan fedi-e az igényeiket. Ha igen, akkor megkezdhetjük a munkát, ha nem, akkor további egyeztetések szükségesek, hogy pontosítsuk a követelményeket.
+
 8. Fogalom szótár
 
