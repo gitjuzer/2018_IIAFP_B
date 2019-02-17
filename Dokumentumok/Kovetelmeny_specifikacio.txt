@@ -93,3 +93,9 @@ Kivitelezõ: Rendben van, elsõ körben ennyi információ elegendõ, hogy felépítsük 
 
 8. Fogalom szótár
 
+-bug: fejlesztési hiba, ami által a program nem a várt eredményt hozza. 
+-main menu: a fõ menü, amely a weboldal/program indulásakor megjelenik.
+-gameboard: játék közben, a különbözõ elemeket tartalmazó felület.
+-backend: a kiszolgáló, ahonnan az alkalmazást el lehet érni. 
+-frontend:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása.
+-web-service: különbözõ programnyelveken írt és különbözõ platformokon futó szoftveralkalmazások interneten keresztül történõ adatcseréjére használt webszolgáltatások.
