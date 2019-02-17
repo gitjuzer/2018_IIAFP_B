@@ -42,11 +42,11 @@ K2: Találd meg a párját:
 K3: Jogkörök:
 	A program tartalmazza az oktatók, illetve a diákok jogkörét is. Az oktatók képesek új feladatokat létrehozni a játékokhoz.
 
-K4:Oktatók és diákok jogkörei:
-	Az oktatók jogai közé tartozik:
+K4: Oktatók és diákok jogkörei:
+	Az oktatók jogai:
 		Az online tananyak szerkeztése, gyakorló feladatok tartalmának teljeskörû szerkeztése, új feladatok hozzáadása melyeknek kérdéseit, megoldásait õk definiálják.
 	A diákok jogai:
-		tananyagok megtekintésére és gyakorló feladatok megoldására akár többször is.
+		Tananyagok megtekintése és gyakorló feladatok megoldása akár többször is.
 
 K5: Statisztika:
 	A feladatokhoz tartozzon statisztika, amely képes szûrés(egyéni, osztály/évfolyam) alapján is dolgozni.
@@ -61,10 +61,10 @@ K8: Virtuális "oklevél":
 	A kurzus befejeztével a felhasználóknak virtuális oklevélben kell részesülnie amit a rendszer autómatikusan generál,
 	az eredmények összesítésével.
 
-K9: online ranglista:
+K9: Online ranglista:
 	A rendszer az összes diák eredményét rangsorba állítja ami publikusan elérhetõ.
 
-K10:Gyerek design:
+K10: Gyerek design:
 	A játékok és a design kizárólag családbarát elveknek megfelelõ anyagot tartalmazhatnak.
 	Színes, játékos kialakítás web, android és windows felületen is.
 
