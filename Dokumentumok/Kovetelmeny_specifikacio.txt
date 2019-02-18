@@ -36,6 +36,16 @@ A programnak Android rendszerrel rendelkezõ okostelefonnal és asztali számítógép
 	7. Miután a számonkérés lezajlott, a munkatársat beosztják egy másik intézményhez, és kezdodik a folyamat elorol. 
 
 5. Igényelt üzleti folyamatok modellje
+	
+	1. Egy olyan szoftver fejlesztése amely segíti a diákok matematikai tudásának fejlõdését/szinten tartását.
+	2. Kiküldenek egy munkatársat egyeztetni az ügyféllel.
+	3. Az ügyfél igényeit a tanulás-segítõ szoftver elõnyeit kihasználva alakítjuk, ezáltal a munkatársak idõbeosztása sokkal rugalmasabbá válik.
+	4. A munkatárs munkába áll, amely során cégünk szoftverjének használatát(funkcióit, lehetõségeit) fogja bemutatni.
+	5. A tanulási/tanítási idõszak alatt munkatársunk csak az intézményen belül tart órákat. Az otthoni(intézményen kívüli) tanítást felváltja
+		cégünk szoftverének használata.
+	6. A tananyagot a szoftverben több modulra osztjuk, melyek végén modulzáró teszteket töltenek ki a diákok. A szoftver generál egy jegyet ezen tesztek
+		eredménye alapján, melyet a tanár felülírhat, ha szeretne(pl.: órai aktivitás alapján).
+	7. Egy munkatárs egy idõben képes több intézmény igényeit(amennyiben nincs speciális igény) kielégíteni a szoftver elõnyeit, rugalmasságát kihasználva.
 
 6. Követelmény lista
 
