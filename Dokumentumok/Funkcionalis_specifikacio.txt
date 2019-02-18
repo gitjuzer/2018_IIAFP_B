@@ -34,3 +34,21 @@ a hibázási arány stb.
 Ha tanulói felületbe jelentkezünk be, és még nem vagyunk beinvitálva egyetlen osztályba sem, akkor a programban nem vagyunk képesek semmit
 sem csinálni, ellenben ha meghívtak minket egy osztályba, láthatjuk az egyes játékokat, illetve a legjobb eredményünket az egyes játékokhoz
 kapcsolódóan, és a próbálkozások számát.
+
+13. fejezet
+
+Fogalomszótár:
+--------------
+
+	-[bug]: fejlesztési hiba ami által a program nem a várt eredményt hozza 
+	-[main menu]: A fõ menü, amely a weboldal/program indulásakor megjelenik(oktatói, tanulói felület kiválasztása)
+	-[games]: Az játékoknak a listája amibõl választhatunk.
+	-[gameboard]: Játék közben, a különbözõ elemeket tartalmazó felület
+	-[backend]: A kiszolgáló, ahonnan az alkalmazást el lehet érni 
+	-[frontend]:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása
+	-[web-service]:különbözõ programnyelveken írt és különbözõ platformokon futó szoftveralkalmazások interneten keresztül történõ adatcseréjére használt webszolgáltatások.
+	-[oktató felület]: A felhasználónak az átlagosnál magasabb jogai vannak("admin"). 
+	-[tanuló felület]: Csak olyan jogai vannak amit az oktatói felületen meghatároztak.
+	-[statisztika]: A játékokon elért eredmények áttekintése.
+	-[játék aktiválása]: A játék elérhetõvé tétele bizonyos emberek számára.
+	-[játék deaktiválása]: A játék elzárása mindenki elõl.
