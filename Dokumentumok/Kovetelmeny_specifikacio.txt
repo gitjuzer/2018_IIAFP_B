@@ -22,6 +22,10 @@ változatosságának köszönhetõen van lehetõsége. Azonban a projekt elsõ változatáb
 Az elsõ verziónak legalább két egyszerû játékot kell tartalmaznia, melyek alatt egy feleletválasztós kérdésekre válaszolós és egy memóriajátékot értünk.
 A megrendelõ profilja az elemi matematika oktatása, célcsoportja a 6-12 éves korosztály. Emiatt a feladatok tartalmát a megrendelõ adja meg.
 A programnak Android rendszerrel rendelkezõ okostelefonnal és asztali számítógépen vagy laptopon indított egyszerû böngészõvel is elérhetõnek kell lennie.
+Korunk az eddiginél sokkalta gyorsabban változik, gyakorlatilag naponta jelennek meg az újdonságok. Nincs sem idõ, sem energia, sem anyagi forrás arra, hogy az emberi tudást papír alapon halmozzuk tovább, ahogy tettük ezt évszazadokig.
+A rendszer szerepet kíván vállalni abban, hogy a fiatal generációk egy modernebb környezetben, naprakész technológiával sajátíthassák el a tananyagot.
+A rendszer oktatáshoz való hozzáállásának kulcsfogalma a gemifikáció. Ennek megfelelõen olyan kreatív és innovatív oktatási módszereket implementálunk a rendszerbe, melyek támogatják a gemifikációt. A legjobb gyakorlatokat, amelyeket használnak a való életben, implementálni fogjuk a programba.
+Az a célunk, hogy amikor a diák elindítja a programot, akkor ne negatív érzéseket társítson a tanuláshoz, hanem éppen az ellenkezõjét. Az online elérésnek köszönhetõen ezt megteheti tanóra keretében, és otthoni idõtöltés során is. Hangsúlyozni szeretnénk, hogy itt szándékosan kerüljük az "otthoni tanulás" kifejezést, ugyanis az a célunk, hogy a diák ne kötelezettséget, hanem kedvtelést lásson a tanulásban. Ideáis esetben leül a nappaliban egy fotelbe egy bögre kakaóval és kedvtelésbõl használja az alkalmazást.
 
 3. Jogi háttér
 
