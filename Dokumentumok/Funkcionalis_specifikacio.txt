@@ -41,7 +41,20 @@ kapcsolódóan, és a próbálkozások számát.
 8. Használati esélyek
 9. Megfeleltetés
 10. Képernyõtervek
-11. Forgató könyvek
+
+11. Forgatókönyvek:
+A szoftver futtatása közben három szereplõ figyelhetõ meg.
+
+- Az elsõ maga a kliens (ami lehet akár android, akár web alapú), 
+ezen keresztül tudja a felhasználó használni, és élvezni az általunk készítendõ rendszert.
+Regisztráció, majd bejelentkezés után kiválaszthatjuk, hogy melyik játékot szeretnénk elindítani.
+A játékmód kiválasztása után megjelennek az adott játékhoz tartozó UI elemek, 
+például lehet ez egy timer, vagy a játékos álatal még felhasználható segítségek száma, és az adott feladat részei.
+- A második szereplõ a már elõzõekben említett játékos, akinek a teszt kitöltése a feladata, a megadott szabályok szerint.
+Ilyen szabály lehet, például, hogy ne lépje túl a megadott idõkeretet, vagy ne hibázhat X alkalomnál többször.
+- A harmadik szereplõ a Web-service, ez felel azért, hogy a felhasználó által küldött adatokat el tudjuk tárolni, 
+illetve a már elkészült teszteket, és játékokhoz szükséges adatokat a kliensekhez tudjuk eljuttatni.
+
 12. Funkció - követelmény megfeleltetés
 13. fejezet
 
