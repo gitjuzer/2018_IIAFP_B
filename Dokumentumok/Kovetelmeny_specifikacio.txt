@@ -55,7 +55,17 @@ A rendszert érintõ oktatási-nevelési jellegû jogszabályok listája:
 		7. melléklet - A Köznevelési Hídprogram kerettanterve
 		8. melléklet - Kerettanterv a szakiskolák számára
 		10. melléklet - A nemzetiségi nevelés-oktatás kerettantervei
+		11. melléklet - Kerettantervek a sajátos nevelési igényû tanulókat oktató nevelési-oktatási intézmények számára
+		14. melléklet - Kerettanterv a szakgimnáziumok 9-12. évfolyama számára
+		15. melléklet - Kerettanterv a szakközépiskolák 9-13. évfolyama számára
 
+A rendszert érintõ belsõ szabályzatok listája:
+	A megrendelõi SZMSZ
+	A megrendelõ saját hatáskörben meghozott speciális oktatási-nevelési jellegû szabályai
+
+A rendszert érintõ adatvédelmi jellegû jogszabályok listája:
+	2011. évi CXII. törvény az információs önrendelkezési jogról és az információszabadságról
+	Az Európai Parlament és a Tanács (EU) 2016/679 rendelete (2016. április 	27.) a természetes személyeknek a személyes adatok kezelése tekintetében 	történõ védelmérõl és az ilyen adatok szabad áramlásáról, valamint a 95/46/EK irányelv hatályon kívül helyezésérõl (általános adatvédelmi rendelet)
 
 
 4. Jelenlegi üzleti folyamatok modellje
