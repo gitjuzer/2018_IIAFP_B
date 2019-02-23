@@ -40,6 +40,24 @@ Az a célunk, hogy amikor a diák elindítja a programot, akkor ne negatív érzéseke
 
 3. Jogi háttér
 
+A rendszert érintõ oktatási-nevelési jellegû jogszabályok listája:
+	2011. évi CXC. törvény a nemzeti köznevelésrõl
+	229/2012.(VIII.28). Korm. rendelet a nemzeti köznevelésrõl szóló törvény végrehajtásáról
+	13/2018.(VI.14.) EMMI rendelet a 2018/2019. tanév rendjérõl
+	xx/2019.(xx.xx.) EMMI rendelet a 2019/2020. tanév rendjérõl
+	51/2012.(XII.21.) EMMI rendelet a kerettantervek kiadásának és jóváhagyásának rendjérõl,
+	illetve ennek következõ mellékletei:
+		1. melléklet - Kerettanterv az általános iskola 1-4. évfolyamára
+		2. melléklet - Kerettanterv az általános iskola 5-8. évfolyamára
+		3. melléklet - Kerettanterv a gimnáziumok 9-12. évfolyama számára
+		4. melléklet - Kerettanterv a gimnáziumok 7-12. évfolyama számára
+		5. melléklet - Kerettanterv a gimnáziumok 5-12. évfolyama számára
+		7. melléklet - A Köznevelési Hídprogram kerettanterve
+		8. melléklet - Kerettanterv a szakiskolák számára
+		10. melléklet - A nemzetiségi nevelés-oktatás kerettantervei
+
+
+
 4. Jelenlegi üzleti folyamatok modellje
 
 	1. Egy intézmény megkeresi a cégüket, mely cég célja az intézmény diákjainak matematikai tudásának bovítése, felzárkóztatása.
