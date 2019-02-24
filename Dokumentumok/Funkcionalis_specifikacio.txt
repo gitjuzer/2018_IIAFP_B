@@ -1,4 +1,11 @@
-﻿1. A rendszer céljai, és nem céljai.
+﻿0. Vezetői összefoglaló
+
+ Ennek a programnak a célja tükrözni a tanárok elképzeléseit és a NAT által mehatározott tantervet. Ez a program nem csak egy tanévet ölel fel, hanem egymásra épülő tudásbázist tartalmaz. A különböző területeken a diákok képességeit, gondolkozását, problémamegoldó képességeit fejleszti. Figyelembe véve az oktatók, diákok szakmai, személyes és szociális helyzetét is a legkisebb községtől a fővárosig mindenhova eljusson. Ezt alapozza meg a programban a pontosan megválasztott tématerületek, a hozzájuk kapcsolódó feladatok és azok ellenőrzése. Cél a folyamatorientált kompetenciák elérése.
+ A diákok egyedül végezhetik a feladatokat, de a pedagógus irányítja és a program ráépül egy előzetes tudásra és kellő motivációt ad a folytatáshoz. A legegyszerűbb játékos verziótól kezdve szintenként, folyamatosan változik a tananyag nehézsége, amelyek közül a diák választhat. A diák a saját eredményeit összefoglalóan megnézheti.
+ Bekerülés egy-egy osztályba meghívás alapján történik. Lehetőség van egyes diákoknak más diákokkal való megméretettésére. A tananyag egységekre bontható, melyet a tanár bővíthet, változtathat. A tanár tudatos osztálykialakítással előre diferenciálhatja a tanulókat.
+ Az oktató feladata a háttérből való irányítás, ugyanakkor ő is ellenőrzi az osztályt.
+
+1. A rendszer céljai, és nem céljai.
 
  Sok mindent lehetne errõl mondani, de rövidre fogom, mert annyi időm nincs, a ranked nem nyeri meg saját magát. Feltehetnénk magunknak a kérdést, hogy "mégis melyik rendszerről van itt szó?" na hát igen. Ez egy nagyon jó kérdés. Melyik rendszerek jöhetnek egyáltalán szóba? A tejút rendszer? Számítógépes rendszer? Kommunizmus? Rendszerváltás? Igazából bármelyik. Utálok dokumentálni, nemtudom látszódik-e. Pláne, hogy ennyire overkill az egész.
 
