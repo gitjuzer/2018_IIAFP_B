@@ -46,6 +46,15 @@ kapcsolódóan, és a próbálkozások számát.
 
 5. Jelenlegi üzleti folyamatok modellje
 
+Az alábbi üzleti folyamatmodellt kell átalakítani az Igényelt üzleti folyamatok modellje c. fejezet alapján:
+A jelenlegi üzleti modellben a megrendelő alkalmazottai (oktatók) külsős óraadóként, vagy különórákkal vesznek részt az adott oktatási intézmény tanulóinak fejlesztésében. Módszereik közé tartozik a frontális oktatás (előadásjelleg), és a csoportos, csapatépítő jellegű előadási modell is, ahol a diákok és az oktató is egyetlen közös körben ülnek egymással szemben.
+A jelenlegi modellben a fent megfogalmazott módon sajátítják el a tanulók a tananyagot. Az adott tanóra tananyagából minden következő óra elején pár perces, rövid feladatsort kell kitölteniük a diákoknak. Ezeknek a feladatoknak csak pozitív elbírálása lehetséges, megrovást nem von maga után az eredmény.
+Témakörönként témazáró dolgozatot írnak a diákok, erre általában 6 hetente kerül sor. Ekkor az adott témakörből átfogó tesztet írnak a diákok, amelyben kifejtős, kiválasztós és összepárosítós feladatok a jellemzőek.
+A megrendelés egyik pontja az óra eleji mini dolgozatok online kiváltására vonatkozik.
+A jelenlegi modellben a minidolgozatokat közös ellenőrzéssel javítják helyben megírás után. Ezután a lapokat be kell adni. (Ezt a folyamatot kell automatizálni online rendszerben.)
+A témazáró dolgozatok javítása beadás után történik, amit a kurzust vezető oktató végez még az intézmény falai között, vagy otthon. Ezt a folyamatot a rendszernek (egyelőre) nem feladata kiváltani.
+Az óra eleji felmérők eredményeit eddig az oktató összesítette, ami az esetleges jobb elbírálás matematikai alapját képezte a tanítási félév végén.
+
 6. Igényelt üzleti folyamatok modellje
 
  Egy olyan szoftver kifejlesztése a cél, amelyet a felhasználó iskolák (általános iskolák, középiskolák, stb.) oktatói mindennapjaikban a tanítás során az órák tanmenetébe beépitve a tananyag gyorsabb áttekinthetőbb megértését segítve, olyan plusz információkat ad át a tanulóknak, melyek fejlesztik logikai és egyéb specifikus képességeiket.
