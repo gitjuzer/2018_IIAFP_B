@@ -59,6 +59,18 @@ a "Diák 01 Tanulás" c. képernyőterven és a "Tanár 01 Leckék" illetve a "T
 A diákok megtekinthetik egyes játékokban elért eredményeit és statisztikát (lsd. "Diák 02 Statisztika" képernyőterv), 
 illetve a tanárok az egyéni illetve egész osztályos eredményeket megtekinthetik (lsd. "Tanár 02 Statisztika" képernyőterv) 5/10
 
+	a K6-os követelménynek megfelelően a diákokat a teljesítményüknek megfelelően jutalmazzuk 7/10 priorítású.
+
+	A k7-es követelmény 2/10 priorítású ennek köszönhetően tudják összemérni a játékosok a tudásukat,
+ezen a felületen képesek vagyunk kihívni más játékosokat, választhatunk tantárgyakat, témákat. Megvalósítása opcionális!
+
+	A k8-as követelmény szintén 7/10-es priorítású ez azért fontos, hogy visszajelzést tudjunk adni a felhaszálónak a kurzus befejeztével!
+	
+	A k9-es követelmény 5/10-es priorítású a diákok itt láthatják, hogy közösségi szinten mekkora tudással rendelkeznek!
+
+	A k10-es követelményre épül az egész alkalmazás design tehát ez bír a legmagasabb priorítással (10/10),
+ebben a pontban meghatározott felületekből a web és az android mindeféleképpen megvalósításra kerül viszont windowsos felületre az alkalmazás csak az 1.1-es update után lesz elérhető!
+
 10. Képernyõtervek
 
 11. Forgatókönyvek:
