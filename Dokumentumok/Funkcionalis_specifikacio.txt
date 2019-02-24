@@ -15,6 +15,10 @@
 
 2. Jelenlegi helyzet leírása
 
+ Egy olyan rendszer megvalósítása amely a funkcionális specifikációban leírt vágyálomrendszernek megfelel.
+ Jelenlegi cél, kialakítani egy olyan webes felületet, amely átláthatóan tartalmazza a diákok és tanárok által használható oldalakat. A felhasználói felületre történő belépésnél már elkülönítve látható az oktatói és tanulói felület.
+ A diák láthatja a statisztikáit, párbaj felületet és a játékos feladatok leírását, míg az oktatói felületen elérhetők a leckék, a diákok statisztikája, illetve az osztályok. Az oktató által megnyitható oldalon, elérhető számára az osztálynévsor és a diákok eredménye mellett, az osztály létrehozása, diák hozzáadás és diák törlése funkció is.
+
 3. A vágyálomrendszer leírása
 
  A program elindításakor választhatunk, hogy oktatói, illetve tanulói felületre szeretnénk-e belépni. Ezt kiválasztva lehetőségünk van regisztrálni, de míg diákként ez teljesen ingyenes és akadálymentes, oktatóként regisztrálni csak érvényes iskolai licenccel lehet, így megakadályozva, hogy
