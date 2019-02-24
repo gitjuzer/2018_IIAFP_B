@@ -87,6 +87,9 @@ Lehetőségek:	- csökkenteni lehet a munkerőt
 
 8. Használati esetek
 
+Mellékletek: - Használati eset diagramok/Használati eset diagram 01 - Diák felület.png
+			 - Használati eset diagramok/Használati eset diagram 02 - Tanári felület.png
+
 9. Megfeleltetés
 
 
