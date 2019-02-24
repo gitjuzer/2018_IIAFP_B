@@ -57,6 +57,9 @@ Az óra eleji felmérők eredményeit eddig az oktató összesítette, ami az es
 
 6. Igényelt üzleti folyamatok modellje
 
+ Az utóbbi időben megnövekedett igényeket a megrendelő üzleti modellje már nem képes kielégíteni, ezért alternatív módszerek (online, távoktatás) irányába fordultak.
+Az új üzleti modellben az általunk fejlesztett rendszernek elő kell segítenie az óra eleji felmérők kiértékelésének automatizálását, az eredmények teljes félévi követését és a félév végi egyszerűbb kiértékelést.
+Röviden, az egész folyamat adminisztratív feladatainak gyorsítását, illetve a továbbiakat:
  Egy olyan szoftver kifejlesztése a cél, amelyet a felhasználó iskolák (általános iskolák, középiskolák, stb.) oktatói mindennapjaikban a tanítás során az órák tanmenetébe beépitve a tananyag gyorsabb áttekinthetőbb megértését segítve, olyan plusz információkat ad át a tanulóknak, melyek fejlesztik logikai és egyéb specifikus képességeiket.
 	1. Célunk a szoftver pozitív előnyeit megismertetni az oktatókkal.
 	2. Az oktatók által történt egyéni belépésnek a pozítiv hatásait elismertetni.
