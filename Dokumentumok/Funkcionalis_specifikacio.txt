@@ -1,75 +1,94 @@
-1. A rendszer céljai, és nem céljai.
+ï»¿1. A rendszer cÃ©ljai, Ã©s nem cÃ©ljai.
 
-Sok mindent lehetne errõl mondani, de rövidre fogom, mert annyi idõm nincs, a ranked nem nyeri meg saját magát. Feltehetnénk magunknak a kérdést, hogy "mégis melyik rendszerrõl van itt szó?" na hát igen. Ez egy nagyon jó kérdés. Melyik rendszerek jöhetnek egyáltalán szóba? A tejút rendszer? Számítógépes rendszer? Kommunizmus? Rendszerváltás? Igazából bármelyik. Utálok dokumentálni, nemtudom látszódik-e. Pláne, hogy ennyire overkill az egész.
+Sok mindent lehetne errÃµl mondani, de rÃ¶vidre fogom, mert annyi idÃµm nincs, a ranked nem nyeri meg sajÃ¡t magÃ¡t. FeltehetnÃ©nk magunknak a kÃ©rdÃ©st, hogy "mÃ©gis melyik rendszerrÃµl van itt szÃ³?" na hÃ¡t igen. Ez egy nagyon jÃ³ kÃ©rdÃ©s. Melyik rendszerek jÃ¶hetnek egyÃ¡ltalÃ¡n szÃ³ba? A tejÃºt rendszer? SzÃ¡mÃ­tÃ³gÃ©pes rendszer? Kommunizmus? RendszervÃ¡ltÃ¡s? IgazÃ¡bÃ³l bÃ¡rmelyik. UtÃ¡lok dokumentÃ¡lni, nemtudom lÃ¡tszÃ³dik-e. PlÃ¡ne, hogy ennyire overkill az egÃ©sz.
 
-A mi rendszerünk, ami érdekel bennünket, az az a rendszer, amivel megvalósítjuk a célunkat. Nyilván nem egy scrum vagy egy kanban, hanem egy saját, elég speciális rendszer. Tartja a mondás is, "kicsi, savanyú, de a miénk". Nem másról, mint a csoportos munkáról van szó. A csoportos munka célja, hogy felkészítsen bennünket a jövõbeli akadályokra, hogy azokat majdnem gondmentesen átléphessük, ugyanis a programozók csapatban dolgoznak, mindenki kap egy kis részt, amit meg kell valósítania, aztán amint készen van vele, jön a következõ. Ez a folyamat addig ismétlõdik, amíg az aktuális célunkat el nem érjük. Ez nem csak a programozásban, de más iparágban is jellemzõ tevékenység. A csoportos munka nagyon jó hatással van a kommunikációs készségre, az emberi kapcsolatok kialakulására, az együttmûködésre, és sok egyéb más szociális tulajdonságra. Csoportban dolgozni jó.
+A mi rendszerÃ¼nk, ami Ã©rdekel bennÃ¼nket, az az a rendszer, amivel megvalÃ³sÃ­tjuk a cÃ©lunkat. NyilvÃ¡n nem egy scrum vagy egy kanban, hanem egy sajÃ¡t, elÃ©g speciÃ¡lis rendszer. Tartja a mondÃ¡s is, "kicsi, savanyÃº, de a miÃ©nk". Nem mÃ¡srÃ³l, mint a csoportos munkÃ¡rÃ³l van szÃ³. A csoportos munka cÃ©lja, hogy felkÃ©szÃ­tsen bennÃ¼nket a jÃ¶vÃµbeli akadÃ¡lyokra, hogy azokat majdnem gondmentesen Ã¡tlÃ©phessÃ¼k, ugyanis a programozÃ³k csapatban dolgoznak, mindenki kap egy kis rÃ©szt, amit meg kell valÃ³sÃ­tania, aztÃ¡n amint kÃ©szen van vele, jÃ¶n a kÃ¶vetkezÃµ. Ez a folyamat addig ismÃ©tlÃµdik, amÃ­g az aktuÃ¡lis cÃ©lunkat el nem Ã©rjÃ¼k. Ez nem csak a programozÃ¡sban, de mÃ¡s iparÃ¡gban is jellemzÃµ tevÃ©kenysÃ©g. A csoportos munka nagyon jÃ³ hatÃ¡ssal van a kommunikÃ¡ciÃ³s kÃ©szsÃ©gre, az emberi kapcsolatok kialakulÃ¡sÃ¡ra, az egyÃ¼ttmÃ»kÃ¶dÃ©sre, Ã©s sok egyÃ©b mÃ¡s szociÃ¡lis tulajdonsÃ¡gra. Csoportban dolgozni jÃ³.
 
-A rendszer nem céljai közé tartozik az elbukás, a teljes megsemmisülés, a projekt létrejövésének hátráltatása és az Anschluss.
-2. Jelenlegi helyzet leírása
-3. A vágyálomrendszer leírása
+A rendszer nem cÃ©ljai kÃ¶zÃ© tartozik az elbukÃ¡s, a teljes megsemmisÃ¼lÃ©s, a projekt lÃ©trejÃ¶vÃ©sÃ©nek hÃ¡trÃ¡ltatÃ¡sa Ã©s az Anschluss.
+2. Jelenlegi helyzet leÃ­rÃ¡sa
+3. A vÃ¡gyÃ¡lomrendszer leÃ­rÃ¡sa
 
-A program elindításakor választhatunk, hogy oktatói, illetve tanulói felületre szeretnénk-e belépni. Ezt kiválasztva lehetõségünk van regisztrálni,
-de míg diákként ez teljesen ingyenes és akadálymentes, oktatóként regisztrálni csak érvényes iskolai licenccel lehet, így megakadályozva, hogy
-bárki használja a szoftvert. Az oktatói felületre belépve több funkciót is észrevehetünk: 
-	1. Osztályok menedzselése
-		1.1 Osztály létrehozása
-			1.1.1 Diák hozzáadása osztályhoz
-			1.1.2 Diák eltávolítása osztályból
-		1.3 Osztály aktivitása
-		1.4 Diákok gyakorlásainak eredményei
-	2. Játékok listája
-		2.1 Játék módosítása
-			2.1.1 Kérdés/lehetõség hozzadása
-			2.1.2 Kérdés/lehetõség törlése
-			2.1.3 Kérdés/lehetõség módosítása
-			2.1.4 Játék aktiválása/deaktiválása
-		2.2 Játékok statisztikái
-Oktatóként képesek vagyunk osztályokat létrehozni, ezekbe diákokat invitálni, így képesek elindítani a gyakorló feladatokat, ezek mellett 
-képesek vagyunk diákokat eltávolítani az osztályokból. Ezeknek az osztályoknak az aktivitását is követni lehet, illetve az egyes diákok 
-eredményeit is képesek vagyunk megtekinteni.
-A játékokban szereplõ kérdéshalmazt képesek vagyunk bovíteni, ebbol kérdéseket törölni, vagy éppen módosítani. Ha szükséges, egyes játékokat
-ki is tudunk kapcsolni, ha az nem túl népszerû a diákoknál, vagy egy hosszadalmasabb kérdésreformot hajtanánk végre, és amint végeztünk ezzel, újra
-élesbe helyezhetjük a játékot. Meg tudjuk tekinteni az egyes játékok statisztikáit, például hogy mely játékot játsszák a legtöbben, melyben a legmagasabb 
-a hibázási arány stb. 
-Ha tanulói felületbe jelentkezünk be, és még nem vagyunk beinvitálva egyetlen osztályba sem, akkor a programban nem vagyunk képesek semmit
-sem csinálni, ellenben ha meghívtak minket egy osztályba, láthatjuk az egyes játékokat, illetve a legjobb eredményünket az egyes játékokhoz
-kapcsolódóan, és a próbálkozások számát.
-4. A rendszerre vonatkozó külsõ megszorítások
-5. Jelenlegi üzleti folyamatok modellje
-6. Igényelt üzleti folyamatok modellje
-7. Követelménylista
-8. Használati esélyek
-9. Megfeleltetés
-10. Képernyõtervek
+A program elindÃ­tÃ¡sakor vÃ¡laszthatunk, hogy oktatÃ³i, illetve tanulÃ³i felÃ¼letre szeretnÃ©nk-e belÃ©pni. Ezt kivÃ¡lasztva lehetÃµsÃ©gÃ¼nk van regisztrÃ¡lni,
+de mÃ­g diÃ¡kkÃ©nt ez teljesen ingyenes Ã©s akadÃ¡lymentes, oktatÃ³kÃ©nt regisztrÃ¡lni csak Ã©rvÃ©nyes iskolai licenccel lehet, Ã­gy megakadÃ¡lyozva, hogy
+bÃ¡rki hasznÃ¡lja a szoftvert. Az oktatÃ³i felÃ¼letre belÃ©pve tÃ¶bb funkciÃ³t is Ã©szrevehetÃ¼nk: 
+	1. OsztÃ¡lyok menedzselÃ©se
+		1.1 OsztÃ¡ly lÃ©trehozÃ¡sa
+			1.1.1 DiÃ¡k hozzÃ¡adÃ¡sa osztÃ¡lyhoz
+			1.1.2 DiÃ¡k eltÃ¡volÃ­tÃ¡sa osztÃ¡lybÃ³l
+		1.3 OsztÃ¡ly aktivitÃ¡sa
+		1.4 DiÃ¡kok gyakorlÃ¡sainak eredmÃ©nyei
+	2. JÃ¡tÃ©kok listÃ¡ja
+		2.1 JÃ¡tÃ©k mÃ³dosÃ­tÃ¡sa
+			2.1.1 KÃ©rdÃ©s/lehetÃµsÃ©g hozzadÃ¡sa
+			2.1.2 KÃ©rdÃ©s/lehetÃµsÃ©g tÃ¶rlÃ©se
+			2.1.3 KÃ©rdÃ©s/lehetÃµsÃ©g mÃ³dosÃ­tÃ¡sa
+			2.1.4 JÃ¡tÃ©k aktivÃ¡lÃ¡sa/deaktivÃ¡lÃ¡sa
+		2.2 JÃ¡tÃ©kok statisztikÃ¡i
+OktatÃ³kÃ©nt kÃ©pesek vagyunk osztÃ¡lyokat lÃ©trehozni, ezekbe diÃ¡kokat invitÃ¡lni, Ã­gy kÃ©pesek elindÃ­tani a gyakorlÃ³ feladatokat, ezek mellett 
+kÃ©pesek vagyunk diÃ¡kokat eltÃ¡volÃ­tani az osztÃ¡lyokbÃ³l. Ezeknek az osztÃ¡lyoknak az aktivitÃ¡sÃ¡t is kÃ¶vetni lehet, illetve az egyes diÃ¡kok 
+eredmÃ©nyeit is kÃ©pesek vagyunk megtekinteni.
+A jÃ¡tÃ©kokban szereplÃµ kÃ©rdÃ©shalmazt kÃ©pesek vagyunk bovÃ­teni, ebbol kÃ©rdÃ©seket tÃ¶rÃ¶lni, vagy Ã©ppen mÃ³dosÃ­tani. Ha szÃ¼ksÃ©ges, egyes jÃ¡tÃ©kokat
+ki is tudunk kapcsolni, ha az nem tÃºl nÃ©pszerÃ» a diÃ¡koknÃ¡l, vagy egy hosszadalmasabb kÃ©rdÃ©sreformot hajtanÃ¡nk vÃ©gre, Ã©s amint vÃ©geztÃ¼nk ezzel, Ãºjra
+Ã©lesbe helyezhetjÃ¼k a jÃ¡tÃ©kot. Meg tudjuk tekinteni az egyes jÃ¡tÃ©kok statisztikÃ¡it, pÃ©ldÃ¡ul hogy mely jÃ¡tÃ©kot jÃ¡tsszÃ¡k a legtÃ¶bben, melyben a legmagasabb 
+a hibÃ¡zÃ¡si arÃ¡ny stb. 
+Ha tanulÃ³i felÃ¼letbe jelentkezÃ¼nk be, Ã©s mÃ©g nem vagyunk beinvitÃ¡lva egyetlen osztÃ¡lyba sem, akkor a programban nem vagyunk kÃ©pesek semmit
+sem csinÃ¡lni, ellenben ha meghÃ­vtak minket egy osztÃ¡lyba, lÃ¡thatjuk az egyes jÃ¡tÃ©kokat, illetve a legjobb eredmÃ©nyÃ¼nket az egyes jÃ¡tÃ©kokhoz
+kapcsolÃ³dÃ³an, Ã©s a prÃ³bÃ¡lkozÃ¡sok szÃ¡mÃ¡t.
+4. A rendszerre vonatkozÃ³ kÃ¼lsÃµ megszorÃ­tÃ¡sok
+5. Jelenlegi Ã¼zleti folyamatok modellje
+6. IgÃ©nyelt Ã¼zleti folyamatok modellje
+7. KÃ¶vetelmÃ©nylista
+8. HasznÃ¡lati esÃ©lyek
+9. MegfeleltetÃ©s
 
-11. Forgatókönyvek:
-A szoftver futtatása közben három szereplõ figyelhetõ meg.
+	A K1 kÃ¶vetelmÃ©ny a megjelenÃ©s napjÃ¡n elÃ©rhetÅ‘ lesz, hiszen ez a legprimitÃ­vebb jÃ¡tÃ©kok egyike. 
+A jÃ¡tÃ©k sorÃ¡n geometriai alakok lesznek a kÃ¡rtyÃ¡kon, minden egyes alak duplikÃ¡ltan lesz az asztalon, 
+Ã­gy csak meg kell talÃ¡lni a pÃ¡rjÃ¡t, illetve a nehÃ©zsÃ©ggel a kÃ¡rtyÃ¡k szÃ¡ma is nÅ‘ ugyan arra az idÅ‘re. 9/10
 
-- Az elsõ maga a kliens (ami lehet akár android, akár web alapú), 
-ezen keresztül tudja a felhasználó használni, és élvezni az általunk készítendõ rendszert.
-Regisztráció, majd bejelentkezés után kiválaszthatjuk, hogy melyik játékot szeretnénk elindítani.
-A játékmód kiválasztása után megjelennek az adott játékhoz tartozó UI elemek, 
-például lehet ez egy timer, vagy a játékos álatal még felhasználható segítségek száma, és az adott feladat részei.
-- A második szereplõ a már elõzõekben említett játékos, akinek a teszt kitöltése a feladata, a megadott szabályok szerint.
-Ilyen szabály lehet, például, hogy ne lépje túl a megadott idõkeretet, vagy ne hibázhat X alkalomnál többször.
-- A harmadik szereplõ a Web-service, ez felel azért, hogy a felhasználó által küldött adatokat el tudjuk tárolni, 
-illetve a már elkészült teszteket, és játékokhoz szükséges adatokat a kliensekhez tudjuk eljuttatni.
+	A K2 kÃ¶vetelmÃ©ny szintÃ©n megjelenÃ©s napi funkcionalitÃ¡s, 
+a jÃ¡tÃ©kmenet sorÃ¡n kÃ©t halmaz fog feltÅ±nni a felhasznÃ¡lÃ³ elÅ‘tt: az mindkettÅ‘ben Ã¶ssze lesznek keverve a fogalmak, 
+illetve egyenletek, a mÃ¡sikban pedig definÃ­ciÃ³k Ã©s egyenlet eredmÃ©nyek. 
+KÃ©t egymÃ¡s melletti dobozba lehet behÃºzni ezeket a pÃ¡rokat, Ã©s ha az egyenlethez jÃ³ eredmÃ©nyt, illetve a fogalomhoz jÃ³ definÃ­ciÃ³t pÃ¡rosÃ­tottunk, 
+zÃ¶ldre vÃ¡ltanak a dobozok. IdÅ‘re futnak a kÃ¶rÃ¶k, egy kÃ¶r akkor Ã©r vÃ©get, ha minden doboz zÃ¶ldre vÃ¡ltott. 8/10
 
-12. Funkció - követelmény megfeleltetés
+	A K3 Ã©s K4 kÃ¶vetelmÃ©ny adja a lelkÃ©t a programnak, Ã­gy ez is release napi funkciÃ³. 
+A jogkÃ¶rÃ¶k rÃ©szletezve vannak a vÃ¡gyÃ¡lomrendszerben, megtekinthetÅ‘k vizuÃ¡lisan a "Login - reg" cÃ­mÅ± kÃ©pernyÅ‘terven, 
+a "DiÃ¡k 01 TanulÃ¡s" c. kÃ©pernyÅ‘terven Ã©s a "TanÃ¡r 01 LeckÃ©k" illetve a "TanÃ¡r 03 OsztÃ¡lyok" kÃ©pernyÅ‘tervben. 10/10
+
+	A K5 kÃ¶vetelmÃ©ny implementÃ¡lÃ¡sra kerÃ¼l mind diÃ¡k, mint tanÃ¡ri szemszÃ¶gbÅ‘l. 
+A diÃ¡kok megtekinthetik egyes jÃ¡tÃ©kokban elÃ©rt eredmÃ©nyeit Ã©s statisztikÃ¡t (lsd. "DiÃ¡k 02 Statisztika" kÃ©pernyÅ‘terv), 
+illetve a tanÃ¡rok az egyÃ©ni illetve egÃ©sz osztÃ¡lyos eredmÃ©nyeket megtekinthetik (lsd. "TanÃ¡r 02 Statisztika" kÃ©pernyÅ‘terv) 5/10
+
+10. KÃ©pernyÃµtervek
+
+11. ForgatÃ³kÃ¶nyvek:
+A szoftver futtatÃ¡sa kÃ¶zben hÃ¡rom szereplÃµ figyelhetÃµ meg.
+
+- Az elsÃµ maga a kliens (ami lehet akÃ¡r android, akÃ¡r web alapÃº), 
+ezen keresztÃ¼l tudja a felhasznÃ¡lÃ³ hasznÃ¡lni, Ã©s Ã©lvezni az Ã¡ltalunk kÃ©szÃ­tendÃµ rendszert.
+RegisztrÃ¡ciÃ³, majd bejelentkezÃ©s utÃ¡n kivÃ¡laszthatjuk, hogy melyik jÃ¡tÃ©kot szeretnÃ©nk elindÃ­tani.
+A jÃ¡tÃ©kmÃ³d kivÃ¡lasztÃ¡sa utÃ¡n megjelennek az adott jÃ¡tÃ©khoz tartozÃ³ UI elemek, 
+pÃ©ldÃ¡ul lehet ez egy timer, vagy a jÃ¡tÃ©kos Ã¡latal mÃ©g felhasznÃ¡lhatÃ³ segÃ­tsÃ©gek szÃ¡ma, Ã©s az adott feladat rÃ©szei.
+- A mÃ¡sodik szereplÃµ a mÃ¡r elÃµzÃµekben emlÃ­tett jÃ¡tÃ©kos, akinek a teszt kitÃ¶ltÃ©se a feladata, a megadott szabÃ¡lyok szerint.
+Ilyen szabÃ¡ly lehet, pÃ©ldÃ¡ul, hogy ne lÃ©pje tÃºl a megadott idÃµkeretet, vagy ne hibÃ¡zhat X alkalomnÃ¡l tÃ¶bbszÃ¶r.
+- A harmadik szereplÃµ a Web-service, ez felel azÃ©rt, hogy a felhasznÃ¡lÃ³ Ã¡ltal kÃ¼ldÃ¶tt adatokat el tudjuk tÃ¡rolni, 
+illetve a mÃ¡r elkÃ©szÃ¼lt teszteket, Ã©s jÃ¡tÃ©kokhoz szÃ¼ksÃ©ges adatokat a kliensekhez tudjuk eljuttatni.
+
+12. FunkciÃ³ - kÃ¶vetelmÃ©ny megfeleltetÃ©s
 13. fejezet
 
-Fogalomszótár:
+FogalomszÃ³tÃ¡r:
 --------------
 
-	-[bug]: fejlesztési hiba ami által a program nem a várt eredményt hozza 
-	-[main menu]: A fõ menü, amely a weboldal/program indulásakor megjelenik(oktatói, tanulói felület kiválasztása)
-	-[games]: Az játékoknak a listája amibõl választhatunk.
-	-[gameboard]: Játék közben, a különbözõ elemeket tartalmazó felület
-	-[backend]: A kiszolgáló, ahonnan az alkalmazást el lehet érni 
-	-[frontend]:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása
-	-[web-service]:különbözõ programnyelveken írt és különbözõ platformokon futó szoftveralkalmazások interneten keresztül történõ adatcseréjére használt webszolgáltatások.
-	-[oktató felület]: A felhasználónak az átlagosnál magasabb jogai vannak("admin"). 
-	-[tanuló felület]: Csak olyan jogai vannak amit az oktatói felületen meghatároztak.
-	-[statisztika]: A játékokon elért eredmények áttekintése.
-	-[játék aktiválása]: A játék elérhetõvé tétele bizonyos emberek számára.
-	-[játék deaktiválása]: A játék elzárása mindenki elõl.
+	-[bug]: fejlesztÃ©si hiba ami Ã¡ltal a program nem a vÃ¡rt eredmÃ©nyt hozza 
+	-[main menu]: A fÃµ menÃ¼, amely a weboldal/program indulÃ¡sakor megjelenik(oktatÃ³i, tanulÃ³i felÃ¼let kivÃ¡lasztÃ¡sa)
+	-[games]: Az jÃ¡tÃ©koknak a listÃ¡ja amibÃµl vÃ¡laszthatunk.
+	-[gameboard]: JÃ¡tÃ©k kÃ¶zben, a kÃ¼lÃ¶nbÃ¶zÃµ elemeket tartalmazÃ³ felÃ¼let
+	-[backend]: A kiszolgÃ¡lÃ³, ahonnan az alkalmazÃ¡st el lehet Ã©rni 
+	-[frontend]:  egy rÃ©teg ami feladata a rendszerbÃµl kijutÃ³ adatok prezentÃ¡lÃ¡sa, illetve a bejÃ¶vÃµ adatok fogadÃ¡sa
+	-[web-service]:kÃ¼lÃ¶nbÃ¶zÃµ programnyelveken Ã­rt Ã©s kÃ¼lÃ¶nbÃ¶zÃµ platformokon futÃ³ szoftveralkalmazÃ¡sok interneten keresztÃ¼l tÃ¶rtÃ©nÃµ adatcserÃ©jÃ©re hasznÃ¡lt webszolgÃ¡ltatÃ¡sok.
+	-[oktatÃ³ felÃ¼let]: A felhasznÃ¡lÃ³nak az Ã¡tlagosnÃ¡l magasabb jogai vannak("admin"). 
+	-[tanulÃ³ felÃ¼let]: Csak olyan jogai vannak amit az oktatÃ³i felÃ¼leten meghatÃ¡roztak.
+	-[statisztika]: A jÃ¡tÃ©kokon elÃ©rt eredmÃ©nyek Ã¡ttekintÃ©se.
+	-[jÃ¡tÃ©k aktivÃ¡lÃ¡sa]: A jÃ¡tÃ©k elÃ©rhetÃµvÃ© tÃ©tele bizonyos emberek szÃ¡mÃ¡ra.
+	-[jÃ¡tÃ©k deaktivÃ¡lÃ¡sa]: A jÃ¡tÃ©k elzÃ¡rÃ¡sa mindenki elÃµl.
