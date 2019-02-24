@@ -87,6 +87,24 @@ Lehetőségek:	- csökkenteni lehet a munkerőt
 
 8. Használati esetek
 
+Szereplők:
+	- Diák
+	- Tanár
+
+Diák használati esetei:
+	- Regisztráció: A diák akadálymentesen tud regisztrálni.
+	- Bejelentkezés: A diák be tud jelentkezni, ha már regisztrát.
+	- Tanulás: A diák tud játékosan tanulni, feltévve hogy benn van egy osztályban. Itt tantárgyat tud választani, majd abban feladatokat megoldani.
+	- Statisztikák megnézése
+	- Párbajozás: A diák tud párbajra hívni más diákokat, vagy ha más diák hívta ki párbajra, akkor vele megküzdeni. 
+	
+Tanár használati esetei: 
+	- Regisztráció: A tanár csak licensz segítségével regiszrálhat a rendszerbe.
+	- Bejelentkezés: A tanár be tud jelentkezni, ha már regisztrát.
+	- Osztályok kezelése: A tanár képes osztályokat létrehozni, és ide diákokat meghívni és őket eltávolítani.
+	- Statisztikák megnézése
+	- Leckék kezelése: A tanár képes leckéket létrehozni, módosítani, törölni és ezeket csoportosítani.
+
 Mellékletek: - Használati eset diagramok/Használati eset diagram 01 - Diák felület.png
 			 - Használati eset diagramok/Használati eset diagram 02 - Tanári felület.png
 
