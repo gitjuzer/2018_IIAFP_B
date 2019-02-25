@@ -127,7 +127,20 @@ Tanár használati esetei:
 Mellékletek: - Használati eset diagramok/Használati eset diagram 01 - Diák felület.png
 			 - Használati eset diagramok/Használati eset diagram 02 - Tanári felület.png
 
-9. Megfeleltetés
+9. Megfeleltetés  - használat eset diagramok és követelményspecifikáció megfeleltetése
+	☑ - Elkészül	? - Nem biztos, hogy release napi funkció	☒ - Nem készül el a release napig
+
+	☑ - Játékok diákok számára (K1, K2, K7 követelmények)
+	☑ - A játékokat tanárok módosíthatják (K3, K4 követelmények)
+	☑ - Diákok számára a játékhoz tartozó statisztika megtekintése (K5 követelmény)
+	☑ - Tanárok számára az egyes játékokhoz tartozó egyéni és átlagos teljesítmény megtekintése (K5 követelmény)
+	? - Jutalomrendszer a diákok számára (K6 követemény)
+	☑ - Automatikusan generált virtuális oklevél a kurzust elvégzőeknek (K8 követelmény)
+	☑ - Gyerekbarát design (sokszínű design, nem túlbonyolított UI) (K10 követelmény)
+	☑ - Webes felület (K10 követelmény)
+	☑ - Androidos felület (K10 követelmény)
+	? - Windowsos felület (K10 követelmény)
+	☑ - Online ranglista az összes diák eredményei szerint (K9 követelmény)
 
 
 10. Képernyőtervek
