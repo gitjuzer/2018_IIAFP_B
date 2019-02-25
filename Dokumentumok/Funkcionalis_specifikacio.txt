@@ -44,6 +44,25 @@ kapcsolódóan, és a próbálkozások számát.
 
 4. A rendszerre vonatkozó külsõ megszorítások
 
+A rendszerre vonatkozó külsö megszorítások közé tartoznak az alábbiak:
+	- pályázat
+	- törvények
+	- rendeletek
+	- szabványok és ajanlások
+Tekintsük először a pályázatot. Pályázat elnyerése esetén eleget kell tenni a pályázatban leírt feltételeknek is. Nem elegendő a saját magunk elé kitűzott céldátum, 
+hanem figyelembe kell venni azt is, hogy a pályázat mennyi időre szól és mikor jár le. Mindezek mellett pályázat esetén meghatározottak azok is, hogy a pályázaton 
+elnyert pénzt, a projekt mely részében, a projekt mely elemeire használhatjuk fel.
+Törvény esetében figyelembe kell venni azt a tényt, hogy a projekt mely országon belül készül és mely országban/országokban szeretnék a későbbiekben ezt forgalmazni 
+és használni. A programnak eleget kell tennie az összes forgalmazni kívánt ország törvényeinek. Esetünkben, mivel egy játékos oktatásról van szó, így korhatáros tartalmakat nem tartalmazhat, illetve egyéb olyan ábrákat, szövegeket sem, amelyek a gyermekre káros hatással vannak és befolyásolják őt fejlődésében.
+Ezeken kívül még lehetnek külön erre a célra alkalmazott rendeletek, amelyeket szinten figyelembe kell venni. Mivel Magyarországon készül el a program, így ez estben
+törvényileg a magyar törvénykönyv szabályozásainak is meg kell felelnie illetve, mivel az oktatás témában belül dolgozunk, így esetünkben az oktatási törvényeket is 
+figyelembe kell venni, melyben bizonyos dologokat rendeletekkel szabályoznak.
+Egyes országok területein eltérőek lehetnek a szabványok és mindezek mellett azok is eltérőek, hogy a program, milyen eszközön kerül majd a későbbiekben használatra.
+Ez lehet akár okostelefon, tablet vagy pc. Ezeket szinten figyelembe kell venni, hogy a program kompatibilis legyen minden olyan eszközzel, amelyen majd a későbbiekben ezt használni fogják. Egy oktató nagyobb esellyel fogja pc-ről használni mint egy diák. Ugyanis az oktató feladata a kérdések összeállítása feladatok szerkesztése, mely minden bizonnyal számára sokkal könnyebben fog menni pc-n. Azonban egy diák aki a feladatokat megoldja és csak válaszokat ad, nem feltételenül fogja pc-ről használni. Az ő esetükben nagyobb arányban fent áll a tablet és okostelefon. Éppen ezért szükséges az, hogy minden lehetséges eszköszre megfelelően készüljön el a program.
+Összességét tekintve a gonololatjelek között és kapcsolat van, vagyis mindennek érvényesülnie kell egyszerre. Figyelembe kell venni a pályázati feltételeket,
+a törvényeket és rendeleteket és ügyeli kell a szabványokra. Ha az összes tényező közül bármelyik is hiányzik vagy hibás, akkor a projekt nem megfelelő és nem 
+tökéletes.
+
 5. Jelenlegi üzleti folyamatok modellje
 
 Az alábbi üzleti folyamatmodellt kell átalakítani az Igényelt üzleti folyamatok modellje c. fejezet alapján:
