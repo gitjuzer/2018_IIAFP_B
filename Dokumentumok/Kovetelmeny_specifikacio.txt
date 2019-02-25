@@ -92,42 +92,51 @@ A rendszert érintõ adatvédelmi jellegû jogszabályok listája:
 
 6. Követelmény lista
 
-K1: Memóriajáték:
-	A programnak tartalmaznia kell egy memóriajátékot. A memóriajátéknak három nehézségi szintje van: Könnyû, közepes és nehéz.
-	Különbség nehézségi szintek között a kártyák mennyiségében mutatkozik meg. Értelemszerûen minél nehezebb, annál több kártya van ugyanannyi idõre.
+6.1 Funkcionális követelmények:
+	K1: Memóriajáték:
+		A programnak tartalmaznia kell egy memóriajátékot. A memóriajátéknak három nehézségi szintje van: Könnyû, közepes és nehéz.
+		Különbség nehézségi szintek között a kártyák mennyiségében mutatkozik meg. Értelemszerûen minél nehezebb, annál több kártya van ugyanannyi idõre.
 
-K2: Találd meg a párját:
-	A program másik alapjátéka a párkeresõ játék. A gyerekeknek a fogalmakhoz tartozó definíciót vagy az egyenlethez tartozó eredményt kell
-	párosítanijuk a defínicókkal, illetve egyenletekkel.
+	K2: Találd meg a párját:
+		A program másik alapjátéka a párkeresõ játék. A gyerekeknek a fogalmakhoz tartozó definíciót vagy az egyenlethez tartozó eredményt kell
+		párosítanijuk a defínicókkal, illetve egyenletekkel.
 
-K3: Jogkörök:
-	A program tartalmazza az oktatók, illetve a diákok jogkörét is. Az oktatók képesek új feladatokat létrehozni a játékokhoz.
+	K3: Jogkörök:
+		A program tartalmazza az oktatók, illetve a diákok jogkörét is. Az oktatók képesek új feladatokat létrehozni a játékokhoz.
 
-K4: Oktatók és diákok jogkörei:
-	Az oktatók jogai:
-		Az online tananyak szerkeztése, gyakorló feladatok tartalmának teljeskörû szerkeztése, új feladatok hozzáadása melyeknek kérdéseit, megoldásait õk definiálják.
-	A diákok jogai:
-		Tananyagok megtekintése és gyakorló feladatok megoldása akár többször is.
+	K4: Oktatók és diákok jogkörei:
+		Az oktatók jogai:
+			Az online tananyak szerkeztése, gyakorló feladatok tartalmának teljeskörû szerkeztése, új feladatok hozzáadása melyeknek kérdéseit, megoldásait õk definiálják.
+		A diákok jogai:
+			Tananyagok megtekintése és gyakorló feladatok megoldása akár többször is.
 
-K5: Statisztika:
-	A feladatokhoz tartozzon statisztika, amely képes szûrés(egyéni, osztály/évfolyam) alapján is dolgozni.
+	K5: Statisztika:
+		A feladatokhoz tartozzon statisztika, amely képes szûrés(egyéni, osztály/évfolyam) alapján is dolgozni.
 
-K6: Jutalomrendszer:
-	A diákok a megfelelõ motiváltság érdekében jutalmazásban részesülnek. A jutalmakat a rendszer tárolja.
+	K6: Jutalomrendszer:
+		A diákok a megfelelõ motiváltság érdekében jutalmazásban részesülnek. A jutalmakat a rendszer tárolja.
 
-K7: Párbaj:
-	A diákok képesek online versenyezni egymás ellen párbaj formában. A feltett kérdésre leghamarabban válaszoló nyer. Opcionális.
+	K7: Párbaj:
+		A diákok képesek online versenyezni egymás ellen párbaj formában. A feltett kérdésre leghamarabban válaszoló nyer. Opcionális.
 
-K8: Virtuális "oklevél":
-	A kurzus befejeztével a felhasználóknak virtuális oklevélben kell részesülnie amit a rendszer autómatikusan generál,
-	az eredmények összesítésével.
+	K8: Virtuális "oklevél":
+		A kurzus befejeztével a felhasználóknak virtuális oklevélben kell részesülnie amit a rendszer autómatikusan generál,
+		az eredmények összesítésével.
 
-K9: Online ranglista:
-	A rendszer az összes diák eredményét rangsorba állítja ami publikusan elérhetõ.
+	K9: Online ranglista:
+		A rendszer az összes diák eredményét rangsorba állítja ami publikusan elérhetõ.
 
-K10: Gyerek design:
-	A játékok és a design kizárólag családbarát elveknek megfelelõ anyagot tartalmazhatnak.
-	Színes, játékos kialakítás web, android és windows felületen is.
+6.2 Nem funkcionális követelmények:
+	K10: Gyerek design:
+		A játékok és a design kizárólag családbarát elveknek megfelelõ anyagot tartalmazhatnak.
+		Színes, játékos kialakítás.
+	K11: Több platform:
+		A rendszer elérhetõ kell hogy legyen web, android és windows felületen is.
+
+6.3 Biztonsági követelmények:
+	K12: Titkosítás:
+		A felhasználók jelszavait csak titkosított formában tárolhatja a rendszer.
+
 
 
 7. Irányított és szabad szöveges riportok szövege
