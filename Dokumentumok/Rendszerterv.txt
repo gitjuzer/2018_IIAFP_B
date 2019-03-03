@@ -1,75 +1,103 @@
-Rendszerterv
+ï»¿Rendszerterv
 
-I. A rendszer célja
+I. A rendszer cÃ©lja
 
-A rendszer célja, hogy a Követelmény és Funkcionális specifikációban meghatározott megrendelõi folyamatokat online színtérbe adoptálja.
-A rendszer szerepet kíván vállalni abban, hogy a fiatal generációk egy modernebb környezetben, naprakész technológiával sajátíthassák el a tananyagot.
-A felépítendõ rendszer a megrendelõvel kötött szerzõdésnek megfelelõen elõször privát elérhetõségû lesz, vagyis Google Play-bõl nem lesz szabadon letölthetõ és használható.
-A megrendelõ nem talált az igényeit teljesen lefedõ szoftvert, ezért ez a rendszer egy speciális igényhalmazt fog kielégíteni.
-A rendszer a 6-12 éves korosztály matematika oktatásával foglalkozik játékos formában. A tartalmat és a design-t ennek megfelelõen kell felépíteni minden, a megrendelõ által igényelt platformon (desktop web, Android).
-A rendszernek meg kell felelnie a megrendelõ által támasztott speciális igényhalmaznak, de ezen túlmenõen elég általánosnak kell lennie ahhoz is, hogy a késõbbiekben megállja a helyét fizetõs Google Play alkalmazásként.
-A rendszernek a játékos oktatáson felül könnyíteni kell a megrendelõ alkalmazottainak adminisztratív terhein is.
-A rendszernek képesnek kell lennie elõkészíteni, levezetni és automatikusan kiértékelni az óra eleji felmérõket. Ezen eredményeket a félév során folyamatosan kell tudnia követnie, és a félév végén egyszerû kiértékelést kell tudnia adni.
-A rendszert a felhasználó oktatóknak tudniuk kell implementálni a mindennapi tanításba, az órák menetébe.
-Biztosítani szükséges külön oktatói és tanulói felületet különbözõ jogosultsági szintekkel.
-A rendszernek tudnia kell követni az egyes tanulók teljesítményét, meg kell tudnia állapítani, hogy hol ütköztek nehézségekbe az egyes diákok, és mindezeket az információkat az oktató rendelkezésére kell bocsátania.
+A rendszer cÃ©lja, hogy a KÃ¶vetelmÃ©ny Ã©s FunkcionÃ¡lis specifikÃ¡ciÃ³ban meghatÃ¡rozott megrendelÃµi folyamatokat online szÃ­ntÃ©rbe adoptÃ¡lja.
+A rendszer szerepet kÃ­vÃ¡n vÃ¡llalni abban, hogy a fiatal generÃ¡ciÃ³k egy modernebb kÃ¶rnyezetben, naprakÃ©sz technolÃ³giÃ¡val sajÃ¡tÃ­thassÃ¡k el a tananyagot.
+A felÃ©pÃ­tendÃµ rendszer a megrendelÃµvel kÃ¶tÃ¶tt szerzÃµdÃ©snek megfelelÃµen elÃµszÃ¶r privÃ¡t elÃ©rhetÃµsÃ©gÃ» lesz, vagyis Google Play-bÃµl nem lesz szabadon letÃ¶lthetÃµ Ã©s hasznÃ¡lhatÃ³.
+A megrendelÃµ nem talÃ¡lt az igÃ©nyeit teljesen lefedÃµ szoftvert, ezÃ©rt ez a rendszer egy speciÃ¡lis igÃ©nyhalmazt fog kielÃ©gÃ­teni.
+A rendszer a 6-12 Ã©ves korosztÃ¡ly matematika oktatÃ¡sÃ¡val foglalkozik jÃ¡tÃ©kos formÃ¡ban. A tartalmat Ã©s a design-t ennek megfelelÃµen kell felÃ©pÃ­teni minden, a megrendelÃµ Ã¡ltal igÃ©nyelt platformon (desktop web, Android).
+A rendszernek meg kell felelnie a megrendelÃµ Ã¡ltal tÃ¡masztott speciÃ¡lis igÃ©nyhalmaznak, de ezen tÃºlmenÃµen elÃ©g Ã¡ltalÃ¡nosnak kell lennie ahhoz is, hogy a kÃ©sÃµbbiekben megÃ¡llja a helyÃ©t fizetÃµs Google Play alkalmazÃ¡skÃ©nt.
+A rendszernek a jÃ¡tÃ©kos oktatÃ¡son felÃ¼l kÃ¶nnyÃ­teni kell a megrendelÃµ alkalmazottainak adminisztratÃ­v terhein is.
+A rendszernek kÃ©pesnek kell lennie elÃµkÃ©szÃ­teni, levezetni Ã©s automatikusan kiÃ©rtÃ©kelni az Ã³ra eleji felmÃ©rÃµket. Ezen eredmÃ©nyeket a fÃ©lÃ©v sorÃ¡n folyamatosan kell tudnia kÃ¶vetnie, Ã©s a fÃ©lÃ©v vÃ©gÃ©n egyszerÃ» kiÃ©rtÃ©kelÃ©st kell tudnia adni.
+A rendszert a felhasznÃ¡lÃ³ oktatÃ³knak tudniuk kell implementÃ¡lni a mindennapi tanÃ­tÃ¡sba, az Ã³rÃ¡k menetÃ©be.
+BiztosÃ­tani szÃ¼ksÃ©ges kÃ¼lÃ¶n oktatÃ³i Ã©s tanulÃ³i felÃ¼letet kÃ¼lÃ¶nbÃ¶zÃµ jogosultsÃ¡gi szintekkel.
+A rendszernek tudnia kell kÃ¶vetni az egyes tanulÃ³k teljesÃ­tmÃ©nyÃ©t, meg kell tudnia Ã¡llapÃ­tani, hogy hol Ã¼tkÃ¶ztek nehÃ©zsÃ©gekbe az egyes diÃ¡kok, Ã©s mindezeket az informÃ¡ciÃ³kat az oktatÃ³ rendelkezÃ©sÃ©re kell bocsÃ¡tania.
 
-A rendszernek nem célja a tanulók csalásra tanítása, az oktató-tanuló kapcsolat roncsolása, a tanulási hatékonyság csökkentése. Nem célja továbbá a tanítási folyamat teljes kiváltása.
+A rendszernek nem cÃ©lja a tanulÃ³k csalÃ¡sra tanÃ­tÃ¡sa, az oktatÃ³-tanulÃ³ kapcsolat roncsolÃ¡sa, a tanulÃ¡si hatÃ©konysÃ¡g csÃ¶kkentÃ©se. Nem cÃ©lja tovÃ¡bbÃ¡ a tanÃ­tÃ¡si folyamat teljes kivÃ¡ltÃ¡sa.
 
 II. Projektterv
 ...
 
-III. Üzleti folyamatok modellje
+III. Ãœzleti folyamatok modellje
 
-Üzleti szereplõk:
-	-Oktató
-	-Tanuló
-Támogatandó üzleti folyamatok
-	-Óra eleji felmérõ
-	-Év közi témazáró dolgozat (opcionáls)
-	-Tanulói eredménykövetés
-	-Félév végi értékelés
+Ãœzleti szereplÃµk:
+	-OktatÃ³
+	-TanulÃ³
+TÃ¡mogatandÃ³ Ã¼zleti folyamatok
+	-Ã“ra eleji felmÃ©rÃµ
+	-Ã‰v kÃ¶zi tÃ©mazÃ¡rÃ³ dolgozat (opcionÃ¡ls)
+	-TanulÃ³i eredmÃ©nykÃ¶vetÃ©s
+	-FÃ©lÃ©v vÃ©gi Ã©rtÃ©kelÃ©s
 
-Üzleti folyamatok leírása (bemenetek, kimenetek, szereplõk)
+Ãœzleti folyamatok leÃ­rÃ¡sa (bemenetek, kimenetek, szereplÃµk)
 
-Óra eleji felmérõ: Szereplõk: Oktató, Tanuló
-A szoftver az oktató által elõre megadott kérdéseket és válaszokat (bemenet) juttatja el a klienseknek (Tanulók eszközei: ennél a folyamatnál általában telefon), akik kiválasztják a helyes vagy helytelen megoldást. Ezeket a rendszer fogadja, eltárolja, majd a felmérõ végén azonnal visszajelzi az elért pontszámot(kimenet). Ezt a pontszámot el is menti az adott felmérõt egyértelmûen beazonosító adatokkal. Ezt minden felmérõnél megteszi, aminek az év végi értékelésnél lesz szerepe.
+Ã“ra eleji felmÃ©rÃµ: SzereplÃµk: OktatÃ³, TanulÃ³
+A szoftver az oktatÃ³ Ã¡ltal elÃµre megadott kÃ©rdÃ©seket Ã©s vÃ¡laszokat (bemenet) juttatja el a klienseknek (TanulÃ³k eszkÃ¶zei: ennÃ©l a folyamatnÃ¡l Ã¡ltalÃ¡ban telefon), akik kivÃ¡lasztjÃ¡k a helyes vagy helytelen megoldÃ¡st. Ezeket a rendszer fogadja, eltÃ¡rolja, majd a felmÃ©rÃµ vÃ©gÃ©n azonnal visszajelzi az elÃ©rt pontszÃ¡mot(kimenet). Ezt a pontszÃ¡mot el is menti az adott felmÃ©rÃµt egyÃ©rtelmÃ»en beazonosÃ­tÃ³ adatokkal. Ezt minden felmÃ©rÃµnÃ©l megteszi, aminek az Ã©v vÃ©gi Ã©rtÃ©kelÃ©snÃ©l lesz szerepe.
 
-Év közi témazáró dolgozat (opcionális): Szereplõk: Oktató, Tanuló
-Csak akkor létezik ez a folyamat, amennyiben az Oktató úgy dönt, hogy felhasználja a szoftvert a témazáró dolgozatnál is. Ebben az esetben az óra eleji felmérõhöz hasonlóan történik minden, kivéve, hogy az elért pontszámról (kimenet) a tanuló nem kap azonnali visszajelzést. Ezt egy külön adatbázisba (valós kimenet) menti a szoftver, ami az Oktató rendelkezésére fog állni, amikor javítani kezdi a dolgozatokat.
+Ã‰v kÃ¶zi tÃ©mazÃ¡rÃ³ dolgozat (opcionÃ¡lis): SzereplÃµk: OktatÃ³, TanulÃ³
+Csak akkor lÃ©tezik ez a folyamat, amennyiben az OktatÃ³ Ãºgy dÃ¶nt, hogy felhasznÃ¡lja a szoftvert a tÃ©mazÃ¡rÃ³ dolgozatnÃ¡l is. Ebben az esetben az Ã³ra eleji felmÃ©rÃµhÃ¶z hasonlÃ³an tÃ¶rtÃ©nik minden, kivÃ©ve, hogy az elÃ©rt pontszÃ¡mrÃ³l (kimenet) a tanulÃ³ nem kap azonnali visszajelzÃ©st. Ezt egy kÃ¼lÃ¶n adatbÃ¡zisba (valÃ³s kimenet) menti a szoftver, ami az OktatÃ³ rendelkezÃ©sÃ©re fog Ã¡llni, amikor javÃ­tani kezdi a dolgozatokat.
 
-Tanulói eredménykövetés: Szereplõk: Tanuló, Oktató
-Az óra eleji felmérõkbõl, opcionálisan házi feladatokból érkezõ pontszámokat (bemenet) a szoftver a félév során folyamatosan nyomon követi. Grafikonon lehetõsége van az Oktatónak követni az egyes tanulók pontszámainak alakulását (kimenet), így következtetéseket tud levonni a tanulók változó teljesítményébõl, célzottabban tud beavatkozni a jobb eredmények elérése érdekében.
+TanulÃ³i eredmÃ©nykÃ¶vetÃ©s: SzereplÃµk: TanulÃ³, OktatÃ³
+Az Ã³ra eleji felmÃ©rÃµkbÃµl, opcionÃ¡lisan hÃ¡zi feladatokbÃ³l Ã©rkezÃµ pontszÃ¡mokat (bemenet) a szoftver a fÃ©lÃ©v sorÃ¡n folyamatosan nyomon kÃ¶veti. Grafikonon lehetÃµsÃ©ge van az OktatÃ³nak kÃ¶vetni az egyes tanulÃ³k pontszÃ¡mainak alakulÃ¡sÃ¡t (kimenet), Ã­gy kÃ¶vetkeztetÃ©seket tud levonni a tanulÃ³k vÃ¡ltozÃ³ teljesÃ­tmÃ©nyÃ©bÃµl, cÃ©lzottabban tud beavatkozni a jobb eredmÃ©nyek elÃ©rÃ©se Ã©rdekÃ©ben.
 
-Félév végi értékelés: Szereplõk: Tanuló, Oktató
-A Tanulói eredménykövetés alapján a szoftver a félév végén összesíti az egyes tanulók pontszámait, differenciált kimutatást készít az oktatónak, ami megmutatja a tanulók közötti különbségeket. Az Oktató ez alapján tudja skálázni a tanulók teljesítményét, ami segítséget nyújt számára a félév végi végleges értékelés kialakításában.
+FÃ©lÃ©v vÃ©gi Ã©rtÃ©kelÃ©s: SzereplÃµk: TanulÃ³, OktatÃ³
+A TanulÃ³i eredmÃ©nykÃ¶vetÃ©s alapjÃ¡n a szoftver a fÃ©lÃ©v vÃ©gÃ©n Ã¶sszesÃ­ti az egyes tanulÃ³k pontszÃ¡mait, differenciÃ¡lt kimutatÃ¡st kÃ©szÃ­t az oktatÃ³nak, ami megmutatja a tanulÃ³k kÃ¶zÃ¶tti kÃ¼lÃ¶nbsÃ©geket. Az OktatÃ³ ez alapjÃ¡n tudja skÃ¡lÃ¡zni a tanulÃ³k teljesÃ­tmÃ©nyÃ©t, ami segÃ­tsÃ©get nyÃºjt szÃ¡mÃ¡ra a fÃ©lÃ©v vÃ©gi vÃ©gleges Ã©rtÃ©kelÃ©s kialakÃ­tÃ¡sÃ¡ban.
 
-IV. Követelmények
+IV. KÃ¶vetelmÃ©nyek
 ...
 
-V. Funkcionális terv
+V. FunkcionÃ¡lis terv
 ...
 
-VI. Fizikai környezet
+VI. Fizikai kÃ¶rnyezet
 ...
 
 VII. Absztrakt domain modell
 ...
 
-VIII. Architekturális terv
+VIII. ArchitekturÃ¡lis terv
 ...
 
-IX. Adatbázisterv
+IX. AdatbÃ¡zisterv
 ...
 
-X. Implementációs terv
+X. ImplementÃ¡ciÃ³s terv
 ...
 
 XI. Tesztterv
 ...
 
-XII. Telepítési terv
-...
+XII. TelepÃ­tÃ©si terv
 
-XIII. Karbantartási terv
-...
+Fizika telepÃ­tÃ©si terv:
+
+- SzÃ¼ksÃ©g van egy adatbÃ¡zis szerverre, amely direktbe csatlakozik LAN-on 
+  a webszerverre, amelyen egy alkalmazÃ¡sszerver fut.
+  
+- A webszerver a lekÃ©rdezÃ©seket REST API segÃ­tsÃ©gÃ©vel vÃ©gzi.
+
+- A webszerverre kÃ¶zvetlenÃ¼l az internetrÅ‘l kapcsolÃ³dnak rÃ¡ a kliensek.
+
+Szoftver telepÃ­tÃ©si terv:
+
+- A szoftver webes felÃ¼letÃ©hez csak egy ajÃ¡nlott bÃ¶ngÃ©szÅ‘ telepÃ­tÃ©se szÃ¼ksÃ©ges
+  (Google Chrome, Firefox, Opera, Safari), kÃ¼lÃ¶n szoftver nem kell hozzÃ¡.
+  
+- A szoftver Android-os telepÃ­tÃ©se Ã©s frissÃ­tÃ©se Google Play segÃ­tsÃ©gÃ©vel
+  tÃ¶rtÃ©nik, tehÃ¡t a felhasznÃ¡lÃ³nak mÃ¡r rendelkeznie kell vele telepÃ­tÃ©s elÅ‘tt.	
+
+XIII. KarbantartÃ¡si terv
+
+A szoftver a jÃ¶vÅ‘ben nem igÃ©nyel nagy karbantartÃ¡sokat, a szÃ¼ksÃ©ges karbantartÃ¡sok az 
+alÃ¡bbi egysÃ©gekbÅ‘l Ã¡llnak:
+
+- Frissebb verziÃ³jÃº bÃ¶ngÃ©szÅ‘kben tÃ¶rtÃ©nÅ‘ tesztelÃ©s, hiba Ã©szlelÃ©se esetÃ©n azoknak javÃ­tÃ¡sa.
+
+- Ãšj verziÃ³jÃº androidon tÃ¶rtÃ©nÅ‘ tesztelÃ©s, hiba Ã©szlelÃ©se esetÃ©n azoknak javÃ­tÃ¡sa.
+
+- A kiszolgÃ¡lÃ³ szerver stÃ¡tuszÃ¡nak ellenÅ‘rzÃ©se, offline szerver esetÃ©n ÃºjraindÃ­tÃ¡s.
+
+- IgÃ©ny esetÃ©n Ãºj funkciÃ³k implementÃ¡lÃ¡sa.
+ 
+- IgÃ©ny esetÃ©n Ãºj feladat tÃ­pusok implementÃ¡lÃ¡sa.

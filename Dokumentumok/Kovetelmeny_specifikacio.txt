@@ -1,171 +1,171 @@
-0. Vezetõi összefoglaló
+ï»¿0. VezetÃµi Ã¶sszefoglalÃ³
 
-A magyar oktatás jelenlegi állapota nem felel meg a XXI. század kihívásainak. Elavult módszerekkel és technológiával oktatnak tanáraink, és tanulnak diákjaink.
-Néhány pozitív példától eltekintve nem használják ki a technológia újdonságai adta lehetõségeket.
-Az általunk fejlesztett rendszer erre a problémára kínál némi orvosságot. Bár a teljes problémát nem tudjuk megoldani, hozzá tudunk tenni, hogy eggyel több lehetõség legyen kihasználni a technológia adta lehetõségeket az oktatásban.
-A következõ fejezetekben felvázoltak célja egy olyan keretrendszer követelményeinek bemutatása, amely segítségével képesek vagyunk online és játékos keretek között átadni a tananyag bizonyos részeit. Kiemelt figyelmet szentelünk a gemifikáció követelményeinek.
-A program célja, hogy a hallgató az iskolában, vagy akár otthon játékos keretek között legyen képes új ismereteket elsajátítani, mindezt úgy, hogy nem nyûgnek, hanem kedvtelésnek éli meg a tanulás folyamatát.
-A rendszer elérhetõ lesz okostelefonos alkalmazásként, és asztali számítógéprõl is.
-Felépítése kétirányú: van egy hallgatói és egy oktatói oldala is. A hallgatók változatos témakörökbõl választhatják ki, hogy éppen mivel akarnak foglalkozni, vagy oktatójuk útmutatása alapján csinálnak feladatokat. Az oktatói oldalon feladatok feltöltésére, javításra, a diákok teljesítményének monitorozására van lehetõség. A rendszer nyomon követi az egyes diákok érdeklõdési preferenciáit is az alapján, hogy kedvtelésbõl milyen feladatokat oldanak meg. Ennek segítségével az oktató képes lehet személyre szabottabb feladatokat is kiadni a diákoknak.
-Összefoglalva a program a gemifikációra és a diák tanulási szabadságára épül, mindeközben pedig igyekszik játékosan, hobbiként ábrázolni a tanulást, és segítséget nyújt a diákoknak, hogy ebbe az irányba változzon az oktatással és tanulással kapcsolatos felfogásuk.
+A magyar oktatÃ¡s jelenlegi Ã¡llapota nem felel meg a XXI. szÃ¡zad kihÃ­vÃ¡sainak. Elavult mÃ³dszerekkel Ã©s technolÃ³giÃ¡val oktatnak tanÃ¡raink, Ã©s tanulnak diÃ¡kjaink.
+NÃ©hÃ¡ny pozitÃ­v pÃ©ldÃ¡tÃ³l eltekintve nem hasznÃ¡ljÃ¡k ki a technolÃ³gia ÃºjdonsÃ¡gai adta lehetÃµsÃ©geket.
+Az Ã¡ltalunk fejlesztett rendszer erre a problÃ©mÃ¡ra kÃ­nÃ¡l nÃ©mi orvossÃ¡got. BÃ¡r a teljes problÃ©mÃ¡t nem tudjuk megoldani, hozzÃ¡ tudunk tenni, hogy eggyel tÃ¶bb lehetÃµsÃ©g legyen kihasznÃ¡lni a technolÃ³gia adta lehetÃµsÃ©geket az oktatÃ¡sban.
+A kÃ¶vetkezÃµ fejezetekben felvÃ¡zoltak cÃ©lja egy olyan keretrendszer kÃ¶vetelmÃ©nyeinek bemutatÃ¡sa, amely segÃ­tsÃ©gÃ©vel kÃ©pesek vagyunk online Ã©s jÃ¡tÃ©kos keretek kÃ¶zÃ¶tt Ã¡tadni a tananyag bizonyos rÃ©szeit. Kiemelt figyelmet szentelÃ¼nk a gemifikÃ¡ciÃ³ kÃ¶vetelmÃ©nyeinek.
+A program cÃ©lja, hogy a hallgatÃ³ az iskolÃ¡ban, vagy akÃ¡r otthon jÃ¡tÃ©kos keretek kÃ¶zÃ¶tt legyen kÃ©pes Ãºj ismereteket elsajÃ¡tÃ­tani, mindezt Ãºgy, hogy nem nyÃ»gnek, hanem kedvtelÃ©snek Ã©li meg a tanulÃ¡s folyamatÃ¡t.
+A rendszer elÃ©rhetÃµ lesz okostelefonos alkalmazÃ¡skÃ©nt, Ã©s asztali szÃ¡mÃ­tÃ³gÃ©prÃµl is.
+FelÃ©pÃ­tÃ©se kÃ©tirÃ¡nyÃº: van egy hallgatÃ³i Ã©s egy oktatÃ³i oldala is. A hallgatÃ³k vÃ¡ltozatos tÃ©makÃ¶rÃ¶kbÃµl vÃ¡laszthatjÃ¡k ki, hogy Ã©ppen mivel akarnak foglalkozni, vagy oktatÃ³juk ÃºtmutatÃ¡sa alapjÃ¡n csinÃ¡lnak feladatokat. Az oktatÃ³i oldalon feladatok feltÃ¶ltÃ©sÃ©re, javÃ­tÃ¡sra, a diÃ¡kok teljesÃ­tmÃ©nyÃ©nek monitorozÃ¡sÃ¡ra van lehetÃµsÃ©g. A rendszer nyomon kÃ¶veti az egyes diÃ¡kok Ã©rdeklÃµdÃ©si preferenciÃ¡it is az alapjÃ¡n, hogy kedvtelÃ©sbÃµl milyen feladatokat oldanak meg. Ennek segÃ­tsÃ©gÃ©vel az oktatÃ³ kÃ©pes lehet szemÃ©lyre szabottabb feladatokat is kiadni a diÃ¡koknak.
+Ã–sszefoglalva a program a gemifikÃ¡ciÃ³ra Ã©s a diÃ¡k tanulÃ¡si szabadsÃ¡gÃ¡ra Ã©pÃ¼l, mindekÃ¶zben pedig igyekszik jÃ¡tÃ©kosan, hobbikÃ©nt Ã¡brÃ¡zolni a tanulÃ¡st, Ã©s segÃ­tsÃ©get nyÃºjt a diÃ¡koknak, hogy ebbe az irÃ¡nyba vÃ¡ltozzon az oktatÃ¡ssal Ã©s tanulÃ¡ssal kapcsolatos felfogÃ¡suk.
 
-1. Jelenlegi helyzet leírása
+1. Jelenlegi helyzet leÃ­rÃ¡sa
 
-Jelenleg az oktatás különbözõ módszerekkel zajlik. A diák ül az iskolapadban a tanár pedig magyaráz. Ez a legelterjedtebb formája az oktatásnak. 
-Azonban ahol az infrastruktúra lehetõve teszi ott nem csak ennyirõl szól az oktatás. Azokon a helyeken a tanár prezentációt készít, videókkal készül az órára, ábrákat mutat be és még sok-sok internetes információt gyûjt össze és mutatja ezt be különféle módszerekkel. 
-Ezzel pedig az oktatás már sokkal sokszínûbb. Ugyanis az elsõ említett esetben sok diák még csak nem is figyel azokra a dolgokra, amelyek idegenek tõlük. 
-Az IKT megjelenésével ez azonban kissé háttérbe szorult, ugyanis, ha a tanár egy érdekes ábrát mutat be, egy érdekes videót, vagy éppen a prezentációját izgalmasan készíti el, 
-akkor a diák már az eddig idegennek számító dolgokat is figyelembe veszi és elkezd érdeklõni iránta, legalább alapszinten. 
-Azonban az elõzõekben felsoroltak mellett méginkább sokszínûbbé és érdekesebbé tennék az oktatást különbözõ tanulást segítõ prgramok létrehozása. 
-Ezek a programok lehetnek játékosak vagy akár komolyabbak is. A lényege, hogy a diák a témakörhöz kapcsolodó ismereteket sajátítsa el miközben használja. 
-Ezek a programok lehetnek olyanok is, hogy akár tudat alatt adja át az információt a diáknak. 
-Viszont az ilyen programok megjelenésével teljesen új megvilágítást kapna az oktatás. 
-(És az oktatás alatt érthetõ az oktatás az iskolapadban és oktatás az iskolán kívül is.) Talán ezekkel a módszerekkel sokkal érdeklõdõbbé lehetne tenni a diákokat, 
-amivel ösztönözhetõek lennének a tanulásra, még a tõlük idegen dolgok alapszintû elsajátítására is. 
-Ha ez megtörténne, akkor a mai oktatási rendszer szereplõi a késõbbiekben sokkal nagyobb ismeretkörrel rendelkeznének illetve egy-egy diák sokkal mûveltebb és tanultabb lenne.
+Jelenleg az oktatÃ¡s kÃ¼lÃ¶nbÃ¶zÃµ mÃ³dszerekkel zajlik. A diÃ¡k Ã¼l az iskolapadban a tanÃ¡r pedig magyarÃ¡z. Ez a legelterjedtebb formÃ¡ja az oktatÃ¡snak. 
+Azonban ahol az infrastruktÃºra lehetÃµve teszi ott nem csak ennyirÃµl szÃ³l az oktatÃ¡s. Azokon a helyeken a tanÃ¡r prezentÃ¡ciÃ³t kÃ©szÃ­t, videÃ³kkal kÃ©szÃ¼l az Ã³rÃ¡ra, Ã¡brÃ¡kat mutat be Ã©s mÃ©g sok-sok internetes informÃ¡ciÃ³t gyÃ»jt Ã¶ssze Ã©s mutatja ezt be kÃ¼lÃ¶nfÃ©le mÃ³dszerekkel. 
+Ezzel pedig az oktatÃ¡s mÃ¡r sokkal sokszÃ­nÃ»bb. Ugyanis az elsÃµ emlÃ­tett esetben sok diÃ¡k mÃ©g csak nem is figyel azokra a dolgokra, amelyek idegenek tÃµlÃ¼k. 
+Az IKT megjelenÃ©sÃ©vel ez azonban kissÃ© hÃ¡ttÃ©rbe szorult, ugyanis, ha a tanÃ¡r egy Ã©rdekes Ã¡brÃ¡t mutat be, egy Ã©rdekes videÃ³t, vagy Ã©ppen a prezentÃ¡ciÃ³jÃ¡t izgalmasan kÃ©szÃ­ti el, 
+akkor a diÃ¡k mÃ¡r az eddig idegennek szÃ¡mÃ­tÃ³ dolgokat is figyelembe veszi Ã©s elkezd Ã©rdeklÃµni irÃ¡nta, legalÃ¡bb alapszinten. 
+Azonban az elÃµzÃµekben felsoroltak mellett mÃ©ginkÃ¡bb sokszÃ­nÃ»bbÃ© Ã©s Ã©rdekesebbÃ© tennÃ©k az oktatÃ¡st kÃ¼lÃ¶nbÃ¶zÃµ tanulÃ¡st segÃ­tÃµ prgramok lÃ©trehozÃ¡sa. 
+Ezek a programok lehetnek jÃ¡tÃ©kosak vagy akÃ¡r komolyabbak is. A lÃ©nyege, hogy a diÃ¡k a tÃ©makÃ¶rhÃ¶z kapcsolodÃ³ ismereteket sajÃ¡tÃ­tsa el mikÃ¶zben hasznÃ¡lja. 
+Ezek a programok lehetnek olyanok is, hogy akÃ¡r tudat alatt adja Ã¡t az informÃ¡ciÃ³t a diÃ¡knak. 
+Viszont az ilyen programok megjelenÃ©sÃ©vel teljesen Ãºj megvilÃ¡gÃ­tÃ¡st kapna az oktatÃ¡s. 
+(Ã‰s az oktatÃ¡s alatt Ã©rthetÃµ az oktatÃ¡s az iskolapadban Ã©s oktatÃ¡s az iskolÃ¡n kÃ­vÃ¼l is.) TalÃ¡n ezekkel a mÃ³dszerekkel sokkal Ã©rdeklÃµdÃµbbÃ© lehetne tenni a diÃ¡kokat, 
+amivel Ã¶sztÃ¶nÃ¶zhetÃµek lennÃ©nek a tanulÃ¡sra, mÃ©g a tÃµlÃ¼k idegen dolgok alapszintÃ» elsajÃ¡tÃ­tÃ¡sÃ¡ra is. 
+Ha ez megtÃ¶rtÃ©nne, akkor a mai oktatÃ¡si rendszer szereplÃµi a kÃ©sÃµbbiekben sokkal nagyobb ismeretkÃ¶rrel rendelkeznÃ©nek illetve egy-egy diÃ¡k sokkal mÃ»veltebb Ã©s tanultabb lenne.
 
-2. Vágyálom rendszer
+2. VÃ¡gyÃ¡lom rendszer
 
-A végcél egy olyan mûködõ keretrendszer, amely segítségével a megrendelõ képes néhány, általa megjelölt oktatási folyamatot online és játékos keretek között átadni a tanulóinak.
-Amennyiben sikeresnek tekinthetõ a project, késõbb elképzelhetõ, hogy további tananyagokat is fel kell vinni a rendszerbe. (Erre a project késõbbi változataiban kerülhet sor.)
-A végsõ rendszerben a felhasználó a tanulás legszimpatikusabb módját választhatja ki. Erre a játékok sokszínûségének és 
-változatosságának köszönhetõen van lehetõsége. Azonban a projekt elsõ változatában még nem az összes játéktípust építenénk be, ezt a késõbbiekben pótolnánk patch-ek formájában.
-Az elsõ verziónak legalább két egyszerû játékot kell tartalmaznia, melyek alatt egy feleletválasztós kérdésekre válaszolós és egy memóriajátékot értünk.
-A megrendelõ profilja az elemi matematika oktatása, célcsoportja a 6-12 éves korosztály. Emiatt a feladatok tartalmát a megrendelõ adja meg.
-A programnak Android rendszerrel rendelkezõ okostelefonnal és asztali számítógépen vagy laptopon indított egyszerû böngészõvel is elérhetõnek kell lennie.
-Korunk az eddiginél sokkalta gyorsabban változik, gyakorlatilag naponta jelennek meg az újdonságok. Nincs sem idõ, sem energia, sem anyagi forrás arra, hogy az emberi tudást papír alapon halmozzuk tovább, ahogy tettük ezt évszazadokig.
-A rendszer szerepet kíván vállalni abban, hogy a fiatal generációk egy modernebb környezetben, naprakész technológiával sajátíthassák el a tananyagot.
-A rendszer oktatáshoz való hozzáállásának kulcsfogalma a gemifikáció. Ennek megfelelõen olyan kreatív és innovatív oktatási módszereket implementálunk a rendszerbe, melyek támogatják a gemifikációt. A legjobb gyakorlatokat, amelyeket használnak a való életben, implementálni fogjuk a programba.
-Az a célunk, hogy amikor a diák elindítja a programot, akkor ne negatív érzéseket társítson a tanuláshoz, hanem éppen az ellenkezõjét. Az online elérésnek köszönhetõen ezt megteheti tanóra keretében, és otthoni idõtöltés során is. Hangsúlyozni szeretnénk, hogy itt szándékosan kerüljük az "otthoni tanulás" kifejezést, ugyanis az a célunk, hogy a diák ne kötelezettséget, hanem kedvtelést lásson a tanulásban. Ideáis esetben leül a nappaliban egy fotelbe egy bögre kakaóval és kedvtelésbõl használja az alkalmazást.
+A vÃ©gcÃ©l egy olyan mÃ»kÃ¶dÃµ keretrendszer, amely segÃ­tsÃ©gÃ©vel a megrendelÃµ kÃ©pes nÃ©hÃ¡ny, Ã¡ltala megjelÃ¶lt oktatÃ¡si folyamatot online Ã©s jÃ¡tÃ©kos keretek kÃ¶zÃ¶tt Ã¡tadni a tanulÃ³inak.
+Amennyiben sikeresnek tekinthetÃµ a project, kÃ©sÃµbb elkÃ©pzelhetÃµ, hogy tovÃ¡bbi tananyagokat is fel kell vinni a rendszerbe. (Erre a project kÃ©sÃµbbi vÃ¡ltozataiban kerÃ¼lhet sor.)
+A vÃ©gsÃµ rendszerben a felhasznÃ¡lÃ³ a tanulÃ¡s legszimpatikusabb mÃ³djÃ¡t vÃ¡laszthatja ki. Erre a jÃ¡tÃ©kok sokszÃ­nÃ»sÃ©gÃ©nek Ã©s 
+vÃ¡ltozatossÃ¡gÃ¡nak kÃ¶szÃ¶nhetÃµen van lehetÃµsÃ©ge. Azonban a projekt elsÃµ vÃ¡ltozatÃ¡ban mÃ©g nem az Ã¶sszes jÃ¡tÃ©ktÃ­pust Ã©pÃ­tenÃ©nk be, ezt a kÃ©sÃµbbiekben pÃ³tolnÃ¡nk patch-ek formÃ¡jÃ¡ban.
+Az elsÃµ verziÃ³nak legalÃ¡bb kÃ©t egyszerÃ» jÃ¡tÃ©kot kell tartalmaznia, melyek alatt egy feleletvÃ¡lasztÃ³s kÃ©rdÃ©sekre vÃ¡laszolÃ³s Ã©s egy memÃ³riajÃ¡tÃ©kot Ã©rtÃ¼nk.
+A megrendelÃµ profilja az elemi matematika oktatÃ¡sa, cÃ©lcsoportja a 6-12 Ã©ves korosztÃ¡ly. Emiatt a feladatok tartalmÃ¡t a megrendelÃµ adja meg.
+A programnak Android rendszerrel rendelkezÃµ okostelefonnal Ã©s asztali szÃ¡mÃ­tÃ³gÃ©pen vagy laptopon indÃ­tott egyszerÃ» bÃ¶ngÃ©szÃµvel is elÃ©rhetÃµnek kell lennie.
+Korunk az eddiginÃ©l sokkalta gyorsabban vÃ¡ltozik, gyakorlatilag naponta jelennek meg az ÃºjdonsÃ¡gok. Nincs sem idÃµ, sem energia, sem anyagi forrÃ¡s arra, hogy az emberi tudÃ¡st papÃ­r alapon halmozzuk tovÃ¡bb, ahogy tettÃ¼k ezt Ã©vszazadokig.
+A rendszer szerepet kÃ­vÃ¡n vÃ¡llalni abban, hogy a fiatal generÃ¡ciÃ³k egy modernebb kÃ¶rnyezetben, naprakÃ©sz technolÃ³giÃ¡val sajÃ¡tÃ­thassÃ¡k el a tananyagot.
+A rendszer oktatÃ¡shoz valÃ³ hozzÃ¡Ã¡llÃ¡sÃ¡nak kulcsfogalma a gemifikÃ¡ciÃ³. Ennek megfelelÃµen olyan kreatÃ­v Ã©s innovatÃ­v oktatÃ¡si mÃ³dszereket implementÃ¡lunk a rendszerbe, melyek tÃ¡mogatjÃ¡k a gemifikÃ¡ciÃ³t. A legjobb gyakorlatokat, amelyeket hasznÃ¡lnak a valÃ³ Ã©letben, implementÃ¡lni fogjuk a programba.
+Az a cÃ©lunk, hogy amikor a diÃ¡k elindÃ­tja a programot, akkor ne negatÃ­v Ã©rzÃ©seket tÃ¡rsÃ­tson a tanulÃ¡shoz, hanem Ã©ppen az ellenkezÃµjÃ©t. Az online elÃ©rÃ©snek kÃ¶szÃ¶nhetÃµen ezt megteheti tanÃ³ra keretÃ©ben, Ã©s otthoni idÃµtÃ¶ltÃ©s sorÃ¡n is. HangsÃºlyozni szeretnÃ©nk, hogy itt szÃ¡ndÃ©kosan kerÃ¼ljÃ¼k az "otthoni tanulÃ¡s" kifejezÃ©st, ugyanis az a cÃ©lunk, hogy a diÃ¡k ne kÃ¶telezettsÃ©get, hanem kedvtelÃ©st lÃ¡sson a tanulÃ¡sban. IdeÃ¡is esetben leÃ¼l a nappaliban egy fotelbe egy bÃ¶gre kakaÃ³val Ã©s kedvtelÃ©sbÃµl hasznÃ¡lja az alkalmazÃ¡st.
 
-3. Jogi háttér
+3. Jogi hÃ¡ttÃ©r
 
-A rendszert érintõ oktatási-nevelési jellegû jogszabályok listája:
-	2011. évi CXC. törvény a nemzeti köznevelésrõl
-	229/2012.(VIII.28). Korm. rendelet a nemzeti köznevelésrõl szóló törvény végrehajtásáról
-	13/2018.(VI.14.) EMMI rendelet a 2018/2019. tanév rendjérõl
-	xx/2019.(xx.xx.) EMMI rendelet a 2019/2020. tanév rendjérõl
-	51/2012.(XII.21.) EMMI rendelet a kerettantervek kiadásának és jóváhagyásának rendjérõl,
-	illetve ennek következõ mellékletei:
-		1. melléklet - Kerettanterv az általános iskola 1-4. évfolyamára
-		2. melléklet - Kerettanterv az általános iskola 5-8. évfolyamára
-		3. melléklet - Kerettanterv a gimnáziumok 9-12. évfolyama számára
-		4. melléklet - Kerettanterv a gimnáziumok 7-12. évfolyama számára
-		5. melléklet - Kerettanterv a gimnáziumok 5-12. évfolyama számára
-		7. melléklet - A Köznevelési Hídprogram kerettanterve
-		8. melléklet - Kerettanterv a szakiskolák számára
-		10. melléklet - A nemzetiségi nevelés-oktatás kerettantervei
-		11. melléklet - Kerettantervek a sajátos nevelési igényû tanulókat oktató nevelési-oktatási intézmények számára
-		14. melléklet - Kerettanterv a szakgimnáziumok 9-12. évfolyama számára
-		15. melléklet - Kerettanterv a szakközépiskolák 9-13. évfolyama számára
+A rendszert Ã©rintÃµ oktatÃ¡si-nevelÃ©si jellegÃ» jogszabÃ¡lyok listÃ¡ja:
+	2011. Ã©vi CXC. tÃ¶rvÃ©ny a nemzeti kÃ¶znevelÃ©srÃµl
+	229/2012.(VIII.28). Korm. rendelet a nemzeti kÃ¶znevelÃ©srÃµl szÃ³lÃ³ tÃ¶rvÃ©ny vÃ©grehajtÃ¡sÃ¡rÃ³l
+	13/2018.(VI.14.) EMMI rendelet a 2018/2019. tanÃ©v rendjÃ©rÃµl
+	xx/2019.(xx.xx.) EMMI rendelet a 2019/2020. tanÃ©v rendjÃ©rÃµl
+	51/2012.(XII.21.) EMMI rendelet a kerettantervek kiadÃ¡sÃ¡nak Ã©s jÃ³vÃ¡hagyÃ¡sÃ¡nak rendjÃ©rÃµl,
+	illetve ennek kÃ¶vetkezÃµ mellÃ©kletei:
+		1. mellÃ©klet - Kerettanterv az Ã¡ltalÃ¡nos iskola 1-4. Ã©vfolyamÃ¡ra
+		2. mellÃ©klet - Kerettanterv az Ã¡ltalÃ¡nos iskola 5-8. Ã©vfolyamÃ¡ra
+		3. mellÃ©klet - Kerettanterv a gimnÃ¡ziumok 9-12. Ã©vfolyama szÃ¡mÃ¡ra
+		4. mellÃ©klet - Kerettanterv a gimnÃ¡ziumok 7-12. Ã©vfolyama szÃ¡mÃ¡ra
+		5. mellÃ©klet - Kerettanterv a gimnÃ¡ziumok 5-12. Ã©vfolyama szÃ¡mÃ¡ra
+		7. mellÃ©klet - A KÃ¶znevelÃ©si HÃ­dprogram kerettanterve
+		8. mellÃ©klet - Kerettanterv a szakiskolÃ¡k szÃ¡mÃ¡ra
+		10. mellÃ©klet - A nemzetisÃ©gi nevelÃ©s-oktatÃ¡s kerettantervei
+		11. mellÃ©klet - Kerettantervek a sajÃ¡tos nevelÃ©si igÃ©nyÃ» tanulÃ³kat oktatÃ³ nevelÃ©si-oktatÃ¡si intÃ©zmÃ©nyek szÃ¡mÃ¡ra
+		14. mellÃ©klet - Kerettanterv a szakgimnÃ¡ziumok 9-12. Ã©vfolyama szÃ¡mÃ¡ra
+		15. mellÃ©klet - Kerettanterv a szakkÃ¶zÃ©piskolÃ¡k 9-13. Ã©vfolyama szÃ¡mÃ¡ra
 
-A rendszert érintõ belsõ szabályzatok listája:
-	A megrendelõi SZMSZ
-	A megrendelõ saját hatáskörben meghozott speciális oktatási-nevelési jellegû szabályai
+A rendszert Ã©rintÃµ belsÃµ szabÃ¡lyzatok listÃ¡ja:
+	A megrendelÃµi SZMSZ
+	A megrendelÃµ sajÃ¡t hatÃ¡skÃ¶rben meghozott speciÃ¡lis oktatÃ¡si-nevelÃ©si jellegÃ» szabÃ¡lyai
 
-A rendszert érintõ adatvédelmi jellegû jogszabályok listája:
-	2011. évi CXII. törvény az információs önrendelkezési jogról és az információszabadságról
-	Az Európai Parlament és a Tanács (EU) 2016/679 rendelete (2016. április 	27.) a természetes személyeknek a személyes adatok kezelése tekintetében 	történõ védelmérõl és az ilyen adatok szabad áramlásáról, valamint a 95/46/EK irányelv hatályon kívül helyezésérõl (általános adatvédelmi rendelet)
+A rendszert Ã©rintÃµ adatvÃ©delmi jellegÃ» jogszabÃ¡lyok listÃ¡ja:
+	2011. Ã©vi CXII. tÃ¶rvÃ©ny az informÃ¡ciÃ³s Ã¶nrendelkezÃ©si jogrÃ³l Ã©s az informÃ¡ciÃ³szabadsÃ¡grÃ³l
+	Az EurÃ³pai Parlament Ã©s a TanÃ¡cs (EU) 2016/679 rendelete (2016. Ã¡prilis 	27.) a termÃ©szetes szemÃ©lyeknek a szemÃ©lyes adatok kezelÃ©se tekintetÃ©ben 	tÃ¶rtÃ©nÃµ vÃ©delmÃ©rÃµl Ã©s az ilyen adatok szabad Ã¡ramlÃ¡sÃ¡rÃ³l, valamint a 95/46/EK irÃ¡nyelv hatÃ¡lyon kÃ­vÃ¼l helyezÃ©sÃ©rÃµl (Ã¡ltalÃ¡nos adatvÃ©delmi rendelet)
 
 
-4. Jelenlegi üzleti folyamatok modellje
+4. Jelenlegi Ã¼zleti folyamatok modellje
 
-	1. Egy intézmény megkeresi a cégüket, mely cég célja az intézmény diákjainak matematikai tudásának bovítése, felzárkóztatása.
-	2. Kiküldenek egy munkatársat egyeztetni az ügyféllel.
-	3. Az ügyfél igényei szerint napi/heti/havi idobeosztással, illetve a munkatársaik beosztható idejevel számolva kialakítanak az intézmény számára egy munkarendet a munkatársuknak, akit az intézményhez rendeltek.
-	4. A munkatársuk megkezdi a munkarendjét, intézménytol illetve beosztható idovel függoen.
-	5. Az idoszak alatt a gyerekeknek órákat tart a munkatársuk, iskolaidon belül-, illetve igény szerint kívül.
-	6. Az idoszak végén számonkérés következik, amelybol egyértelmuen kiderül, hogy egyes diákok mennyire sajátították el a tananyagot, illetve a tananyag mely részen vannak problémái az egyes gyermekeknek.
-	7. Miután a számonkérés lezajlott, a munkatársat beosztják egy másik intézményhez, és kezdodik a folyamat elorol. 
+	1. Egy intÃ©zmÃ©ny megkeresi a cÃ©gÃ¼ket, mely cÃ©g cÃ©lja az intÃ©zmÃ©ny diÃ¡kjainak matematikai tudÃ¡sÃ¡nak bovÃ­tÃ©se, felzÃ¡rkÃ³ztatÃ¡sa.
+	2. KikÃ¼ldenek egy munkatÃ¡rsat egyeztetni az Ã¼gyfÃ©llel.
+	3. Az Ã¼gyfÃ©l igÃ©nyei szerint napi/heti/havi idobeosztÃ¡ssal, illetve a munkatÃ¡rsaik beoszthatÃ³ idejevel szÃ¡molva kialakÃ­tanak az intÃ©zmÃ©ny szÃ¡mÃ¡ra egy munkarendet a munkatÃ¡rsuknak, akit az intÃ©zmÃ©nyhez rendeltek.
+	4. A munkatÃ¡rsuk megkezdi a munkarendjÃ©t, intÃ©zmÃ©nytol illetve beoszthatÃ³ idovel fÃ¼ggoen.
+	5. Az idoszak alatt a gyerekeknek Ã³rÃ¡kat tart a munkatÃ¡rsuk, iskolaidon belÃ¼l-, illetve igÃ©ny szerint kÃ­vÃ¼l.
+	6. Az idoszak vÃ©gÃ©n szÃ¡monkÃ©rÃ©s kÃ¶vetkezik, amelybol egyÃ©rtelmuen kiderÃ¼l, hogy egyes diÃ¡kok mennyire sajÃ¡tÃ­tottÃ¡k el a tananyagot, illetve a tananyag mely rÃ©szen vannak problÃ©mÃ¡i az egyes gyermekeknek.
+	7. MiutÃ¡n a szÃ¡monkÃ©rÃ©s lezajlott, a munkatÃ¡rsat beosztjÃ¡k egy mÃ¡sik intÃ©zmÃ©nyhez, Ã©s kezdodik a folyamat elorol. 
 
-5. Igényelt üzleti folyamatok modellje
+5. IgÃ©nyelt Ã¼zleti folyamatok modellje
 	
-	1. Egy olyan szoftver fejlesztése amely segíti a diákok matematikai tudásának fejlõdését/szinten tartását.
-	2. Kiküldenek egy munkatársat egyeztetni az ügyféllel.
-	3. Az ügyfél igényeit a tanulás-segítõ szoftver elõnyeit kihasználva alakítjuk, ezáltal a munkatársak idõbeosztása sokkal rugalmasabbá válik.
-	4. A munkatárs munkába áll, amely során cégünk szoftverjének használatát(funkcióit, lehetõségeit) fogja bemutatni.
-	5. A tanulási/tanítási idõszak alatt munkatársunk csak az intézményen belül tart órákat. Az otthoni(intézményen kívüli) tanítást felváltja
-		cégünk szoftverének használata.
-	6. A tananyagot a szoftverben több modulra osztjuk, melyek végén modulzáró teszteket töltenek ki a diákok. A szoftver generál egy jegyet ezen tesztek
-		eredménye alapján, melyet a tanár felülírhat, ha szeretne(pl.: órai aktivitás alapján).
-	7. Egy munkatárs egy idõben képes több intézmény igényeit(amennyiben nincs speciális igény) kielégíteni a szoftver elõnyeit, rugalmasságát kihasználva.
+	1. Egy olyan szoftver fejlesztÃ©se amely segÃ­ti a diÃ¡kok matematikai tudÃ¡sÃ¡nak fejlÃµdÃ©sÃ©t/szinten tartÃ¡sÃ¡t.
+	2. KikÃ¼ldenek egy munkatÃ¡rsat egyeztetni az Ã¼gyfÃ©llel.
+	3. Az Ã¼gyfÃ©l igÃ©nyeit a tanulÃ¡s-segÃ­tÃµ szoftver elÃµnyeit kihasznÃ¡lva alakÃ­tjuk, ezÃ¡ltal a munkatÃ¡rsak idÃµbeosztÃ¡sa sokkal rugalmasabbÃ¡ vÃ¡lik.
+	4. A munkatÃ¡rs munkÃ¡ba Ã¡ll, amely sorÃ¡n cÃ©gÃ¼nk szoftverjÃ©nek hasznÃ¡latÃ¡t(funkciÃ³it, lehetÃµsÃ©geit) fogja bemutatni.
+	5. A tanulÃ¡si/tanÃ­tÃ¡si idÃµszak alatt munkatÃ¡rsunk csak az intÃ©zmÃ©nyen belÃ¼l tart Ã³rÃ¡kat. Az otthoni(intÃ©zmÃ©nyen kÃ­vÃ¼li) tanÃ­tÃ¡st felvÃ¡ltja
+		cÃ©gÃ¼nk szoftverÃ©nek hasznÃ¡lata.
+	6. A tananyagot a szoftverben tÃ¶bb modulra osztjuk, melyek vÃ©gÃ©n modulzÃ¡rÃ³ teszteket tÃ¶ltenek ki a diÃ¡kok. A szoftver generÃ¡l egy jegyet ezen tesztek
+		eredmÃ©nye alapjÃ¡n, melyet a tanÃ¡r felÃ¼lÃ­rhat, ha szeretne(pl.: Ã³rai aktivitÃ¡s alapjÃ¡n).
+	7. Egy munkatÃ¡rs egy idÃµben kÃ©pes tÃ¶bb intÃ©zmÃ©ny igÃ©nyeit(amennyiben nincs speciÃ¡lis igÃ©ny) kielÃ©gÃ­teni a szoftver elÃµnyeit, rugalmassÃ¡gÃ¡t kihasznÃ¡lva.
 
-6. Követelmény lista
+6. KÃ¶vetelmÃ©ny lista
 
-6.1 Funkcionális követelmények:
-	K1: Memóriajáték:
-		A programnak tartalmaznia kell egy memóriajátékot. A memóriajátéknak három nehézségi szintje van: Könnyû, közepes és nehéz.
-		Különbség nehézségi szintek között a kártyák mennyiségében mutatkozik meg. Értelemszerûen minél nehezebb, annál több kártya van ugyanannyi idõre.
+6.1 FunkcionÃ¡lis kÃ¶vetelmÃ©nyek:
+	K1: MemÃ³riajÃ¡tÃ©k:
+		A programnak tartalmaznia kell egy memÃ³riajÃ¡tÃ©kot. A memÃ³riajÃ¡tÃ©knak hÃ¡rom nehÃ©zsÃ©gi szintje van: KÃ¶nnyÃ», kÃ¶zepes Ã©s nehÃ©z.
+		KÃ¼lÃ¶nbsÃ©g nehÃ©zsÃ©gi szintek kÃ¶zÃ¶tt a kÃ¡rtyÃ¡k mennyisÃ©gÃ©ben mutatkozik meg. Ã‰rtelemszerÃ»en minÃ©l nehezebb, annÃ¡l tÃ¶bb kÃ¡rtya van ugyanannyi idÃµre.
 
-	K2: Találd meg a párját:
-		A program másik alapjátéka a párkeresõ játék. A gyerekeknek a fogalmakhoz tartozó definíciót vagy az egyenlethez tartozó eredményt kell
-		párosítanijuk a defínicókkal, illetve egyenletekkel.
+	K2: TalÃ¡ld meg a pÃ¡rjÃ¡t:
+		A program mÃ¡sik alapjÃ¡tÃ©ka a pÃ¡rkeresÃµ jÃ¡tÃ©k. A gyerekeknek a fogalmakhoz tartozÃ³ definÃ­ciÃ³t vagy az egyenlethez tartozÃ³ eredmÃ©nyt kell
+		pÃ¡rosÃ­tanijuk a defÃ­nicÃ³kkal, illetve egyenletekkel.
 
-	K3: Jogkörök:
-		A program tartalmazza az oktatók, illetve a diákok jogkörét is. Az oktatók képesek új feladatokat létrehozni a játékokhoz.
+	K3: JogkÃ¶rÃ¶k:
+		A program tartalmazza az oktatÃ³k, illetve a diÃ¡kok jogkÃ¶rÃ©t is. Az oktatÃ³k kÃ©pesek Ãºj feladatokat lÃ©trehozni a jÃ¡tÃ©kokhoz.
 
-	K4: Oktatók és diákok jogkörei:
-		Az oktatók jogai:
-			Az online tananyak szerkeztése, gyakorló feladatok tartalmának teljeskörû szerkeztése, új feladatok hozzáadása melyeknek kérdéseit, megoldásait õk definiálják.
-		A diákok jogai:
-			Tananyagok megtekintése és gyakorló feladatok megoldása akár többször is.
+	K4: OktatÃ³k Ã©s diÃ¡kok jogkÃ¶rei:
+		Az oktatÃ³k jogai:
+			Az online tananyak szerkeztÃ©se, gyakorlÃ³ feladatok tartalmÃ¡nak teljeskÃ¶rÃ» szerkeztÃ©se, Ãºj feladatok hozzÃ¡adÃ¡sa melyeknek kÃ©rdÃ©seit, megoldÃ¡sait Ãµk definiÃ¡ljÃ¡k.
+		A diÃ¡kok jogai:
+			Tananyagok megtekintÃ©se Ã©s gyakorlÃ³ feladatok megoldÃ¡sa akÃ¡r tÃ¶bbszÃ¶r is.
 
 	K5: Statisztika:
-		A feladatokhoz tartozzon statisztika, amely képes szûrés(egyéni, osztály/évfolyam) alapján is dolgozni.
+		A feladatokhoz tartozzon statisztika, amely kÃ©pes szÃ»rÃ©s(egyÃ©ni, osztÃ¡ly/Ã©vfolyam) alapjÃ¡n is dolgozni.
 
 	K6: Jutalomrendszer:
-		A diákok a megfelelõ motiváltság érdekében jutalmazásban részesülnek. A jutalmakat a rendszer tárolja.
+		A diÃ¡kok a megfelelÃµ motivÃ¡ltsÃ¡g Ã©rdekÃ©ben jutalmazÃ¡sban rÃ©szesÃ¼lnek. A jutalmakat a rendszer tÃ¡rolja.
 
-	K7: Párbaj:
-		A diákok képesek online versenyezni egymás ellen párbaj formában. A feltett kérdésre leghamarabban válaszoló nyer. Opcionális.
+	K7: PÃ¡rbaj:
+		A diÃ¡kok kÃ©pesek online versenyezni egymÃ¡s ellen pÃ¡rbaj formÃ¡ban. A feltett kÃ©rdÃ©sre leghamarabban vÃ¡laszolÃ³ nyer. OpcionÃ¡lis.
 
-	K8: Virtuális "oklevél":
-		A kurzus befejeztével a felhasználóknak virtuális oklevélben kell részesülnie amit a rendszer autómatikusan generál,
-		az eredmények összesítésével.
+	K8: VirtuÃ¡lis "oklevÃ©l":
+		A kurzus befejeztÃ©vel a felhasznÃ¡lÃ³knak virtuÃ¡lis oklevÃ©lben kell rÃ©szesÃ¼lnie amit a rendszer autÃ³matikusan generÃ¡l,
+		az eredmÃ©nyek Ã¶sszesÃ­tÃ©sÃ©vel.
 
 	K9: Online ranglista:
-		A rendszer az összes diák eredményét rangsorba állítja ami publikusan elérhetõ.
+		A rendszer az Ã¶sszes diÃ¡k eredmÃ©nyÃ©t rangsorba Ã¡llÃ­tja ami publikusan elÃ©rhetÃµ.
 
-6.2 Nem funkcionális követelmények:
+6.2 Nem funkcionÃ¡lis kÃ¶vetelmÃ©nyek:
 	K10: Gyerek design:
-		A játékok és a design kizárólag családbarát elveknek megfelelõ anyagot tartalmazhatnak.
-		Színes, játékos kialakítás.
-	K11: Több platform:
-		A rendszer elérhetõ kell hogy legyen web, android és windows felületen is.
+		A jÃ¡tÃ©kok Ã©s a design kizÃ¡rÃ³lag csalÃ¡dbarÃ¡t elveknek megfelelÃµ anyagot tartalmazhatnak.
+		SzÃ­nes, jÃ¡tÃ©kos kialakÃ­tÃ¡s.
+	K11: TÃ¶bb platform:
+		A rendszer elÃ©rhetÃµ kell hogy legyen web, android Ã©s windows felÃ¼leten is.
 
-6.3 Biztonsági követelmények:
-	K12: Titkosítás:
-		A felhasználók jelszavait csak titkosított formában tárolhatja a rendszer.
+6.3 BiztonsÃ¡gi kÃ¶vetelmÃ©nyek:
+	K12: TitkosÃ­tÃ¡s:
+		A felhasznÃ¡lÃ³k jelszavait csak titkosÃ­tott formÃ¡ban tÃ¡rolhatja a rendszer.
 
 
 
-7. Irányított és szabad szöveges riportok szövege
+7. IrÃ¡nyÃ­tott Ã©s szabad szÃ¶veges riportok szÃ¶vege
 
-Szabad szöveges riport szövege
-Kivitelezõ: Legyen szíves írja le nekem, hogy pontosan mire is van szükségük!
-Megrendelõ: Tehát mi egy olyan programot szeretnénk, amivel a tananyagaink egy része az interneten is elérhetõ. Gondolok itt az okostelefonokra is persze, nem csak a számítógépekre.
-Kivitelezõ: Mivel foglalkozik a cégük konkrétan?
-Megrendelõ: Elemi matematikai ismereteket oktatunk a 6-12 éves korosztálynak. Ügyfeleink között ezért általános iskolák, egyházi iskolák, de magánintézmények is szerepelnek. Eddig az volt a bevett szokás, hogy óraadóként voltunk jelen ezekben az intézményekben, mint ún. harmadik fél, de az utóbbi idõben annyira megnõtt az igény a szolgáltatásaink iránt, hogy kénytelenek vagyunk más, a hatékonyságunkat növelõ irányokba is tapogatózni. Így jött szóba a vezetésben az, hogy erre az online irány lenne a legmegfelelõbb. Ha sikerülne egy vállalható online oktatási rendszert összeraknunk, akkor azzal csökkenteni tudnánk a kollégák vállát nyomó terheket.
-Kivitelezõ: Van már pontos elképzelésük arról, hogy mit akarnak, vagy csak az ötlet merült fel, hogy "de jó lenne, ha lenne egy ilyenünk"?
-Megrendelõ: Õõõõõ... Konkrétan ez így még nincs meg, de egyeztetek a vezetõséggel, hogy hogyan gondolják. Folytathatjuk ezt a megbeszélést 2 nap múlva?
-Kivitelezõ: Hogyne!
+Szabad szÃ¶veges riport szÃ¶vege
+KivitelezÃµ: Legyen szÃ­ves Ã­rja le nekem, hogy pontosan mire is van szÃ¼ksÃ©gÃ¼k!
+MegrendelÃµ: TehÃ¡t mi egy olyan programot szeretnÃ©nk, amivel a tananyagaink egy rÃ©sze az interneten is elÃ©rhetÃµ. Gondolok itt az okostelefonokra is persze, nem csak a szÃ¡mÃ­tÃ³gÃ©pekre.
+KivitelezÃµ: Mivel foglalkozik a cÃ©gÃ¼k konkrÃ©tan?
+MegrendelÃµ: Elemi matematikai ismereteket oktatunk a 6-12 Ã©ves korosztÃ¡lynak. Ãœgyfeleink kÃ¶zÃ¶tt ezÃ©rt Ã¡ltalÃ¡nos iskolÃ¡k, egyhÃ¡zi iskolÃ¡k, de magÃ¡nintÃ©zmÃ©nyek is szerepelnek. Eddig az volt a bevett szokÃ¡s, hogy Ã³raadÃ³kÃ©nt voltunk jelen ezekben az intÃ©zmÃ©nyekben, mint Ãºn. harmadik fÃ©l, de az utÃ³bbi idÃµben annyira megnÃµtt az igÃ©ny a szolgÃ¡ltatÃ¡saink irÃ¡nt, hogy kÃ©nytelenek vagyunk mÃ¡s, a hatÃ©konysÃ¡gunkat nÃ¶velÃµ irÃ¡nyokba is tapogatÃ³zni. Ãgy jÃ¶tt szÃ³ba a vezetÃ©sben az, hogy erre az online irÃ¡ny lenne a legmegfelelÃµbb. Ha sikerÃ¼lne egy vÃ¡llalhatÃ³ online oktatÃ¡si rendszert Ã¶sszeraknunk, akkor azzal csÃ¶kkenteni tudnÃ¡nk a kollÃ©gÃ¡k vÃ¡llÃ¡t nyomÃ³ terheket.
+KivitelezÃµ: Van mÃ¡r pontos elkÃ©pzelÃ©sÃ¼k arrÃ³l, hogy mit akarnak, vagy csak az Ã¶tlet merÃ¼lt fel, hogy "de jÃ³ lenne, ha lenne egy ilyenÃ¼nk"?
+MegrendelÃµ: Ã•ÃµÃµÃµÃµ... KonkrÃ©tan ez Ã­gy mÃ©g nincs meg, de egyeztetek a vezetÃµsÃ©ggel, hogy hogyan gondoljÃ¡k. Folytathatjuk ezt a megbeszÃ©lÃ©st 2 nap mÃºlva?
+KivitelezÃµ: Hogyne!
 
-2 nap múlva:
-Kivitelezõ: Üdv, sikerült kideríteni, hogy mi a konkrét elvárás?
-Megrendelõ: Hello, igen, egyeztettem az illetékesekkel. Úgy gondoljuk, hogy az eddigi offline bevált módszereinket kellene átkonvertálni az online felületre is. Az eddigi gyakorlatunk az volt, hogy a tanár leadta az anyagot, majd a számonkéréskor papír alapon feleletválasztós kérdésekkel ellenõrizte a megszerzett tudást. Illetve bizonyos konkrét matematikai tételeknél pontos definíciót várt el. Erre azt találtuk ki, hogy lehetne ilyen összekötõs játék, vagy ennek a keresd meg az azonos ábrákat játéknak az átdolgozott verziója, ahol a fogalomhoz kellene párosítani a definíciót vagy fordítva.
-Kivitelezõ: Világos. Akkor ha jól értem nekünk a programszintû megoldást kell szállítanunk, amibe Önök pakolják majd bele a tartalmat?
-Megrendelõ: Pontosan így van, hiszen Önök ahhoz értenek, hogy egy rendszert tegyenek alá, mi meg ahhoz, hogy ezt feltöltsük a saját tananyagunkkal.
-Kivitelezõ: Arról van már elképzelésük, hogy hogyan nézzen ki az alkalmazás, illetve a webes felület? Kell-e regisztráció? Hányan használják majd egyszerre? Milyen funkciók kellenek bele?
-Megrendelõ: Tekintve, hogy a célcsoportunk a 6-12 éves korosztály, jó lenne, ha az õ ízlésüknek megfelelõ lenne a design. Mivel itt a tanulók tudását ellenõrizzük, jó lenne, ha a kérdésre adott válaszokat tanulónként lehetne csoportosítani, hogy ki tudjuk értékelni az adott gyerkõc tudását. Esetleg lehetne egy rekordtábla is, ami inspirálja õket, hogy jobban teljesítsenek. Ugyebár nekünk kell feltölteni tartalommal az alkalmazást, ezért kellene egy oktatói felület is, amit csak mi érünk el, a tanulók nem.
-Kivitelezõ: Világos. A használt technológiákra és eszközökre van valamilyen megkötésük?
-Megrendelõ: Hát mi ezekhez a programozós dolgokhoz nem igazán értünk, úgyhogy az Önök szakértelmére bízzuk a dolognak ezt a részét. Használjanak olyat, amit Önök megfelelõnek látnak.
-Kivitelezõ: Rendben van, elsõ körben ennyi információ elegendõ, hogy felépítsük a specifikációt. Mihelyt készen vagyunk vele, továbbítjuk Önök felé, ezt majd tüzetesen olvassák át, hogy valóban és pontosan fedi-e az igényeiket. Ha igen, akkor megkezdhetjük a munkát, ha nem, akkor további egyeztetések szükségesek, hogy pontosítsuk a követelményeket.
+2 nap mÃºlva:
+KivitelezÃµ: Ãœdv, sikerÃ¼lt kiderÃ­teni, hogy mi a konkrÃ©t elvÃ¡rÃ¡s?
+MegrendelÃµ: Hello, igen, egyeztettem az illetÃ©kesekkel. Ãšgy gondoljuk, hogy az eddigi offline bevÃ¡lt mÃ³dszereinket kellene Ã¡tkonvertÃ¡lni az online felÃ¼letre is. Az eddigi gyakorlatunk az volt, hogy a tanÃ¡r leadta az anyagot, majd a szÃ¡monkÃ©rÃ©skor papÃ­r alapon feleletvÃ¡lasztÃ³s kÃ©rdÃ©sekkel ellenÃµrizte a megszerzett tudÃ¡st. Illetve bizonyos konkrÃ©t matematikai tÃ©teleknÃ©l pontos definÃ­ciÃ³t vÃ¡rt el. Erre azt talÃ¡ltuk ki, hogy lehetne ilyen Ã¶sszekÃ¶tÃµs jÃ¡tÃ©k, vagy ennek a keresd meg az azonos Ã¡brÃ¡kat jÃ¡tÃ©knak az Ã¡tdolgozott verziÃ³ja, ahol a fogalomhoz kellene pÃ¡rosÃ­tani a definÃ­ciÃ³t vagy fordÃ­tva.
+KivitelezÃµ: VilÃ¡gos. Akkor ha jÃ³l Ã©rtem nekÃ¼nk a programszintÃ» megoldÃ¡st kell szÃ¡llÃ­tanunk, amibe Ã–nÃ¶k pakoljÃ¡k majd bele a tartalmat?
+MegrendelÃµ: Pontosan Ã­gy van, hiszen Ã–nÃ¶k ahhoz Ã©rtenek, hogy egy rendszert tegyenek alÃ¡, mi meg ahhoz, hogy ezt feltÃ¶ltsÃ¼k a sajÃ¡t tananyagunkkal.
+KivitelezÃµ: ArrÃ³l van mÃ¡r elkÃ©pzelÃ©sÃ¼k, hogy hogyan nÃ©zzen ki az alkalmazÃ¡s, illetve a webes felÃ¼let? Kell-e regisztrÃ¡ciÃ³? HÃ¡nyan hasznÃ¡ljÃ¡k majd egyszerre? Milyen funkciÃ³k kellenek bele?
+MegrendelÃµ: Tekintve, hogy a cÃ©lcsoportunk a 6-12 Ã©ves korosztÃ¡ly, jÃ³ lenne, ha az Ãµ Ã­zlÃ©sÃ¼knek megfelelÃµ lenne a design. Mivel itt a tanulÃ³k tudÃ¡sÃ¡t ellenÃµrizzÃ¼k, jÃ³ lenne, ha a kÃ©rdÃ©sre adott vÃ¡laszokat tanulÃ³nkÃ©nt lehetne csoportosÃ­tani, hogy ki tudjuk Ã©rtÃ©kelni az adott gyerkÃµc tudÃ¡sÃ¡t. Esetleg lehetne egy rekordtÃ¡bla is, ami inspirÃ¡lja Ãµket, hogy jobban teljesÃ­tsenek. UgyebÃ¡r nekÃ¼nk kell feltÃ¶lteni tartalommal az alkalmazÃ¡st, ezÃ©rt kellene egy oktatÃ³i felÃ¼let is, amit csak mi Ã©rÃ¼nk el, a tanulÃ³k nem.
+KivitelezÃµ: VilÃ¡gos. A hasznÃ¡lt technolÃ³giÃ¡kra Ã©s eszkÃ¶zÃ¶kre van valamilyen megkÃ¶tÃ©sÃ¼k?
+MegrendelÃµ: HÃ¡t mi ezekhez a programozÃ³s dolgokhoz nem igazÃ¡n Ã©rtÃ¼nk, Ãºgyhogy az Ã–nÃ¶k szakÃ©rtelmÃ©re bÃ­zzuk a dolognak ezt a rÃ©szÃ©t. HasznÃ¡ljanak olyat, amit Ã–nÃ¶k megfelelÃµnek lÃ¡tnak.
+KivitelezÃµ: Rendben van, elsÃµ kÃ¶rben ennyi informÃ¡ciÃ³ elegendÃµ, hogy felÃ©pÃ­tsÃ¼k a specifikÃ¡ciÃ³t. Mihelyt kÃ©szen vagyunk vele, tovÃ¡bbÃ­tjuk Ã–nÃ¶k felÃ©, ezt majd tÃ¼zetesen olvassÃ¡k Ã¡t, hogy valÃ³ban Ã©s pontosan fedi-e az igÃ©nyeiket. Ha igen, akkor megkezdhetjÃ¼k a munkÃ¡t, ha nem, akkor tovÃ¡bbi egyeztetÃ©sek szÃ¼ksÃ©gesek, hogy pontosÃ­tsuk a kÃ¶vetelmÃ©nyeket.
 
-8. Fogalom szótár
+8. Fogalom szÃ³tÃ¡r
 
--bug: fejlesztési hiba, ami által a program nem a várt eredményt hozza. 
--main menu: a fõ menü, amely a weboldal/program indulásakor megjelenik.
--gameboard: játék közben, a különbözõ elemeket tartalmazó felület.
--backend: a kiszolgáló, ahonnan az alkalmazást el lehet érni. 
--frontend:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása.
--web-service: különbözõ programnyelveken írt és különbözõ platformokon futó szoftveralkalmazások interneten keresztül történõ adatcseréjére használt webszolgáltatások.
+-bug: fejlesztÃ©si hiba, ami Ã¡ltal a program nem a vÃ¡rt eredmÃ©nyt hozza. 
+-main menu: a fÃµ menÃ¼, amely a weboldal/program indulÃ¡sakor megjelenik.
+-gameboard: jÃ¡tÃ©k kÃ¶zben, a kÃ¼lÃ¶nbÃ¶zÃµ elemeket tartalmazÃ³ felÃ¼let.
+-backend: a kiszolgÃ¡lÃ³, ahonnan az alkalmazÃ¡st el lehet Ã©rni. 
+-frontend:  egy rÃ©teg ami feladata a rendszerbÃµl kijutÃ³ adatok prezentÃ¡lÃ¡sa, illetve a bejÃ¶vÃµ adatok fogadÃ¡sa.
+-web-service: kÃ¼lÃ¶nbÃ¶zÃµ programnyelveken Ã­rt Ã©s kÃ¼lÃ¶nbÃ¶zÃµ platformokon futÃ³ szoftveralkalmazÃ¡sok interneten keresztÃ¼l tÃ¶rtÃ©nÃµ adatcserÃ©jÃ©re hasznÃ¡lt webszolgÃ¡ltatÃ¡sok.
