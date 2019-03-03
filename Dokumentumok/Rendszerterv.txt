@@ -1,0 +1,75 @@
+Rendszerterv
+
+I. A rendszer célja
+
+A rendszer célja, hogy a Követelmény és Funkcionális specifikációban meghatározott megrendelõi folyamatokat online színtérbe adoptálja.
+A rendszer szerepet kíván vállalni abban, hogy a fiatal generációk egy modernebb környezetben, naprakész technológiával sajátíthassák el a tananyagot.
+A felépítendõ rendszer a megrendelõvel kötött szerzõdésnek megfelelõen elõször privát elérhetõségû lesz, vagyis Google Play-bõl nem lesz szabadon letölthetõ és használható.
+A megrendelõ nem talált az igényeit teljesen lefedõ szoftvert, ezért ez a rendszer egy speciális igényhalmazt fog kielégíteni.
+A rendszer a 6-12 éves korosztály matematika oktatásával foglalkozik játékos formában. A tartalmat és a design-t ennek megfelelõen kell felépíteni minden, a megrendelõ által igényelt platformon (desktop web, Android).
+A rendszernek meg kell felelnie a megrendelõ által támasztott speciális igényhalmaznak, de ezen túlmenõen elég általánosnak kell lennie ahhoz is, hogy a késõbbiekben megállja a helyét fizetõs Google Play alkalmazásként.
+A rendszernek a játékos oktatáson felül könnyíteni kell a megrendelõ alkalmazottainak adminisztratív terhein is.
+A rendszernek képesnek kell lennie elõkészíteni, levezetni és automatikusan kiértékelni az óra eleji felmérõket. Ezen eredményeket a félév során folyamatosan kell tudnia követnie, és a félév végén egyszerû kiértékelést kell tudnia adni.
+A rendszert a felhasználó oktatóknak tudniuk kell implementálni a mindennapi tanításba, az órák menetébe.
+Biztosítani szükséges külön oktatói és tanulói felületet különbözõ jogosultsági szintekkel.
+A rendszernek tudnia kell követni az egyes tanulók teljesítményét, meg kell tudnia állapítani, hogy hol ütköztek nehézségekbe az egyes diákok, és mindezeket az információkat az oktató rendelkezésére kell bocsátania.
+
+A rendszernek nem célja a tanulók csalásra tanítása, az oktató-tanuló kapcsolat roncsolása, a tanulási hatékonyság csökkentése. Nem célja továbbá a tanítási folyamat teljes kiváltása.
+
+II. Projektterv
+...
+
+III. Üzleti folyamatok modellje
+
+Üzleti szereplõk:
+	-Oktató
+	-Tanuló
+Támogatandó üzleti folyamatok
+	-Óra eleji felmérõ
+	-Év közi témazáró dolgozat (opcionáls)
+	-Tanulói eredménykövetés
+	-Félév végi értékelés
+
+Üzleti folyamatok leírása (bemenetek, kimenetek, szereplõk)
+
+Óra eleji felmérõ: Szereplõk: Oktató, Tanuló
+A szoftver az oktató által elõre megadott kérdéseket és válaszokat (bemenet) juttatja el a klienseknek (Tanulók eszközei: ennél a folyamatnál általában telefon), akik kiválasztják a helyes vagy helytelen megoldást. Ezeket a rendszer fogadja, eltárolja, majd a felmérõ végén azonnal visszajelzi az elért pontszámot(kimenet). Ezt a pontszámot el is menti az adott felmérõt egyértelmûen beazonosító adatokkal. Ezt minden felmérõnél megteszi, aminek az év végi értékelésnél lesz szerepe.
+
+Év közi témazáró dolgozat (opcionális): Szereplõk: Oktató, Tanuló
+Csak akkor létezik ez a folyamat, amennyiben az Oktató úgy dönt, hogy felhasználja a szoftvert a témazáró dolgozatnál is. Ebben az esetben az óra eleji felmérõhöz hasonlóan történik minden, kivéve, hogy az elért pontszámról (kimenet) a tanuló nem kap azonnali visszajelzést. Ezt egy külön adatbázisba (valós kimenet) menti a szoftver, ami az Oktató rendelkezésére fog állni, amikor javítani kezdi a dolgozatokat.
+
+Tanulói eredménykövetés: Szereplõk: Tanuló, Oktató
+Az óra eleji felmérõkbõl, opcionálisan házi feladatokból érkezõ pontszámokat (bemenet) a szoftver a félév során folyamatosan nyomon követi. Grafikonon lehetõsége van az Oktatónak követni az egyes tanulók pontszámainak alakulását (kimenet), így következtetéseket tud levonni a tanulók változó teljesítményébõl, célzottabban tud beavatkozni a jobb eredmények elérése érdekében.
+
+Félév végi értékelés: Szereplõk: Tanuló, Oktató
+A Tanulói eredménykövetés alapján a szoftver a félév végén összesíti az egyes tanulók pontszámait, differenciált kimutatást készít az oktatónak, ami megmutatja a tanulók közötti különbségeket. Az Oktató ez alapján tudja skálázni a tanulók teljesítményét, ami segítséget nyújt számára a félév végi végleges értékelés kialakításában.
+
+IV. Követelmények
+...
+
+V. Funkcionális terv
+...
+
+VI. Fizikai környezet
+...
+
+VII. Absztrakt domain modell
+...
+
+VIII. Architekturális terv
+...
+
+IX. Adatbázisterv
+...
+
+X. Implementációs terv
+...
+
+XI. Tesztterv
+...
+
+XII. Telepítési terv
+...
+
+XIII. Karbantartási terv
+...
