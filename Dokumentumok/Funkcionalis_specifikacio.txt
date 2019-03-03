@@ -7,11 +7,8 @@
 
 1. A rendszer céljai, és nem céljai.
 
- Sok mindent lehetne errõl mondani, de rövidre fogom, mert annyi időm nincs, a ranked nem nyeri meg saját magát. Feltehetnénk magunknak a kérdést, hogy "mégis melyik rendszerről van itt szó?" na hát igen. Ez egy nagyon jó kérdés. Melyik rendszerek jöhetnek egyáltalán szóba? A tejút rendszer? Számítógépes rendszer? Kommunizmus? Rendszerváltás? Igazából bármelyik. Utálok dokumentálni, nemtudom látszódik-e. Pláne, hogy ennyire overkill az egész.
-
- A mi rendszerünk, ami érdekel bennünket, az az a rendszer, amivel megvalósítjuk a célunkat. Nyilván nem egy scrum vagy egy kanban, hanem egy saját, elég speciális rendszer. Tartja a mondás is, "kicsi, savanyú, de a miénk". Nem másról, mint a csoportos munkáról van szó. A csoportos munka célja, hogy felkészítsen bennünket a jövőbeli akadályokra, hogy azokat majdnem gondmentesen átléphessük, ugyanis a programozók csapatban dolgoznak, mindenki kap egy kis részt, amit meg kell valósítania, aztán amint készen van vele, jön a következő. Ez a folyamat addig ismétlődik, amíg az aktuális célunkat el nem érjük. Ez nem csak a programozásban, de más iparágban is jellemzõ tevékenység. A csoportos munka nagyon jó hatással van a kommunikációs készségre, az emberi kapcsolatok kialakulására, az együttműködésre, és sok egyéb más szociális tulajdonságra. Csoportban dolgozni jó.
-
- A rendszer nem céljai közé tartozik az elbukás, a teljes megsemmisülés, a projekt létrejövésének hátráltatása és az Anschluss.
+ 	A rendszer célja, hogy a gyerekek egy olyan környezetben tanuljanak, amelyben nem a tanulást, hanem a szórakozást érezzék. Ha egy általános iskolás gyermek angolul szeretne tanulni, és leültetjük egy könyv fölé, és adunk neki egy munkafüzetet, az nem lesz olyan hatékony, mintha egy olyan játékos oktató programmal tanulna, ami játszva vezeti őt be egy ismeretlen világba. Csakis a megalkotó kreativitása szabhat határt, hogy milyen játékos feladatokkal és magyarázatokkal taníttassa meg a kis nebulónak az ismeretlen világ rejtelmeit. Természetesen nem csak idegen nyelveket lehet megtanítani, hanem például a matematikát, a helyes nyelvtant, vagy akár még a tanulási módszereket is. A cél, egy olyan barátságos, színes környezet kialakítása, amiben a diák szívesebben tanul, és elsajátítja azokat az alapvető talentumokat, amelyekre a tényleges tananyag épül.
+	A rendszer nem célja, hogy felcserélje az iskolai oktatást, ezzel a játékosan-tanuló módszerrel. Ez a játszva tanulás inkább amolyan kezdés, hogy a gyerek ne utálja meg első kézből a tanulást. Nem célja továbbá helyettesíteni a tanárok oktatását, és az internetes "száraz" tananyagokat.
 
 2. Jelenlegi helyzet leírása
 
