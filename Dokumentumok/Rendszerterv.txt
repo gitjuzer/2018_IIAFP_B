@@ -51,7 +51,13 @@ V. Funkcionális terv
 ...
 
 VI. Fizikai környezet
-...
+
+A webes részt fejlesztő csapat számára a fejlesztési folyamat az ingyenes, nyílt forráskódú 
+Visual Studio Code fejlesztői környezetben zajlik, ami képes az intelligens kódkezelésre (intelligent code completion) az IntelliSense segítségével.
+Ahhoz, hogy a szoftvert használhassuk a számítógépen szükség van egy Windows vagy macOS vagy Linux operációs rendszert futtató számítógépre és
+egy webböngészőre. Ajánlott webböngészők: Firefox, Google Chrome, Opera, Safari. 
+Az alkalmazás mobiltelefonon történő használata Android 5.0-ás vagy ettől újabb verziószámú Androidos operációs rendszert igényel.
+Az androidos szoftver fejlesztése Android Studio-ban történik.
 
 VII. Absztrakt domain modell
 ...
