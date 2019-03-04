@@ -45,7 +45,19 @@ Félév végi értékelés: Szereplõk: Tanuló, Oktató
 A Tanulói eredménykövetés alapján a szoftver a félév végén összesíti az egyes tanulók pontszámait, differenciált kimutatást készít az oktatónak, ami megmutatja a tanulók közötti különbségeket. Az Oktató ez alapján tudja skálázni a tanulók teljesítményét, ami segítséget nyújt számára a félév végi végleges értékelés kialakításában.
 
 IV. Követelmények
-...
+
+   Funkcionális követelmények:
+	- A regisztrált felhasználók adatainak tárolása a GDPR-nak megfelelően
+	- A felhasználókat lehessen csoportokba szervezni
+	- Mind android, mind webes környezetben gördülékenyen kell működnie
+	- Android platformon minimális mobilinternet használat.
+ 
+   Nem funkcionális követelmények:
+	- Gyermekbarát, és letisztult kinézet
+	- Android platformon minimális tárhely használat.
+
+   Törvényi előírások:
+	- A hatályban lévő GDPR szabályozásnak meg kell felelnie.	
 
 V. Funkcionális terv
 ...
