@@ -117,7 +117,13 @@ X. Implementációs terv
 ...
 
 XI. Tesztterv
-...
+I. Unit tesztek
+	A program könnyebb kezelése és a lehető legtöbb hiba elkerülése érdekében fontos, hogy a fejlesztés közben is lehetőleg minden
+	metódusra legyen írva unit test.
+II. Alpha teszt:
+	Az alpha tesztet a fejlesztők végzik, amelyben a rendszer összeomlását próbálják elérni remélhetőleg sikertelenül. Amennyiben 
+	felderítenek egy hibát jelentést írnak róla, majd javítják.
+III. Béta teszt:
 
 XII. Telepítési terv
 
