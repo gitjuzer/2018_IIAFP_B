@@ -135,9 +135,12 @@ I. Unit tesztek
 II. Alpha teszt:
 	Az alpha tesztet a fejlesztők végzik, amelyben a rendszer összeomlását próbálják elérni remélhetőleg sikertelenül. Amennyiben 
 	felderítenek egy hibát jelentést írnak róla, majd javítják.
+	Az alpha teszt során külön tesztelni kell a fontosabb funkciókat, mintpedig: Feladatok menedzselése, megoldása, jutalomrendszer, 
+	design letisztultsága. A teszt során a hibák csökkentése az elsődleges cél.
 III. Béta teszt:
 	Az alpha tesztet követően a felhasználók elvégzik a béta tesztet, melynek során a programban maradt súlyosabb hibák felderítésre kerülnek, majd a fejlesztők javítják őket.
-
+	A teszt során a stabilitás, letisztultság növelése a cél.
+A tesztekről naplót kell készíteni, amely alapján esetleges hibáknál kitölthető a hibajelentő.
 XII. Telepítési terv
 
 Fizika telepítési terv:
