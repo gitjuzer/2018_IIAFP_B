@@ -18,7 +18,9 @@ A rendszernek nem célja a tanulók csalásra tanítása, az oktató-tanuló kap
 
 II. Projektterv
 
-2019.03.04. 	Adatbázis terv áttekintése és véglegesítése
+Dátum		Tevékenység						Résztvevő(k)
+
+2019.03.04. 	Adatbázis terv áttekintése és véglegesítése		
 2019.03.11.	Dokumentációk elkészítése és véglegesítése
 2019.03.12.	Fejlesztése megkezdése
 2019.04.20-29.	Unit tesztek
