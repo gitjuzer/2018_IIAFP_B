@@ -21,7 +21,10 @@ II. Projektterv
 2019.03.04. 	Adatbázis terv áttekintése és véglegesítése
 2019.03.11.	Dokumentációk elkészítése és véglegesítése
 2019.03.12.	Fejlesztése megkezdése
-2019.05.06.	Projekt átadása
+2019.04.20-29.	Unit tesztek
+2019.04.29.	Alpha teszt
+2019.05.06.	Béta teszt
+2019.05.13.	Projekt átadása
 
 III. Üzleti folyamatok modellje
 
