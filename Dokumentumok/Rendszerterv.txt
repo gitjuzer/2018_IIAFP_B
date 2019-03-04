@@ -26,7 +26,7 @@ Dátum		Tevékenység						Résztvevő(k)
 2019.04.20-29.	Unit tesztek
 2019.04.29.	Alpha teszt
 2019.05.06.	Béta teszt
-2019.05.13.	Projekt átadása
+2019.05.13.	Projekt átadása						A projektben résztvevő összes szereplő
 
 III. Üzleti folyamatok modellje
 
