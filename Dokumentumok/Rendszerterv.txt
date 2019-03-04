@@ -69,7 +69,34 @@ IV. Követelmények
 	- A hatályban lévő GDPR szabályozásnak meg kell felelnie.	
 
 V. Funkcionális terv
-...
+
+Rendszerszereplők:
+	- Tanár
+	- Diák
+	- Admin
+
+Rendszer használati esetek és lefutásaik:
+	Diák:
+		-Tesztek kitöltése
+		-Tananyag megtekintése
+		-Üzenetküldés
+		-Barát hozzáadása
+		-Eredményei megtekintése
+		-Személyes adatmódosítás
+	Tanár:
+		-csoport kezelése
+		-tesztek létrehozása, szerkeztése
+		-tananyag létrehozása, szerkeztése
+	Admin:
+		-Rendszerüzenetek küldése
+		-Felhasználók kitiltása
+		-Fórum moderálása
+		
+
+Határ osztályok:
+	
+Menü hierarchiák:
+
 
 VI. Fizikai környezet
 
