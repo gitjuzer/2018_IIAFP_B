@@ -17,7 +17,11 @@ A rendszernek tudnia kell követni az egyes tanulók teljesítményét, meg kell
 A rendszernek nem célja a tanulók csalásra tanítása, az oktató-tanuló kapcsolat roncsolása, a tanulási hatékonyság csökkentése. Nem célja továbbá a tanítási folyamat teljes kiváltása.
 
 II. Projektterv
-...
+
+2019.03.04. 	Adatbázis terv áttekintése és véglegesítése
+2019.03.11.	Dokumentációk elkészítése és véglegesítése
+2019.03.12.	Fejlesztése megkezdése
+2019.05.06.	Projekt átadása
 
 III. Üzleti folyamatok modellje
 
