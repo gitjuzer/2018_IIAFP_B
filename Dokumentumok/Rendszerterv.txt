@@ -60,7 +60,52 @@ VIII. Architekturális terv
 ...
 
 IX. Adatbázisterv
-...
+	MELLÉKLET: Adatbázis tervek/db_terv_alpha_pdf.pdf
+	User tábla:
+		Id(INT, Primary key); (Username(VARCHAR (16); Password(VARCHAR (16)) hash-el kódolva; First_name(VARCHAR(45)); Last_name(VARCHAR(45)); Created_at(DATETIME) létrehozás dátuma; Last_login(DATETIME, nullable) utolsó belépés dátuma;
+		Felhasználói adatok eltárolására alkalmas.
+	Token tábla:
+		Id(INT, Primary key); Token(VARCHAR(100)) JSON webtoken eltárolására; Created_at(DATETIME); Expires_at(DATETIME) token lejárati dátuma; IsActive(TINYINT, nullable) token aktív-e; User_Id(INT, Foreign key)
+		RESTful architekúra számára kialakítva, a userek tokenjeinek eltárolására alkalmas.
+	Role tábla:
+		Id(INT, Primary key); Role_name(VARCHAR(45)) szerepkör neve; Role_description(VARCHAR(45)) szerepkör leírása
+		Szerepkörök leírására és tárolásra alkalmas.
+	User_To_Role tábla:
+		User_Id_PK(Primary key); Role_Id_PK(Primary key)
+		A táblával userekhez rendelhetünk szerepköröket, osztott elsődleges kulcsok
+	Permission tábla:
+		Id(INT); Permission_name(VARCHAR(45)) jogosultság nevét írja le
+		Ebben a táblában definiálhatunk jogosultságokat, pl játék kérdéseit módosíthatja stb.
+	Role_To_Permission tábla:
+		Role_Id_PK(INT, Primary key); Permission_Id_PK(INT, Primary key)
+		Szerepkörökhöz rendelhetünk ebben a táblában jogosultságokat, pl csak a tanár szerepkör tudja módosítani a játék kérdéseit. Osztott elsődleges kulcsok.
+	Classroom tábla:
+		Id(INT, Primary key); Name(VARCHAR(45)) osztály neve; User_Id(INT, Foreign key)
+		Ebben a táblában tároljuk az osztályokat, egy osztályhoz több user tartozhat.
+	Game tábla:
+		Id(INT, Primary key); Name(VARCHAR(45)) játék neve; Description(VARCHAR(250), nullable) játék leírása
+		Ebben a táblában tárolhatjuk a játékok fajtáit.
+	Classroom_To_Game tábla:
+		IsActive(TINYINT, nullable) a játék aktív-e az osztály számára; Game_Id_PK(INT, Primary key); Classroom_Id_PK(INT, Primary key)
+		A táblában osztályokhoz rendelhetünk játékokat, illetve megadhatjuk, hogy a hozzárendelt játékok aktívak-e. Osztott elsődleges kulcsok.
+	Difficulty tábla:
+		Difficulty_level(INT, Primary key) nehézségi szintet definiál.
+	Game_session tábla:
+		Id(INT, Primary key); Max_points(INT) maximum megszerezhető pontok száma; Game_Id(INT, Foreign key); Difficulty_level(INT, Foreign key)
+		Ebben a táblában játékokhoz tudunk létrehozni ún. "sessionokat", "kérdéssorozatokat", és ezeknek a sorozatoknak tudjuk definiálni a maximum megszerezhető pontszámot, illetve nehézségi szintet tudunk hozzárendelni.
+	Statistic tábla:
+		Id(INT, Primary key); Gained_points(INT); Created_at(DATETIME); User_Id(INT, Foreign key); Game_session_Id(INT, Foreign key)
+		Ebben a táblában tároljuk a lejátszott játékmeneteket, eltároljuk hogy melyik user, melyik játékhoz tartozó sessiont játszotta le, és hogy abból hány pontot szerzett.
+	Question tábla: 
+		Id(INT, Primary key); Question(VARCHAR(250)) a sessionhoz tartozó kérdés; Points(INT) hány pontot ér a kérdés; Game_session_Id(INT)
+		Ebben a táblában tároljuk el a játékokhoz tartozó sessionokhoz tartozó kérdéseket.
+	Wrong_answer tábla:
+		Id(INT, Primary key); Wrong_answer(VARCHAR(250)); Question_Id(INT, Foreign key)
+		Ebben a táblában tároljuk a kérdésekhez tartozó rossz válaszokat, egy kérdéshez tartozhat több rossz válasz is.
+	Correct_answer tábla:
+		Question_Id(INT, Primary key); Correct_answer(VARCHAR(250));
+		A táblában a kérdésekhez tartozó jó választ tároljuk el. A Question táblából a Question_Id az elsődleges kulcs, ugyanis egy kérdéshez csak egy jó válasz tartozik.
+		(Igény szerint módosítható, ha például checkboxos kérdéseket is kell implementálni.)
 
 X. Implementációs terv
 ...
