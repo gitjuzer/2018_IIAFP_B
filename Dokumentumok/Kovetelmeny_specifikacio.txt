@@ -70,25 +70,21 @@ A rendszert érintõ adatvédelmi jellegû jogszabályok listája:
 
 4. Jelenlegi üzleti folyamatok modellje
 
-	1. Egy intézmény megkeresi a cégüket, mely cég célja az intézmény diákjainak matematikai tudásának bovítése, felzárkóztatása.
-	2. Kiküldenek egy munkatársat egyeztetni az ügyféllel.
-	3. Az ügyfél igényei szerint napi/heti/havi idobeosztással, illetve a munkatársaik beosztható idejevel számolva kialakítanak az intézmény számára egy munkarendet a munkatársuknak, akit az intézményhez rendeltek.
-	4. A munkatársuk megkezdi a munkarendjét, intézménytol illetve beosztható idovel függoen.
-	5. Az idoszak alatt a gyerekeknek órákat tart a munkatársuk, iskolaidon belül-, illetve igény szerint kívül.
-	6. Az idoszak végén számonkérés következik, amelybol egyértelmuen kiderül, hogy egyes diákok mennyire sajátították el a tananyagot, illetve a tananyag mely részen vannak problémái az egyes gyermekeknek.
-	7. Miután a számonkérés lezajlott, a munkatársat beosztják egy másik intézményhez, és kezdodik a folyamat elorol. 
+	1. Egy intézmény megkeresi a cégüket, mely cég célja az intézmény diákjainak matematikai tudásának bővítése, felzárkóztatása.
+	2. Egy kijelölt időszak alatt a diákoknak órákat tart a cég munkatársa, iskolaidőn belül-, illetve igény szerint kívül.
+	3. Az időszak végén számonkérés következik, amelybol egyértelműen kiderül, hogy egyes diákok mennyire sajátították el a tananyagot, illetve a tananyag mely részen vannak problémái az egyes diákoknak.
+	4. Miután a számonkérés lezajlott, a cég beosztja az alkalmazottat egy másik intézményhez, amely felkereste a céget. 
 
 5. Igényelt üzleti folyamatok modellje
 	
 	1. Egy olyan szoftver fejlesztése amely segíti a diákok matematikai tudásának fejlõdését/szinten tartását.
-	2. Kiküldenek egy munkatársat egyeztetni az ügyféllel.
-	3. Az ügyfél igényeit a tanulás-segítõ szoftver elõnyeit kihasználva alakítjuk, ezáltal a munkatársak idõbeosztása sokkal rugalmasabbá válik.
-	4. A munkatárs munkába áll, amely során cégünk szoftverjének használatát(funkcióit, lehetõségeit) fogja bemutatni.
-	5. A tanulási/tanítási idõszak alatt munkatársunk csak az intézményen belül tart órákat. Az otthoni(intézményen kívüli) tanítást felváltja
+	2. Az ügyfél igényeit a tanulás-segítõ szoftver elõnyeit kihasználva alakítjuk, ezáltal a munkatársak idõbeosztása sokkal rugalmasabbá válik.
+	3. A munkatárs munkába áll, amely során cégünk szoftverjének használatát(funkcióit, lehetõségeit) fogja bemutatni.
+	4. A tanulási/tanítási idõszak alatt munkatársunk csak az intézményen belül tart órákat. Az otthoni(intézményen kívüli) tanítást felváltja
 		cégünk szoftverének használata.
-	6. A tananyagot a szoftverben több modulra osztjuk, melyek végén modulzáró teszteket töltenek ki a diákok. A szoftver generál egy jegyet ezen tesztek
+	5. A tananyagot a szoftverben több modulra osztjuk, melyek végén modulzáró teszteket töltenek ki a diákok. A szoftver generál egy jegyet ezen tesztek
 		eredménye alapján, melyet a tanár felülírhat, ha szeretne(pl.: órai aktivitás alapján).
-	7. Egy munkatárs egy idõben képes több intézmény igényeit(amennyiben nincs speciális igény) kielégíteni a szoftver elõnyeit, rugalmasságát kihasználva.
+	6. Egy munkatárs egy idõben képes több intézmény igényeit(amennyiben nincs speciális igény) kielégíteni a szoftver elõnyeit, rugalmasságát kihasználva.
 
 6. Követelmény lista
 
