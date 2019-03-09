@@ -1,4 +1,4 @@
-﻿Rendszerterv
+Rendszerterv
 
 I. A rendszer célja
 
@@ -108,7 +108,10 @@ Az alkalmazás mobiltelefonon történő használata Android 5.0-ás vagy ettől
 Az androidos szoftver fejlesztése Android Studio-ban történik.
 
 VII. Absztrakt domain modell
-...
+A program működése során a felhasználó kétféle szerepkörben szerepelhet: tanár vagy diák. Ennek megfelelően kap az alany funkciókat, amelyek a szerepkörökhöz kizárólagosan vagy nem kizárólagosan kapcsolódnak: azaz vagy csak ő fér hozzá, vagy mindketten a saját oldalukról.
+Az általános alany szerepkörét a bejelentkezés után a Jogosultság vizsgálata dönti el. Ezen a szinten még csak logikai elkülönítés történik a funkciók elérésében, nem valódi. Ez azt jelenti, hogy például az Összesített Statisztikák hozzáférhetőek mindkét szerepkör számára, de az Összesített Statisztikák szintjén már valódi elkülönítés jön létre a jogosultsági szint alapú hozzáférés korlátozásával. Ennek a működési módját az Oracle SQL-ből ismert View funkcióhoz hasonlóan kell elképzelni.
+A Játék Kiválasztása szinten is valódi elkülönítés történik a logikai alapján, ahol szintén megjelennek kizárólagos funkciók is.
+A Játék szint univerzálisan elérhető mindkét szerepkörből, és semmiféle korlátozás nincsen. Ez arra szolgál, hogy a Tanár alany élesben tesztelhesse az általa készített kérdéssort.
 
 VIII. Architekturális terv
 ...
