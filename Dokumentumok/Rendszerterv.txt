@@ -179,7 +179,21 @@ IX. Adatbázisterv
 		(Igény szerint módosítható, ha például checkboxos kérdéseket is kell implementálni.)
 
 X. Implementációs terv
-...
+	Perzisztencia osztályok:
+		UserMapper - Model
+		ClassMapper - Model
+		GameMapper - Model
+		QuestionMapper - Model
+		SubjectMapper - Model
+		StatsMapper - Model
+	
+	Üzleti logika osztályok:
+		LoginLogout
+		Registration
+		GameActions
+		StudentActions
+		TeacherActions
+		ClassActions
 
 XI. Tesztterv
 I. Unit tesztek
