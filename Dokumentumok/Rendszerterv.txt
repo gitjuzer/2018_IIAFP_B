@@ -1,4 +1,4 @@
-Rendszerterv
+﻿Rendszerterv
 
 I. A rendszer célja
 
@@ -92,10 +92,24 @@ Rendszer használati esetek és lefutásaik:
 		-Felhasználók kitiltása
 		-Fórum moderálása
 		
-
-Határ osztályok:
 	
 Menü hierarchiák:
+	Bejelentkezés
+		Bejelentkezés
+		Regisztráció
+		Elfelejtett jelszó
+	Főmenü
+		Feladat létrehozás(Tanár, Admin)
+		Személyes adatok
+		Ranglista
+		Mérföldkövek
+		Kijelentkezés
+		Játékpanel
+		Kapcsolat(üzenet küldése a karbantartóknak, segítség kérés)
+		Segítség(felhasználói "kézikönyv")
+	Csevegő
+		Vitatéma kiírása
+		Hozzászólás
 
 
 VI. Fizikai környezet
