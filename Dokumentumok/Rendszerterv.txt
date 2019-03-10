@@ -195,6 +195,19 @@ X. Implementációs terv
 		TeacherActions
 		ClassActions
 
+	Kliens oldal osztályai:
+		LoginRegWindow
+		LoginPage
+		RegisterPage
+		MainWindow
+		StudyPage
+		StudentStatsPage
+		TeacherStatsPage
+		DuelPage
+		GamePage
+		LessonPage
+		ClassesPage
+
 XI. Tesztterv
 I. Unit tesztek
 	A program könnyebb kezelése és a lehető legtöbb hiba elkerülése érdekében fontos, hogy a fejlesztés közben is lehetőleg minden
