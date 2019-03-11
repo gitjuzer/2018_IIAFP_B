@@ -128,7 +128,8 @@ A Játék Kiválasztása szinten is valódi elkülönítés történik a logikai
 A Játék szint univerzálisan elérhető mindkét szerepkörből, és semmiféle korlátozás nincsen. Ez arra szolgál, hogy a Tanár alany élesben tesztelhesse az általa készített kérdéssort.
 
 VIII. Architekturális terv
-...
+Melléklet 1.: Architektúrális terv/architecture.png
+Melléklet 2.: https://creately.com/diagram/jt3jwhx62/WpNkv5ZhFHtMZGCrkm8eW2HE8%3D
 
 IX. Adatbázisterv
 	MELLÉKLET: Adatbázis tervek/db_terv_alpha_pdf.pdf
