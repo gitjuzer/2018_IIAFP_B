@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Oktató App</string>
+    <string name="login_title">Tanár/Diák Bejelentkezés/Regisztráció</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Belépés</string>
+    <string name="register">Regisztráció</string>
+    <string name="student">Diák</string>
+    <string name="teacher">Tanár</string>
 </resources>
