@@ -1,8 +1,10 @@
 package hu.afp.oktatoapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import hu.afp.oktatoapp.MainActivity;
 
 public class StudentMenu extends AppCompatActivity {
 
@@ -15,9 +17,7 @@ public class StudentMenu extends AppCompatActivity {
         final TextView usernameDisplay;
 
 
-
         usernameDisplay = findViewById(R.id.usernameDisplay_editText);
-        String actualUsername = "asd"; /*findViewById(R.id.usernameET).toString(); */
-        usernameDisplay.setText(actualUsername);
+        usernameDisplay.setText(getIntent().getStringExtra("Username"));
     }
 }

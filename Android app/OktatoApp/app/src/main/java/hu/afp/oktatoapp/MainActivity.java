@@ -86,17 +86,21 @@ public class MainActivity extends AppCompatActivity {
                 String temp2 = password.getText().toString();
                 if (!("".contentEquals(temp1)) && !("".contentEquals(temp2)))
                     sendLoginData(temp1, temp2);
+
                 if (teacherBtnIsClicked == false && studentBtnIsClicked == false){
                     Toast errorToast = Toast.makeText(MainActivity.this, "Ki kell választanod " +
-                            "legalább az egyik menüpontot. Tanár, vagy diákként szeretnél belépni?", Toast.LENGTH_SHORT);
+                            "legalább az egyik menüpontot. Tanár, vagy diákként szeretnél belépni?",
+                            Toast.LENGTH_SHORT);
                     errorToast.show();
                 }
                 if (studentBtnIsClicked == true) {
                     Intent student = new Intent(MainActivity.this, StudentMenu.class);
+                    student.putExtra("Username", username.getText().toString());
                     startActivity(student);
                 }
                 if (teacherBtnIsClicked == true) {
                     Intent teacher = new Intent(MainActivity.this, TeacherMenu.class);
+                    teacher.putExtra("Username", username.getText().toString());
                     startActivity(teacher);
                 }
             }
@@ -110,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             jsonObject.put("username",username);
             jsonObject.put("password",hashedPass);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
