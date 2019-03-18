@@ -66,6 +66,7 @@
                     android:src="@drawable/ic_user" />
 
                 <EditText
+                    android:id="@+id/usernameET"
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/username"
@@ -89,6 +90,7 @@
                     android:src="@drawable/ic_lock" />
 
                 <EditText
+                    android:id="@+id/passwordET"
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
@@ -101,15 +103,18 @@
                 android:layout_below="@id/password"
                 android:gravity="center"
                 android:orientation="horizontal"
+                android:paddingBottom="16dp"
                 android:paddingTop="16dp">
 
                 <Button
+                    android:id="@+id/loginBtn"
                     style="@style/LoginButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/login" />
 
                 <Button
+                    android:id="@+id/registerBtn"
                     style="@style/LoginButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
