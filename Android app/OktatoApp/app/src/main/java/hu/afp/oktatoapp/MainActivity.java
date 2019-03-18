@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -29,6 +28,9 @@ import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean studentBtnIsClicked;
+    boolean teacherBtnIsClicked;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         ImageView logo, studentLogo, teacherLogo;
         TextView studentTV, teacherTV;
         Button login, register;
+
+
 
 
         toolbar = findViewById(R.id.myToolbar);
@@ -64,14 +68,15 @@ public class MainActivity extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, StudentMainActivity.class);
-                startActivity(intent);
+                studentBtnIsClicked = true;
+                teacherBtnIsClicked = false;
             }
         });
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Teacher mode selected
+                teacherBtnIsClicked = true;
+                studentBtnIsClicked = false;
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
@@ -81,10 +86,22 @@ public class MainActivity extends AppCompatActivity {
                 String temp2 = password.getText().toString();
                 if (!("".contentEquals(temp1)) && !("".contentEquals(temp2)))
                     sendLoginData(temp1, temp2);
+                if (teacherBtnIsClicked == false && studentBtnIsClicked == false){
+                    Toast errorToast = Toast.makeText(MainActivity.this, "Ki kell választanod " +
+                            "legalább az egyik menüpontot. Tanár, vagy diákként szeretnél belépni?", Toast.LENGTH_SHORT);
+                    errorToast.show();
+                }
+                if (studentBtnIsClicked == true) {
+                    Intent student = new Intent(MainActivity.this, StudentMenu.class);
+                    startActivity(student);
+                }
+                if (teacherBtnIsClicked == true) {
+                    Intent teacher = new Intent(MainActivity.this, TeacherMenu.class);
+                    startActivity(teacher);
+                }
             }
         });
     }
-
     private void sendLoginData(String username, String password) {
         /*POST: username, password JSON formátumban*/
         String url = "example.com/OktatoiAppAPI/session";
