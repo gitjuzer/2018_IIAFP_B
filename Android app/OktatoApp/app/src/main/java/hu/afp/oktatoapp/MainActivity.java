@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Student mode selected
+                Intent intent = new Intent(MainActivity.this, StudentMainActivity.class);
+                startActivity(intent);
             }
         });
         teacher.setOnClickListener(new View.OnClickListener() {
