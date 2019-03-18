@@ -7,4 +7,7 @@
     <string name="register">Regisztráció</string>
     <string name="student">Diák</string>
     <string name="teacher">Tanár</string>
+    <string name="learning">Tanulás</string>
+    <string name="statistic">Statisztika</string>
+    <string name="duel">Párbaj</string>
 </resources>

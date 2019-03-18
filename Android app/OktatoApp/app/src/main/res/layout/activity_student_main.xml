@@ -6,6 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".StudentMenu">
 
+    <ImageButton
+        android:id="@+id/learning_Button"
+        android:layout_width="233dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageButton
+        android:id="@+id/statistic_button"
+        android:layout_width="233dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/button_background"
+        app:layout_constraintBottom_toTopOf="@+id/duel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learning_Button" />
+
+    <ImageButton
+        android:id="@+id/duel_button"
+        android:layout_width="233dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/button_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statistic_button" />
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -17,16 +56,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/usernameDisplay_editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/usernameDisplay_TextView"
+        android:layout_width="167dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/learning_textView"
+        android:layout_width="153dp"
+        android:layout_height="62dp"
+        android:text="@string/learning"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/learning_Button"
+        app:layout_constraintEnd_toEndOf="@+id/learning_Button"
+        app:layout_constraintStart_toStartOf="@+id/learning_Button"
+        app:layout_constraintTop_toTopOf="@+id/learning_Button" />
+
+    <TextView
+        android:id="@+id/statistic_textView"
+        android:layout_width="167dp"
+        android:layout_height="43dp"
+        android:text="@string/statistic"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/statistic_button"
+        app:layout_constraintEnd_toEndOf="@+id/statistic_button"
+        app:layout_constraintStart_toStartOf="@+id/statistic_button"
+        app:layout_constraintTop_toTopOf="@+id/statistic_button" />
+
+    <TextView
+        android:id="@+id/duel_textView"
+        android:layout_width="155dp"
+        android:layout_height="61dp"
+        android:text="@string/duel"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/duel_button"
+        app:layout_constraintEnd_toEndOf="@+id/duel_button"
+        app:layout_constraintStart_toStartOf="@+id/duel_button"
+        app:layout_constraintTop_toTopOf="@+id/duel_button" />
+
+
 </android.support.constraint.ConstraintLayout>
