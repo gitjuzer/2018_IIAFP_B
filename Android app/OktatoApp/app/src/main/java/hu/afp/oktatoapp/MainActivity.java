@@ -2,11 +2,29 @@ package hu.afp.oktatoapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.common.hash.Hashing;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,6 +84,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendLoginData(String username, String password) {
-        //JSON objektum küldése username, password mezőkkel
+        /*POST: username, password JSON formátumban*/
+        String url = "example.com/OktatoiAppAPI/session";
+        final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("username",username);
+            jsonObject.put("password",hashedPass);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        final String requestBody = jsonObject.toString();
+        RequestQueue queue = Volley.newRequestQueue(this);
+        StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(getBaseContext(), "Logged in.", Toast.LENGTH_SHORT).show();
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("Error.Response", error.getMessage());
+                    }
+                }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+            @Override
+            public byte[] getBody(){
+                try {
+                    return requestBody == null ? null : requestBody.getBytes("utf-8");
+                } catch (UnsupportedEncodingException e) {
+                    VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
+                    return null;
+                }
+            }
+        };
+        //queue.add(postRequest);
+        Log.d("POST_REQ",requestBody);
     }
 }
