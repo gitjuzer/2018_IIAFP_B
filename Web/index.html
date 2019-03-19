@@ -1,11 +1,69 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title></title>
-<link rel="stylesheet" type="text/css" media="screen" href="style.css">
-<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Üres html állomány</h1>
+    <header>
+        <ul class="headdiv">
+
+            <li class="headAppName">
+                <a class="heada1" href="">
+                    <img class="Applogo" src="img/logo.png" alt="logo" />Teaching App
+                </a>
+            </li>
+
+        </ul>
+    </header>
+
+    <div class="selectionBarDiv">
+
+        <div class="blockdiv1">
+            <div class="innerblockdiv1">
+                <button class="button1"></button>
+                <div class="undertextdiv1">Teacher</div>
+
+            </div>
+
+        </div>
+
+        <div class="blockdiv2">
+            <div class="innerblockdiv2">
+                <button class="button2"></button>
+                <div class="undertextdiv2">Student</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+      <div class="login">
+        <h1>Login</h1>
+        <form class="form" method="post" action="#">
+
+            <p class="field">
+                <input type="text" name="login" placeholder="Username" required />
+                <i class="fa fa-user"></i>
+            </p>
+
+            <p class="field">
+                <input type="password" name="password" placeholder="Password" required />
+                <i class="fa fa-lock"></i>
+            </p>
+
+            <p class="submit"><input type="submit" name="sent" value="Login"></p>
+
+        </form>
+    </div>
+
 </body>
+
 </html>

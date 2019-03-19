@@ -1,0 +1,95 @@
+.headdiv {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+}
+
+.headAppName {
+  float: center;
+  width: 100%;
+}
+
+.heada1 {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 26px;
+  text-decoration: none;
+  font-size: 150%;
+  position: relative;
+  height: 6%;
+}
+
+li a:hover {
+  background-color: rgb(124, 160, 128);
+  background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
+}
+
+body {
+  margin: 0;
+}
+
+.blockdiv1, .blockdiv2 {
+  float: left;
+  width: 50%;
+  height: 30%;
+}
+
+.blockdiv1 {
+  text-align: right;
+}
+
+.blockdiv2 {
+  text-align: left;
+}
+
+.button1:hover, .button2:hover {
+  background-color: rgb(124, 160, 128);
+  background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
+  box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
+  transform: translate(0, -10px);
+}
+
+.button1, .button2 {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(51, 211, 64);
+  outline: 0;
+  box-shadow: 10px 20px 50px grey;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+
+.undertextdiv1, .undertextdiv2 {
+  padding-top: 3px;
+  text-align: center;
+  color: rgb(51, 211, 64);
+  font-size: 20;
+}
+
+.innerblockdiv1 {
+  float: right;
+}
+
+.innerblockdiv2 {
+  float: left;
+}
+
+.innerblockdiv1, .innerblockdiv2 {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.login{
+  text-align: center;
+}
