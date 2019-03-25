@@ -28,11 +28,20 @@ router.post('/', (req,res,next)=>{
     else{
         User.createUser(newUser, account_type, (err, result) =>{
             User.getUserById(result, (err, result)=>{
-                res.status(201).json({
-                    "status_code": "201",
-                    "description": "Sikeres regisztráció!",
-                    "data":result
-                });
+                if(result === null){
+                    res.status(201).json({
+                        "status_code": "409",
+                        "description": "Már létezik ilyen felhasználó!",
+                        "data":{}
+                    });
+                }
+                else{
+                    res.status(201).json({
+                        "status_code": "201",
+                        "description": "Sikeres regisztráció!",
+                        "data":result
+                    });
+                }
             });
             
         });

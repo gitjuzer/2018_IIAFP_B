@@ -85,14 +85,16 @@ ALTER TABLE `role`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `user_to_role`
 --
 ALTER TABLE `user_to_role`
   ADD PRIMARY KEY (`user_id_pk`,`role_id_pk`),
-  ADD KEY `fk_user_to_role_role1` (`role_id_pk`);
+  ADD KEY `fk_user_to_role_role1` (`role_id_pk`),
+  ADD UNIQUE KEY `user_id_pk` (`user_id_pk`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -102,13 +104,13 @@ ALTER TABLE `user_to_role`
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- Constraints for dumped tables

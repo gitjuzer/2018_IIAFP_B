@@ -27,9 +27,11 @@ Role.getAllRoles = (result) =>{
 Role.getRoleById = (id, result)=>{
     sql.query("SELECT * FROM role WHERE id = ?",id, (err, res)=>{
         if(err){
+            console.log(err);
             result(err, null);
         }
         else{
+            console.log(res);
             result(null, res);
         }
     });
@@ -53,5 +55,15 @@ Role.deleteRole = (roleName, result)=>{
             result(null, res);
         }
     })
-}
+};
+Role.modifyRole=(role, roleName, result) => {
+    sql.query("UPDATE role SET ? WHERE role_name = ?", [role, roleName], (err,res)=>{
+        if(err){
+            result(err, null);
+        }
+        else{
+            result(null, res);
+        }
+    });
+};
 module.exports = Role;
