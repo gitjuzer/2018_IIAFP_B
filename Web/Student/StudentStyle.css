@@ -1,0 +1,51 @@
+
+body {
+    margin: 0;
+  }
+
+.headdiv {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+  }
+  
+  .headAppName {
+    float: left;
+    width: 70%;
+  }
+  
+  .headUserName {
+    float: right;
+    width: 30%;
+    background: white;
+  }
+  
+  .heada1, .heada2 {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 26px;
+    text-decoration: none;
+    font-size: 150%;
+    position: relative;
+    height: 6%;
+  }
+
+  .heada2 {
+    margin-left: 3px;
+    background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+    font-size: 100%;
+  }
+
+  li a:hover {
+    background-color: rgb(124, 160, 128);
+    background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
+  }
+
+  .userlogo {
+    border-radius: 50%;
+  }
+  
+  
