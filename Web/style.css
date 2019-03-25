@@ -10,7 +10,6 @@
 	float: center;
 	width: 100%;
 }
-
 .heada1{
 	display: block;
 	color: white;
@@ -45,14 +44,49 @@ body {
 	text-align: left;
 }
 
-.button1:hover, .button2:hover {
+.button1:hover{
+	background-image: url(img/magister_icon.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
 	background-color: rgb(124, 160, 128);
-	background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
+	box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
+	transform: translate(0, -10px);
+}
+.button2:hover {
+	background-image: url(img/human_head_icon.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+	background-color: rgb(124, 160, 128);
 	box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
 	transform: translate(0, -10px);
 }
 
-.button1, .button2 {
+.button1{
+	background-image: url(img/magister_icon.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+	border-radius: 100%;
+	width: 100px;
+	height: 100px;
+	background-color: rgb(51, 211, 64);
+	outline: 0;
+	box-shadow: 10px 20px 50px grey;
+	display: inline-block;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 20px 30px;
+	box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+	transition: all ease-in-out 300ms;
+}
+.button2 {
+	background-image: url(img/human_head_icon.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
 	border-radius: 100%;
 	width: 100px;
 	height: 100px;
