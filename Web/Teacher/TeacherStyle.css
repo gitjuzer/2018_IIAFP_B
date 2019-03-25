@@ -1,0 +1,22 @@
+.headdiv {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+}
+.headAppName {
+  float: center;
+  width: 100%;
+}
+
+.heada1 {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 26px;
+  text-decoration: none;
+  font-size: 150%;
+  position: relative;
+  height: 6%;
+}

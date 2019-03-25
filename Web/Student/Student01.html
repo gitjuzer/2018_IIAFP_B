@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student</title>
+
+    <link rel="stylesheet" href="StudentStyle.css">
+</head>
+
+<body>
+                    <li class="headAppName">
+    <header>
+        <ul class="headdiv">
+
+            <li class="headAppName">
+
+                <a class="heada1" href="Student01.html">
+                    <img class="Applogo" src="img/logo.png" alt="logo" />Teaching App
+                </a>
+            </li>
+
+            <li class="headUserName">
+                <a class="heada2" href="Student01.html">
+                    <img class="Userlogo" src="img/logo.png" alt="logo" />Username
+                </a>
+            </li>
+
+        </ul>
+    </header>
+
+    <main>
+        <div class="mainDiv">
+
+            <div class="mainLearn">
+
+                <div class="SelectSubject">
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Subject
+                            <img class="Applogo" src="img/logo.png" alt="logo" />
+                        </button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+    
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+</body>
+
+</html>
