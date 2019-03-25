@@ -48,4 +48,72 @@ body {
     border-radius: 50%;
   }
   
+  .dropbtn {
+    background-color: rgb(12, 180, 87);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    margin: 20px 5px 5px 10px;
+    cursor: pointer;
+  }
   
+  .dropbtn:hover, .dropbtn:focus, .SideMenuElement:hover, .SideMenuElement:focus {
+    background-color: rgb(8, 114, 56);
+    outline: 0;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd
+  }
+  
+  .show {
+    display: block;
+  }
+
+  .SelectSubject {
+    width: 15%;
+  }
+  
+  .SideMenuElement {
+    margin: 0px 0px 30px 0px;
+    width: 200px;
+    border-radius: 10%;
+    background-color: rgb(12, 180, 87);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-color: rgb(12, 180, 87);
+  }
+
+  .mainSideMenu {
+    margin-top: 20px;
+    float: right;
+    width: 30%;
+    text-align: center;
+  }
+  
+  .htmldata{
+    width: 40%;
+  }
