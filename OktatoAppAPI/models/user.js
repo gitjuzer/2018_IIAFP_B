@@ -15,6 +15,8 @@ User.createUser = (newUser, account_type, result)=>{
             result(err, null);
         }
         else{
+            result(null, res.insertId);
+            /*
             const user_id_pk = res.insertId;
             Role.getRoleByName(account_type, (err, res)=>{
                 if(err){
@@ -31,7 +33,7 @@ User.createUser = (newUser, account_type, result)=>{
                         }
                     })
                 }
-            })
+            })*/
         };
     }); 
 };
