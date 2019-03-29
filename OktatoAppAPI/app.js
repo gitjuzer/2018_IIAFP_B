@@ -9,10 +9,13 @@ app.use(bodyParser.json());
 
 const userRoutes = require('./routes/user');
 const roleRoutes = require('./routes/role');
+const pemissionRoutes = require('./routes/permission');
+
 
 app.use('/OktatoAppAPI/users', userRoutes);
 app.use('/OktatoAppAPI/roles', roleRoutes);
-
+app.use('/OktatoAppAPI/permission', pemissionRoutes)
+//idetaska
 app.use((req,res,next)=>{
     const error = new Error('Not found');
     error.status = 404;

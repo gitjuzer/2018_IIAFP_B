@@ -59,6 +59,22 @@ CREATE TABLE `user` (
   `last_login` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Table structure for table `permission`
+--
+
+CREATE TABLE `permission`(
+	`id` int(11) NOT NULL,
+    `permission_name` VARCHAR(45) UNIQUE
+
+);
+
+ALTER TABLE `permission`
+  ADD PRIMARY KEY (`id`);
+  
+  
+ALTER TABLE `permission`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 -- --------------------------------------------------------
 
 --
