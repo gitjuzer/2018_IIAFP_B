@@ -2,7 +2,11 @@ const Role = require('../models/role');
 
 exports.get_all_roles = (req,res,next)=>{
     Role.getAllRoles((err, result) =>{
-        res.status(200).json(result);
+        res.status(200).json({
+            "status_code": "200",
+            "description": "Szerepkörök sikeresen lekérdezve!",
+            "data":result
+        });
     })
 }
 
