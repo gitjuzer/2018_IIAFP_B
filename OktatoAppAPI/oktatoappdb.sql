@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2019 at 09:27 PM
+-- Generation Time: Mar 30, 2019 at 09:43 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -33,6 +33,14 @@ CREATE TABLE `permission` (
   `permission_name` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `permission`
+--
+
+INSERT INTO `permission` (`id`, `permission_name`) VALUES
+(3, 'INSERT_NEW_QUESTION'),
+(1, 'INSERT_TO_CLASSROOM');
+
 -- --------------------------------------------------------
 
 --
@@ -57,6 +65,25 @@ INSERT INTO `role` (`id`, `role_name`, `role_description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `role_to_permission`
+--
+
+CREATE TABLE `role_to_permission` (
+  `role_id_pk` int(11) NOT NULL,
+  `permission_id_pk` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `role_to_permission`
+--
+
+INSERT INTO `role_to_permission` (`role_id_pk`, `permission_id_pk`) VALUES
+(2, 3),
+(3, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `token`
 --
 
@@ -68,6 +95,14 @@ CREATE TABLE `token` (
   `is_active` tinyint(4) DEFAULT NULL,
   `user_Id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `token`
+--
+
+INSERT INTO `token` (`id`, `token`, `created_at`, `expires_at`, `is_active`, `user_Id`) VALUES
+(14, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InhjdiIsInVzZXJfaWQiOjIsImlhdCI6MTU1Mzg4OTE0MiwiZXhwIjoxNTUzODkyNzQyfQ._eYPwSCLbGy50I3RjYHyveu5oh6ncqtjt1t4nzkgOCg', '2019-03-29 20:52:22', '2019-03-29 21:52:22', 1, 2),
+(15, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InhjdiIsInVzZXJfaWQiOjIsImlhdCI6MTU1Mzg5MTU2NCwiZXhwIjoxNTUzODk1MTY0fQ.sbsA8o7Y-o_8N2-QPk9LOIyyKizie1S9h047ZANM2j0', '2019-03-29 21:32:44', '2019-03-29 22:32:44', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -84,6 +119,14 @@ CREATE TABLE `user` (
   `created_at` datetime NOT NULL,
   `last_login` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `first_name`, `last_name`, `created_at`, `last_login`) VALUES
+(1, 'test', 'test', 'test', 'test', '2019-03-29 16:39:15', NULL),
+(2, 'xcv', 'test', 'test', 'test', '2019-03-29 20:47:20', NULL);
 
 -- --------------------------------------------------------
 
@@ -123,6 +166,14 @@ ALTER TABLE `role`
   ADD UNIQUE KEY `role_name` (`role_name`);
 
 --
+-- Indexes for table `role_to_permission`
+--
+ALTER TABLE `role_to_permission`
+  ADD PRIMARY KEY (`role_id_pk`,`permission_id_pk`),
+  ADD KEY `fk_role_to_permission_role1_idx` (`role_id_pk`),
+  ADD KEY `fk_role_to_permission_permission1_idx` (`permission_id_pk`);
+
+--
 -- Indexes for table `token`
 --
 ALTER TABLE `token`
@@ -152,7 +203,7 @@ ALTER TABLE `user_to_role`
 -- AUTO_INCREMENT for table `permission`
 --
 ALTER TABLE `permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -164,17 +215,24 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `token`
 --
 ALTER TABLE `token`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `role_to_permission`
+--
+ALTER TABLE `role_to_permission`
+  ADD CONSTRAINT `fk_role_to_permission_permission1` FOREIGN KEY (`permission_id_pk`) REFERENCES `permission` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_role_to_permission_role1` FOREIGN KEY (`role_id_pk`) REFERENCES `role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `token`

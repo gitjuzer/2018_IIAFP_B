@@ -14,7 +14,7 @@ const pemissionRoutes = require('./routes/permission');
 
 app.use('/OktatoAppAPI/users', userRoutes);
 app.use('/OktatoAppAPI/roles', roleRoutes);
-app.use('/OktatoAppAPI/permission', pemissionRoutes)
+app.use('/OktatoAppAPI/permissions', pemissionRoutes)
 //idetaska
 app.use((req,res,next)=>{
     const error = new Error('Not found');
