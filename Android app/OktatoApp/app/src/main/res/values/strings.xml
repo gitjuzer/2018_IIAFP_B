@@ -10,4 +10,5 @@
     <string name="learning">Tanulás</string>
     <string name="statistic">Statisztika</string>
     <string name="duel">Párbaj</string>
+    <string name="teacher_id">Teacher ID</string>
 </resources>

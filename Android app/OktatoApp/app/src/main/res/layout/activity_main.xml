@@ -98,9 +98,34 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/teacherID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/password"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_teacher_green" />
+
+                <EditText
+                    android:id="@+id/teacherIDET"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/teacher_id"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/teacherID"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingBottom="16dp"
