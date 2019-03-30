@@ -1,5 +1,7 @@
 package hu.afp.oktatoapp;
 
+import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -7,9 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Intent;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -36,13 +38,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final EditText username, password;
-        View toolbar, student, teacher;
+        final View toolbar, student, teacher;
         ImageView logo, studentLogo, teacherLogo;
         TextView studentTV, teacherTV;
         Button login, register;
-
-
-
+        final LinearLayout teacherID;
 
         toolbar = findViewById(R.id.myToolbar);
         student = findViewById(R.id.studentBtn);
@@ -51,13 +51,13 @@ public class MainActivity extends AppCompatActivity {
         register = findViewById(R.id.registerBtn);
         username = findViewById(R.id.usernameET);
         password = findViewById(R.id.passwordET);
+        teacherID = findViewById(R.id.teacherID);
 
         logo = toolbar.findViewById(R.id.logo);
         studentLogo = student.findViewById(R.id.logo);
         studentTV = student.findViewById(R.id.buttonText);
         teacherLogo = teacher.findViewById(R.id.logo);
         teacherTV = teacher.findViewById(R.id.buttonText);
-
 
         logo.setImageDrawable(getDrawable(R.drawable.ic_puzzle));
         studentLogo.setImageDrawable(getDrawable(R.drawable.ic_student));
@@ -68,13 +68,19 @@ public class MainActivity extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                student.findViewById(R.id.background).setBackground(getDrawable(R.drawable.circle));
+                teacher.findViewById(R.id.background).setBackground(getDrawable(R.drawable.disabled_circle));
                 studentBtnIsClicked = true;
                 teacherBtnIsClicked = false;
+                if(teacherID.getVisibility() == View.VISIBLE)
+                    teacherID.setVisibility(View.GONE);
             }
         });
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                student.findViewById(R.id.background).setBackground(getDrawable(R.drawable.disabled_circle));
+                teacher.findViewById(R.id.background).setBackground(getDrawable(R.drawable.circle));
                 teacherBtnIsClicked = true;
                 studentBtnIsClicked = false;
             }
@@ -87,33 +93,41 @@ public class MainActivity extends AppCompatActivity {
                 if (!("".contentEquals(temp1)) && !("".contentEquals(temp2)))
                     sendLoginData(temp1, temp2);
 
-                if (teacherBtnIsClicked == false && studentBtnIsClicked == false){
+                if (!teacherBtnIsClicked && !studentBtnIsClicked) {
                     Toast errorToast = Toast.makeText(MainActivity.this, "Ki kell választanod " +
-                            "legalább az egyik menüpontot. Tanár, vagy diákként szeretnél belépni?",
+                                    "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél belépni?",
                             Toast.LENGTH_SHORT);
                     errorToast.show();
                 }
-                if (studentBtnIsClicked == true) {
+                if (studentBtnIsClicked) {
                     Intent student = new Intent(MainActivity.this, StudentMenu.class);
                     student.putExtra("Username", username.getText().toString());
                     startActivity(student);
                 }
-                if (teacherBtnIsClicked == true) {
+                if (teacherBtnIsClicked) {
                     Intent teacher = new Intent(MainActivity.this, TeacherMenu.class);
                     teacher.putExtra("Username", username.getText().toString());
                     startActivity(teacher);
                 }
             }
         });
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(teacherBtnIsClicked && teacherID.getVisibility() == View.GONE)
+                    teacherID.setVisibility(View.VISIBLE);
+            }
+        });
     }
+
     private void sendLoginData(String username, String password) {
         /*POST: username, password JSON formátumban*/
         String url = "example.com/OktatoiAppAPI/session";
         final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("username",username);
-            jsonObject.put("password",hashedPass);
+            jsonObject.put("username", username);
+            jsonObject.put("password", hashedPass);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -139,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public byte[] getBody(){
+            public byte[] getBody() {
                 try {
                     return requestBody == null ? null : requestBody.getBytes("utf-8");
                 } catch (UnsupportedEncodingException e) {
@@ -149,6 +163,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         //queue.add(postRequest);
-        Log.d("POST_REQ",requestBody);
+        Log.d("POST_REQ", requestBody);
     }
 }
