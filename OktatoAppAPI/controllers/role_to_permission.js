@@ -23,10 +23,16 @@ exports.AddPermissionToRole = (req,res,next)=>{
     const permission_name = req.body.permission_name
     RoleToPermission.AddPermissionToRole(role_name, permission_name, (err, result)=>{
         if(err || result === null || !result){
-            if(err.errno == '1062'){
+            if(err && err.errno == '1062'){
                 return res.status(409).json({
                     "status_code" : "409",
                     "description" : "Ehhez ez szerepkörhöz már tartozik ilyen jogosultság!"
+                })
+            }
+            if(!result){
+                return res.status(404).json({
+                    "status_code" : "404",
+                    "description" : "Jogosultság nem található!"
                 })
             }
             return res.status(404).json({

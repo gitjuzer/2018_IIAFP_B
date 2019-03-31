@@ -9,7 +9,9 @@ const connection = mysql.createConnection({
 });
 
 connection.connect(function(err) {
-    if (err) throw err;
+    if (err){
+        console.log('Nem fut az adatbázis!')
+    }
 });
 
 module.exports = connection;
