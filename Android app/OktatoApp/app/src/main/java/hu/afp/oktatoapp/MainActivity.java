@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendLoginData(String username, String password) {
         /*POST: username, password JSON formátumban*/
-        String url = "example.com/OktatoiAppAPI/session";
+        String url = "localhost:3000/OktatoiAppAPI/users/login";
         final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         JSONObject jsonObject = new JSONObject();
         try {
