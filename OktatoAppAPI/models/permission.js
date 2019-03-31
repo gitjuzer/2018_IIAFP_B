@@ -62,11 +62,9 @@ Permission.DeleteByPermissionName = (permissionName,result)=>{
     sql.query("Delete From permission Where permission_name = ?",permissionName,(err,res) =>{
         if(err)
         {
-            console.log("error")
             result(err,null);
         }
         else{
-            console.log("joo");
             result(null,res)
         }
 

@@ -17,11 +17,9 @@ Role.createRole = (newRole, result) =>{
 Role.getAllRoles = (result) =>{
     sql.query("SELECT * FROM role",(err, res)=>{
         if (err){
-            console.log('error fut le')
             result(err, null);
         }
         else{
-            console.log('Hibatlan')
             result(null, res)
         }
     })
@@ -29,11 +27,9 @@ Role.getAllRoles = (result) =>{
 Role.getRoleById = (id, result)=>{
     sql.query("SELECT * FROM role WHERE id = ?",id, (err, res)=>{
         if(err){
-            console.log(err);
             result(err, null);
         }
         else{
-            console.log(res);
             result(null, res);
         }
     });

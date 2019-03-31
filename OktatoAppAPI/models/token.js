@@ -75,6 +75,17 @@ Token.deactiveToken = (token, result)=>{
     })
 };
 
+Token.deactiveTokenById = (token_id, result)=>{
+    sql.query('UPDATE token SET is_active = 0 WHERE id = ?', token_id, (err,res)=>{
+        if(err){
+            result(err, null)
+        }
+        else{
+            result(null, res)
+        }
+    })
+}
+
 Token.getActiveTokensByUsername = (username, result)=>{
     sql.query('SELECT token.id, token.token, token.created_at, token.expires_at, token.is_active, user.username FROM token INNER JOIN user ON user.id = token.user_id WHERE user.username = ? AND token.is_active = 1 AND CAST(token.expires_at AS DATETIME) > ?',[username, moment(new Date()).format("YYYY-MM-DD HH:mm:ss")], (err,res)=>{
         if(err){
