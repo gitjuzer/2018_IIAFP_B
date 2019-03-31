@@ -5,7 +5,8 @@ const connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
     password : '',
-    database : 'oktatoappdb'
+    database : 'oktatoappdb',
+    timezone : 'utc'
 });
 
 connection.connect(function(err) {

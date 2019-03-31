@@ -1,5 +1,6 @@
 const sql = require('./db');
 const Role = require('./role');
+var moment = require('moment')
 
 const User = function(user){
     this.username = user.username;
@@ -7,7 +8,7 @@ const User = function(user){
     this.password = user.password;
     this.first_name = user.first_name;
     this.last_name = user.last_name;
-    this.created_at = new Date();
+    this.created_at = moment(new Date()).format("YYYY-MM-DD HH:mm:ss");
 };
 
 User.createUser = (newUser, account_type, result)=>{
@@ -17,24 +18,6 @@ User.createUser = (newUser, account_type, result)=>{
         }
         else{
             result(null, res.insertId);
-            /*
-            const user_id_pk = res.insertId;
-            Role.getRoleByName(account_type, (err, res)=>{
-                if(err){
-                    result(err, null);
-                }
-                else{
-                    role_id_pk = res[0].id;
-                    sql.query("INSERT INTO user_to_role SET ?", {"role_id_pk": role_id_pk, "user_id_pk": user_id_pk }, (err, res)=>{
-                        if(err){
-                            result(err, null);
-                        }
-                        else{
-                            result(null, user_id_pk);
-                        }
-                    })
-                }
-            })*/
         };
     }); 
 };
