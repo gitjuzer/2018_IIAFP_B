@@ -120,8 +120,6 @@ public class MainActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(teacherBtnIsClicked && teacherID.getVisibility() == View.GONE)
-                    teacherID.setVisibility(View.VISIBLE);
                 Intent registrationIntent = new Intent(MainActivity.this, RegistrationActivity.class);
                 startActivity(registrationIntent);
             }
