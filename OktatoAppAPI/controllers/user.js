@@ -3,6 +3,7 @@ const Role = require('../models/role');
 const UserToRole = require('../models/user_to_role');
 const jwt = require('jsonwebtoken')
 const Token = require('../models/token')
+var moment = require('moment')
 
 function hasWhiteSpace(s) {
     return /\s/g.test(s);
@@ -62,39 +63,52 @@ exports.login = (req,res,next)=>{
                 "description":"Sikertelen bejelentkezés!"
             })
         }
-        if (req.body.password != user[0].password){
-            return res.status(401).json({
-                "status_code":"401",
-                "description":"Sikertelen bejelentkezés!"
-            })
-        }
-        const token = jwt.sign({
-            username: user[0].username,
-            user_id: user[0].id
-            },
-            process.env.JWT_KEY,
-            {
-                expiresIn: "1h"
-            }
-        )
-        Token.createNewToken({
-            "token": token,
-            "created_at": new Date(),
-            "expires_at": new Date().addHours(1),
-            "is_active": 1,
-            "user_id": user[0].id
-        },
-        (err,result)=>{
-            Token.getTokenById(result.insertId, (err, result)=>{
-                res.status(201).json({
+        Token.getActiveTokensByUsername(req.body.username, (err, result)=>{
+            const tokenfromdb = result;
+            if(tokenfromdb.length == 1){
+                return res.status(201).json({
                     "status_code":"201",
                     "description":"Sikeres bejelentkezés!",
-                    "data": result
+                    "data": tokenfromdb
                 })
-            })       
+            }
+            if (req.body.password != user[0].password){
+                return res.status(401).json({
+                    "status_code":"401",
+                    "description":"Sikertelen bejelentkezés!"
+                })
+            }
+            const token = jwt.sign({
+                username: user[0].username,
+                user_id: user[0].id
+                },
+                process.env.JWT_KEY,
+                {
+                    expiresIn: "1h"
+                }
+            )
+            Token.createNewToken(new Token({
+                token:token,
+                expires_at: moment(new Date().addHours(1)).format("YYYY-MM-DD HH:mm:ss"),
+                is_active:1,
+                user_id:user[0].id
+            }),
+            (err,result)=>{
+                Token.getTokenById(result.insertId, (err, result1)=>{
+                    res.status(201).json({
+                        "status_code":"201",
+                        "description":"Sikeres bejelentkezés!",
+                        "data": result1
+                    })
+                })       
+            })
         })
     })
 }
+
+/*exports.logout = (req,res,next)=>{
+    if(!req.headers.)
+}*/
 
 exports.create_new_user = (req,res,next)=>{
     const newUser = new User(req.body);
