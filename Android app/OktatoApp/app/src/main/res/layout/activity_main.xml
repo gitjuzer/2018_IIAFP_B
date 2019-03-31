@@ -50,7 +50,7 @@
                 android:textSize="18sp" />
 
             <LinearLayout
-                android:id="@+id/name"
+                android:id="@+id/username_EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title"
@@ -74,10 +74,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/password"
+                android:id="@+id/password_EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/name"
+                android:layout_below="@id/username_EditText"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:gravity="center"
@@ -101,7 +101,7 @@
                 android:id="@+id/teacherID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/password"
+                android:layout_below="@id/password_EditText"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:gravity="center"

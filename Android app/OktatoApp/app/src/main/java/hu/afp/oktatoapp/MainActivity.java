@@ -1,5 +1,6 @@
 package hu.afp.oktatoapp;
 
+import android.app.NativeActivity;
 import android.content.Intent;
 import android.opengl.Visibility;
 import android.os.Bundle;
@@ -121,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(teacherBtnIsClicked && teacherID.getVisibility() == View.GONE)
                     teacherID.setVisibility(View.VISIBLE);
+                Intent registrationIntent = new Intent(MainActivity.this, RegistrationActivity.class);
+                startActivity(registrationIntent);
             }
         });
     }
