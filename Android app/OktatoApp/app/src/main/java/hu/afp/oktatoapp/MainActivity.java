@@ -45,8 +45,13 @@ public class MainActivity extends AppCompatActivity {
         final LinearLayout teacherID;
 
         toolbar = findViewById(R.id.myToolbar);
+
         student = findViewById(R.id.studentBtn);
+        student.findViewById(R.id.background).setBackground(getDrawable(R.drawable.disabled_circle));
+
         teacher = findViewById(R.id.teacherBtn);
+        teacher.findViewById(R.id.background).setBackground(getDrawable(R.drawable.disabled_circle));
+
         login = findViewById(R.id.loginBtn);
         register = findViewById(R.id.registerBtn);
         username = findViewById(R.id.usernameET);
