@@ -106,9 +106,34 @@ exports.login = (req,res,next)=>{
     })
 }
 
-/*exports.logout = (req,res,next)=>{
-    if(!req.headers.)
-}*/
+exports.logout = (req,res,next)=>{
+    const username = req.user_data.username;
+    Token.getActiveTokensByUsername(username, (err,result)=>{
+        const tokenfromdb = result;
+        if(tokenfromdb.length == 1){
+            Token.deactiveTokenById(tokenfromdb[0].id, (err, result1)=>{
+                if(err){
+                    return res.status(401).send({
+                        "status_code": "401",
+                        "description": "Hibás token!"
+                    });
+                }
+                else{
+                    return res.status(200).send({
+                        "status_code": "200",
+                        "description": "Sikeres kijelentkezés!"
+                    });
+                }
+            })
+        }
+        else{
+            return res.status(401).send({
+                "status_code": "401",
+                "description": "Hibás token!"
+            });
+        }
+    })
+}
 
 exports.create_new_user = (req,res,next)=>{
     const newUser = new User(req.body);
