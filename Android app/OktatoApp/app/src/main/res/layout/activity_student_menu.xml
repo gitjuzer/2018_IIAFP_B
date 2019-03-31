@@ -69,39 +69,74 @@
 
     <TextView
         android:id="@+id/learning_textView"
-        android:layout_width="153dp"
-        android:layout_height="62dp"
+        android:layout_width="123dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/learning"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/learning_Button"
         app:layout_constraintEnd_toEndOf="@+id/learning_Button"
-        app:layout_constraintStart_toStartOf="@+id/learning_Button"
-        app:layout_constraintTop_toTopOf="@+id/learning_Button" />
+        app:layout_constraintTop_toTopOf="@+id/learning_Button"
+        app:layout_constraintVertical_bias="0.494" />
 
     <TextView
         android:id="@+id/statistic_textView"
         android:layout_width="167dp"
         android:layout_height="43dp"
+        android:layout_marginStart="4dp"
         android:text="@string/statistic"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/statistic_button"
         app:layout_constraintEnd_toEndOf="@+id/statistic_button"
-        app:layout_constraintStart_toStartOf="@+id/statistic_button"
-        app:layout_constraintTop_toTopOf="@+id/statistic_button" />
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/statistic_button"
+        app:layout_constraintVertical_bias="0.531" />
 
     <TextView
         android:id="@+id/duel_textView"
-        android:layout_width="155dp"
-        android:layout_height="61dp"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
         android:text="@string/duel"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/duel_button"
         app:layout_constraintEnd_toEndOf="@+id/duel_button"
-        app:layout_constraintStart_toStartOf="@+id/duel_button"
         app:layout_constraintTop_toTopOf="@+id/duel_button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/learning_Button"
+        app:layout_constraintEnd_toStartOf="@+id/learning_textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/learning_Button"
+        app:layout_constraintTop_toTopOf="@+id/learning_Button"
+        app:srcCompat="@drawable/ic_lightbulb" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/statistic_button"
+        app:layout_constraintStart_toStartOf="@+id/statistic_button"
+        app:layout_constraintTop_toTopOf="@+id/statistic_button"
+        app:srcCompat="@drawable/ic_poll" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/duel_button"
+        app:layout_constraintEnd_toStartOf="@+id/duel_textView"
+        app:layout_constraintStart_toStartOf="@+id/duel_button"
+        app:layout_constraintTop_toTopOf="@+id/duel_button"
+        app:srcCompat="@drawable/ic_sword_cross" />
 
 
 </android.support.constraint.ConstraintLayout>
