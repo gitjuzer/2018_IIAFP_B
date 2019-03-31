@@ -8,6 +8,11 @@ function hasWhiteSpace(s) {
     return /\s/g.test(s);
 }
 
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 Date.prototype.addHours = function(h){
     this.setHours(this.getHours()+h);
     return this;
@@ -95,19 +100,20 @@ exports.create_new_user = (req,res,next)=>{
     const newUser = new User(req.body);
     const account_type = req.body['account_type'];
 
-    if(hasWhiteSpace(newUser.username) || hasWhiteSpace(newUser.password)){
-        return res.status(400).send({
-            "status_code": "400",
-            "description": "Hibás felhasználónév vagy jelszó!"
-        });
-    }
     if(!newUser.username || !newUser.password ||!newUser.first_name ||!newUser.last_name ||
-        !account_type){
+        !account_type || !newUser.email){
         return res.status(400).send({
             "status_code": "400",
             "description": "Hiányzó adatok!"
         });
     }
+    if(hasWhiteSpace(newUser.username) || hasWhiteSpace(newUser.password) || !validateEmail(newUser.email)){
+        return res.status(400).send({
+            "status_code": "400",
+            "description": "Hibás adatok!"
+        });
+    }
+    
     User.createUser(newUser, account_type, (err,result)=>{
         if (err || result === null){
             return res.status(409).json({

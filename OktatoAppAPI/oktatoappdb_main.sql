@@ -190,6 +190,7 @@ CREATE TABLE `token` (
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `username` varchar(16) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `first_name` varchar(45) NOT NULL,
   `last_name` varchar(45) NOT NULL,
@@ -331,7 +332,8 @@ ALTER TABLE `token`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `user_to_classroom`
