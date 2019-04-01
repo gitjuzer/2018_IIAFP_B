@@ -84,12 +84,12 @@ exports.login = (req,res,next)=>{
                 },
                 process.env.JWT_KEY,
                 {
-                    expiresIn: "1h"
+                    expiresIn: "4h"
                 }
             )
             Token.createNewToken(new Token({
                 token:token,
-                expires_at: moment(new Date().addHours(1)).format("YYYY-MM-DD HH:mm:ss"),
+                expires_at: moment(new Date().addHours(4)).format("YYYY-MM-DD HH:mm:ss"),
                 is_active:1,
                 user_id:user[0].id
             }),

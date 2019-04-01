@@ -20,11 +20,13 @@ app.use((req,res,next)=>{
 const userRoutes = require('./routes/user');
 const roleRoutes = require('./routes/role');
 const pemissionRoutes = require('./routes/permission');
+const classroomRoutes = require('./routes/classroom')
 
 
 app.use('/OktatoAppAPI/users', userRoutes);
 app.use('/OktatoAppAPI/roles', roleRoutes);
 app.use('/OktatoAppAPI/permissions', pemissionRoutes)
+app.use('/OktatoAppAPI/classrooms', classroomRoutes)
 
 app.use((req,res,next)=>{
     const error = new Error('Not found');
