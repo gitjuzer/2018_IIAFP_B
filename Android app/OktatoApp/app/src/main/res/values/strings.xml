@@ -15,4 +15,6 @@
     <string name="emailAddress">E-mail cím</string>
     <string name="firstName">Keresztnév</string>
     <string name="lastName">Családnév</string>
+    <string name="lessons">Leckék</string>
+    <string name="classes">Osztályok</string>
 </resources>

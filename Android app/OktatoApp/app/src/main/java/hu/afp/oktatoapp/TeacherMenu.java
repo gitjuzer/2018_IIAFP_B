@@ -15,7 +15,7 @@ public class TeacherMenu extends AppCompatActivity {
         final TextView usernameDisplay;
 
 
-        usernameDisplay = findViewById(R.id.username_editText);
+        usernameDisplay = findViewById(R.id.usernameT_TextView);
         usernameDisplay.setText(getIntent().getStringExtra("Username"));
     }
 }
