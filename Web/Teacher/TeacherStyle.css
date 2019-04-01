@@ -1,47 +1,111 @@
 body {
   margin: 0;
 }
+
 .headdiv {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
-  }
-  
-  .headAppName {
-    float: left;
-    width: 70%;
-  }
-  
-  .headUserName {
-    float: right;
-    width: 30%;
-    background: white;
-  }
-  
-  .heada1, .heada2 {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 26px;
-    text-decoration: none;
-    font-size: 150%;
-    position: relative;
-    height: 6%;
-  }
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 25;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+}
 
-  .heada2 {
-    margin-left: 3px;
-    background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
-    font-size: 100%;
-  }
+.headAppName {
+  float: left;
+  width: 70%;
+}
 
-  li a:hover {
-    background-color: rgb(124, 160, 128);
-    background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
-  }
+.headUserName {
+  float: right;
+  width: 30%;
+  background: white;
+}
 
-  .userlogo {
-    border-radius: 50%;
-  }
+.Userlogo {
+  height: 100%;
+  max-width: 100%;
+  float: left;
+}
+
+.heada1,
+.heada2 {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 26px;
+  text-decoration: none;
+  font-size: 150%;
+  position: relative;
+  height: 6%;
+}
+
+.heada2 {
+  margin-left: 2px;
+  background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+  font-size: 100%;
+}
+
+li a:hover {
+  background-color: rgb(124, 160, 128);
+  background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
+}
+
+.show {
+  display: block;
+}
+
+.LeftColumn,
+.MiddleColumn,
+.RightColumn {
+  float: left;
+}
+
+.LeftColumn,
+.RightColumn {
+  width: 20%;
+
+}
+
+.MiddleColumn {
+  width: 60%;
+  text-align: center
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.Learninglogo,
+.Statslogo,
+.Versuslogo {
+  height: 30;
+  max-width: 100%;
+  float: left;
+}
+
+.Selected {
+  margin: 0px 0px 10px 0px;
+  width: 200px;
+  border-radius: 10%;
+  background-color: rgb(12, 180, 87);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: rgb(12, 180, 87);
+}
+
+.Unselected {
+  margin: 0px 0px 10px 0px;
+  width: 200px;
+  border-radius: 10%;
+  background-color: rgb(168, 168, 168);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
