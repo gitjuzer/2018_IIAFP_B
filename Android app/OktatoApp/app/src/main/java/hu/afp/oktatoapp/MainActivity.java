@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final EditText username, password;
@@ -128,8 +129,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendLoginData(String username, String password) {
         /*POST: username, password JSON formátumban*/
-        String url = "localhost:3000/OktatoiAppAPI/users/login";
-        final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+
+        NukeSSLCerts.nuke();
+
+        String url = "https://10.0.2.2:3000/OktatoAppAPI/users/login";
+        //final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+        final String hashedPass = password;
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("username", username);
@@ -150,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("Error.Response", error.getMessage());
+                        Log.d("Error.Response", " " + error.getMessage());
                     }
                 }) {
             @Override
@@ -168,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-        //queue.add(postRequest);
-        Log.d("POST_REQ", requestBody);
+        queue.add(postRequest);
+        Log.d("POST_REQ", " "+ requestBody);
     }
 }
