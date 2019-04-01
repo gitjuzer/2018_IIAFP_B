@@ -97,11 +97,12 @@ body {
 }
 
 .textUnderIndexButton{
+	
 	padding-top: 10px;
 	text-align: center;
 	color: rgb(51, 211, 64);
-	font-size: 20;
-	font-weight: 900;
+	font-size: 25;
+	font-weight: bold;
 }
 
 .teacherDiv{
@@ -116,6 +117,10 @@ body {
 	width: 50%;
 	text-align: center;
 	padding-top: 60px;
+}
+.routing{
+	text-decoration: none;
+	outline: none;
 }
 /* End Index Page */
 
@@ -144,9 +149,20 @@ body {
 	margin-left: 6px;
 }
 
+.emailIcon{
+	background-image: url("img/email.png");
+	margin-left: 6px;
+}
+
+
 .passIcon{
 	background-image: url("img/pass.png");
 	margin-left: 10px;
+}
+
+.teacherIcon{
+	background-image: url("img/magister_icon.png");
+	margin-left: 6px;
 }
 
 .icon{

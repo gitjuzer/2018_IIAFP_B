@@ -61,9 +61,12 @@
         android:layout_width="167dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.622"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
@@ -90,7 +93,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/statistic_button"
         app:layout_constraintEnd_toEndOf="@+id/statistic_button"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/statisticIcon_ImgView"
         app:layout_constraintTop_toTopOf="@+id/statistic_button"
         app:layout_constraintVertical_bias="0.531" />
 
@@ -106,7 +109,7 @@
         app:layout_constraintTop_toTopOf="@+id/duel_button" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/learningIcon_ImgView"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginStart="24dp"
@@ -118,7 +121,7 @@
         app:srcCompat="@drawable/ic_lightbulb" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/statisticIcon_ImgView"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginStart="24dp"
@@ -128,7 +131,7 @@
         app:srcCompat="@drawable/ic_poll" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/duelIcon_ImgView"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginStart="24dp"
@@ -137,6 +140,21 @@
         app:layout_constraintStart_toStartOf="@+id/duel_button"
         app:layout_constraintTop_toTopOf="@+id/duel_button"
         app:srcCompat="@drawable/ic_sword_cross" />
+
+    <ImageView
+        android:id="@+id/studentIcon_ImgView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/usernameDisplay_TextView"
+        app:layout_constraintEnd_toStartOf="@+id/usernameDisplay_TextView"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.555"
+        app:srcCompat="@drawable/ic_face" />
 
 
 </android.support.constraint.ConstraintLayout>

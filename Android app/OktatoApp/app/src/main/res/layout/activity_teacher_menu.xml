@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".TeacherMenu">
 
+    <ImageButton
+        android:id="@+id/classes_Button"
+        android:layout_width="233dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button_background" />
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/upperToolbar"
         android:layout_width="0dp"
@@ -17,18 +29,132 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/username_editText"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/upperToolbar"
-        app:layout_constraintEnd_toEndOf="@+id/upperToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/usernameT_TextView"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="@+id/upperToolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/upperToolbar"
+        app:srcCompat="@drawable/ic_teacher" />
+
+    <ImageButton
+        android:id="@+id/lessons_Button"
+        android:layout_width="233dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upperToolbar"
+        app:srcCompat="@drawable/button_background" />
+
+    <ImageButton
+        android:id="@+id/statisticT_Button"
+        android:layout_width="233dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/classes_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessons_Button"
+        app:srcCompat="@drawable/button_background" />
+
+    <TextView
+        android:id="@+id/lessons_textView"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
+        android:text="@string/lessons"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lessons_Button"
+        app:layout_constraintEnd_toEndOf="@+id/lessons_Button"
+        app:layout_constraintTop_toTopOf="@+id/lessons_Button" />
+
+    <TextView
+        android:id="@+id/classes_textView"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/classes"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/classes_Button"
+        app:layout_constraintEnd_toEndOf="@+id/classes_Button"
+        app:layout_constraintTop_toTopOf="@+id/classes_Button" />
+
+    <TextView
+        android:id="@+id/statisticT_textView"
+        android:layout_width="152dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/statistic"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/statisticT_Button"
+        app:layout_constraintEnd_toEndOf="@+id/statisticT_Button"
+        app:layout_constraintTop_toTopOf="@+id/statisticT_Button" />
+
+    <TextView
+        android:id="@+id/usernameT_TextView"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/upperToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toStartOf="@+id/upperToolbar"
+        app:layout_constraintTop_toTopOf="@+id/upperToolbar" />
+
+    <ImageView
+        android:id="@+id/lessonsIcon_ImgView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lessons_Button"
+        app:layout_constraintEnd_toStartOf="@+id/lessons_textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/lessons_Button"
+        app:layout_constraintTop_toTopOf="@+id/lessons_Button"
+        app:srcCompat="@drawable/ic_lightbulb" />
+
+    <ImageView
+        android:id="@+id/statisticTIcon_ImgView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/statisticT_Button"
+        app:layout_constraintEnd_toStartOf="@+id/statisticT_textView"
+        app:layout_constraintStart_toStartOf="@+id/statisticT_Button"
+        app:layout_constraintTop_toTopOf="@+id/statisticT_Button"
+        app:srcCompat="@drawable/ic_poll" />
+
+    <ImageView
+        android:id="@+id/classesIcon_ImgView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/classes_Button"
+        app:layout_constraintEnd_toStartOf="@+id/classes_textView"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/classes_Button"
+        app:layout_constraintTop_toTopOf="@+id/classes_Button"
+        app:srcCompat="@drawable/ic_classes" />
+
 </android.support.constraint.ConstraintLayout>
