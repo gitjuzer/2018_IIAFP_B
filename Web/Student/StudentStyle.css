@@ -43,7 +43,6 @@ li a:hover {
   background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
 }
 
-
 .userlogo {
   border-radius: 50%;
 }
@@ -106,9 +105,8 @@ li a:hover {
   top: 0px;
   left: 250px;
   border-style: solid;
-  border-color:  rgb(3, 87, 80);
+  border-color: rgb(3, 87, 80);
   border-radius: 1%;
-
 }
 
 .SideMenuElement {
@@ -130,6 +128,6 @@ li a:hover {
   text-align: center;
 }
 
-.htmldata{
+.htmldata {
   width: 40%;
 }
