@@ -131,3 +131,21 @@ li a:hover {
 .htmldata {
   width: 40%;
 }
+
+.icon-app{
+  background-image: url("../img/magister_icon.png");
+}
+
+.icon-user{
+  background-image: url("../img/human_head_icon.png");
+}
+
+[class^="icon"] {
+  background-repeat: no-repeat;
+  background-size:auto 100%;
+  width: 30;
+  height: 30;
+  position: relative;
+  padding-left: 30px;
+  z-index: 2;
+}
