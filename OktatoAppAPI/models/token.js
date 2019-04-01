@@ -97,4 +97,15 @@ Token.getActiveTokensByUsername = (username, result)=>{
     })
 }
 
+Token.getActiveTokensByUserId = (id, result)=>{
+    sql.query('SELECT token.id, token.token, token.created_at, token.expires_at, token.is_active, user.username FROM token INNER JOIN user ON user.id = token.user_id WHERE token.user_id = ? AND token.is_active = 1 AND CAST(token.expires_at AS DATETIME) > ?',[id, moment(new Date()).format("YYYY-MM-DD HH:mm:ss")], (err,res)=>{
+        if(err){
+            result(err, null)
+        }
+        else{
+            result(null, res)
+        }
+    })
+}
+
 module.exports = Token;
