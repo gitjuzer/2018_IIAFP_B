@@ -149,9 +149,20 @@ body {
 	margin-left: 6px;
 }
 
+.emailIcon{
+	background-image: url("img/email.png");
+	margin-left: 6px;
+}
+
+
 .passIcon{
 	background-image: url("img/pass.png");
 	margin-left: 10px;
+}
+
+.teacherIcon{
+	background-image: url("img/magister_icon.png");
+	margin-left: 6px;
 }
 
 .icon{
