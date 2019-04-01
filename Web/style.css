@@ -97,11 +97,12 @@ body {
 }
 
 .textUnderIndexButton{
+	
 	padding-top: 10px;
 	text-align: center;
 	color: rgb(51, 211, 64);
-	font-size: 20;
-	font-weight: 900;
+	font-size: 25;
+	font-weight: bold;
 }
 
 .teacherDiv{
@@ -116,6 +117,10 @@ body {
 	width: 50%;
 	text-align: center;
 	padding-top: 60px;
+}
+.routing{
+	text-decoration: none;
+	outline: none;
 }
 /* End Index Page */
 
