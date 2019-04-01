@@ -3,7 +3,8 @@ const Role = require('../models/role');
 const UserToRole = require('../models/user_to_role');
 const jwt = require('jsonwebtoken')
 const Token = require('../models/token')
-var moment = require('moment')
+const moment = require('moment')
+const encryption = require('../utilities/encryption')
 
 function hasWhiteSpace(s) {
     return /\s/g.test(s);
@@ -63,44 +64,47 @@ exports.login = (req,res,next)=>{
                 "description":"Sikertelen bejelentkezés!"
             })
         }
-        Token.getActiveTokensByUsername(req.body.username, (err, result)=>{
-            const tokenfromdb = result;
-            if(tokenfromdb.length == 1){
-                return res.status(201).json({
-                    "status_code":"201",
-                    "description":"Sikeres bejelentkezés!",
-                    "data": tokenfromdb
-                })
-            }
-            if (req.body.password != user[0].password){
+        encryption.comparePassword(req.body.password, user[0].password, (err, res_isPasswordMatch)=>{
+            if(!res_isPasswordMatch){
                 return res.status(401).json({
                     "status_code":"401",
                     "description":"Sikertelen bejelentkezés!"
                 })
             }
-            const token = jwt.sign({
-                username: user[0].username,
-                user_id: user[0].id
-                },
-                process.env.JWT_KEY,
-                {
-                    expiresIn: "4h"
-                }
-            )
-            Token.createNewToken(new Token({
-                token:token,
-                expires_at: moment(new Date().addHours(4)).format("YYYY-MM-DD HH:mm:ss"),
-                is_active:1,
-                user_id:user[0].id
-            }),
-            (err,result)=>{
-                Token.getTokenById(result.insertId, (err, result1)=>{
-                    res.status(201).json({
+            Token.getActiveTokensByUsername(req.body.username, (err, result)=>{
+                const tokenfromdb = result;
+                if(tokenfromdb.length == 1){
+                    return res.status(201).json({
                         "status_code":"201",
                         "description":"Sikeres bejelentkezés!",
-                        "data": result1
+                        "data": tokenfromdb
                     })
-                })       
+                }        
+                const token = jwt.sign({
+                    username: user[0].username,
+                    email: user[0].email,
+                    user_id: user[0].id
+                    },
+                    process.env.JWT_KEY,
+                    {
+                        expiresIn: "4h"
+                    }
+                )
+                Token.createNewToken(new Token({
+                    token:token,
+                    expires_at: moment(new Date().addHours(4)).format("YYYY-MM-DD HH:mm:ss"),
+                    is_active:1,
+                    user_id:user[0].id
+                }),
+                (err,result)=>{
+                    Token.getTokenById(result.insertId, (err, result1)=>{
+                        return res.status(201).json({
+                            "status_code":"201",
+                            "description":"Sikeres bejelentkezés!",
+                            "data": result1
+                        })
+                    })       
+                })
             })
         })
     })
@@ -136,7 +140,7 @@ exports.logout = (req,res,next)=>{
 }
 
 exports.create_new_user = (req,res,next)=>{
-    const newUser = new User(req.body);
+    var newUser = new User(req.body);
     const account_type = req.body['account_type'];
 
     if(!newUser.username || !newUser.password ||!newUser.first_name ||!newUser.last_name ||
@@ -152,38 +156,46 @@ exports.create_new_user = (req,res,next)=>{
             "description": "Hibás adatok!"
         });
     }
-    
-    User.createUser(newUser, account_type, (err,result)=>{
-        if (err || result === null){
-            return res.status(409).json({
-                "status_code": "409",
-                "description": "Már létezik ilyen felhasználó!"
-            });
+    encryption.cryptPassword(newUser.password, (err, result_enc)=>{
+        if(err){
+            return res.status(500).json({
+                "status_code":"500",
+                "description":err
+            })
         }
-        const user_id_pk = result;
-        Role.getRoleByName(account_type, (err,result)=>{
-            if (err || result === null || Object.keys(result).length === 0){
-                return res.status(404).json({
-                    "status_code": "404",
-                    "description": "Szerepkör nem található!"
+        newUser.password = result_enc
+        User.createUser(newUser, account_type, (err,result)=>{
+            if (err || result === null){
+                return res.status(409).json({
+                    "status_code": "409",
+                    "description": "Már létezik ilyen felhasználó!"
                 });
             }
-            const role_id_pk = result[0].id;
-            UserToRole.createUserToRole(new UserToRole(user_id_pk, role_id_pk), (err, result)=>{
+            const user_id_pk = result;
+            Role.getRoleByName(account_type, (err,result)=>{
                 if (err || result === null || Object.keys(result).length === 0){
                     return res.status(404).json({
                         "status_code": "404",
                         "description": "Szerepkör nem található!"
                     });
                 }
-                User.getUserById(user_id_pk, (err, result)=>{
-                    return res.status(201).json({
-                        "status_code": "201",
-                        "description": "Sikeres regisztráció!",
-                        "data":result
-                    }); 
-                });
-            }) 
-        });
+                const role_id_pk = result[0].id;
+                UserToRole.createUserToRole(new UserToRole(user_id_pk, role_id_pk), (err, result)=>{
+                    if (err || result === null || Object.keys(result).length === 0){
+                        return res.status(404).json({
+                            "status_code": "404",
+                            "description": "Szerepkör nem található!"
+                        });
+                    }
+                    User.getUserById(user_id_pk, (err, result)=>{
+                        return res.status(201).json({
+                            "status_code": "201",
+                            "description": "Sikeres regisztráció!",
+                            "data":result
+                        }); 
+                    });
+                }) 
+            });
+        })
     })
 }

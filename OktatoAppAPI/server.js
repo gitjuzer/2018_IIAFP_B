@@ -5,14 +5,13 @@ const fs = require('fs')
 const dotenv = require('dotenv');
 dotenv.config();
 
-const port = process.env.PORT || 3000;
+const https_port = process.env.HTTPS_PORT || 3000
 
 var httpsOptions ={
     key: fs.readFileSync('keys/server.key'),
     cert: fs.readFileSync('keys/server.cert')
 }
 
-const server = https.createServer(httpsOptions, app);
-
-console.log('Server is listening on port ' + process.env.PORT)
-server.listen(port);
+const https_server = https.createServer(httpsOptions, app);
+console.log('HTTPS server is listening on https://localhost:' + process.env.HTTPS_PORT)
+https_server.listen(https_port)
