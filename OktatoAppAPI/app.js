@@ -29,7 +29,7 @@ app.use('/OktatoAppAPI/permissions', pemissionRoutes)
 app.use('/OktatoAppAPI/classrooms', classroomRoutes)
 
 app.use((req,res,next)=>{
-    const error = new Error('Not found');
+    const error = new Error('Nem található');
     error.status = 404;
     next(error);
 });
@@ -37,9 +37,8 @@ app.use((req,res,next)=>{
 app.use((error, req,res,next)=>{
     res.status(error.status || 500);
     res.json({
-        error:{
-            message: error.message
-        }
+        "status_code": error.status || 500,
+        "description": error.message
     });
 });
 module.exports = app;
