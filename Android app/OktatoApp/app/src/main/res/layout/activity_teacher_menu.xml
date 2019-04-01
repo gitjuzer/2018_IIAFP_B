@@ -85,7 +85,7 @@
         android:id="@+id/classes_textView"
         android:layout_width="140dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/classes"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -118,5 +118,43 @@
         app:layout_constraintHorizontal_bias="0.63"
         app:layout_constraintStart_toStartOf="@+id/upperToolbar"
         app:layout_constraintTop_toTopOf="@+id/upperToolbar" />
+
+    <ImageView
+        android:id="@+id/lessonsIcon_ImgView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lessons_Button"
+        app:layout_constraintEnd_toStartOf="@+id/lessons_textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/lessons_Button"
+        app:layout_constraintTop_toTopOf="@+id/lessons_Button"
+        app:srcCompat="@drawable/ic_lightbulb" />
+
+    <ImageView
+        android:id="@+id/statisticTIcon_ImgView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/statisticT_Button"
+        app:layout_constraintEnd_toStartOf="@+id/statisticT_textView"
+        app:layout_constraintStart_toStartOf="@+id/statisticT_Button"
+        app:layout_constraintTop_toTopOf="@+id/statisticT_Button"
+        app:srcCompat="@drawable/ic_poll" />
+
+    <ImageView
+        android:id="@+id/classesIcon_ImgView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/classes_Button"
+        app:layout_constraintEnd_toStartOf="@+id/classes_textView"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/classes_Button"
+        app:layout_constraintTop_toTopOf="@+id/classes_Button"
+        app:srcCompat="@drawable/ic_classes" />
 
 </android.support.constraint.ConstraintLayout>
