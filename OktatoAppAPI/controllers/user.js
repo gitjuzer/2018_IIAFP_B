@@ -58,7 +58,7 @@ exports.login = (req,res,next)=>{
     }
     User.getUserByUsernameWithPassword(req.body.username, (err, result)=>{
         const user = result;
-        if (user.length < 1){
+        if (!user ||  user.length < 1){
             return res.status(401).json({
                 "status_code":"401",
                 "description":"Sikertelen bejelentkezés!"
@@ -140,31 +140,26 @@ exports.logout = (req,res,next)=>{
 }
 
 exports.create_new_user = (req,res,next)=>{
-    var newUser = new User(req.body);
+    var newUser = new User(req.body, req.body.password);
     const account_type = req.body['account_type'];
-
-    if(!newUser.username || !newUser.password ||!newUser.first_name ||!newUser.last_name ||
+    console.log(newUser)
+    if(!newUser.username || !newUser.password_hash ||!newUser.first_name ||!newUser.last_name ||
         !account_type || !newUser.email){
         return res.status(400).send({
             "status_code": "400",
             "description": "Hiányzó adatok!"
         });
     }
-    if(hasWhiteSpace(newUser.username) || hasWhiteSpace(newUser.password) || !validateEmail(newUser.email)){
-        return res.status(400).send({
-            "status_code": "400",
-            "description": "Hibás adatok!"
-        });
-    }
-    encryption.cryptPassword(newUser.password, (err, result_enc)=>{
+    encryption.cryptPassword(newUser.password_hash, (err, result_enc)=>{
         if(err){
             return res.status(500).json({
                 "status_code":"500",
                 "description":err
             })
         }
-        newUser.password = result_enc
-        User.createUser(newUser, account_type, (err,result)=>{
+        newUser.password_hash = result_enc
+        User.createUser(newUser, (err,result)=>{
+            console.log(err, result)
             if (err || result === null){
                 return res.status(409).json({
                     "status_code": "409",

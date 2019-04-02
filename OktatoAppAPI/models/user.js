@@ -5,13 +5,13 @@ var moment = require('moment')
 const User = function(user){
     this.username = user.username;
     this.email = user.email;
-    this.password = user.password;
+    this.password_hash = user.password;
     this.first_name = user.first_name;
     this.last_name = user.last_name;
     this.created_at = moment(new Date()).format("YYYY-MM-DD HH:mm:ss");
 };
 
-User.createUser = (newUser, account_type, result)=>{
+User.createUser = (newUser, result)=>{
     sql.query("INSERT INTO user SET ?", newUser, (err, res) =>{
         if (err){
             result(err, null);
@@ -42,7 +42,7 @@ User.getUserByUsername = (username, result)=>{
     });
 };
 User.getUserByUsernameWithPassword = (username, result)=>{
-    sql.query("SELECT user.id, user.username, user.email, user.password, user.first_name, user.last_name, user.created_at, user.last_login, role.role_name FROM user LEFT JOIN user_to_role ON user.id = user_to_role.user_id_pk LEFT JOIN role ON role.id = user_to_role.role_id_pk WHERE user.username = ?",username, (err, res)=>{
+    sql.query("SELECT user.id, user.username, user.email, user.password_hash, user.first_name, user.last_name, user.created_at, user.last_login, role.role_name FROM user LEFT JOIN user_to_role ON user.id = user_to_role.user_id_pk LEFT JOIN role ON role.id = user_to_role.role_id_pk WHERE user.username = ?",username, (err, res)=>{
         if(err){
             result(err, null);
         }
