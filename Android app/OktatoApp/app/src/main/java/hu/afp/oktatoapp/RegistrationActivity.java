@@ -3,6 +3,7 @@ package hu.afp.oktatoapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,12 +39,13 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        final EditText username = findViewById(R.id.usernameET);
+        final EditText username = findViewById(R.id.username_ET1);
         final EditText password = findViewById(R.id.passwordET);
         final EditText retryPassword = findViewById(R.id.retryPassword_ET);
         final EditText emailAddress = findViewById(R.id.email_ET);
         final EditText firstName = findViewById(R.id.firstName_ET);
         final EditText lastName = findViewById(R.id.lastName_ET);
+
 
         final RelativeLayout studentButton = findViewById(R.id.studentBtn);
         final RelativeLayout teacherButton = findViewById(R.id.teacherBtn);
@@ -87,32 +89,34 @@ public class RegistrationActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*String realUsername = username.getText().toString();
-                String realPassword = password.getText().toString();
-                String realRetryPassword = retryPassword.getText().toString();
-                String realEmail = emailAddress.getText().toString();
-                String realFirstName = firstName.getText().toString();
-                String realLastName = lastName.getText().toString();
-                */
 
                 String realPassword = password.getText().toString();
                 String realRetryPassword = retryPassword.getText().toString();
+                String realUsername = username.getText().toString();
+                String realEmail = emailAddress.getText().toString();
+                String realFirstName = firstName.getText().toString();
+                String realLastName = lastName.getText().toString();
 
                 if (!realPassword.equals(realRetryPassword)){
                     Toast errorToast = Toast.makeText(RegistrationActivity.this, "Nem egyeznek meg a " +
                             "jelszavak.", Toast.LENGTH_SHORT);
                     errorToast.show();
                 }
+                /*else if(emptyDataExists(realUsername, realPassword, realRetryPassword, realEmail, realFirstName, realLastName)){
+                    Toast errorToast = Toast.makeText(RegistrationActivity.this, "Minden adatot kötelező " +
+                            "kitölteni.", Toast.LENGTH_SHORT);
+                    errorToast.show();
+                }*/                             //  ez a szar nem működik valamiért
                else {
                     if (studentButtonIsClicked) {
-                        //sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Student);
+                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Student);
                         Toast.makeText(getBaseContext(), "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
 
                     } else if (teacherButtonIsClicked) {
                         Toast.makeText(getBaseContext(),"Tanárként való regisztráláshoz tudnod kell a " +
                                 "központi kódot.", Toast.LENGTH_SHORT).show();
 
-                        //sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Teacher);
+                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Teacher);
                     } else {
                         Toast errorToast = Toast.makeText(RegistrationActivity.this, "Ki kell választanod " +
                                         "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél regisztrálni?",
@@ -125,6 +129,15 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
+    private boolean emptyDataExists(String username, String password, String retryPassword, String email,
+                                   String firstName, String lastName){
+        if(TextUtils.isEmpty(username) || TextUtils.isEmpty(password) || TextUtils.isEmpty(retryPassword) || TextUtils.isEmpty(email)
+        || TextUtils.isEmpty(firstName) || TextUtils.isEmpty(lastName)){
+            return false;
+        }
+        else
+            return true;
+    }
     private void sendRegistrationData(String username, String email, String password,
                                        String firstName, String lastName, AccountType accountType){
         NukeSSLCerts.nuke();
@@ -139,6 +152,7 @@ public class RegistrationActivity extends AppCompatActivity {
             jsonObject.put("email", email);
             jsonObject.put("first_name", firstName);
             jsonObject.put("last_name", lastName);
+            jsonObject.put("account_type", accountType);
 
         } catch (JSONException e) {
             e.printStackTrace();

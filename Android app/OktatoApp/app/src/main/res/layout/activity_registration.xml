@@ -60,7 +60,7 @@
                 android:src="@drawable/ic_user" />
 
             <EditText
-                android:id="@+id/username_ET"
+                android:id="@+id/username_ET1"
                 android:layout_width="256dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/username"
