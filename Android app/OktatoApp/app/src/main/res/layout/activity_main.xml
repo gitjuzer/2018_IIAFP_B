@@ -12,7 +12,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/myToolbar">
+        android:layout_below="@id/myToolbar"
+        android:layout_marginTop="0dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -128,8 +129,8 @@
                 android:layout_below="@id/teacherID"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:paddingBottom="16dp"
-                android:paddingTop="16dp">
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
 
                 <Button
                     android:id="@+id/loginBtn"

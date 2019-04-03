@@ -14,21 +14,45 @@
         tools:context=".RegistrationActivity">
 
         <LinearLayout
+            android:id="@+id/modeSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <include
+                android:id="@+id/studentBtn"
+                layout="@layout/mode_select_button"
+                android:src="@drawable/ic_student" />
+
+            <include
+                android:id="@+id/teacherBtn"
+                layout="@layout/mode_select_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:src="@drawable/ic_teacher" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/username_EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.087"
-            tools:layout_editor_absoluteX="32dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modeSelect"
+            app:layout_constraintVertical_bias="0.0">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -43,68 +67,38 @@
                 android:inputType="text" />
         </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/password_EditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/username_EditText"
-        android:layout_marginTop="8dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/username_EditText"
-        tools:layout_editor_absoluteX="0dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_lock" />
-
-        <EditText
-            android:id="@+id/passwordET"
-            android:layout_width="256dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/password"
-            android:inputType="textPassword" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/retryPassword_EditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/username_EditText"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="148dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_EditText"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_lock" />
-
-        <EditText
-            android:id="@+id/retryPassword_ET"
-            android:layout_width="256dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/retryPassword"
-            android:inputType="textPassword" />
-    </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/email_EditText"
+            android:id="@+id/password_EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_below="@id/username_EditText"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username_EditText">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_lock" />
+
+            <EditText
+                android:id="@+id/passwordET"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/retryPassword_EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_EditText"
             android:layout_marginBottom="148dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -112,9 +106,39 @@
             android:orientation="horizontal"
             android:paddingTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_EditText"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_lock" />
+
+            <EditText
+                android:id="@+id/retryPassword_ET"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/retryPassword"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email_EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="148dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/retryPassword_EditText"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="0dp">
+            app:layout_constraintVertical_bias="0.0">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -135,7 +159,6 @@
             android:id="@+id/fistName_EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="148dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -143,24 +166,23 @@
             android:orientation="horizontal"
             android:paddingTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_EditText"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="0dp">
+            app:layout_constraintVertical_bias="0.0">
 
             <EditText
                 android:id="@+id/firstName_ET"
                 android:layout_width="256dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/firstName"
                 android:layout_marginLeft="27dp"
-                />
+                android:hint="@string/firstName" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lastName_EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="148dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -168,18 +190,18 @@
             android:orientation="horizontal"
             android:paddingTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fistName_EditText"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="0dp">
+            app:layout_constraintVertical_bias="0.0">
 
 
             <EditText
                 android:id="@+id/lastName_ET"
                 android:layout_width="256dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/lastName"
                 android:layout_marginLeft="27dp"
-                />
+                android:hint="@string/lastName" />
         </LinearLayout>
 
         <Button

@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         teacherLogo = teacher.findViewById(R.id.logo);
         teacherTV = teacher.findViewById(R.id.buttonText);
 
+
         logo.setImageDrawable(getDrawable(R.drawable.ic_puzzle));
         studentLogo.setImageDrawable(getDrawable(R.drawable.ic_student));
         teacherLogo.setImageDrawable(getDrawable(R.drawable.ic_teacher));
@@ -129,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendLoginData(String username, String password) {
         /*POST: username, password JSON formátumban*/
-
         NukeSSLCerts.nuke();
 
         String url = "https://10.0.2.2:3000/OktatoAppAPI/users/login";
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(getBaseContext(), "Logged in.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getBaseContext(), "Sikeres bejelentkezés.", Toast.LENGTH_SHORT).show();
                     }
                 },
                 new Response.ErrorListener() {
