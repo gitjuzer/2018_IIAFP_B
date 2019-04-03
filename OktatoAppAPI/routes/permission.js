@@ -4,7 +4,7 @@ const checkAuth = require('../middleware/check-auth')
 
 const permissionController = require('../controllers/permission')
 
-router.get('/', permissionController.get_all_permission);
+router.get('/', checkAuth.IsLoggedIn, permissionController.get_all_permission);
 router.post('/',checkAuth.IsAdmin, permissionController.create_permission)
 router.delete('/:permission_name', checkAuth.IsAdmin,permissionController.delete_permission)
 

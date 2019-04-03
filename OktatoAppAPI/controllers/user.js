@@ -64,7 +64,7 @@ exports.login = (req,res,next)=>{
                 "description":"Sikertelen bejelentkezés!"
             })
         }
-        encryption.comparePassword(req.body.password, user[0].password, (err, res_isPasswordMatch)=>{
+        encryption.comparePassword(req.body.password, user[0].password_hash, (err, res_isPasswordMatch)=>{
             if(!res_isPasswordMatch){
                 return res.status(401).json({
                     "status_code":"401",
@@ -83,7 +83,8 @@ exports.login = (req,res,next)=>{
                 const token = jwt.sign({
                     username: user[0].username,
                     email: user[0].email,
-                    user_id: user[0].id
+                    user_id: user[0].id,
+                    account_type: user[0].role_name
                     },
                     process.env.JWT_KEY,
                     {
@@ -140,9 +141,8 @@ exports.logout = (req,res,next)=>{
 }
 
 exports.create_new_user = (req,res,next)=>{
-    var newUser = new User(req.body, req.body.password);
+    var newUser = new User(req.body);
     const account_type = req.body['account_type'];
-    console.log(newUser)
     if(!newUser.username || !newUser.password_hash ||!newUser.first_name ||!newUser.last_name ||
         !account_type || !newUser.email){
         return res.status(400).send({
@@ -159,7 +159,6 @@ exports.create_new_user = (req,res,next)=>{
         }
         newUser.password_hash = result_enc
         User.createUser(newUser, (err,result)=>{
-            console.log(err, result)
             if (err || result === null){
                 return res.status(409).json({
                     "status_code": "409",

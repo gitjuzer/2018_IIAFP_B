@@ -4,9 +4,9 @@ const checkAuth = require('../middleware/check-auth')
 
 const userController = require('../controllers/user')
 
-router.get('/', userController.get_all_users);
+router.get('/',checkAuth.IsLoggedIn, userController.get_all_users);
 
-router.get('/:username', userController.get_user_by_username);
+router.get('/:username',checkAuth.IsLoggedIn, userController.get_user_by_username);
 
 router.post('/signup', userController.create_new_user);
 
