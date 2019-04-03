@@ -31,19 +31,19 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private boolean succesfulRegistration = false;
     private boolean studentButtonIsClicked = false;
-    private boolean teacherButtonIsClicked = true;
+    private boolean teacherButtonIsClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        EditText username = findViewById(R.id.usernameET);
-        EditText password = findViewById(R.id.passwordET);
-        EditText retryPasswrd = findViewById(R.id.retryPassword_ET);
-        EditText emailAddress = findViewById(R.id.email_ET);
-        EditText firstName = findViewById(R.id.firstName_ET);
-        EditText lastName = findViewById(R.id.lastName_ET);
+        final EditText username = findViewById(R.id.usernameET);
+        final EditText password = findViewById(R.id.passwordET);
+        final EditText retryPassword = findViewById(R.id.retryPassword_ET);
+        final EditText emailAddress = findViewById(R.id.email_ET);
+        final EditText firstName = findViewById(R.id.firstName_ET);
+        final EditText lastName = findViewById(R.id.lastName_ET);
 
         final RelativeLayout studentButton = findViewById(R.id.studentBtn);
         final RelativeLayout teacherButton = findViewById(R.id.teacherBtn);
@@ -82,33 +82,47 @@ public class RegistrationActivity extends AppCompatActivity {
                 studentButton.findViewById(R.id.background).setBackground(getDrawable(R.drawable.disabled_circle));
                 studentButtonIsClicked = false;
                 teacherButtonIsClicked = true;
-
             }
         });
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*String realUsername = username.getText().toString();
+                String realPassword = password.getText().toString();
+                String realRetryPassword = retryPassword.getText().toString();
+                String realEmail = emailAddress.getText().toString();
+                String realFirstName = firstName.getText().toString();
+                String realLastName = lastName.getText().toString();
 
-                if(studentButtonIsClicked) {
-                    //sendRegistrationData();
-                }
-                else if (teacherButtonIsClicked){
-                 // Validate teacher registration with some sort of password or something.
-                 //sendRegistrationData();
-                }
-                else {
-                    Toast errorToast = Toast.makeText(RegistrationActivity.this, "Ki kell választanod " +
-                                    "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél regisztrálni?",
-                            Toast.LENGTH_SHORT);
+                if (!realPassword.equals(realRetryPassword)){
+                    Toast errorToast = Toast.makeText(RegistrationActivity.this, "Nem egyeznek meg a " +
+                            "jelszavak.", Toast.LENGTH_SHORT);
                     errorToast.show();
-                }
+                }*/
+             /*   else {*/
+                    if (studentButtonIsClicked) {
+                        //sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Student);
+                        Toast.makeText(getBaseContext(), "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
+
+                    } else if (teacherButtonIsClicked) {
+                        Toast.makeText(getBaseContext(),"Tanárként való regisztráláshoz tudnod kell a " +
+                                "központi kódot.", Toast.LENGTH_SHORT).show();
+
+                        //sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Teacher);
+                    } else {
+                        Toast errorToast = Toast.makeText(RegistrationActivity.this, "Ki kell választanod " +
+                                        "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél regisztrálni?",
+                                Toast.LENGTH_SHORT);
+                        errorToast.show();
+                    }
+                //}
             }
         });
 
     }
 
     private void sendRegistrationData(String username, String email, String password,
-                                       String firstName, String lastName){
+                                       String firstName, String lastName, AccountType accountType){
         NukeSSLCerts.nuke();
         String url = "https://10.0.2.2:3000/OktatoAppAPI/users/signup";
 
