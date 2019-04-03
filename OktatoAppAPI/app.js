@@ -21,8 +21,9 @@ const userRoutes = require('./routes/user');
 const roleRoutes = require('./routes/role');
 const pemissionRoutes = require('./routes/permission');
 const classroomRoutes = require('./routes/classroom')
+const myselfRoutes = require('./routes/myself')
 
-
+app.use('/OktatoAppAPI/myself', myselfRoutes)
 app.use('/OktatoAppAPI/users', userRoutes);
 app.use('/OktatoAppAPI/roles', roleRoutes);
 app.use('/OktatoAppAPI/permissions', pemissionRoutes)
