@@ -37,8 +37,8 @@ Classroom.getClassroomById = (id, result)=>{
     })
 }
 
-Classroom.createNewClassroom = (newClass, result)=>{
-    sql.query('INSERT INTO classroom VALUES ?',newClass, (err, res)=>{
+Classroom.createNewClassroom = (newClassroom, result)=>{
+    sql.query('INSERT INTO classroom SET ?',newClassroom, (err, res)=>{
         if(err){
             result(err, null)
         }
@@ -60,7 +60,7 @@ Classroom.deleteClassroomByName = (name, result)=>{
     })
 }
 
-Classroom.deleteClassroomByName = (id, result)=>{
+Classroom.deleteClassroomById = (id, result)=>{
     sql.query('DELETE FROM classroom WHERE id = ?',id,(err, res)=>{
         if(err){
             result(err, null)
