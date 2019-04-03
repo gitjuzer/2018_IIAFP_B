@@ -93,13 +93,17 @@ public class RegistrationActivity extends AppCompatActivity {
                 String realEmail = emailAddress.getText().toString();
                 String realFirstName = firstName.getText().toString();
                 String realLastName = lastName.getText().toString();
+                */
+
+                String realPassword = password.getText().toString();
+                String realRetryPassword = retryPassword.getText().toString();
 
                 if (!realPassword.equals(realRetryPassword)){
                     Toast errorToast = Toast.makeText(RegistrationActivity.this, "Nem egyeznek meg a " +
                             "jelszavak.", Toast.LENGTH_SHORT);
                     errorToast.show();
-                }*/
-             /*   else {*/
+                }
+               else {
                     if (studentButtonIsClicked) {
                         //sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Student);
                         Toast.makeText(getBaseContext(), "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
@@ -115,7 +119,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                 Toast.LENGTH_SHORT);
                         errorToast.show();
                     }
-                //}
+                }
             }
         });
 
