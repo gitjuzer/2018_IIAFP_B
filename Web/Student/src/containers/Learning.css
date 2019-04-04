@@ -1,0 +1,12 @@
+div.learning-flex-container{
+    display: flex;
+    flex-direction: row;
+}
+div.learning-side-bar{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+div.learning-main-content{
+    flex-basis: 0;
+    flex-grow: 3;
+}
