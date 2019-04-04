@@ -81,8 +81,14 @@ li a:hover {
 
 .Learninglogo,
 .Statslogo,
-.Versuslogo {
-  height: 30;
+.Classeslogo {
+  height: 25;
+  max-width: 100%;
+  float: left;
+}
+
+.Plusimg {
+  height: 25;
   max-width: 100%;
   float: left;
 }
@@ -90,7 +96,7 @@ li a:hover {
 .Selected {
   margin: 0px 0px 10px 0px;
   width: 200px;
-  border-radius: 10%;
+  border-radius: 5%;
   background-color: rgb(12, 180, 87);
   color: white;
   padding: 16px;
@@ -102,10 +108,16 @@ li a:hover {
 .Unselected {
   margin: 0px 0px 10px 0px;
   width: 200px;
-  border-radius: 10%;
+  border-radius: 5%;
   background-color: rgb(168, 168, 168);
   color: white;
   padding: 16px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.AddButton {
+  background: none;
+  border: none;
+  width: 100%;
 }
