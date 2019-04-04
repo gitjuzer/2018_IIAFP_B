@@ -1,5 +1,6 @@
 body{
   font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .flex-container{
   display: flex;
@@ -7,12 +8,10 @@ body{
   max-height: 85vh;
 }
 .main-section{
-  border: 1px solid red;
   flex-grow: 4;
   flex-basis: 0;
 }
 .side-bar{
-  border: 1px solid black;
   flex-grow: 1;
   display: flex;
   flex-direction: column;

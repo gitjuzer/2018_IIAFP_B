@@ -1,0 +1,45 @@
+.custom-select{
+    width: auto;
+    display: inline-block;
+    margin: 10px;
+}
+.custom-select .selected{
+    display: block;
+}
+.custom-select .option-container{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.custom-select .selected,
+.custom-select .option{
+    cursor: pointer;
+    padding: 10px 80px 10px 10px;
+}
+.custom-select .selected{
+    background: #3ED443;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 5px;
+}
+.custom-select .option{
+    border-bottom: 1px solid lightgray;
+}
+.custom-select .option:hover{
+    background: #428BCA;
+    color: white;
+}
+.custom-select .option:last-child{
+    border-bottom: none;
+}
+.option-container{
+    transition: transform 250ms ease;
+}
+.custom-select.closed .option-container{
+    transform: translateY(-50%) scaleY(0);
+}
+.custom-select.opened .option-container{
+    transform: translateY(0) scaleY(1);
+}
