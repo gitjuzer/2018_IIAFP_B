@@ -22,12 +22,16 @@ const roleRoutes = require('./routes/role');
 const pemissionRoutes = require('./routes/permission');
 const classroomRoutes = require('./routes/classroom')
 const myselfRoutes = require('./routes/myself')
+const gamemodeRoutes = require('./routes/gamemode')
+const gamesessionRoutes = require('./routes/gamesession')
 
 app.use('/OktatoAppAPI/myself', myselfRoutes)
 app.use('/OktatoAppAPI/users', userRoutes);
 app.use('/OktatoAppAPI/roles', roleRoutes);
 app.use('/OktatoAppAPI/permissions', pemissionRoutes)
 app.use('/OktatoAppAPI/classrooms', classroomRoutes)
+app.use('/OktatoAppAPI/game-mode',gamemodeRoutes)
+app.use('/OktatoAppAPI/game-session',gamesessionRoutes)
 
 app.use((req,res,next)=>{
     const error = new Error('Nem található');
