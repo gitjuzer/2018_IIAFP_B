@@ -56,7 +56,7 @@ exports.update_role_by_rolename = (req,res,next)=>{
     const role_name = req.params.role_name;
     const role = new Role(req.body);
     if(!role.role_name || !role.role_description){
-        res.status(400).send({
+        res.status(400).json({
             "status_code": "400",
             "description": "Helytelen paraméterek!"
         });

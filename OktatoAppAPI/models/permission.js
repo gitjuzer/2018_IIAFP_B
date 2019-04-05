@@ -22,11 +22,9 @@ Permission.getAllPermissions = (result) =>{
 Permission.getPermissionById =(id,result) =>{
     sql.query("SELECT * FROM permission WHERE id = ?",id, (err, res)=>{
         if(err){
-            console.log("Hiba");
             result(err, null);
         }
         else{
-            console.log(res);
             result(null, res);
         }
     })

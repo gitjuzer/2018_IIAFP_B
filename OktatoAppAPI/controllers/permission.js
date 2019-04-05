@@ -38,7 +38,7 @@ exports.create_permission = (req,res,next) =>{
             {
                 res.status(409).json({
                     "status_code": "409",
-                        "description": "Már létezik ilyen felhasználó!"
+                        "description": "Már létezik ilyen jogosultság!"
                 })
             }
             else
