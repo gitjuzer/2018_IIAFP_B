@@ -9,5 +9,7 @@ router.get('/:gamename', GameModeController.select_by_name)
 router.post("/",checkAuth.IsAdmin,GameModeController.create_gamemode)
 router.delete("/:gamename",checkAuth.IsAdmin,GameModeController.delete_gamemode)
 router.put("/:gamename",checkAuth.IsAdmin,GameModeController.update_gamemode)
+router.get('/:game_name/game-session', GameModeController.all_gameSession_to_gameMode)
+router.get('/:game_name/classrooms', GameModeController.classrooms_to_gamemode)
 module.exports = router
 

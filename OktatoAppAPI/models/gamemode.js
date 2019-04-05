@@ -86,4 +86,15 @@ GameMode.modifyGameMode =(gamemode,gamename,result) =>{
     })
 }
 
+GameMode.allClassToGame = (id,result)=>{
+    sql.query("SELECT game_mode.id as id, classroom.name, classroom.id as classroom_id , classroom_to_game.is_active FROM game_mode INNER JOIN classroom_to_game ON game_mode.id = classroom_to_game.game_id_pk INNER JOIN classroom ON classroom.id = classroom_to_game.classroom_id_pk WHERE game_mode.id = ?",id,(err,res)=>{
+        if(err)
+        {
+            result(err,null)
+        }
+        else{
+            result(null,res)
+        }
+    })
+}
 module.exports = GameMode;

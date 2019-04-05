@@ -1,4 +1,5 @@
 const GameMode = require('../models/gamemode')
+const GameSession = require('../models/gamesession')
 
 exports.get_all_gamemode = (req,res,next) =>{
     
@@ -120,4 +121,48 @@ exports.update_gamemode =(req,res,next)=>{
         }
     })
     
+}
+
+exports.all_gameSession_to_gameMode =( req,res,next)=>{
+    const gameName = req.params.game_name
+    GameMode.selectGameByname(gameName,(err,result)=>{
+        if(err || result === null || Object.keys(result).length === 0)
+        {
+            return res.status(404).json({
+                "status_code":"404",
+                "description":"Játékmód nem létezik!"
+            })
+        }
+      // igy szedem ki az idt console.log(result[0].id)
+        GameSession.getGameID(result[0].id,(err,result2) =>{
+            res.status(200).json({
+                "status_code":"200",
+                "description":"A játékmódhoz tartozó játékmenetek sikeresen lekérdezve!",
+                "data":result2
+            })
+        })
+        
+    })
+}
+
+exports.classrooms_to_gamemode =(req,res,next)=>{
+    const gameName = req.params.game_name
+
+    GameMode.selectGameByname(gameName,(err,result)=>{
+        console.log(gameName)
+        if(err || result === null || Object.keys(result).length === 0)
+        {
+            return res.status(404).json({
+                "status_code":"404",
+                "description":"Nem található ilyen játékmód!"
+            })
+        }
+        GameMode.allClassToGame(result[0].id,(err,result2)=>{
+            res.status(200).json({
+                "status_code":"200",
+                "description":"A játékhoz tartozó adatok sikeresen lekérdezve!",
+                "data":result2
+            })
+        })
+    })
 }
