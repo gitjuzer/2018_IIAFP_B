@@ -57,4 +57,16 @@ GameSession.createGameSession = (newGameSession,result)=>{
     })
 }
 
+GameSession.getGameID = (gameid,result)=>{
+    sql.query('Select * from game_session Where game_id = ?',gameid,(err,res)=>{
+        if(err)
+        {
+            result(err,null)
+        }
+        else{
+            result(null,res)
+        }
+    })
+}
+
 module.exports = GameSession
