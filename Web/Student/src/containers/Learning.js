@@ -1,6 +1,7 @@
 import React from 'react';
 import './Learning.css';
 import Dropdown from '../components/dropdown';
+import Gamemode from '../components/gamemode';
 
 const Learning = props => {
   return (
@@ -9,7 +10,9 @@ const Learning = props => {
         <Dropdown/>
       </div>
       <div className="learning-main-content">
-        <h1>Témakörök</h1>
+        <Gamemode name="X. téma neve" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in dignissim odio. Curabitur laoreet lacus eu massa consequat, scelerisque finibus nulla commodo. Nulla quis suscipit sem. Phasellus ultricies consequat elementum. Aliquam non mauris non ligula varius facilisis at sit amet dolor. ">
+
+        </Gamemode>
       </div>
     </div>
   )
