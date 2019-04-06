@@ -1,12 +1,26 @@
 .game-mode{
     border: 2px solid #3ED443;
-    padding: 5px;
+    padding: 20px;
+    display: flex;
+    margin-bottom: 20px;
 }
 .game-mode-name{
     margin: 5px;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 .game-mode-description{
     padding: 0;
     margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.game-mode .box{
+    background: #3ED443;
+    display: inline-block;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.game-mode .box i{
+    color: white;
 }

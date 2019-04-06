@@ -17,13 +17,22 @@
     cursor: pointer;
     padding: 10px 80px 10px 10px;
 }
+
 .custom-select .selected{
     background: #3ED443;
     color: white;
     font-weight: bold;
     text-align: left;
     border-radius: 5px;
+    transition: transform 100ms ease;
 }
+.custom-select .selected:active{
+    transform: scale(0.95);
+}
+.custom-select .selected:hover{
+    background: #428BCA;
+}
+
 .custom-select .option{
     border-bottom: 1px solid lightgray;
 }
