@@ -35,7 +35,18 @@ Difficulty.createDifficulty = (newDifficulty,result)=>{
     sql.query("INSERT INTO difficulty SET ?",newDifficulty,(err,res)=>{
         if(err)
         {
+            result(err,null)
+        }
+        else{
+            result(null,res)
+        }
+    })
+}
 
+Difficulty.deleteDiff = (level,result)=>{
+    sql.query('Delete From difficulty Where difficulty_level = ?',level,(err,res)=>{
+        if(err)
+        {
             result(err,null)
         }
         else{

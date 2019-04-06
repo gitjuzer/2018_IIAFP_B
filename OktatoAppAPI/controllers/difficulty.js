@@ -52,5 +52,29 @@ exports.create_new_difficulty = (req,res,next)=>{
 
 
 
+exports.delete_difficulty = (req,res,next)=>{
+    const level = req.params.level
+
+    Difficulty.selectByLevel(level,(err,result)=>{
+        if(err || result === null || Object.keys(result).length === 0)
+        {
+          return res.status(404).json({
+                "status_code":"404",
+                "description":"Ilyen nehézségi szint nem létezik!"
+            })
+        }
+        Difficulty.deleteDiff(level,(err,result2)=>{
+            res.status(200).json({
+                "status_code":"200",
+                "description":"Nehézségi szint sikeresen törölve!",
+                "data":[]
+            })
+        })
+    })
+}
+
+
+
+
 
 
