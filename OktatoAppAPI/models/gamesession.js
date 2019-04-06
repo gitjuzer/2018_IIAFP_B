@@ -69,4 +69,30 @@ GameSession.getGameID = (gameid,result)=>{
     })
 }
 
+GameSession.deleteGameSession = (sessionName,result)=>{
+    sql.query('DELETE FROM game_session WHERE session_name = ?',sessionName,(err,res)=>{
+        if(err)
+        {
+            result(err,null)
+        }
+        else{
+            result(null,res)
+        }
+    })
+}
+
+GameSession.modifyGameSession = (sessionName,newGameSession,result)=>{
+   
+    sql.query('UPDATE game_session SET max_points = ?, game_id = ?, difficulty_level = ? WHERE session_name = ?', [newGameSession.max_points,newGameSession.game_id,newGameSession.difficulty_level,sessionName],(err,res)=>{
+        if(err)
+        {
+           
+            result(err,null)
+        }
+        else{
+            
+            result(null,res)
+        }
+    })
+}
 module.exports = GameSession

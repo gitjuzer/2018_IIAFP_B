@@ -1,5 +1,6 @@
 const GameSession = require('../models/gamesession')
 const GameMode = require('../models/gamemode')
+const Difficulty = require('../models/difficulty')
 
 exports.select_all_gamesession =(req,res,next)=>{
     GameSession.getAllGameSession((err,result)=>{
@@ -67,15 +68,72 @@ exports.create_gamesession = (req,res,next)=>{
                                 "data": result
                             })
                         })
-                
-                
                     })
                 }
+            })}
+        })
+    }
+}
+
+exports.delete_gamesession = (req,res,next)=>{
+    const sessionName = req.params.sessionname
+
+    GameSession.getGameSessionByName(sessionName,(err,result)=>{
+        if(err || result === null || Object.keys(result).length === 0)
+        {
+            return res.status(404).json({
+                "status_code":"404",
+                "description":"Nem létező játékmenet!"
             })
         }
+        GameSession.deleteGameSession(sessionName,(err,result2)=>{
+            res.status(200).json({
+                "status_code":"200",
+                "description":"Játékmenet sikeresen törölve",
+                "data":[]
+            })
+        })
     })
-   
+}
 
-    }
+exports.update_gamesession = (req,res,next)=>{
+    const sessionName = req.params.sessionname
+    const gameSession = new GameSession(req.body)
 
+    GameSession.getGameSessionByName(sessionName,(err1,result)=>{
+        if(err1 || result === null || Object.keys(result).length === 0)
+        {
+            return res.status(404).json({
+                "status_code":"404",
+                "description":"Nem létező játékmenet!"
+            })
+        }
+        GameMode.selectById(gameSession.game_id,(err2,result2)=>{
+            if(err2 || result2 === null || Object.keys(result2).length === 0)
+            {
+                return res.status(404).json({
+                    "status_code":"404",
+                    "description":"Nem létező játékmód!"
+                })
+            }
+            Difficulty.selectByLevel(gameSession.difficulty_level,(err3,result3)=>{
+                if(err3 || result3 === null || Object.keys(result3).length === 0)
+                {
+                    return res.status(404).json({
+                        "status_code":"404",
+                        "description":"Nem létező nehézségi szint!"
+                    }) 
+                }
+                GameSession.modifyGameSession(sessionName,gameSession,(err4,result4)=>{
+                    GameSession.getGameSessionByName(sessionName,(err5,result5)=>{
+                            res.status(200).json({
+                                "status_code":"200",
+                                "description":"Játékmenet sikeresen módosítva!",
+                                "data": result5
+                            })
+                    })
+                })
+            })      
+        })
+    })
 }
