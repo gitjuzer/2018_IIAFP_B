@@ -19,6 +19,17 @@ WrongAnswer.SelectById = (id,result)=>{
     })
 }
 
+WrongAnswer.selectWrongAnswersByQuestionId =(question_id, result)=>{
+    sql.query('SELECT question.id AS question_id, question.question, wrong_answer.wrong_answer, wrong_answer.id AS wrong_answer_id FROM question INNER JOIN wrong_answer ON wrong_answer.question_id = question.id WHERE question.id = ?',question_id, (err, res)=>{
+        if(err)
+        {
+            result(err,null)
+        }
+        else(
+            result(null,res)
+        )
+    })
+}
 
 WrongAnswer.SelectAll = (result)=>{
     sql.query('SELECT * from wrong_answer',(err,res)=>{
