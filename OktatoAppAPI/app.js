@@ -25,6 +25,8 @@ const myselfRoutes = require('./routes/myself')
 const gamemodeRoutes = require('./routes/gamemode')
 const gamesessionRoutes = require('./routes/gamesession')
 const difficultyRoutes = require('./routes/difficulty')
+const questionRoutes = require('./routes/question')
+const wronganswerRoutes = require('./routes/wronganswer')
 
 app.use('/OktatoAppAPI/myself', myselfRoutes)
 app.use('/OktatoAppAPI/users', userRoutes);
@@ -34,6 +36,8 @@ app.use('/OktatoAppAPI/classrooms', classroomRoutes)
 app.use('/OktatoAppAPI/game-modes',gamemodeRoutes)
 app.use('/OktatoAppAPI/game-sessions',gamesessionRoutes)
 app.use('/OktatoAppAPI/difficulties',difficultyRoutes)
+app.use('/OktatoAppAPI/questions',questionRoutes)
+app.use('/OktatoAppAPI/wrong-answers',wronganswerRoutes)
 
 app.use((req,res,next)=>{
     const error = new Error('Nem található');
