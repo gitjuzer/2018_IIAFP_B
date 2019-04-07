@@ -3,8 +3,11 @@ const router = express.Router();
 const checkAuth = require('../middleware/check-auth')
 
 const userController = require('../controllers/user')
+const statisticController = require('../controllers/statistic')
 
 router.get('/',checkAuth.IsLoggedIn, userController.get_all_users);
+
+router.get('/:username/statistics', checkAuth.IsLoggedIn, statisticController.getAllStatisticsForUserByUsername)
 
 router.get('/:username',checkAuth.IsLoggedIn, userController.get_user_by_username);
 
