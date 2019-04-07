@@ -31,8 +31,8 @@ app.use('/OktatoAppAPI/users', userRoutes);
 app.use('/OktatoAppAPI/roles', roleRoutes);
 app.use('/OktatoAppAPI/permissions', pemissionRoutes)
 app.use('/OktatoAppAPI/classrooms', classroomRoutes)
-app.use('/OktatoAppAPI/game-mode',gamemodeRoutes)
-app.use('/OktatoAppAPI/game-session',gamesessionRoutes)
+app.use('/OktatoAppAPI/game-modes',gamemodeRoutes)
+app.use('/OktatoAppAPI/game-sessions',gamesessionRoutes)
 app.use('/OktatoAppAPI/difficulties',difficultyRoutes)
 
 app.use((req,res,next)=>{

@@ -97,4 +97,5 @@ GameMode.allClassToGame = (id,result)=>{
         }
     })
 }
+
 module.exports = GameMode;

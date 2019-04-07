@@ -3,7 +3,6 @@ const RoleToPermission = require('../models/role_to_permission')
 exports.GetPermissionForRole = (req, res, next) =>{
     const role_name = req.params.role_name;
     RoleToPermission.getPermissionsForRole(role_name, (err, result)=>{
-        console.log('asd')
         if(err || result === null || !result){
             return res.status(404).json({
                 "status_code" : "404",
