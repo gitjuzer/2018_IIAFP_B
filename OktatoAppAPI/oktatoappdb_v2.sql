@@ -110,7 +110,7 @@ DROP TABLE IF EXISTS `game_session`;
 CREATE TABLE IF NOT EXISTS `game_session` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `session_name` varchar(45) NOT NULL,
-  `max_points` int(11) NOT NULL,
+  `max_points` int(11),
   `game_id` int(11) NOT NULL,
   `difficulty_level` int(11) NOT NULL,
   PRIMARY KEY (`id`),
