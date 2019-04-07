@@ -283,7 +283,7 @@ CREATE TABLE IF NOT EXISTS `user_to_role` (
 
 DROP TABLE IF EXISTS `wrong_answer`;
 CREATE TABLE IF NOT EXISTS `wrong_answer` (
-  `id` varchar(45) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `wrong_answer` varchar(250) NOT NULL,
   `question_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
