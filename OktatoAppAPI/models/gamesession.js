@@ -8,6 +8,8 @@ const GameSession = function(gamesession)
     this.difficulty_level = gamesession.difficulty_level
 }
 
+
+
 GameSession.getAllGameSession = (result)=>{
     sql.query('Select * from game_session',(err,res) =>{
         if(err)
@@ -71,6 +73,31 @@ GameSession.getGameID = (gameid,result)=>{
 
 GameSession.deleteGameSession = (sessionName,result)=>{
     sql.query('DELETE FROM game_session WHERE session_name = ?',sessionName,(err,res)=>{
+        if(err)
+        {
+            result(err,null)
+        }
+        else{
+            result(null,res)
+        }
+    })
+}
+
+
+GameSession.modifyGameSessionMaxPointOsszeada =(sessionid,max_point,question_point,result)=>{
+    sql.query('UPDATE game_session SET max_points = ? WHERE id = ?',[parseInt(max_point)+parseInt(question_point),sessionid],(err,res)=>{
+        if(err)
+        {
+            result(err,null)
+        }
+        else{
+            result(null,res)
+        }
+    })
+}
+
+GameSession.modifyMaxPointKivonas =(sessionid,max_point,question_point,result)=>{
+    sql.query('UPDATE game_session SET max_points = ? WHERE id = ?',[parseInt(max_point)-parseInt(question_point),sessionid],(err,res)=>{
         if(err)
         {
             result(err,null)
