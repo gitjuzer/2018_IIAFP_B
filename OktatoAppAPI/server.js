@@ -1,4 +1,5 @@
 const https = require('https');
+const http = require('http')
 const app = require('./app');
 const fs = require('fs')
 
@@ -13,5 +14,10 @@ var httpsOptions ={
 }
 
 const https_server = https.createServer(httpsOptions, app);
-console.log('HTTPS server is listening on https://localhost:' + process.env.HTTPS_PORT)
+console.log('HTTPS server is listening on https://localhost:' + https_port)
 https_server.listen(https_port)
+
+const http_port = process.env.HTTP_PORT || 3001
+const http_server = http.createServer(app)
+console.log('HTTP server is listening on https://localhost:' + http_port)
+http_server.listen(http_port)
