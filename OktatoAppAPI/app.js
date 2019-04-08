@@ -2,8 +2,13 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const path = require('path')
+var fs = require('fs')
+
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
 app.use(morgan('dev'));
+app.use(morgan('combined', { stream: accessLogStream }));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
