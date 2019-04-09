@@ -19,9 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `oktatoappdb`
 --
-DROP DATABASE `oktatoappdb`;
-CREATE DATABASE IF NOT EXISTS `oktatoappdb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `oktatoappdb`;
+USE `heroku_9f6b4f373cfd5f1`;
 
 -- --------------------------------------------------------
 
