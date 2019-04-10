@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken')
 const Token = require('../models/token')
 const User = require('../models/user')
+const message = require('../utilities/jsonmessage')
 
 IsAuthorized = (role1, role2, req, res, next)=>{
     try{
@@ -21,26 +22,17 @@ IsAuthorized = (role1, role2, req, res, next)=>{
                             throw new Error()
                         }
                     }catch(error){
-                        return res.status(401).json({
-                            "status_code":"401",
-                            "description":"Jogosulatlan hozzáférés!"
-                        })
+                        return res.status(401).json(message.composeMessage('401','Jogosulatlan hozzáférés!'))
                     }
                 })
             }
             else{
-                return res.status(401).json({
-                    "status_code":"401",
-                    "description":"Jogosulatlan hozzáférés!"
-                })
+                return res.status(401).json(message.composeMessage('401','Jogosulatlan hozzáférés!'))
             }
         })
         
     } catch(error){
-        return res.status(401).json({
-            "status_code":"401",
-            "description":"Jogosulatlan hozzáférés!"
-        })
+        return res.status(401).json(message.composeMessage('401','Jogosulatlan hozzáférés!'))
     }
 }
 exports.IsLoggedIn = (req,res,next)=>{
