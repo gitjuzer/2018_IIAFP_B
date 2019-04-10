@@ -1,16 +1,20 @@
-# API Elérése #
+## API Elérése ##
 Az API Heroku ingyenes változatán keresztül deployolva lett, ez azt jelenti, hogy __nem kell localhoston a fejlesztőknek se a szervert, sem az adatbázist futtatni__ az API eléréséhez. Ennek a verziónak a javítása egy külön branchen folyik, a többi fejleszőt kérjük, hogy ne piszkáljanak ebbe a branchbe.
 Az elérés a következő linken történik:
 <https://oktatoappapi.herokuapp.com>
 Innentől az Interface specifikációban leírt URI-k az érvényesek.
-## Jelenlegi verzió ##
+### Jelenlegi verzió ###
 A jelenlegi deployolt verzió nem végleges. Rengeteget fogunk még rajta refaktorálni, bugokat javítani. Jelenleg a legnagyobb probléma az időzónákkal, és dátumokkal van az API-ban,
 ezekről tudunk, igyekszünk megtalálni a probléma forrását.
-## Localhoston futtatás ## 
+### Localhoston futtatás(opcionális) ###
 __Előfeltételek:__ 
-	* Node.js (10.15.3 LTS): https://nodejs.org/en/
-	* Wamp vagy XAMPP: http://www.wampserver.com/en/ vagy https://www.apachefriends.org/hu/index.html
-	* MySQL Workbench (opcionális, ha tudod hogy kell használni a phpMyAdmin-t): https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.15-winx64.msi
+	* Node.js (10.15.3 LTS)
+		* <https://nodejs.org/en/>
+	* Wamp vagy XAMPP
+		* <http://www.wampserver.com/en/>
+		* <https://www.apachefriends.org/hu/index.html>
+	* MySQL Workbench (opcionális)
+		* <https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.15-winx64.msi>
 
 1. Indítsd el vagy a Wamp-ot vagy a XAMPP-ot (ha XAMPP, akkor az Apache és MySQL modulokat)
 2. Pullold le a legfrissebb verziót a repobol
