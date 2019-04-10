@@ -22,17 +22,17 @@ IsAuthorized = (role1, role2, req, res, next)=>{
                             throw new Error()
                         }
                     }catch(error){
-                        return res.status(401).json(message.composeMessage('401','Jogosulatlan hozzáférés!'))
+                        return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
                     }
                 })
             }
             else{
-                return res.status(401).json(message.composeMessage('401','Jogosulatlan hozzáférés!'))
+                return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
             }
         })
         
     } catch(error){
-        return res.status(401).json(message.composeMessage('401','Jogosulatlan hozzáférés!'))
+        return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
     }
 }
 exports.IsLoggedIn = (req,res,next)=>{

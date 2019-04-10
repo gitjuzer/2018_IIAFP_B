@@ -57,7 +57,7 @@ app.use((req,res,next)=>{
 
 app.use((error, req,res,next)=>{
     res.status(error.status || 500);
-    res.json(message.composeMessage(error.status || 500, error.message));
+    res.json(message.compose(error.status || 500, error.message));
 });
 module.exports = app;
 
