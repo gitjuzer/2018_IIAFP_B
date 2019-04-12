@@ -140,7 +140,6 @@ public class RegistrationActivity extends AppCompatActivity {
     }
     private void sendRegistrationData(String username, String email, String password,
                                        String firstName, String lastName, AccountType accountType){
-        NukeSSLCerts.nuke();
         String url = "https://10.0.2.2:3000/OktatoAppAPI/users/signup";
 
         //final String hashedPass = password;

@@ -23,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.common.hash.Hashing;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     boolean studentBtnIsClicked;
     boolean teacherBtnIsClicked;
+    boolean ableToLogin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String temp1 = username.getText().toString();
                 String temp2 = password.getText().toString();
-                if (!("".contentEquals(temp1)) && !("".contentEquals(temp2)))
-                    sendLoginData(temp1, temp2);
+
+                sendLoginData(temp1, temp2);
 
                 if (!teacherBtnIsClicked && !studentBtnIsClicked) {
                     Toast errorToast = Toast.makeText(MainActivity.this, "Ki kell választanod " +
@@ -107,12 +109,12 @@ public class MainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT);
                     errorToast.show();
                 }
-                if (studentBtnIsClicked) {
+                if (studentBtnIsClicked && ableToLogin) {
                     Intent student = new Intent(MainActivity.this, StudentMenu.class);
                     student.putExtra("Username", username.getText().toString());
                     startActivity(student);
                 }
-                if (teacherBtnIsClicked) {
+                if (teacherBtnIsClicked && ableToLogin) {
                     Intent teacher = new Intent(MainActivity.this, TeacherMenu.class);
                     teacher.putExtra("Username", username.getText().toString());
                     startActivity(teacher);
@@ -129,16 +131,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendLoginData(String username, String password) {
-        /*POST: username, password JSON formátumban*/
-        NukeSSLCerts.nuke();
 
-        String url = "https://10.0.2.2:3000/OktatoAppAPI/users/login";
-        //final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
-        final String hashedPass = password;
+        String url = "https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login";
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("username", username);
-            jsonObject.put("password", hashedPass);
+            jsonObject.put("password", password);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -149,13 +147,45 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(getBaseContext(), "Sikeres bejelentkezés.", Toast.LENGTH_SHORT).show();
+
+                        int statusCode = 0;
+                        String description;
+                        
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            JSONArray responseInJSONArray = jsonObject.getJSONArray("data");
+
+                            statusCode = Integer.parseInt(jsonObject.getString("status_code"));
+                            description = jsonObject.getString("description");
+
+                            for (int i = 0; i < responseInJSONArray.length(); i++) {
+
+                                JSONObject obj = responseInJSONArray.getJSONObject(i);
+
+                                if (statusCode == 201) {
+                                    ableToLogin = true;
+                                }
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            if(statusCode == 401){
+                                ableToLogin = false;
+                            }
+                        }
+
+
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Error.Response", " " + error.getMessage());
+                       if(error.networkResponse.statusCode == 401){
+                           ableToLogin = false;
+                           Toast errorToast = Toast.makeText(MainActivity.this, "Hibás adatok.",
+                                   Toast.LENGTH_SHORT);
+                           errorToast.show();
+                       }
                     }
                 }) {
             @Override
