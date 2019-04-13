@@ -4,7 +4,8 @@ import java.util.Date;
 
 public class User {
 
-    //region variables
+    //region privát mezők
+    private int id;
     private String username;
     private String email;
     private String password;
@@ -61,14 +62,21 @@ public class User {
     public Date getLast_login(){
         return last_login;
     }
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+        this.id = id;
+    }
 //endregion
 
     public User(){
 
     }
-    public User(String username, String email, String password, String lastName, String firstName,
+    public User(int id, String username, String email, String password, String lastName, String firstName,
                 Date created_at, Date last_login){
         super();
+        this.setId(id);
         this.setUsername(username);
         this.setEmail(email);
         this.setPassword(password);

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     boolean studentBtnIsClicked;
     boolean teacherBtnIsClicked;
-    boolean ableToLogin = false;
+    boolean ableToLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Button login, register;
         final LinearLayout teacherID;
 
+        ableToLogin = false;
         toolbar = findViewById(R.id.myToolbar);
 
         student = findViewById(R.id.studentBtn);
@@ -158,15 +159,15 @@ public class MainActivity extends AppCompatActivity {
                             statusCode = Integer.parseInt(jsonObject.getString("status_code"));
                             description = jsonObject.getString("description");
 
-                            responseInJSONArray = jsonObject.getJSONArray("data");
-
                             if (statusCode == 201) {
                                 ableToLogin = true;
                             }
+
+                            responseInJSONArray = jsonObject.getJSONArray("data");
                             for (int i = 0; i < responseInJSONArray.length(); i++) {
 
                                 JSONObject obj = responseInJSONArray.getJSONObject(i);
-                                obj.getString("");
+                                obj.getString("token");
 
                             }
                         } catch (JSONException e) {
