@@ -150,21 +150,24 @@ public class MainActivity extends AppCompatActivity {
 
                         int statusCode = 0;
                         String description;
+                        JSONArray responseInJSONArray;
                         
                         try {
                             JSONObject jsonObject = new JSONObject(response);
-                            JSONArray responseInJSONArray = jsonObject.getJSONArray("data");
 
                             statusCode = Integer.parseInt(jsonObject.getString("status_code"));
                             description = jsonObject.getString("description");
 
+                            responseInJSONArray = jsonObject.getJSONArray("data");
+
+                            if (statusCode == 201) {
+                                ableToLogin = true;
+                            }
                             for (int i = 0; i < responseInJSONArray.length(); i++) {
 
                                 JSONObject obj = responseInJSONArray.getJSONObject(i);
+                                obj.getString("");
 
-                                if (statusCode == 201) {
-                                    ableToLogin = true;
-                                }
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
