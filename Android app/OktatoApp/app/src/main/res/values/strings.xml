@@ -17,4 +17,6 @@
     <string name="lastName">Családnév</string>
     <string name="lessons">Leckék</string>
     <string name="classes">Osztályok</string>
+    <string name="error1">Ki kell választanod legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél belépni?</string>
+    <string name="check_connection">Kérlek ellenőrizd az internetkapcsolatod!</string>
 </resources>

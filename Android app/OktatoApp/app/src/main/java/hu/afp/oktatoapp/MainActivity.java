@@ -1,8 +1,6 @@
 package hu.afp.oktatoapp;
 
-import android.app.NativeActivity;
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -21,27 +19,20 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.common.hash.Hashing;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
-import java.text.FieldPosition;
 import java.text.ParseException;
-import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
+import hu.afp.oktatoapp.Classes.Global;
 import hu.afp.oktatoapp.Classes.Token;
-import hu.afp.oktatoapp.Classes.User;
 
 import static hu.afp.oktatoapp.Classes.Token.Tokens;
 
@@ -62,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         TextView studentTV, teacherTV;
         Button login, register;
         final LinearLayout teacherID;
+
 
         ableToLogin = false;
         toolbar = findViewById(R.id.myToolbar);
@@ -98,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 teacher.findViewById(R.id.background).setBackground(getDrawable(R.drawable.disabled_circle));
                 studentBtnIsClicked = true;
                 teacherBtnIsClicked = false;
-                if(teacherID.getVisibility() == View.VISIBLE)
+                if (teacherID.getVisibility() == View.VISIBLE)
                     teacherID.setVisibility(View.GONE);
             }
         });
@@ -114,27 +106,28 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp1 = username.getText().toString();
-                String temp2 = password.getText().toString();
+                if (Global.isNetworkConnected(v.getContext())) {
+                    String temp1 = username.getText().toString();
+                    String temp2 = password.getText().toString();
 
-                sendLoginData(temp1, temp2);
+                    sendLoginData(temp1, temp2);
 
-                if (!teacherBtnIsClicked && !studentBtnIsClicked) {
-                    Toast errorToast = Toast.makeText(MainActivity.this, "Ki kell választanod " +
-                                    "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél belépni?",
-                            Toast.LENGTH_SHORT);
-                    errorToast.show();
-                }
-                if (studentBtnIsClicked && ableToLogin) {
-                    Intent student = new Intent(MainActivity.this, StudentMenu.class);
-                    student.putExtra("Username", username.getText().toString());
-                    startActivity(student);
-                }
-                if (teacherBtnIsClicked && ableToLogin) {
-                    Intent teacher = new Intent(MainActivity.this, TeacherMenu.class);
-                    teacher.putExtra("Username", username.getText().toString());
-                    startActivity(teacher);
-                }
+                    if (!teacherBtnIsClicked && !studentBtnIsClicked) {
+                        Toast errorToast = Toast.makeText(MainActivity.this, R.string.error1, Toast.LENGTH_SHORT);
+                        errorToast.show();
+                    }
+                    if (studentBtnIsClicked && ableToLogin) {
+                        Intent student = new Intent(MainActivity.this, StudentMenu.class);
+                        student.putExtra("Username", username.getText().toString());
+                        startActivity(student);
+                    }
+                    if (teacherBtnIsClicked && ableToLogin) {
+                        Intent teacher = new Intent(MainActivity.this, TeacherMenu.class);
+                        teacher.putExtra("Username", username.getText().toString());
+                        startActivity(teacher);
+                    }
+                } else
+                    Toast.makeText(v.getContext(), R.string.check_connection, Toast.LENGTH_SHORT).show();
             }
         });
         register.setOnClickListener(new View.OnClickListener() {
@@ -175,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
                         int userId;
                         String username;
                         JSONArray responseInJSONArray;
-                        
+
                         try {
                             JSONObject jsonObject = new JSONObject(response);
 
@@ -203,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                                 Token tempToken = new Token(tokenId, token, created_at, expires_at, isActive, username);
                                 Tokens.add(tempToken);
                             }
-                                //TESZT a tokenek adatainak kiiírására
+                            //TESZT a tokenek adatainak kiiírására
                                /* List<Token> temp = Token.getTokens();
                                 for (int j = 0; j < temp.size(); j++) {
                                     Log.d("TOKEN ADATAI:////////////", " " + temp.get(i).getCreated_at() + " " + temp.get(i).getExpires_at());
@@ -211,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
 
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            if(statusCode == 401){
+                            if (statusCode == 401) {
                                 ableToLogin = false;
                             }
                         } catch (ParseException e) {
@@ -225,12 +218,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Error.Response", " " + error.getMessage());
-                       if(error.networkResponse.statusCode == 401){
-                           ableToLogin = false;
-                           Toast errorToast = Toast.makeText(MainActivity.this, "Hibás adatok.",
-                                   Toast.LENGTH_SHORT);
-                           errorToast.show();
-                       }
+                        if (error.networkResponse.statusCode == 401) {
+                            ableToLogin = false;
+                            Toast errorToast = Toast.makeText(MainActivity.this, "Hibás adatok.",
+                                    Toast.LENGTH_SHORT);
+                            errorToast.show();
+                        }
                     }
                 }) {
             @Override
@@ -249,6 +242,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         queue.add(postRequest);
-        Log.d("POST_REQ", " "+ requestBody);
+        Log.d("POST_REQ", " " + requestBody);
     }
 }
