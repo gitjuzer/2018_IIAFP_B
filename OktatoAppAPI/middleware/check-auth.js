@@ -15,7 +15,7 @@ IsAuthorized = (role1, role2, req, res, next)=>{
                 }
                 User.getUserById(decoded.user_id, (err, result1)=>{
                     try{
-                        if(result1[0].role_name === (role1 || role2)){
+                        if(result1[0].account_type === (role1 || role2)){
                             next()
                         }
                         else{

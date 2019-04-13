@@ -22,7 +22,7 @@ User.createUser = (newUser, result)=>{
     }); 
 };
 User.getAllUsers = (result) =>{
-    sql.query("SELECT user.id, user.username, user.email, user.first_name, user.last_name, user.created_at, user.last_login, role.role_name FROM user LEFT JOIN user_to_role ON user.id = user_to_role.user_id_pk LEFT JOIN role ON role.id = user_to_role.role_id_pk",(err, res)=>{
+    sql.query("SELECT user.id, user.username, user.email, user.first_name, user.last_name, user.created_at, user.last_login, role.role_name AS account_type FROM user LEFT JOIN user_to_role ON user.id = user_to_role.user_id_pk LEFT JOIN role ON role.id = user_to_role.role_id_pk",(err, res)=>{
         if (err){
             result(err, null);
         }
@@ -32,7 +32,7 @@ User.getAllUsers = (result) =>{
     })
 };
 User.getUserByUsername = (username, result)=>{
-    sql.query("SELECT user.id, user.username, user.email, user.first_name, user.last_name, user.created_at, user.last_login, role.role_name FROM user LEFT JOIN user_to_role ON user.id = user_to_role.user_id_pk LEFT JOIN role ON role.id = user_to_role.role_id_pk WHERE user.username = ?",username, (err, res)=>{
+    sql.query("SELECT user.id, user.username, user.email, user.first_name, user.last_name, user.created_at, user.last_login, role.role_name AS account_type FROM user LEFT JOIN user_to_role ON user.id = user_to_role.user_id_pk LEFT JOIN role ON role.id = user_to_role.role_id_pk WHERE user.username = ?",username, (err, res)=>{
         if(err){
             result(err, null);
         }
@@ -52,7 +52,7 @@ User.getUserByUsernameWithPassword = (username, result)=>{
     });
 };
 User.getUserById = (id, result)=>{
-    sql.query("SELECT user.id, user.username, user.email, user.first_name, user.last_name, user.created_at, user.last_login, role.role_name FROM user LEFT JOIN user_to_role ON user.id = user_to_role.user_id_pk LEFT JOIN role ON role.id = user_to_role.role_id_pk WHERE user.id = ?",id, (err, res)=>{
+    sql.query("SELECT user.id, user.username, user.email, user.first_name, user.last_name, user.created_at, user.last_login, role.role_name AS account_type FROM user LEFT JOIN user_to_role ON user.id = user_to_role.user_id_pk LEFT JOIN role ON role.id = user_to_role.role_id_pk WHERE user.id = ?",id, (err, res)=>{
         if(err){
             result(err, null);
         }
