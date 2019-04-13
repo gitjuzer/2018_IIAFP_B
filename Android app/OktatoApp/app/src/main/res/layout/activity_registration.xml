@@ -171,11 +171,16 @@
             app:layout_constraintTop_toBottomOf="@+id/email_EditText"
             app:layout_constraintVertical_bias="0.0">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_namebadge"
+                android:tint="@color/colorPrimary" />
+
             <EditText
                 android:id="@+id/firstName_ET"
                 android:layout_width="256dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="27dp"
                 android:hint="@string/firstName" />
         </LinearLayout>
 
@@ -195,12 +200,16 @@
             app:layout_constraintTop_toBottomOf="@+id/fistName_EditText"
             app:layout_constraintVertical_bias="0.0">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_namebadge"
+                android:tint="@color/colorPrimary" />
 
             <EditText
                 android:id="@+id/lastName_ET"
                 android:layout_width="256dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="27dp"
                 android:hint="@string/lastName" />
         </LinearLayout>
 

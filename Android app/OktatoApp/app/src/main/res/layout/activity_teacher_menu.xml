@@ -157,4 +157,19 @@
         app:layout_constraintTop_toTopOf="@+id/classes_Button"
         app:srcCompat="@drawable/ic_classes" />
 
+    <ImageButton
+        android:id="@+id/imageButton_logoutButtonT"
+        android:layout_width="32dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/upperToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/upperToolbar"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toEndOf="@+id/usernameT_TextView"
+        app:layout_constraintTop_toTopOf="@+id/upperToolbar"
+        app:srcCompat="@drawable/ic_logout" />
+
 </android.support.constraint.ConstraintLayout>
