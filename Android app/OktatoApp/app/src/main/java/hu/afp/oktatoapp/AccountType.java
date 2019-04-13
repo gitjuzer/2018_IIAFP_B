@@ -1,3 +1,0 @@
-package hu.afp.oktatoapp;
-
-

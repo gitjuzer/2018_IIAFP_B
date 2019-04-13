@@ -56,6 +56,18 @@ public class Token {
     public static List<Token> getTokens(){
         return Tokens;
     }
+
+    public static String getTokenByUsername(String username){
+        String tempToken = "";
+        for (int i = 0; i < Tokens.size(); i++) {
+            if(Tokens.get(i).username.equals(username)){
+                tempToken = Tokens.get(i).token;
+                break;
+            }
+            break;
+        }
+        return tempToken;
+    }
     //endregion
 
     public Token(){

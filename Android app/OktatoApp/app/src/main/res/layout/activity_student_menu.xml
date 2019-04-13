@@ -156,5 +156,18 @@
         app:layout_constraintVertical_bias="0.555"
         app:srcCompat="@drawable/ic_face" />
 
+    <ImageButton
+        android:id="@+id/imageButton_logoutButton"
+        android:layout_width="32dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logout" />
+
 
 </android.support.constraint.ConstraintLayout>

@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import hu.afp.oktatoapp.Classes.Token;
+
 public class StudentMenu extends AppCompatActivity {
 
     @Override
@@ -22,8 +24,9 @@ public class StudentMenu extends AppCompatActivity {
 
         usernameDisplay = findViewById(R.id.usernameDisplay_TextView);
         usernameDisplay.setText(getIntent().getStringExtra("Username"));
-        ImageButton statistic;
+        ImageButton statistic, logoutButton;
         statistic = findViewById(R.id.statistic_button);
+        logoutButton = findViewById(R.id.imageButton_logoutButton);
 
         statistic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +35,18 @@ public class StudentMenu extends AppCompatActivity {
                 startActivity(studentStatistic);
             }
         });
+        /*logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String currentUsername = usernameDisplay.getText().toString();
+                String currentUsersToken = Token.getTokenByUsername(currentUsername);
+                for (int i = 0; i < Token.getTokens().size(); i++) {
+                    if (Token.getTokens().get(i).getToken().equals(currentUsersToken)) {
+                        Token.getTokens().remove(Token.getTokens().get(i));
+                    }
+                }
+            }
+        });*/
     }
-
 
 }

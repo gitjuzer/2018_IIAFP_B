@@ -17,6 +17,7 @@ public class User {
     private Date last_login;
     public static List<User> Users = new ArrayList<>();
     private Role.roleType role;
+    private String token;
 //endregion
     //region properties, set, get
     public String getUsername(){
@@ -84,6 +85,18 @@ public class User {
 
     public static List<User> getUsers(){
         return Users;
+    }
+
+    public User getUserByToken(String token){
+        User user = new User();
+        for (int i = 0; i < Users.size(); i++) {
+            if(Users.get(i).token.equals(token)){
+                user = Users.get(i);
+                break;
+            }
+            break;
+        }
+        return user;
     }
 
 //endregion
