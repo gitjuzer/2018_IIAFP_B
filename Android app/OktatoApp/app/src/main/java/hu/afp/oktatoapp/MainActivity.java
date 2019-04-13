@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
 
-                            statusCode = Integer.parseInt(jsonObject.getString("status_code"));
+                            statusCode = jsonObject.getInt("status_code");
                             description = jsonObject.getString("description");
 
                             if (statusCode == 201) {

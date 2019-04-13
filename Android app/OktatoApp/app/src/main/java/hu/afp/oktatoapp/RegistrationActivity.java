@@ -35,6 +35,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import hu.afp.oktatoapp.Classes.Role;
 import hu.afp.oktatoapp.Classes.User;
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -111,24 +112,25 @@ public class RegistrationActivity extends AppCompatActivity {
                             "jelszavak.", Toast.LENGTH_SHORT);
                     errorToast.show();
                 }
-                /*else if(emptyDataExists(realUsername, realPassword, realRetryPassword, realEmail, realFirstName, realLastName)){
-                    Toast errorToast = Toast.makeText(RegistrationActivity.this, "Minden adatot kötelező " +
-                            "kitölteni.", Toast.LENGTH_SHORT);
-                    errorToast.show();
-                }*/                             //  ez a szar nem működik valamiért
                else {
-                    if (studentButtonIsClicked) {
-                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Student);
+                   if(!studentButtonIsClicked && !teacherButtonIsClicked){
+                       Toast errorToast = Toast.makeText(RegistrationActivity.this, "Ki kell választanod " +
+                                       "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél regisztrálni?",
+                               Toast.LENGTH_SHORT);
+                       errorToast.show();
+                   }
+                    if (studentButtonIsClicked && succesfulRegistration) {
+                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.Student);
                         Toast.makeText(getBaseContext(), "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
 
-                    } else if (teacherButtonIsClicked) {
+                    } else if (teacherButtonIsClicked && succesfulRegistration) {
                         Toast.makeText(getBaseContext(),"Tanárként való regisztráláshoz tudnod kell a " +
                                 "központi kódot.", Toast.LENGTH_SHORT).show();
 
-                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, AccountType.Teacher);
-                    } else {
-                        Toast errorToast = Toast.makeText(RegistrationActivity.this, "Ki kell választanod " +
-                                        "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél regisztrálni?",
+                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.Teacher);
+                    }
+                    else{
+                        Toast errorToast = Toast.makeText(RegistrationActivity.this, "Hiányzó adatok.",
                                 Toast.LENGTH_SHORT);
                         errorToast.show();
                     }
@@ -138,17 +140,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
-    private boolean emptyDataExists(String username, String password, String retryPassword, String email,
-                                   String firstName, String lastName){
-        if(TextUtils.isEmpty(username) || TextUtils.isEmpty(password) || TextUtils.isEmpty(retryPassword) || TextUtils.isEmpty(email)
-        || TextUtils.isEmpty(firstName) || TextUtils.isEmpty(lastName)){
-            return false;
-        }
-        else
-            return true;
-    }
     private void sendRegistrationData(String username, String email, final String password,
-                                      String firstName, String lastName, AccountType accountType){
+                                      String firstName, String lastName, final Role.roleType roleType){
         String url = "https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/signup";
 
         JSONObject jsonObject = new JSONObject();
@@ -158,7 +151,7 @@ public class RegistrationActivity extends AppCompatActivity {
             jsonObject.put("email", email);
             jsonObject.put("first_name", firstName);
             jsonObject.put("last_name", lastName);
-            jsonObject.put("account_type", accountType);
+            jsonObject.put("account_type", roleType);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -172,14 +165,14 @@ public class RegistrationActivity extends AppCompatActivity {
                         int statusCode = 0;
                         String description;
 
-                        int id = 0;
+                        int id;
                         String username;
                         String email;
                         String firstName;
                         String lastName;
                         Date created_at;
                         Date last_login;
-                        AccountType accountType;
+                        Role.roleType role;
                         JSONArray responseInJSONArray;
 
                         try{
@@ -202,16 +195,21 @@ public class RegistrationActivity extends AppCompatActivity {
                                 lastName = obj.getString("last_name");
                                 created_at = format.parse((obj.getString("created_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
                                 last_login = format.parse((obj.getString("created_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
-                                accountType = AccountType.valueOf(obj.getString("account_type"));
+                                role = Role.roleType.valueOf(obj.getString("account_type"));
+
 
                                 User newUser = new User(id, username, email, password, lastName, firstName, created_at
-                                , last_login);
+                                , last_login, role);
                             }
                         }
 
                          catch (JSONException e) {
-                            if(statusCode == 400){
+                            if(statusCode == 400 || statusCode == 409){
                                 succesfulRegistration = false;
+                            }
+                            if(statusCode == 0){
+                                Toast errorToast = Toast.makeText(RegistrationActivity.this,"nulla eza geci" + e.getMessage(), Toast.LENGTH_SHORT);
+                                errorToast.show();
                             }
                             e.printStackTrace();
                         } catch (ParseException e) {
@@ -243,7 +241,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public byte[] getBody() {
                 try {
-                    return requestBody == null ? null : requestBody.getBytes("utf-8");
+                    return requestBody.getBytes("utf-8");
                 } catch (UnsupportedEncodingException e) {
                     VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
                     return null;

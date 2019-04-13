@@ -16,6 +16,7 @@ public class User {
     private Date created_at;
     private Date last_login;
     public static List<User> Users = new ArrayList<>();
+    private Role.roleType role;
 //endregion
     //region properties, set, get
     public String getUsername(){
@@ -52,6 +53,7 @@ public class User {
     public String getFirstName(){
         return firstName;
     }
+
     public void setCreated_at(Date created_at){
         this.created_at = created_at;
     }
@@ -65,22 +67,32 @@ public class User {
     public Date getLast_login(){
         return last_login;
     }
+
     public int getId(){
         return id;
     }
     public void setId(int id){
         this.id = id;
     }
+
+    public Role.roleType getRole(){
+        return this.role;
+    }
+    public void setRole(Role.roleType role){
+        this.role = role;
+    }
+
     public static List<User> getUsers(){
         return Users;
     }
+
 //endregion
 
     public User(){
 
     }
     public User(int id, String username, String email, String password, String lastName, String firstName,
-                Date created_at, Date last_login){
+                Date created_at, Date last_login, Role.roleType role){
         super();
         this.setId(id);
         this.setUsername(username);
@@ -90,6 +102,6 @@ public class User {
         this.setFirstName(firstName);
         this.setCreated_at(created_at);
         this.setLast_login(last_login);
-
+        this.setRole(role);
     }
 }
