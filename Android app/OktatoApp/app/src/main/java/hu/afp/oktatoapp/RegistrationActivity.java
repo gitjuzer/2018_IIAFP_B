@@ -107,29 +107,28 @@ public class RegistrationActivity extends AppCompatActivity {
                 String realFirstName = firstName.getText().toString();
                 String realLastName = lastName.getText().toString();
 
-                if (!realPassword.equals(realRetryPassword)){
+                if (!realPassword.equals(realRetryPassword)) {
                     Toast errorToast = Toast.makeText(RegistrationActivity.this, "Nem egyeznek meg a " +
                             "jelszavak.", Toast.LENGTH_SHORT);
                     errorToast.show();
-                }
-               else {
-                   if(!studentButtonIsClicked && !teacherButtonIsClicked){
-                       Toast errorToast = Toast.makeText(RegistrationActivity.this, "Ki kell választanod " +
-                                       "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél regisztrálni?",
-                               Toast.LENGTH_SHORT);
-                       errorToast.show();
-                   }
-                    if (studentButtonIsClicked && succesfulRegistration) {
-                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.Student);
-                        Toast.makeText(getBaseContext(), "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
-
-                    } else if (teacherButtonIsClicked && succesfulRegistration) {
-                        Toast.makeText(getBaseContext(),"Tanárként való regisztráláshoz tudnod kell a " +
-                                "központi kódot.", Toast.LENGTH_SHORT).show();
-
+                } else {
+                    if (!studentButtonIsClicked && !teacherButtonIsClicked) {
+                        Toast errorToast = Toast.makeText(RegistrationActivity.this, "Ki kell választanod " +
+                                        "legalább az egyik menüpontot. Tanárként, vagy diákként szeretnél regisztrálni?",
+                                Toast.LENGTH_SHORT);
+                        errorToast.show();
+                    } else if (teacherButtonIsClicked) {
                         sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.Teacher);
-                    }
-                    else{
+                        if(succesfulRegistration) {
+                            Toast.makeText(getBaseContext(), "Tanárként való regisztráláshoz tudnod kell a " +
+                                    "központi kódot.", Toast.LENGTH_SHORT).show();
+                        }
+                    } else if (studentButtonIsClicked) {
+                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.Student);
+                        if(succesfulRegistration) {
+                            Toast.makeText(getBaseContext(), "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
                         Toast errorToast = Toast.makeText(RegistrationActivity.this, "Hiányzó adatok.",
                                 Toast.LENGTH_SHORT);
                         errorToast.show();
@@ -223,7 +222,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         Log.d("Error.Response", " " + error.getMessage());
                         if(error.networkResponse.statusCode == 400){
                             succesfulRegistration = false;
-                            Toast errorToast = Toast.makeText(RegistrationActivity.this, "Hiányzó adatok!", Toast.LENGTH_SHORT);
+                            Toast errorToast = Toast.makeText(RegistrationActivity.this, "Hiányzó adatokkkkk!", Toast.LENGTH_SHORT);
                             errorToast.show();
                         }
                         if(error.networkResponse.statusCode == 409){
@@ -241,7 +240,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public byte[] getBody() {
                 try {
-                    return requestBody.getBytes("utf-8");
+                    return requestBody == null ? null : requestBody.getBytes("utf-8");
                 } catch (UnsupportedEncodingException e) {
                     VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
                     return null;
