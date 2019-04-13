@@ -192,25 +192,15 @@ public class MainActivity extends AppCompatActivity {
                                 DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH);
 
                                 JSONObject obj = responseInJSONArray.getJSONObject(i);
-                                Token tempToken = new Token();
 
                                 tokenId = obj.getInt("id");
                                 token = obj.getString("token");
                                 created_at = format.parse((obj.getString("created_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
                                 expires_at = format.parse((obj.getString("expires_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
                                 isActive = obj.getInt("is_active") == 1;
-                                //userId = obj.getInt("user_id");
                                 username = obj.getString("username");
 
-                                tempToken.setTokenId(tokenId);
-                                tempToken.setToken(token);
-                                tempToken.setCreated_at(created_at);
-                                tempToken.setExpires_at(expires_at);
-                                tempToken.setisActive(isActive);
-                                //tempToken.setUserId(userId);
-                                tempToken.setUsername(username);
-                                tempToken.setUsername(obj.getString("username"));
-                                Token.Tokens.add(tempToken);
+                                Token tempToken = new Token(tokenId, token, created_at, expires_at, isActive, username);
 
                                 //TESZT a tokenek adatainak kiiírására
                                /* List<Token> temp = Token.getTokens();

@@ -12,7 +12,6 @@ public class Token {
     private Date created_at;
     private Date expires_at;
     private boolean isActive;
-    private int userId;
     private String username;
     public static List<Token> Tokens = new ArrayList<>();
     //endregion
@@ -48,12 +47,6 @@ public class Token {
     public void setisActive(boolean isActive){
         this.isActive = isActive;
     }
-    public void setUserId(int userId){
-        this.userId = userId;
-    }
-    public int getUserId(){
-        return userId;
-    }
     public String getUsername(){
         return username;
     }
@@ -68,12 +61,13 @@ public class Token {
     public Token(){
 
     }
-    public Token(int tokenId, String token, Date created_at, Date expires_at, boolean isActive){
+    public Token(int tokenId, String token, Date created_at, Date expires_at, boolean isActive, String username){
         super();
         this.setTokenId(tokenId);
         this.setToken(token);
         this.setCreated_at(created_at);
         this.setExpires_at(expires_at);
         this.setisActive(isActive);
+        this.setUsername(username);
     }
 }
