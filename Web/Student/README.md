@@ -34,3 +34,5 @@ Bővebben: [deployment](https://facebook.github.io/create-react-app/docs/deploym
 ## Hasznos linkek
 [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 [React documentation](https://reactjs.org/).
+
+### install, start bat megcsinálja ezeket neked.
