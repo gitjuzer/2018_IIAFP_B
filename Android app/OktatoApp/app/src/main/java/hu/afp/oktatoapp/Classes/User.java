@@ -1,6 +1,8 @@
 package hu.afp.oktatoapp.Classes;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class User {
 
@@ -13,6 +15,7 @@ public class User {
     private String firstName;
     private Date created_at;
     private Date last_login;
+    public static List<User> Users = new ArrayList<>();
 //endregion
     //region properties, set, get
     public String getUsername(){
@@ -68,6 +71,9 @@ public class User {
     public void setId(int id){
         this.id = id;
     }
+    public static List<User> getUsers(){
+        return Users;
+    }
 //endregion
 
     public User(){
@@ -84,5 +90,6 @@ public class User {
         this.setFirstName(firstName);
         this.setCreated_at(created_at);
         this.setLast_login(last_login);
+
     }
 }

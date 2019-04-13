@@ -29,6 +29,21 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParseException;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import hu.afp.oktatoapp.Classes.Token;
+import hu.afp.oktatoapp.Classes.User;
+
+import static hu.afp.oktatoapp.Classes.Token.Tokens;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -151,6 +166,14 @@ public class MainActivity extends AppCompatActivity {
 
                         int statusCode = 0;
                         String description;
+
+                        int tokenId;
+                        String token;
+                        Date created_at;
+                        Date expires_at;
+                        boolean isActive;
+                        int userId;
+                        String username;
                         JSONArray responseInJSONArray;
                         
                         try {
@@ -166,15 +189,42 @@ public class MainActivity extends AppCompatActivity {
                             responseInJSONArray = jsonObject.getJSONArray("data");
                             for (int i = 0; i < responseInJSONArray.length(); i++) {
 
-                                JSONObject obj = responseInJSONArray.getJSONObject(i);
-                                obj.getString("token");
+                                DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH);
 
+                                JSONObject obj = responseInJSONArray.getJSONObject(i);
+                                Token tempToken = new Token();
+
+                                tokenId = obj.getInt("id");
+                                token = obj.getString("token");
+                                created_at = format.parse((obj.getString("created_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
+                                expires_at = format.parse((obj.getString("expires_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
+                                isActive = obj.getInt("is_active") == 1;
+                                //userId = obj.getInt("user_id");
+                                username = obj.getString("username");
+
+                                tempToken.setTokenId(tokenId);
+                                tempToken.setToken(token);
+                                tempToken.setCreated_at(created_at);
+                                tempToken.setExpires_at(expires_at);
+                                tempToken.setisActive(isActive);
+                                //tempToken.setUserId(userId);
+                                tempToken.setUsername(username);
+                                tempToken.setUsername(obj.getString("username"));
+                                Token.Tokens.add(tempToken);
+
+                                //TESZT a tokenek adatainak kiiírására
+                               /* List<Token> temp = Token.getTokens();
+                                for (int j = 0; j < temp.size(); j++) {
+                                    Log.d("TOKEN ADATAI:////////////", " " + temp.get(i).getCreated_at() + " " + temp.get(i).getExpires_at());
+                                }*/
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
                             if(statusCode == 401){
                                 ableToLogin = false;
                             }
+                        } catch (ParseException e) {
+                            e.printStackTrace();
                         }
 
 
