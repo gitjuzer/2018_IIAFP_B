@@ -201,13 +201,14 @@ public class MainActivity extends AppCompatActivity {
                                 username = obj.getString("username");
 
                                 Token tempToken = new Token(tokenId, token, created_at, expires_at, isActive, username);
-
+                                Tokens.add(tempToken);
+                            }
                                 //TESZT a tokenek adatainak kiiírására
                                /* List<Token> temp = Token.getTokens();
                                 for (int j = 0; j < temp.size(); j++) {
                                     Log.d("TOKEN ADATAI:////////////", " " + temp.get(i).getCreated_at() + " " + temp.get(i).getExpires_at());
                                 }*/
-                            }
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                             if(statusCode == 401){

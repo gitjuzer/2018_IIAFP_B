@@ -1,5 +1,6 @@
 package hu.afp.oktatoapp;
 
+import android.accounts.Account;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,11 +23,19 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+import hu.afp.oktatoapp.Classes.User;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -138,16 +147,14 @@ public class RegistrationActivity extends AppCompatActivity {
         else
             return true;
     }
-    private void sendRegistrationData(String username, String email, String password,
-                                       String firstName, String lastName, AccountType accountType){
-        String url = "https://10.0.2.2:3000/OktatoAppAPI/users/signup";
+    private void sendRegistrationData(String username, String email, final String password,
+                                      String firstName, String lastName, AccountType accountType){
+        String url = "https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/signup";
 
-        //final String hashedPass = password;
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("username", username);
             jsonObject.put("password", password);
-            //jsonObject.put("retryPassword", retryPassword);
             jsonObject.put("email", email);
             jsonObject.put("first_name", firstName);
             jsonObject.put("last_name", lastName);
@@ -162,13 +169,70 @@ public class RegistrationActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(getBaseContext(), "Sikeres regisztráció.", Toast.LENGTH_SHORT).show();
+                        int statusCode = 0;
+                        String description;
+
+                        int id = 0;
+                        String username;
+                        String email;
+                        String firstName;
+                        String lastName;
+                        Date created_at;
+                        Date last_login;
+                        AccountType accountType;
+                        JSONArray responseInJSONArray;
+
+                        try{
+                            JSONObject jsonObject = new JSONObject(response);
+
+                            statusCode = jsonObject.getInt("status_code");
+                            description = jsonObject.getString("description");
+                            if(statusCode == 201){
+                                succesfulRegistration = true;
+                            }
+                            responseInJSONArray = jsonObject.getJSONArray("data");
+                            for (int i = 0; i < responseInJSONArray.length(); i++) {
+                                DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH);
+
+                                JSONObject obj = responseInJSONArray.getJSONObject(i);
+                                id = obj.getInt("id");
+                                username = obj.getString("username");
+                                email = obj.getString("email");
+                                firstName = obj.getString("first_name");
+                                lastName = obj.getString("last_name");
+                                created_at = format.parse((obj.getString("created_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
+                                last_login = format.parse((obj.getString("created_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
+                                accountType = AccountType.valueOf(obj.getString("account_type"));
+
+                                User newUser = new User(id, username, email, password, lastName, firstName, created_at
+                                , last_login);
+                            }
+                        }
+
+                         catch (JSONException e) {
+                            if(statusCode == 400){
+                                succesfulRegistration = false;
+                            }
+                            e.printStackTrace();
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Error.Response", " " + error.getMessage());
+                        if(error.networkResponse.statusCode == 400){
+                            succesfulRegistration = false;
+                            Toast errorToast = Toast.makeText(RegistrationActivity.this, "Hiányzó adatok!", Toast.LENGTH_SHORT);
+                            errorToast.show();
+                        }
+                        if(error.networkResponse.statusCode == 409){
+                            succesfulRegistration = false;
+                            Toast errorToast = Toast.makeText(RegistrationActivity.this, "Már létezik ilyen felhasználó!", Toast.LENGTH_SHORT);
+                            errorToast.show();
+                        }
                     }
                 }) {
             @Override
