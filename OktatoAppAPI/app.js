@@ -6,10 +6,9 @@ const path = require('path')
 var fs = require('fs')
 const message = require('./utilities/jsonmessage')
 
-var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+//var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
-app.use(morgan('dev'));
-app.use(morgan('combined', { stream: accessLogStream }));
+app.use(morgan('combined'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
