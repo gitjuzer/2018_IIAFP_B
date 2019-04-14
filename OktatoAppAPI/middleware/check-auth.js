@@ -6,7 +6,7 @@ const message = require('../utilities/jsonmessage')
 IsAuthorized = (role1, role2, req, res, next)=>{
     try{
         const token = req.headers.authorization.split(' ')[1]
-        const decoded = jwt.verify(token, process.env.JWT_KEY)
+        const decoded = jwt.verify(token, process.env.JWT_KEY || "2018_19_II.FELEV_LABOR_B")
         req.user_data = decoded
         Token.getActiveTokensByUserId(decoded.user_id, (err,result)=>{
             if(result.length == 1){

@@ -63,7 +63,7 @@ exports.login = (req,res,next)=>{
                     user_id: user[0].id,
                     account_type: user[0].role_name
                     },
-                    process.env.JWT_KEY,
+                    process.env.JWT_KEY || "2018_19_II.FELEV_LABOR_B",
                     {
                         expiresIn: "4h"
                     }
