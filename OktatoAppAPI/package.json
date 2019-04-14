@@ -2,18 +2,18 @@
   "name": "oktatoappapi",
   "version": "1.0.0",
   "description": "Oktató alkalmazás REST API-ja.",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Varga Patrik Ádám",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.5",
     "body-parser": "^1.18.3",
-    "dotenv": "^7.0.0",
     "express": "^4.16.4",
+    "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.0",
     "moment": "^2.24.0",
     "morgan": "^1.9.1",

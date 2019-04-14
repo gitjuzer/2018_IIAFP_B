@@ -1,11 +1,12 @@
 const jwt = require('jsonwebtoken')
 const Token = require('../models/token')
 const User = require('../models/user')
+const message = require('../utilities/jsonmessage')
 
 IsAuthorized = (role1, role2, req, res, next)=>{
     try{
         const token = req.headers.authorization.split(' ')[1]
-        const decoded = jwt.verify(token, process.env.JWT_KEY)
+        const decoded = jwt.verify(token, process.env.JWT_KEY || "2018_19_II.FELEV_LABOR_B")
         req.user_data = decoded
         Token.getActiveTokensByUserId(decoded.user_id, (err,result)=>{
             if(result.length == 1){
@@ -14,33 +15,24 @@ IsAuthorized = (role1, role2, req, res, next)=>{
                 }
                 User.getUserById(decoded.user_id, (err, result1)=>{
                     try{
-                        if(result1[0].role_name === (role1 || role2)){
+                        if(result1[0].account_type === (role1 || role2)){
                             next()
                         }
                         else{
                             throw new Error()
                         }
                     }catch(error){
-                        return res.status(401).json({
-                            "status_code":"401",
-                            "description":"Jogosulatlan hozzáférés!"
-                        })
+                        return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
                     }
                 })
             }
             else{
-                return res.status(401).json({
-                    "status_code":"401",
-                    "description":"Jogosulatlan hozzáférés!"
-                })
+                return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
             }
         })
         
     } catch(error){
-        return res.status(401).json({
-            "status_code":"401",
-            "description":"Jogosulatlan hozzáférés!"
-        })
+        return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
     }
 }
 exports.IsLoggedIn = (req,res,next)=>{

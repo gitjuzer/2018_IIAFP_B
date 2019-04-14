@@ -4,11 +4,11 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path')
 var fs = require('fs')
+const message = require('./utilities/jsonmessage')
 
-var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+//var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
-app.use(morgan('dev'));
-app.use(morgan('combined', { stream: accessLogStream }));
+app.use(morgan('combined'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -56,10 +56,7 @@ app.use((req,res,next)=>{
 
 app.use((error, req,res,next)=>{
     res.status(error.status || 500);
-    res.json({
-        "status_code": error.status || 500,
-        "description": error.message
-    });
+    res.json(message.compose(error.status || 500, error.message));
 });
 module.exports = app;
 
