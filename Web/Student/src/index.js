@@ -12,8 +12,8 @@ class Layout extends React.Component {
         username: "",
         token: "",
     }
-    componentDidMount(){
-        this.login("szar","szar");
+    componentDidMount() {
+        this.login("szar", "szar");
     }
     login = (username, password) => {
         const data = {
@@ -27,53 +27,55 @@ class Layout extends React.Component {
             },
             body: JSON.stringify(data)
         })
-        .then(response => response.json())
-        .then(responsejson => {
-            alert(responsejson.description);
-            this.setState({
-                username: responsejson.data[0].username, 
-                token: responsejson.data[0].token
+            .then(response => response.json())
+            .then(responsejson => {
+                console.log(responsejson.description);
+                this.setState({
+                    username: responsejson.data[0].username,
+                    token: responsejson.data[0].token
+                });
             });
-        });
     }
     renderSection = () => {
         switch (this.state.activeMenu) {
             case "Learning":
-                return <Learning token={this.state.token}/>
+                return <Learning token={this.state.token} />
             case "Statics":
-                return <Statics token={this.state.token}/>
+                return <Statics token={this.state.token} />
             case "Versus":
-                return <Versus token={this.state.token}/>
+                return <Versus token={this.state.token} />
             default:
                 return <div></div>;
         }
     }
     changeSection = (newSection) => {
-        this.setState({activeMenu: newSection});
+        this.setState({ activeMenu: newSection });
     }
-    
+
     unselected = "side-bar-button";
     selected = "side-bar-button active";
     render() {
-      return (
-        <main className="flex-container">
-            <section className="main-section">
-                {this.renderSection()}
-            </section>
-            <aside className="side-bar">
-                <button className={ this.state.activeMenu === "Learning" ? this.selected : this.unselected } onClick={() => this.changeSection("Learning")}>
-                    <i className="far fa-lightbulb fa-2x"></i>Learning
-                </button>
-                <button className={ this.state.activeMenu === "Statics" ? this.selected : this.unselected } onClick={() => this.changeSection("Statics")}>
-                    <i className="fas fa-chart-bar fa-2x"></i>Statics
-                </button>
-                <button className={ this.state.activeMenu === "Versus" ? this.selected : this.unselected } onClick={() => this.changeSection("Versus")}>
-                    <i className="fas fa-gamepad fa-2x"></i>Versus
-                </button>
-            </aside>
-        </main>
-        
-      );
+        if(this.state.token)
+            return (
+                <main className="flex-container">
+                    <section className="main-section">
+                        {this.renderSection()}
+                    </section>
+                    <aside className="side-bar">
+                        <button className={this.state.activeMenu === "Learning" ? this.selected : this.unselected} onClick={() => this.changeSection("Learning")}>
+                            <i className="far fa-lightbulb fa-2x"></i>Learning
+                    </button>
+                        <button className={this.state.activeMenu === "Statics" ? this.selected : this.unselected} onClick={() => this.changeSection("Statics")}>
+                            <i className="fas fa-chart-bar fa-2x"></i>Statics
+                    </button>
+                        <button className={this.state.activeMenu === "Versus" ? this.selected : this.unselected} onClick={() => this.changeSection("Versus")}>
+                            <i className="fas fa-gamepad fa-2x"></i>Versus
+                    </button>
+                    </aside>
+                </main>
+            );
+        else
+            return <div></div>
     }
 }
 ReactDOM.render(<Layout />, document.getElementById('react-section'));
