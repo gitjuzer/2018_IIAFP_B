@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teaching app Home</title>
+    <link rel="stylesheet" href="TeacherStyle.css">
+</head>
+
+<body>
+    <header>
+        <ul class="headdiv">
+
+            <li class="headAppName">
+                <a class="heada1" href="">
+                    <img class="Applogo" src="img/logo.png" alt="logo helye" />Teaching App
+                </a>
+            </li>
+            <li class="headUserName">
+                <a class="heada2" href="">
+                    <i class="icon-user"></i>Felhasználónév
+                </a>
+            </li>
+
+        </ul>
+    </header>
+    <main>
+        <div class="MainDiv">
+            <div class="PageMain">
+                <div class="LeftColumn">
+
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">
+                            <i class="icon-app"></i>Subject
+                        </button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">Matek</a>
+                            <a href="#">Történelem</a>
+                            <a href="#">Informatika</a>
+                        </div>
+
+                    </div>
+
+                    <div class="LessonManagement">
+                        <button class="AddButton">
+                            <img class="Plusimg" src="../img/pluss.png" alt="logo" />Tárgy hozzáadása
+                        </button>
+                        <button class="AddButton">
+                            <img class="Plusimg" src="../img/pluss.png" alt="logo" />Téma hozzáadása
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="MiddleColumn">
+                <div class="curriculum">
+                    <div>
+
+                        <object type="text/html" data="inner.html" style="width: 100%; height: 483px;">
+                        </object>
+                    </div>
+                </div>
+            </div>
+
+            <div class="RightColumn">
+                <button class="Selected">
+                    <img class="Learninglogo" src="../img/user.png" alt="logo" />Learning
+                </button>
+
+
+                <button class="Unselected">
+                    <img class="Statslogo" src="../img/user.png" alt="logo" />Statistics
+                </button>
+
+
+                <button class="Unselected">
+                    <img class="ClassesLogo" src="../img/user.png" alt="logo" />Classes
+                </button>
+            </div>
+        </div>
+        </div>
+
+
+    </main>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+}
+
+.headdiv {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 25;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+}
+
+.headAppName {
+  float: left;
+  width: 70%;
+}
+
+.headUserName {
+  float: right;
+  width: 30%;
+  background: white;
+}
+
+.Userlogo {
+  height: 100%;
+  max-width: 100%;
+  float: left;
+}
+
+.heada1,
+.heada2 {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 26px;
+  text-decoration: none;
+  font-size: 150%;
+  position: relative;
+  height: 6%;
+}
+
+.heada2 {
+  margin-left: 2px;
+  background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+  font-size: 120%;
+  align-content: center;
+}
+
+li a:hover {
+  background-color: rgb(124, 160, 128);
+  background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
+}
+
+.LeftColumn,
+.MiddleColumn,
+.RightColumn {
+  float: left;
+}
+
+.LeftColumn,
+.RightColumn {
+  width: 20%;
+
+}
+
+.curriculum {
+  margin-top: 10px;
+  height: 483px;
+  width: 80%;
+  top: 0px;
+  left: 250px;
+  border-style: solid;
+  border-color: rgb(3, 87, 80);
+  border-radius: 1%;
+  float: left;
+}
+
+.MiddleColumn {
+  width: 60%;
+  text-align: center
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.Learninglogo,
+.Statslogo,
+.Classeslogo {
+  height: 25;
+  max-width: 100%;
+  float: left;
+}
+
+.Plusimg {
+  height: 25;
+  max-width: 100%;
+  margin: 0px 2px 3px 5px;
+  float: left;
+}
+
+.Selected {
+  margin: 0px 0px 10px 0px;
+  width: 200px;
+  border-radius: 5%;
+  background-color: rgb(12, 180, 87);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: rgb(12, 180, 87);
+}
+
+.Unselected {
+  margin: 0px 0px 10px 0px;
+  width: 200px;
+  border-radius: 5%;
+  background-color: rgb(168, 168, 168);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.AddButton {
+  background: none;
+  border: none;
+
+}
+
+.dropbtn {
+  background-color: rgb(12, 180, 87);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  margin: 20px 5px 15px 10px;
+  cursor: pointer;
+  width: 160px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus,
+.SideMenuElement:hover,
+.SideMenuElement:focus {
+  background-color: rgb(8, 114, 56);
+  outline: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd
+}
+
+.htmldata {
+  width: 40%;
+}
+
+.icon-app {
+  background-image: url("../img/magister_icon.png");
+}
+
+.icon-user {
+  background-image: url("../img/human_head_icon.png");
+}
+
+.icon-pluss {
+  background-image: url("../img/pluss.png");
+}
+
+[class^="icon"] {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  width: 30;
+  height: 30;
+  position: relative;
+  padding-left: 30px;
+  z-index: 2;
+}
+
+.show {
+  display: block;
+}
