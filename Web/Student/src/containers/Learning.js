@@ -1,5 +1,6 @@
 import React from 'react';
 import './Learning.css';
+import { responseCodeTest } from '../functions/responseCodeTest';
 import Dropdown from '../components/dropdown';
 import Gamemode from '../components/gamemode';
 import Gamesession from '../components/gamesession';
@@ -17,7 +18,7 @@ class Learning extends React.Component {
         })
             .then(response => response.json())
             .then(responsejson => {
-                console.log(responsejson);
+                responseCodeTest(responsejson);
             })
         return null;
     };

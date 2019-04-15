@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { responseCodeTest } from './functions/responseCodeTest';
 import Learning from './containers/Learning';
 import Statics from './containers/Statics';
 import Versus from './containers/Versus';
@@ -29,7 +30,7 @@ class Layout extends React.Component {
         })
             .then(response => response.json())
             .then(responsejson => {
-                console.log(responsejson.description);
+                responseCodeTest(responsejson);
                 this.setState({
                     username: responsejson.data[0].username,
                     token: responsejson.data[0].token
