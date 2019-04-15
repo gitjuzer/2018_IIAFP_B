@@ -7,7 +7,7 @@ export default class gamemode extends Component {
       <div className="game-mode">
         <div>
             <div className="box">
-                <i class="fas fa-th-large fa-3x"></i>
+                <i className="fas fa-th-large fa-3x"></i>
             </div>
         </div>
         <div>

@@ -9,15 +9,41 @@ import * as serviceWorker from './serviceWorker';
 class Layout extends React.Component {
     state = {
         activeMenu: "Learning",
+        username: "",
+        token: "",
+    }
+    componentDidMount(){
+        this.login("szar","szar");
+    }
+    login = (username, password) => {
+        const data = {
+            "username": username,
+            "password": password
+        };
+        fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(responsejson => {
+            alert(responsejson.description);
+            this.setState({
+                username: responsejson.data[0].username, 
+                token: responsejson.data[0].token
+            });
+        });
     }
     renderSection = () => {
         switch (this.state.activeMenu) {
             case "Learning":
-                return <Learning/>
+                return <Learning token={this.state.token}/>
             case "Statics":
-                return <Statics/>
+                return <Statics token={this.state.token}/>
             case "Versus":
-                return <Versus/>
+                return <Versus token={this.state.token}/>
             default:
                 return <div></div>;
         }
@@ -25,6 +51,7 @@ class Layout extends React.Component {
     changeSection = (newSection) => {
         this.setState({activeMenu: newSection});
     }
+    
     unselected = "side-bar-button";
     selected = "side-bar-button active";
     render() {
