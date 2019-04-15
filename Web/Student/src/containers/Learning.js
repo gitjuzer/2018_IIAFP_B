@@ -6,10 +6,14 @@ import Gamemode from '../components/gamemode';
 import Gamesession from '../components/gamesession';
 
 class Learning extends React.Component {
-    componentDidMount(){
-        this.renderGameModes();
+    state = {
+        gamemodes : {},
     }
-    renderGameModes = () => {
+    componentDidMount(){
+        this.getGameModes();
+        
+    }
+    getGameModes = () => {
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/game-modes", {
             methor: "GET",
             headers: {
@@ -19,9 +23,19 @@ class Learning extends React.Component {
             .then(response => response.json())
             .then(responsejson => {
                 responseCodeTest(responsejson);
+                this.setState({gamemodes: responsejson.data});
+                console.log(this.state.gamemodes);
             })
-        return null;
     };
+    renderGameModes = () => {
+        return Array.from(this.state.gamemodes).map(gamemode => {
+            return (
+                <Gamemode name={gamemode.name} description={gamemode.description} key={gamemode.id}>
+                </Gamemode>
+            )
+            
+        })
+    }
     render() {
         return (
             <div className="learning-flex-container">
@@ -29,21 +43,7 @@ class Learning extends React.Component {
                     <Dropdown />
                 </div>
                 <div className="learning-main-content">
-                    <Gamemode name="X. téma neve" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in dignissim odio. Curabitur laoreet lacus eu massa consequat, scelerisque finibus nulla commodo. Nulla quis suscipit sem. Phasellus ultricies consequat elementum. Aliquam non mauris non ligula varius facilisis at sit amet dolor. ">
-                        <Gamesession name="1. Feladat neve" />
-                        <Gamesession name="2. Feladat neve" />
-                        <Gamesession name="3. Feladat neve" />
-                    </Gamemode>
-                    <Gamemode name="X. téma neve" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in dignissim odio. Curabitur laoreet lacus eu massa consequat, scelerisque finibus nulla commodo. Nulla quis suscipit sem. Phasellus ultricies consequat elementum. Aliquam non mauris non ligula varius facilisis at sit amet dolor. ">
-                        <Gamesession name="1. Feladat neve" />
-                        <Gamesession name="2. Feladat neve" />
-                        <Gamesession name="3. Feladat neve" />
-                    </Gamemode>
-                    <Gamemode name="X. téma neve" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in dignissim odio. Curabitur laoreet lacus eu massa consequat, scelerisque finibus nulla commodo. Nulla quis suscipit sem. Phasellus ultricies consequat elementum. Aliquam non mauris non ligula varius facilisis at sit amet dolor. ">
-                        <Gamesession name="1. Feladat neve" />
-                        <Gamesession name="2. Feladat neve" />
-                        <Gamesession name="3. Feladat neve" />
-                    </Gamemode>
+                    {this.renderGameModes()}
                 </div>
             </div>
         )
