@@ -1,42 +1,29 @@
-import React, { Component } from 'react'
-import { responseCodeTest } from '../functions/responseCodeTest';
+import React, { Component } from 'react';
 import './dropdown.css';
+import { all } from 'q';
 
 export default class Dropdown extends Component {
     state = {
         isOpened: false,
-        selectedOption: "",
-        difficulties: null
-    }
-    componentWillMount() {
-        this.getDataFromServer();
     }
     toggleOpen = () => {
         this.setState({ isOpened: !this.state.isOpened });
     }
     selectItem = (level) => {
         this.setState({ selectedOption: level })
-        let newLevel = this.state.difficulties.filter(diff => diff.diffculty_name === level)[0];
-        this.props.setLevel(newLevel.difficulty_level, newLevel.diffculty_name);
+        let newLevel = this.props.difficulties.filter(diff => diff.diffculty_name === level)[0];
+        if (level === "Mind")
+            this.props.setLevel({
+                diffculty_name: level,
+                difficulty_level: "all",
+            });
+        else
+            this.props.setLevel(newLevel);
     }
-    getDataFromServer = () => {
-        fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/difficulties", {
-            methor: "GET",
-            headers: {
-                "Authorization": "Bearer " + this.props.token,
-            }
-        })
-            .then(response => response.json())
-            .then(responsejson => {
-                responseCodeTest(responsejson);
-                this.setState({ selectedOption: responsejson.data[0].diffculty_name })
-                this.props.setLevel(responsejson.data[0].difficulty_level, responsejson.data[0].diffculty_name);
-                this.setState({ difficulties: responsejson.data });
-            })
-    }
+
     renderOptions = () => {
-        if (this.state.difficulties) {
-            return Array.from(this.state.difficulties).map((level, index) => {
+        if (this.props.difficulties) {
+            return Array.from(this.props.difficulties).map((level, index) => {
                 return <div key={index} className="option" onClick={() => this.selectItem(level.diffculty_name)}>{level.diffculty_name}</div>
             });
         }
@@ -44,16 +31,19 @@ export default class Dropdown extends Component {
     render() {
         const opened = "custom-select opened";
         const closed = "custom-select closed";
-        if (this.state.difficulties)
+        if (this.props.selectedLevel) {
             return (
                 <div className={this.state.isOpened ? opened : closed} onClick={this.toggleOpen}>
-                    <div className="selected">{this.state.selectedOption}</div>
+                    <div className="selected">{this.props.selectedLevel.diffculty_name}</div>
                     <div className="option-container">
+                        <div key={-1} className="option" onClick={() => this.selectItem("Mind")}>Mind</div>
                         {this.renderOptions()}
                     </div>
                 </div>
             )
-        else
+        } else {
             return <div></div>
+        }
+
     }
 }
