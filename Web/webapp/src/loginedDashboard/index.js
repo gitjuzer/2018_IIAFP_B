@@ -4,6 +4,7 @@ import { responseCodeTest } from './functions/responseCodeTest';
 import Learning from './containers/Learning';
 import Statics from './containers/Statics';
 import Versus from './containers/Versus';
+import Header from './components/header';
 
 class Layout extends React.Component {
     state = {
@@ -54,24 +55,28 @@ class Layout extends React.Component {
     unselected = "side-bar-button";
     selected = "side-bar-button active";
     render() {
-        if(this.state.token)
+        if (this.state.token)
             return (
-                <main className="flex-container">
-                    <section className="main-section">
-                        {this.renderSection()}
-                    </section>
-                    <aside className="side-bar">
-                        <button className={this.state.activeMenu === "Learning" ? this.selected : this.unselected} onClick={() => this.changeSection("Learning")}>
-                            <i className="far fa-lightbulb fa-2x"></i>Learning
-                    </button>
-                        <button className={this.state.activeMenu === "Statics" ? this.selected : this.unselected} onClick={() => this.changeSection("Statics")}>
-                            <i className="fas fa-chart-bar fa-2x"></i>Statics
-                    </button>
-                        <button className={this.state.activeMenu === "Versus" ? this.selected : this.unselected} onClick={() => this.changeSection("Versus")}>
-                            <i className="fas fa-gamepad fa-2x"></i>Versus
-                    </button>
-                    </aside>
-                </main>
+                <React.Fragment>
+                    <Header title="Student Dashboard" username={this.state.username}/>
+                    <main className="flex-container">
+                        <section className="main-section">
+                            {this.renderSection()}
+                        </section>
+                        <aside className="side-bar">
+                            
+                            <button className={this.state.activeMenu === "Learning" ? this.selected : this.unselected} onClick={() => this.changeSection("Learning")}>
+                                <i className="far fa-lightbulb fa-2x"></i>Learning
+                        </button>
+                            <button className={this.state.activeMenu === "Statics" ? this.selected : this.unselected} onClick={() => this.changeSection("Statics")}>
+                                <i className="fas fa-chart-bar fa-2x"></i>Statics
+                        </button>
+                            <button className={this.state.activeMenu === "Versus" ? this.selected : this.unselected} onClick={() => this.changeSection("Versus")}>
+                                <i className="fas fa-gamepad fa-2x"></i>Versus
+                        </button>
+                        </aside>
+                    </main>
+                </React.Fragment>
             );
         else
             return <div></div>
