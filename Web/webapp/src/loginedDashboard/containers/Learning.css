@@ -1,0 +1,15 @@
+div.learning-flex-container{
+    display: flex;
+    flex-direction: row;
+}
+div.learning-side-bar{
+    flex-basis: 0;
+    flex-grow: 2;
+}
+div.learning-main-content{
+    padding: 10px;
+    flex-basis: 0;
+    flex-grow: 5;
+    height: 85vh;
+    overflow-y: scroll;
+}

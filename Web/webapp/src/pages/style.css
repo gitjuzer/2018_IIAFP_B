@@ -1,0 +1,190 @@
+/* Basic css for all page */
+
+.defaultColor{
+	color:white;
+	background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+}
+
+.headdiv {
+	margin-top: 0px;
+	margin-bottom: 16px;
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+}
+
+.heada1{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 20px 26px;
+	text-decoration: none;
+	font-size: 150%;
+}
+
+li a:hover {
+	background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
+}
+
+body {
+ font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+}
+
+.button{
+	font-weight: 900;
+	border-radius: 5px;	
+	padding: 15px 32px;
+	margin: 10px;
+	font-size: 16px;
+}
+
+.button:hover{
+	background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
+}
+/* End Basic */
+
+/* Form design */
+.divbox{	
+	margin: auto;
+	max-width: 500px;
+	text-align:center;  
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 2px;
+	border-color:rgba(0, 0, 0, 0.07);
+}
+
+.divbox > h1{
+	margin: 0 ;
+	padding: 10px;
+}
+
+/* End form design */
+
+/* Index Page */
+.teacherStudentCircles{
+	float: left;
+	width: 50%;
+	height: 30%;
+}
+
+.indexButton:hover{
+	background-size: 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgb(30, 170, 40);
+	box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
+	transform: translate(0, -10px);
+}
+
+.indexButton{
+	outline: 0;
+	background-size: 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 100%;
+	min-width: 150px;
+	min-height: 150px;
+	background-color: rgb(51, 211, 64);
+	box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+	transition: all ease-in-out 300ms;
+}
+
+.buttonTeacher{
+	background-image: url(img/magister_icon.png);
+	
+}
+.buttonStudent{
+	background-image: url(img/human_head_icon.png);
+}
+
+.textUnderIndexButton{
+	
+	padding-top: 10px;
+	text-align: center;
+	color: rgb(51, 211, 64);
+	font-size: 25;
+	font-weight: bold;
+}
+
+.teacherDiv{
+	float: right;
+}
+
+.studentDiv{
+	float: left;
+}
+
+.teacherDiv, .studentDiv{
+	width: 50%;
+	text-align: center;
+	padding-top: 60px;
+}
+.routing{
+	text-decoration: none;
+	outline: none;
+}
+/* End Index Page */
+
+/* Register page */
+.input-container{
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	margin: 5px;
+}
+
+.input-field{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius:5px;
+	width: 100%;
+	padding: 10px 10px 10px 5px;
+	outline: none;
+	font-size: 15px;
+}
+
+.input-field:focus{
+	border: 2px solid rgb(51, 211, 64);
+}
+
+.userIcon{
+	background-image: url("img/user.png");
+	margin-left: 6px;
+}
+
+.emailIcon{
+	background-image: url("img/email.png");
+	margin-left: 6px;
+}
+
+
+.passIcon{
+	background-image: url("img/pass.png");
+	margin-left: 10px;
+}
+
+.teacherIcon{
+	background-image: url("img/magister_icon.png");
+	margin-left: 6px;
+}
+
+.icon{
+	background-size:auto 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 2;
+	margin-top: 5px;
+	width: 30px;
+	height: 30px;
+}
+
+.iconBg{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
+	min-width: 40px;
+	z-index: 1;
+}
+/* End of register */

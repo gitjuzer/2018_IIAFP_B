@@ -1,0 +1,32 @@
+
+.game-session-button{
+    position: relative;
+    background: #3ED443;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 30px 13px 50px;
+    border: none;
+    margin: 2px 0;
+    transition: transform 100ms ease;
+}
+.game-session-button:active{
+    transform: scale(0.95);
+}
+.game-session-button:hover{
+    background: #428BCA;
+}
+.game-session-button i{
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.game-session-button+i{
+    color: #3ED443;
+    position: relative;
+    left: 2px;
+    transform: translateY(25%) scale(0.8);
+}
