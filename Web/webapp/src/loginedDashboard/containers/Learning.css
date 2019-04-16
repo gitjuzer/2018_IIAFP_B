@@ -1,13 +1,23 @@
 div.learning-flex-container{
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 }
 div.learning-side-bar{
+    background: #ddd;
+    height: 60px;
+    padding: 20px;
     flex-basis: 0;
-    flex-grow: 1;
+    flex-grow: 2;
 }
 div.learning-main-content{
     padding: 0 10px;
     flex-basis: 0;
-    flex-grow: 5;
+    flex-grow: 9;
+}
+div.learning-dropdown-title{
+    color: #222;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    font-weight: bold;
 }

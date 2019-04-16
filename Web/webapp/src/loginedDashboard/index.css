@@ -24,25 +24,34 @@ body{
   height: 100%;
 }
 
+.side-bar-title{
+  color: white;
+  font-size: 1.25rem;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
 .side-bar-button{
   border: none;
   position: relative;
-  background: #B7B7B7;
+  background: #fff;
   padding: 12px;
   margin-bottom: 10px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: white;
+  color: #444;
   cursor: pointer;
 }
 .side-bar-button:hover{
   background: #428BCA;
+  color: white;
   text-decoration: underline;
 }
 .side-bar-button.active:hover{
   background: rgb(72, 231, 78);
 }
 .side-bar-button.active{
+  color: white;
   background: #3ED443;
 }
 .side-bar-button i{

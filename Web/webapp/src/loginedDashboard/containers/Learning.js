@@ -57,7 +57,8 @@ class Learning extends React.Component {
         return (
             <div className="learning-flex-container">
                 <div className="learning-side-bar">
-                    <Dropdown />
+                    <div className="learning-dropdown-title">Válassz nehézséget!</div>
+                    <Dropdown token={this.props.token}/>
                 </div>
                 <div className="learning-main-content">
                     {this.renderGameModes()}

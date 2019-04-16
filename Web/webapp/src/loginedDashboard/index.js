@@ -58,22 +58,22 @@ class Layout extends React.Component {
         if (this.state.token)
             return (
                 <React.Fragment>
-                    <Header title="Student Dashboard" username={this.state.username}/>
+                    <Header title="Student Dashboard" username={this.state.username} />
                     <main className="flex-container">
                         <section className="main-section">
                             {this.renderSection()}
                         </section>
                         <aside className="side-bar">
-                            
+                            <div className="side-bar-title">Menu</div>
                             <button className={this.state.activeMenu === "Learning" ? this.selected : this.unselected} onClick={() => this.changeSection("Learning")}>
                                 <i className="far fa-lightbulb fa-2x"></i>Learning
-                        </button>
+                            </button>
                             <button className={this.state.activeMenu === "Statics" ? this.selected : this.unselected} onClick={() => this.changeSection("Statics")}>
                                 <i className="fas fa-chart-bar fa-2x"></i>Statics
-                        </button>
+                            </button>
                             <button className={this.state.activeMenu === "Versus" ? this.selected : this.unselected} onClick={() => this.changeSection("Versus")}>
                                 <i className="fas fa-gamepad fa-2x"></i>Versus
-                        </button>
+                            </button>
                         </aside>
                     </main>
                 </React.Fragment>

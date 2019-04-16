@@ -6,13 +6,15 @@ class Header extends Component {
     render() {
         return (
             <header className={classes.header}>
-                <div className={classes.title}>
-                    <i className="fas fa-puzzle-piece fa-lg"></i>
-                    {this.props.title}
-                </div>
-                <div className={classes.username}>
-                    <i className="fas fa-user fa-lg"></i>
-                    {this.props.username}
+                <div className={classes.flex}>
+                    <div className={classes.title}>
+                        <i className="fas fa-puzzle-piece fa-lg"></i>
+                        {this.props.title}
+                    </div>
+                    <div className={classes.username}>
+                        <i className="fas fa-user fa-lg"></i>
+                        {this.props.username}
+                    </div>
                 </div>
             </header>
         );

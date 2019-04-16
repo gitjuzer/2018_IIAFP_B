@@ -1,7 +1,6 @@
 .custom-select{
     width: auto;
     display: inline-block;
-    margin: 10px;
 }
 .custom-select .selected{
     display: block;
@@ -35,6 +34,7 @@
 
 .custom-select .option{
     border-bottom: 1px solid lightgray;
+    background: #fafafa;
 }
 .custom-select .option:hover{
     background: #428BCA;

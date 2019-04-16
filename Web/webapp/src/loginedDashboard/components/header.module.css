@@ -1,19 +1,25 @@
 .header{
+    
+    /*background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));*/
+    background: #34343a;
+    margin-bottom: 15px;
+    padding: 15px 0;
+    
+}
+.flex{
+    margin: auto;
     display: flex;
     flex-direction: row;
     color: white;
     text-align: center;
     font-size: 1.5rem;
-    /*background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));*/
-    background: #33333a;
-    margin-bottom: 15px;
-    padding: 15px 0;
+    width: 100%;
+    max-width: 1250px;
 }
 .title{
     flex-grow: 4;
 }
 .username{
-    text-align: right;
     margin-right: 25px;
     flex-grow: 1;
 }

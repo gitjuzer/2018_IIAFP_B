@@ -1,31 +1,56 @@
 import React, { Component } from 'react'
+import { responseCodeTest } from '../functions/responseCodeTest';
 import './dropdown.css';
 
 export default class Dropdown extends Component {
     state = {
         isOpened: false,
-        selectedOption: "Tárgy1",
+        selectedOption: "",
+        difficulties: null
+    }
+    componentWillMount() {
+        this.getDataFromServer();
     }
     toggleOpen = () => {
-        this.setState({isOpened: !this.state.isOpened});
+        this.setState({ isOpened: !this.state.isOpened });
     }
-    selectItem = (subject) => {
-        this.setState({selectedOption: subject})
+    selectItem = (level) => {
+        this.setState({ selectedOption: level })
     }
-  render() {
-    const opened = "custom-select opened";
-    const closed = "custom-select closed";
-
-    return (
-        <div className={this.state.isOpened ? opened : closed} onClick={this.toggleOpen}>
-            <div className="selected">{this.state.selectedOption}</div>
-            <div className="option-container">
-                <div className="option" onClick={() => this.selectItem("Tárgy1")}>Tárgy1</div>
-                <div className="option" onClick={() => this.selectItem("Tárgy2")}>Tárgy2</div>
-                <div className="option" onClick={() => this.selectItem("Tárgy3")}>Tárgy3</div>
-                <div className="option" onClick={() => this.selectItem("Tárgy4")}>Tárgy4</div>
-            </div>
-        </div>
-    )
-  }
+    getDataFromServer = () => {
+        fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/difficulties", {
+            methor: "GET",
+            headers: {
+                "Authorization": "Bearer " + this.props.token,
+            }
+        })
+            .then(response => response.json())
+            .then(responsejson => {
+                responseCodeTest(responsejson);
+                this.setState({ selectedOption: responsejson.data[0].diffculty_name })
+                this.setState({ difficulties: responsejson.data });
+            })
+    }
+    renderOptions = () => {
+        if (this.state.difficulties) {
+            return Array.from(this.state.difficulties).map((level, index) => {
+                return <div key={index} className="option" onClick={() => this.selectItem(level.diffculty_name)}>{level.diffculty_name}</div>
+            });
+        }
+    }
+    render() {
+        const opened = "custom-select opened";
+        const closed = "custom-select closed";
+        if (this.state.difficulties)
+            return (
+                <div className={this.state.isOpened ? opened : closed} onClick={this.toggleOpen}>
+                    <div className="selected">{this.state.selectedOption}</div>
+                    <div className="option-container">
+                        {this.renderOptions()}
+                    </div>
+                </div>
+            )
+        else
+            return <div></div>
+    }
 }
