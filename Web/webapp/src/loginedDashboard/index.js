@@ -79,7 +79,7 @@ class Layout extends React.Component {
                 </React.Fragment>
             );
         else
-            return <div></div>
+            return <div>Loading...</div>
     }
 }
 

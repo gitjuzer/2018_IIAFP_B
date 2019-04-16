@@ -3,18 +3,19 @@
     flex-direction: row;
     color: white;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    /*background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));*/
+    background: #33333a;
+    margin-bottom: 15px;
+    padding: 15px 0;
 }
 .title{
     flex-grow: 4;
-    background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
-    padding: 15px 0;
-    margin-right: 2px;
 }
 .username{
+    text-align: right;
+    margin-right: 25px;
     flex-grow: 1;
-    background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
-    padding: 15px 0;
 }
 .header i{
     margin-right: 10px;

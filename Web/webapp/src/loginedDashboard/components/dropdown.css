@@ -44,7 +44,7 @@
     border-bottom: none;
 }
 .option-container{
-    transition: transform 250ms ease;
+    transition: transform 150ms ease;
 }
 .custom-select.closed .option-container{
     transform: translateY(-50%) scaleY(0);

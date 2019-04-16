@@ -1,15 +1,18 @@
 body{
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #efefef;
 }
 .flex-container{
+  margin: auto;
+  width: 100%;
+  max-width: 1250px;
   display: flex;
-  height: 700px;
-  max-height: 85vh;
 }
 .main-section{
   flex-grow: 4;
   flex-basis: 0;
+  overflow-y: scroll;
 }
 .side-bar{
   flex-grow: 1;
@@ -17,19 +20,27 @@ body{
   flex-direction: column;
   padding: 20px;
   flex-basis: 0;
+  background: #5b5b62;
+  height: 100%;
 }
 
 .side-bar-button{
   border: none;
   position: relative;
   background: #B7B7B7;
-  padding: 20px;
+  padding: 12px;
   margin-bottom: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: white;
   cursor: pointer;
-  
+}
+.side-bar-button:hover{
+  background: #428BCA;
+  text-decoration: underline;
+}
+.side-bar-button.active:hover{
+  background: rgb(72, 231, 78);
 }
 .side-bar-button.active{
   background: #3ED443;
@@ -38,5 +49,5 @@ body{
   position: absolute;
   left: 20%;
   top: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%) scale(0.8);
 }
