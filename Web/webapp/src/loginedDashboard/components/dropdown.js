@@ -16,6 +16,8 @@ export default class Dropdown extends Component {
     }
     selectItem = (level) => {
         this.setState({ selectedOption: level })
+        let newLevel = this.state.difficulties.filter(diff => diff.diffculty_name === level)[0];
+        this.props.setLevel(newLevel.difficulty_level, newLevel.diffculty_name);
     }
     getDataFromServer = () => {
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/difficulties", {
@@ -28,6 +30,7 @@ export default class Dropdown extends Component {
             .then(responsejson => {
                 responseCodeTest(responsejson);
                 this.setState({ selectedOption: responsejson.data[0].diffculty_name })
+                this.props.setLevel(responsejson.data[0].difficulty_level, responsejson.data[0].diffculty_name);
                 this.setState({ difficulties: responsejson.data });
             })
     }

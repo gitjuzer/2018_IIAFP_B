@@ -4,6 +4,7 @@
     margin-bottom: 20px;
     background: #fff;
     box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 500ms ease, opacity 500ms ease;
 }
 .game-mode-name{
     margin: 5px;
@@ -21,7 +22,17 @@
     padding: 20px;
     margin-right: 20px;
     border-radius: 10px;
+    transition: transform 500ms ease, opacity 500ms ease;
 }
 .game-mode .box i{
     color: white;
+}
+.game-mode.disabled{
+    background: #bbb;
+    opacity: 0.5;
+    transform: scale(0.95);
+    color: #666;
+}
+.game-mode.disabled .box{
+    background: #ddd;
 }
