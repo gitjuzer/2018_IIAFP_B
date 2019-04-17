@@ -8,16 +8,15 @@ exports.get_all_question = (req,res,next)=>{
     })
 }
 
-exports.getAllQuestionsBySessionName = (req, res, next)=>{
-    const session_name = req.params.session_name
-    GameSession.getGameSessionByName(session_name, (selectSessionErr, selectSessionRes)=>{
+exports.getAllQuestionsBySessionId = (req, res, next)=>{
+    const sessionId = req.params.session_id
+    GameSession.getGameSessionById(sessionId, (selectSessionErr, selectSessionRes)=>{
         if(selectSessionErr || selectSessionRes === null || Object.keys(selectSessionRes).length === 0)
         {
            return res.status(404).json(message.compose('404','A játékmenet nem létezik!'))
         }
         else{
-            const sessionid = selectSessionRes[0].id
-            Question.selectAllBySessionName(sessionid, (selectQuestionErr, selectQuestionRes)=>{
+            Question.selectAllBySessionName(sessionId, (selectQuestionErr, selectQuestionRes)=>{
                 return res.status(200).json(message.compose('200','Játékmenethez tartozó kérdések sikeresen lekérdezve!',selectQuestionRes))
             })
         }
