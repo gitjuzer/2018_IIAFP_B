@@ -71,8 +71,8 @@ GameSession.getGameID = (gameid,result)=>{
     })
 }
 
-GameSession.deleteGameSession = (sessionName,result)=>{
-    sql.query('DELETE FROM game_session WHERE session_name = ?',sessionName,(err,res)=>{
+GameSession.deleteGameSession = (sessionId,result)=>{
+    sql.query('DELETE FROM game_session WHERE id = ?',sessionId,(err,res)=>{
         if(err)
         {
             result(err,null)
@@ -108,9 +108,9 @@ GameSession.modifyMaxPointKivonas =(sessionid,max_point,question_point,result)=>
     })
 }
 
-GameSession.modifyGameSession = (sessionName,newGameSession,result)=>{
+GameSession.modifyGameSession = (sessionId,newGameSession,result)=>{
    
-    sql.query('UPDATE game_session SET max_points = ?, game_id = ?, difficulty_level = ? WHERE session_name = ?', [newGameSession.max_points,newGameSession.game_id,newGameSession.difficulty_level,sessionName],(err,res)=>{
+    sql.query('UPDATE game_session SET max_points = ?, game_id = ?, difficulty_level = ? WHERE id = ?', [newGameSession.max_points,newGameSession.game_id,newGameSession.difficulty_level,sessionId],(err,res)=>{
         if(err)
         {
            
