@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
+import { NavLink } from 'react-router-dom';
+
 export default class Slogin extends Component {
     render() {
     return (
@@ -16,9 +18,11 @@ export default class Slogin extends Component {
             <i className="passIcon icon"></i>
             <input className="input-field" type="password" placeholder="Password" name="psw" />
           </div>
-          <button type="submit" className="defaultColor button">Login</button>
-          <a href="teacherregister.html"><button type="button" className="defaultColor button">Register</button></a>
-          <a href="../"><button type="button" className="defaultColor button">Back</button></a>
+          <div>
+            <button type="submit" className="defaultColor button">Login</button>
+            <NavLink to="/register/student"><button className="defaultColor button">Register</button></NavLink>
+            <NavLink to="../"><button className="defaultColor button">Back</button></NavLink>
+          </div>
         </form>
       </div>
     )

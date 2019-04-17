@@ -23,7 +23,7 @@ export default class Tlogin extends Component {
             <i className="passIcon icon"></i>
             <input className="input-field" type="password" placeholder="Teacher ID" name="tid" />
           </div>
-          <div className="menubutton">
+          <div>
             <button type="submit" className="defaultColor button">Register</button>
             <NavLink to="/login/teacher"><button className="defaultColor button">Login</button></NavLink>
             <NavLink to="../"><button className="defaultColor button">Back</button></NavLink>
