@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
+import { NavLink } from 'react-router-dom';
 
 export default class Tlogin extends Component {
  render() {
@@ -14,12 +15,19 @@ export default class Tlogin extends Component {
           </div>
           <div className="input-container">
             <i className="iconBg"></i>
-            <i className="userIcon icon"></i>
+            <i className="passIcon icon"></i>
             <input className="input-field" type="password" placeholder="Password" name="psw" />
           </div>
-          <button type="submit" className="defaultColor button">Login</button>
-          <button type="button" className="defaultColor button">Register</button>
-          <a href="index.html"><button type="button" className="defaultColor button">Back</button></a>
+          <div className="input-container">
+            <i className="iconBg"></i>
+            <i className="passIcon icon"></i>
+            <input className="input-field" type="password" placeholder="Teacher ID" name="tid" />
+          </div>
+          <div className="menubutton">
+            <button type="submit" className="defaultColor button">Login</button>
+            <NavLink to="/register/teacher"><button className="defaultColor button">Register</button></NavLink>
+            <NavLink to="../"><button className="defaultColor button">Back</button></NavLink>
+          </div>
         </form>
       </div>
     )

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './style.css';
-
 export default class Slogin extends Component {
     render() {
     return (
@@ -14,12 +13,12 @@ export default class Slogin extends Component {
           </div>
           <div className="input-container">
             <i className="iconBg"></i>
-            <i className="userIcon icon"></i>
+            <i className="passIcon icon"></i>
             <input className="input-field" type="password" placeholder="Password" name="psw" />
           </div>
           <button type="submit" className="defaultColor button">Login</button>
           <a href="teacherregister.html"><button type="button" className="defaultColor button">Register</button></a>
-          <a href="index.html"><button type="button" className="defaultColor button">Back</button></a>
+          <a href="../"><button type="button" className="defaultColor button">Back</button></a>
         </form>
       </div>
     )
