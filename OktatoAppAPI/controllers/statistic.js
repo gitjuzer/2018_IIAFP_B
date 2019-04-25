@@ -18,19 +18,35 @@ exports.getAllStatisticsForUserByUsername = (req, res, next)=>{
     })
 }
 
-exports.getAllStatisticsForGameSessionBySessionId = (req,res,next)=>{
-    const sessionId = req.params.session_id
-    GameSession.getGameSessionById(sessionId,(selectSessionErr, selectSessionRes)=>{
+exports.getAllStatisticsForGameSessionBySessionName = (req,res,next)=>{
+    const session_name = req.params.session_name
+    GameSession.getGameSessionByName(session_name,(selectSessionErr, selectSessionRes)=>{
         if(selectSessionErr || selectSessionRes === null || !selectSessionRes || Object.keys(selectSessionRes).length === 0){
             res.status(404).json(message.compose('404','Nem található ilyen játékmenet!'))
         }
         else{
-            Statistic.getStatisticsByGameSessionId(sessionId, (selectStatErr, selectStatRes)=>{
+            const session_id = selectSessionRes[0].id
+            Statistic.getStatisticsByGameSessionId(session_id, (selectStatErr, selectStatRes)=>{
                 res.status(200).json(message.compose('200','Játékmenethez tartozó statisztika lekérdezése sikeres!',selectStatRes))
             })
         }
     })
 }
+exports.getAllStatisticsForGameSessionBySessionId = (req,res,next)=>{
+    const session_id = req.params.session_id
+    GameSession.getGameSessionById(session_id,(selectSessionErr, selectSessionRes)=>{
+        if(selectSessionErr || selectSessionRes === null || !selectSessionRes || Object.keys(selectSessionRes).length === 0){
+            res.status(404).json(message.compose('404','Nem található ilyen játékmenet!'))
+        }
+        else{
+            const session_Id = selectSessionRes[0].id
+            Statistic.getStatisticsByGameSessionId(session_Id, (selectStatErr, selectStatRes)=>{
+                res.status(200).json(message.compose('200','Játékmenethez tartozó statisztika lekérdezése sikeres!',selectStatRes))
+            })
+        }
+    })
+}
+
 
 exports.getAllStatisticsForUserByUserId = (req, res, next)=>{
     const user_id = req.user_data.user_id
