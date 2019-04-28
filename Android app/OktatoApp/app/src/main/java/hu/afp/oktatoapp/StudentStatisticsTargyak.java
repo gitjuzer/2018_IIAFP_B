@@ -26,20 +26,13 @@ public class StudentStatisticsTargyak extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_statistics_targyak);
-        //Pie pie = AnyChart.pie();
-        //List<DataEntry> data = new ArrayList<>();
-        //data.add(new ValueDataEntry("John", 10000));
-        //data.add(new ValueDataEntry("Jake", 12000));
-        //data.add(new ValueDataEntry("Peter", 18000));
-        //pie.data(data);
-        //anyChartView.setChart(pie);
 
         Button parbajstat;
         parbajstat = findViewById(R.id.parbajstat);
         parbajstat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent parbajstatisztika = new Intent();
+                Intent parbajstatisztika = new Intent(StudentStatisticsTargyak.this, StudentStatisticsParbaj.class);
                 startActivity(parbajstatisztika);
             }
         });

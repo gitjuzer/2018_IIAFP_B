@@ -14,9 +14,9 @@
         />
 
     <Button
-        android:id="@+id/parbajstat"
+        android:id="@+id/atlagstat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Párbaj statisztika" />
+        android:text="Vissza az átlagokhoz" />
 
 </LinearLayout>
