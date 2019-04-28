@@ -1,5 +1,6 @@
 import React from 'react';
 class Error extends React.Component {
+    //var bgColor = {"default" : "rgb(30, 170, 40)"};
     state = {  }
     render() { 
         return ( 
