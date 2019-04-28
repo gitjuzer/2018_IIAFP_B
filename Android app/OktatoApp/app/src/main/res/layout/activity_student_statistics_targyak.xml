@@ -7,9 +7,16 @@
     android:orientation="vertical"
     tools:ignore="HardcodedText" >
 
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/barChart"
+    <com.anychart.AnyChartView
+        android:id="@+id/any_chart_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="675dp"
+        />
+
+    <Button
+        android:id="@+id/parbajstat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Párbaj statisztika" />
 
 </LinearLayout>
