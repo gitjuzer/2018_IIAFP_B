@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TargyValaszto"></activity>
+        <activity android:name=".TeacherStatisticsOsztalyok" />
         <activity android:name=".StudentStatisticsParbaj" />
         <activity android:name=".StudentStatisticsTargyak" />
         <activity android:name=".RegistrationActivity" />

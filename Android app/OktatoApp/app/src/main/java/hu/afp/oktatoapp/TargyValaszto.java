@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class TargyValaszto extends AppCompatActivity {
-
+//TODO TOVÁBB A TÉMÁKHOZ GOMB
     Spinner spinner;
 
     @Override
@@ -25,25 +25,25 @@ public class TargyValaszto extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(spinner.getSelectedItemPosition() == 1) {
-                    Intent intent = new Intent(TargyValaszto.this, );
+                    Intent intent = new Intent(TargyValaszto.this, TeacherStatisticsOsztalyok.class);
                     String targy = "tortenelem";
                     intent.putExtra("targy", targy);
                     startActivity(intent);
                 }
                 if(spinner.getSelectedItemPosition() == 2) {
-                    Intent intent = new Intent(TargyValaszto.this, );
+                    Intent intent = new Intent(TargyValaszto.this, TeacherStatisticsOsztalyok.class);
                     String targy = "matematika";
                     intent.putExtra("targy", targy);
                     startActivity(intent);
                 }
                 if(spinner.getSelectedItemPosition() == 3) {
-                    Intent intent = new Intent(TargyValaszto.this,);
+                    Intent intent = new Intent(TargyValaszto.this, TeacherStatisticsOsztalyok.class);
                     String targy = "magyarnyelv";
                     intent.putExtra("targy", targy);
                     startActivity(intent);
                 }
                 if(spinner.getSelectedItemPosition() == 4) {
-                    Intent intent = new Intent(TargyValaszto.this, );
+                    Intent intent = new Intent(TargyValaszto.this, TeacherStatisticsOsztalyok.class);
                     String targy = "fizika";
                     intent.putExtra("targy", targy);
                     startActivity(intent);
