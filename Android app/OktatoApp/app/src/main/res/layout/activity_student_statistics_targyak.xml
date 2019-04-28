@@ -6,15 +6,19 @@
     android:background="#ffffff"
     android:orientation="vertical"
     tools:ignore="HardcodedText" >
+    <include
+        android:id="@+id/myToolbar"
+        layout="@layout/mytoolbar" />
 
     <com.anychart.AnyChartView
         android:id="@+id/any_chart_view"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        />
+        android:layout_height="550dp"
+    />
 
     <Button
         android:id="@+id/parbajstat"
+        android:textColor="#3BD340"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Párbaj statisztika" />

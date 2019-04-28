@@ -10,6 +10,8 @@ import com.anychart.AnyChartView;
 import com.anychart.chart.common.dataentry.DataEntry;
 import com.anychart.chart.common.dataentry.ValueDataEntry;
 import com.anychart.charts.Pie;
+import com.anychart.enums.Anchor;
+import com.anychart.enums.Position;
 
 import java.util.ArrayList;
 import java.util.List;

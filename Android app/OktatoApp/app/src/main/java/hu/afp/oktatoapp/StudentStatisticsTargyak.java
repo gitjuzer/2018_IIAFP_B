@@ -57,11 +57,12 @@ public class StudentStatisticsTargyak extends AppCompatActivity {
                 .format("{%Value}{groupsSeparator: }");
 
         cartesian.animation(true);
+        column.normal().fill("#3BD340");
+        column.selected().fill("#00CC99");
 
         cartesian.title("Átlagok tárgyak szerint");
         cartesian.yScale().maximum(5.0);
         cartesian.yAxis(0).labels().format("{%Value}{groupsSeparator: }");
-        cartesian.tooltip().positionMode(TooltipPositionMode.POINT);
         cartesian.interactivity().hoverMode(HoverMode.BY_X);
         cartesian.xAxis(0).title("Tárgyak");
         cartesian.yAxis(0).title("Jegyek");
