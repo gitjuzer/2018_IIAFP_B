@@ -1,11 +1,15 @@
 import React from 'react';
 class Error extends React.Component {
-    //var bgColor = {"default" : "rgb(30, 170, 40)"};
     state = {  }
     render() { 
         return ( 
-            <div>
-                <h1>Error 404 Page not found</h1>
+            <div className="pageNotFound">
+                <img src={ require('./img/sadStudent.jpg') } />
+                <h1 className="pnfH1">404 Page Not Found</h1>
+                <div>
+                    <p className="pnfP">Sorry, but the page you were trying to view does not exist.</p>
+                </div>
+                <button className="button">Back to home page</button>
             </div>
          );
     }

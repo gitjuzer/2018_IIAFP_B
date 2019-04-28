@@ -188,3 +188,20 @@ body {
 	z-index: 1;
 }
 /* End of register */
+/* 404 Page not found */
+.pageNotFound{
+	background-color: rgb(30, 170, 40);
+	border-style: solid;
+	border-width: 3px;
+	border-color:rgba(0, 0, 0, 0.07);
+	text-align: center;
+}
+.pnfH1{
+	color:white;
+	font-size: 40px;
+}
+.pnfP{
+	color: white;
+	font-size: 20px;
+	font-family: 'Kalam';
+}
