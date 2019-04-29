@@ -9,7 +9,7 @@ export default class logindiv extends Component {
       }
     render() {
     return (
-     <div>
+     <div className="maindiv">
         <div className="teacherStudentCircles">
             <NavLink to="/login/teacher" className="teacherDiv">
 				<button className="buttonTeacher indexButton" onClick={this.props.ourInputFunction} value="TLogin"/>

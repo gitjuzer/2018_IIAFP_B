@@ -64,8 +64,20 @@ body {
 	margin: 0 ;
 	padding: 10px;
 }
-
 /* End form design */
+
+/* Main design */
+
+.maindiv{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	min-width: 600px;
+}
+
+/* End of main design */
 
 /* Index Page */
 .teacherStudentCircles{
