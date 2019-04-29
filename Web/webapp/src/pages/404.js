@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 class Error extends React.Component {
     state = {  }
     render() { 
@@ -9,7 +10,7 @@ class Error extends React.Component {
                 <div>
                     <p className="pnfP">Sorry, but the page you were trying to view does not exist.</p>
                 </div>
-                <button className="button">Back to home page</button>
+                <NavLink to="../"><button className="button">Back to home page</button></NavLink>
             </div>
          );
     }
