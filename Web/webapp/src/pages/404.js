@@ -5,7 +5,7 @@ class Error extends React.Component {
     render() { 
         return ( 
             <div className="pageNotFound">
-                <img src={ require('./img/sadStudent.jpg') } />
+                <img src={ require('./img/sadStudent.png') } />
                 <h1 className="pnfH1">404 Page Not Found</h1>
                 <div>
                     <p className="pnfP">Sorry, but the page you were trying to view does not exist.</p>
