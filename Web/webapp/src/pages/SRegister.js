@@ -80,7 +80,7 @@ handleLastName(text)
           </div>
           <div className="input-container">
             <i className="iconBg"></i>
-            <i className="??? icon"></i>
+            <i className="emailIcon icon"></i>
             <input className="input-field" type="text" placeholder="Email" onChange={(text) => {this.handleEmail(text)}} />
           </div>
           <div className="input-container">

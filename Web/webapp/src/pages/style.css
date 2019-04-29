@@ -206,17 +206,16 @@ body {
 /* End of register */
 /* 404 Page not found */
 .pageNotFound{
-	position:fixed;
-  padding:0;
+	background-image: url('./img/h_10.png');
+	background-attachment: fixed;
+    background-position: center;
+	position:absolute;
+    padding:0;
 	margin:0;
 	top:0;
-  left:0;
-  width: 100%;
-  height: 100%;
-	background-color: rgb(30, 170, 40);
-	border-style: solid;
-	border-width: 3px;
-	border-color:rgba(0, 0, 0, 0.07);
+    left:0;
+    width: 100%;
+    height: 100%;
 	text-align: center;
 }
 .pnfH1{
@@ -238,10 +237,24 @@ body {
 	font-size: 16px;
 	background-color: rgb(100, 255, 100);
 	opacity: 0.6;
-  transition: 0.5s;
+	transition: all 0.7s ease;
 }
 
 .pnfButton:hover {
 	opacity: 1;
 	background-color: rgb(30, 170, 40);
+	transform: scale(1.3);
+}
+.hahabox{
+	background-image: url('./img/SW404.png');
+	text-align: center;
+	height: 300px;
+	width: 299px;
+	text-align: center;
+	opacity: 0;
+	margin: auto;
+}
+.hahabox:hover{
+	opacity: 100;
+	transition: all 1s ease-in-out;
 }
