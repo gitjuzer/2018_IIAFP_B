@@ -47,6 +47,10 @@ body {
 
 /* Form design */
 .divbox{	
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 	margin: auto;
 	max-width: 500px;
 	text-align:center;  
@@ -191,14 +195,12 @@ body {
 /* 404 Page not found */
 .pageNotFound{
 	position:fixed;
-    padding:0;
-    margin:0;
-
-    top:0;
-    left:0;
-
-    width: 100%;
-    height: 100%;
+  padding:0;
+	margin:0;
+	top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
 	background-color: rgb(30, 170, 40);
 	border-style: solid;
 	border-width: 3px;
@@ -224,7 +226,7 @@ body {
 	font-size: 16px;
 	background-color: rgb(100, 255, 100);
 	opacity: 0.6;
-  	transition: 0.5s;
+  transition: 0.5s;
 }
 
 .pnfButton:hover {
