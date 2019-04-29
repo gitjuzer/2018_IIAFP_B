@@ -10,7 +10,7 @@ class Error extends React.Component {
                 <div>
                     <p className="pnfP">Sorry, but the page you were trying to view does not exist.</p>
                 </div>
-                <NavLink to="../"><button className="button">Back to home page</button></NavLink>
+                <NavLink to="../"><button className="pnfButton">Back to home page</button></NavLink>
             </div>
          );
     }
