@@ -8,10 +8,10 @@ export default class Slogin extends Component {
     password: "",
     token: "",
 }
-login = (username, password) => {
+login = () => {
     const data = {
-        "username": username,
-        "password": password
+        "username": this.state.username,
+        "password": this.state.password
     };
     fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login", {
         method: "POST",
@@ -33,12 +33,12 @@ login = (username, password) => {
       {alert("Wrong username or password!");}
     });
 } 
-handleUname(text)
+handleUserName(text)
 {
   this.setState({username:text.target.value})
 }
  
-handlePass(text)
+handlePassword(text)
 {
   this.setState({password:text.target.value})
 }
@@ -50,15 +50,15 @@ handlePass(text)
           <div className="input-container">
             <i className="iconBg"></i>
             <i className="userIcon icon"></i>
-            <input className="input-field" type="text" placeholder="Username" onChange={(text) => {this.handleUname(text)}} />
+            <input className="input-field" type="text" placeholder="Username" onChange={(text) => {this.handleUserName(text)}} />
           </div>
           <div className="input-container">
             <i className="iconBg"></i>
             <i className="passIcon icon"></i>
-            <input className="input-field" type="password" placeholder="Password" onChange={(text) => {this.handlePass(text)}} />
+            <input className="input-field" type="password" placeholder="Password" onChange={(text) => {this.handlePassword(text)}} />
           </div>
           <div>
-            <button className="defaultColor button" onClick={()=>{this.login(this.state.username,this.state.password)}}>Login</button>
+            <button className="defaultColor button" onClick={()=>{this.login()}}>Login</button>
             <NavLink to="/register/student"><button className="defaultColor button">Register</button></NavLink>
             <NavLink to="../"><button className="defaultColor button">Back</button></NavLink>
           </div>
