@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import { NavLink } from 'react-router-dom';
+import Header from '../elements/header';
 
 export default class Tlogin extends Component {
   state = {
@@ -48,6 +49,8 @@ handlePassword(text)
   
   render() {
     return (
+       <React.Fragment>
+        <Header />
       <div className="divbox">
         <h1 className="defaultColor">Teacher Login</h1>
           <div className="input-container">
@@ -66,6 +69,7 @@ handlePassword(text)
             <NavLink to="../"><button className="defaultColor button">Back</button></NavLink>
           </div>
       </div>
+      </React.Fragment>
     )
   }
 }

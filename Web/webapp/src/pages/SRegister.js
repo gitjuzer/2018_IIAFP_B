@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './style.css';
 import { NavLink } from 'react-router-dom';
+import Header from '../elements/header';
 
-export default class Slogin extends Component {
+export default class SRegister extends Component {
   state = {
     username: "",
     email: "",
@@ -71,6 +72,8 @@ handleLastName(text)
 
   render() {
     return (
+       <React.Fragment>
+        <Header />
       <div className="divbox">
         <h1 className="defaultColor">Student Login</h1>
           <div className="input-container">
@@ -104,6 +107,7 @@ handleLastName(text)
             <NavLink to="../"><button className="defaultColor button">Back</button></NavLink>
           </div>
       </div>
+      </React.Fragment>
     )
   }
 }

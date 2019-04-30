@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './style.css';
 import { NavLink } from 'react-router-dom';
+import Header from '../elements/header';
 
-export default class Tlogin extends Component {
+export default class TRegister extends Component {
  render() {
     return (
+       <React.Fragment>
+       <Header />
       <div className="divbox">
         <h1 className="defaultColor">Teacher Register</h1>
         <form action="" method="POST">
@@ -30,6 +33,7 @@ export default class Tlogin extends Component {
           </div>
         </form>
       </div>
+      </React.Fragment>
     )
   }
 }

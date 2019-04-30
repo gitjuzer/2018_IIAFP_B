@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.css';
-
+import Header from '../elements/header';
 
 export default class logindiv extends Component {
     constructor(props) {
@@ -9,6 +9,8 @@ export default class logindiv extends Component {
       }
     render() {
     return (
+        <React.Fragment>
+        <Header />
      <div className="maindiv">
         <div className="teacherStudentCircles">
             <NavLink to="/login/teacher" className="teacherDiv">
@@ -23,6 +25,7 @@ export default class logindiv extends Component {
             </NavLink>
         </div>
     </div>
+    </React.Fragment>
     )
   }
 }

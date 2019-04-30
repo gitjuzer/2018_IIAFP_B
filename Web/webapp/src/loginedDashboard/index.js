@@ -13,12 +13,14 @@ class Layout extends React.Component {
         token: "",
     }
     componentDidMount() {
-        this.login("szar", "szar");
+        this.login("upsi", "1234");
     }
     login = (username, password) => {
         const data = {
             "username": username,
-            "password": password
+            "password": password,
+            "login_type": "STUDENT"
+
         };
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login", {
             method: "POST",
