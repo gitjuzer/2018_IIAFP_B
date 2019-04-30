@@ -237,13 +237,15 @@ body {
 	font-size: 16px;
 	background-color: rgb(100, 255, 100);
 	opacity: 0.6;
-	transition: all 0.7s ease;
+	transition: all 1s ease;
+	top:80px;
+	position: relative;
 }
-
 .pnfButton:hover {
 	opacity: 1;
 	background-color: rgb(30, 170, 40);
-	transform: scale(1.3);
+	transform: scale(1.5);
+	top:-160px;
 }
 .hahabox{
 	background-image: url('./img/SW404.png');
