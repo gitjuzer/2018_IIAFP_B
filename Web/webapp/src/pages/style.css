@@ -185,6 +185,14 @@ body {
 	background-image: url("img/magister_icon.png");
 	margin-left: 6px;
 }
+.firstnameIcon{
+	background-image: url("img/firstname.png");
+	margin-left: 8px;
+}
+.lastnameIcon{
+	background-image: url("img/lastname.png");
+	margin-left: 6px;
+}
 
 .icon{
 	background-size:auto 100%;

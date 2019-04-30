@@ -90,12 +90,12 @@ handleLastName(text)
           </div>
           <div className="input-container">
             <i className="iconBg"></i>
-            <i className="??? icon"></i>
+            <i className="firstnameIcon icon"></i>
             <input className="input-field" type="text" placeholder="First Name" onChange={(text) => {this.handleFirstName(text)}} />
           </div>
           <div className="input-container">
             <i className="iconBg"></i>
-            <i className="??? icon"></i>
+            <i className="lastnameIcon icon"></i>
             <input className="input-field" type="text" placeholder="Last Name"  onChange={(text) => {this.handleLastName(text)}} />
           </div>
           <div>
