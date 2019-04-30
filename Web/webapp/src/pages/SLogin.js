@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import './style.css';
 import { NavLink } from 'react-router-dom';
 import Header from '../elements/header';
+import DashboardStudent from '../loginedDashboard/index';
 
 export default class Slogin extends Component {
+  constructor(props) {
+    super(props);
+}
   state = {
     username: "",
     password: "",
-    token: "",
+    token: null,
     accountType: "STUDENT"
   }
   login = () => {
@@ -30,7 +34,6 @@ export default class Slogin extends Component {
             username: responsejson.data[0].username,
             token: responsejson.data[0].token
           });
-          alert(this.state.token);
         }
         else { alert("Wrong username or password!"); }
       });
@@ -44,6 +47,7 @@ export default class Slogin extends Component {
   }
 
   render() {
+    if(!this.state.token){
     return (
       <React.Fragment>
         <Header />
@@ -68,4 +72,10 @@ export default class Slogin extends Component {
       </React.Fragment>
     )
   }
+  else  {
+    return(
+      <DashboardStudent token={this.state.token} username={this.state.username}/>
+      )
+  }
+}
 }

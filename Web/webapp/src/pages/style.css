@@ -48,7 +48,7 @@ body {
 /* Form design */
 .divbox{	
 	position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 	margin: auto;
@@ -70,7 +70,7 @@ body {
 
 .maindiv{
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 50%;
 	width: 100%;
 	transform: translate(-50%, -50%);

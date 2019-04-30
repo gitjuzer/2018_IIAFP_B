@@ -9,35 +9,10 @@ import Header from './components/header';
 class Layout extends React.Component {
     state = {
         activeMenu: "Learning",
-        username: "",
-        token: "",
+        username: this.props.username,
+        token: this.props.token,
     }
-    componentDidMount() {
-        this.login("upsi", "1234");
-    }
-    login = (username, password) => {
-        const data = {
-            "username": username,
-            "password": password,
-            "login_type": "STUDENT"
-
-        };
-        fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(responsejson => {
-                responseCodeTest(responsejson);
-                this.setState({
-                    username: responsejson.data[0].username,
-                    token: responsejson.data[0].token
-                });
-            });
-    }
+    
     renderSection = () => {
         switch (this.state.activeMenu) {
             case "Learning":
@@ -57,7 +32,6 @@ class Layout extends React.Component {
     unselected = "side-bar-button";
     selected = "side-bar-button active";
     render() {
-        if (this.state.token)
             return (
                 <React.Fragment>
                     <Header title="Student Dashboard" username={this.state.username} />
@@ -80,8 +54,6 @@ class Layout extends React.Component {
                     </main>
                 </React.Fragment>
             );
-        else
-            return <div>Loading...</div>
     }
 }
 

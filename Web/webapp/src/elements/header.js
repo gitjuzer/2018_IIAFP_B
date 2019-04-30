@@ -5,10 +5,10 @@ export default class App extends Component {
     render() {
         return (
             <header>
-                <ul class="defaultColor headdiv">
+                <ul className="defaultColor headdiv">
                     <li>
-                        <a class="heada1" href="">
-                            <img class="Applogo" alt="logo" />Teaching App
+                        <a className="heada1" href="">
+                            <img className="Applogo" alt="logo" />Teaching App
                         </a>
                     </li>
                 </ul>
