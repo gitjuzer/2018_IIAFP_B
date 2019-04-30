@@ -54,7 +54,7 @@ exports.login = (req,res,next)=>{
         if (!user ||  user.length < 1){
             return res.status(401).json(message.compose('401','Sikertelen bejelentkezés!'))
         }
-        if(((login_type == 'TEACHER' || login_type == 'ADMIN') && (user[0].role_name == 'STUDENT')) || (login_type == 'ADMIN' && user[0].role_name == 'TEACHER')){
+        if(login_type != user[0].role_name){
             return res.status(401).json(message.compose('401','Sikertelen bejelentkezés!'))
         }
         encryption.comparePassword(req.body.password, user[0].password_hash, (err, res_isPasswordMatch)=>{
