@@ -40,12 +40,26 @@ exports.get_user_by_username = (req,res,next)=>{
 }
 
 exports.login = (req,res,next)=>{
-    if (!req.body.username || !req.body.password){
+    if (!req.body.username || !req.body.password || !req.body.login_type){
+        return res.status(401).json(message.compose('401','Sikertelen bejelentkezés!'))
+    }
+    console.log('itt')
+    login_type = req.body.login_type
+    console.log(login_type)
+    fasz = login_type == 'ADMIN'
+    console.log(fasz)
+    if(login_type != 'ADMIN' && login_type != 'TEACHER' && login_type != 'STUDENT'){
+        console.log('here')
         return res.status(401).json(message.compose('401','Sikertelen bejelentkezés!'))
     }
     User.getUserByUsernameWithPassword(req.body.username, (err, result)=>{
         const user = result;
+        console.log(user[0])
+        console.log(login_type)
         if (!user ||  user.length < 1){
+            return res.status(401).json(message.compose('401','Sikertelen bejelentkezés!'))
+        }
+        if(((login_type == 'TEACHER' || login_type == 'ADMIN') && (user[0].role_name == 'STUDENT')) || (login_type == 'ADMIN' && user[0].role_name == 'TEACHER')){
             return res.status(401).json(message.compose('401','Sikertelen bejelentkezés!'))
         }
         encryption.comparePassword(req.body.password, user[0].password_hash, (err, res_isPasswordMatch)=>{
