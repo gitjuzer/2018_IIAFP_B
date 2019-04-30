@@ -13,7 +13,7 @@ export default class SRegister extends Component {
     accountType: "STUDENT" ,
   }
 
-  register = (username, email, password, firstName, lastName, accountType) => {
+  register = () => {
     const data = {
         "username": this.state.username,
         "email": this.state.email,
@@ -35,7 +35,7 @@ export default class SRegister extends Component {
         {this.setState({
             username: responsejson.data[0].username,
         });
-        alert(responsejson.id);
+        alert("Successfull registration!");
       }
       else if (responsejson.status_code === "409")
       {
@@ -75,7 +75,7 @@ handleLastName(text)
        <React.Fragment>
         <Header />
       <div className="divbox">
-        <h1 className="defaultColor">Student Login</h1>
+        <h1 className="defaultColor">Student Register</h1>
           <div className="input-container">
             <i className="iconBg"></i>
             <i className="userIcon icon"></i>
