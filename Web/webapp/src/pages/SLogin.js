@@ -7,11 +7,13 @@ export default class Slogin extends Component {
     username: "",
     password: "",
     token: "",
+    accountType: "STUDENT"
 }
 login = () => {
     const data = {
         "username": this.state.username,
-        "password": this.state.password
+        "password": this.state.password,
+        "login_type": this.state.accountType
     };
     fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login", {
         method: "POST",
