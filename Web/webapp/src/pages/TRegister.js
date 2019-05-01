@@ -34,7 +34,7 @@ export default class TRegister extends Component {
         {this.setState({
             username: responsejson.data[0].username,
         });
-        alert("Successfull registration!");
+        alert("Successful registration!");
       }
       else if (responsejson.status_code === "409")
       {
