@@ -52,7 +52,7 @@ export default class Slogin extends Component {
       <React.Fragment>
         <Header />
         <div className="divbox">
-          <h1 className="defaultColor">Student Login</h1>
+          <h1 className="defaultColor header">Student Login</h1>
           <div className="input-container">
             <i className="iconBg"></i>
             <i className="userIcon icon"></i>

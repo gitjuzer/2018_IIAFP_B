@@ -75,7 +75,7 @@ handleLastName(text)
        <React.Fragment>
         <Header />
       <div className="divbox">
-        <h1 className="defaultColor">Student Register</h1>
+        <h1 className="defaultColor header">Student Register</h1>
           <div className="input-container">
             <i className="iconBg"></i>
             <i className="userIcon icon"></i>

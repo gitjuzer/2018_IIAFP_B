@@ -52,7 +52,7 @@ handlePassword(text)
        <React.Fragment>
         <Header />
       <div className="divbox">
-        <h1 className="defaultColor">Teacher Login</h1>
+        <h1 className="defaultColor header">Teacher Login</h1>
           <div className="input-container">
             <i className="iconBg"></i>
             <i className="userIcon icon"></i>

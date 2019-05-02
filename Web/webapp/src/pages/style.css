@@ -5,23 +5,6 @@
 	background-image: linear-gradient(rgb(135, 252, 99), rgb(12, 180, 87));
 }
 
-.headdiv {
-	margin-top: 0px;
-	margin-bottom: 16px;
-	list-style-type: none;
-	padding: 0;
-	overflow: hidden;
-}
-
-.heada1{
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 20px 26px;
-	text-decoration: none;
-	font-size: 150%;
-}
-
 li a:hover {
 	background-image: linear-gradient(rgb(139, 241, 135), rgb(6, 204, 49));
 }
@@ -45,8 +28,29 @@ body {
 }
 /* End Basic */
 
+/* Header design */
+.headdiv {
+	margin-top: 0px;
+	margin-bottom: 16px;
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+}
+
+.heada1{
+	color:white;
+	display: block;
+	text-align: center;
+	padding: 20px 26px;
+	text-decoration: none;
+	font-size: 150%;
+	font-weight: bold;
+}
+/* End of header design */
+
 /* Form design */
 .divbox{	
+	background-color:rgb(200, 255, 200);
 	position: absolute;
   top: 45%;
   left: 50%;
@@ -54,10 +58,15 @@ body {
 	margin: auto;
 	max-width: 500px;
 	text-align:center;  
-	border-radius: 3px;
+	border-radius: 20px;
 	border-style: solid;
 	border-width: 2px;
 	border-color:rgba(0, 0, 0, 0.07);
+	box-shadow: 10px 10px 25px 0px rgb(50, 133, 65);
+}
+.header{
+	border-radius: 20px 20px 0px 0px;
+	width: 95.6%;
 }
 
 .divbox > h1{
