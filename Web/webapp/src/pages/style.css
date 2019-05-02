@@ -17,7 +17,7 @@ body {
 
 .button{
 	font-weight: 900;
-	border-radius: 5px;	
+	border-radius: 500px;	
 	padding: 15px 32px;
 	margin: 10px;
 	font-size: 16px;
@@ -38,7 +38,7 @@ body {
 }
 
 .heada1{
-	color:white;
+	color: rgb(200, 255, 200);
 	display: block;
 	text-align: center;
 	padding: 20px 26px;
@@ -67,6 +67,7 @@ body {
 .header{
 	border-radius: 20px 20px 0px 0px;
 	width: 95.6%;
+	color: rgb(200, 255, 200)
 }
 
 .divbox > h1{
