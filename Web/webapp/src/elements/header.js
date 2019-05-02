@@ -7,8 +7,8 @@ export default class App extends Component {
             <header>
                 <ul className="defaultColor headdiv">
                     <li>
-                        <a className="heada1" href="">
-                            <img className="Applogo" alt="logo" />Teaching App
+                        <a className="heada1" href="/">
+                            <img className="Applogo" alt="logo" />Teaching Apo
                         </a>
                     </li>
                 </ul>
