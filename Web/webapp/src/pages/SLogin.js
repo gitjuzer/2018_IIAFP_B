@@ -74,7 +74,7 @@ export default class Slogin extends Component {
   }
   else  {
     return(
-      <DashboardStudent token={this.state.token} username={this.state.username}/>
+      <DashboardStudent stateToPass = {[this.state.token,this.state.username]}/>
       )
   }
 }

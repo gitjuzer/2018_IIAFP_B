@@ -14,13 +14,13 @@ export default class logindiv extends Component {
      <div className="maindiv">
         <div className="teacherStudentCircles">
             <NavLink to="/login/teacher" className="teacherDiv">
-				<button className="buttonTeacher indexButton" onClick={this.props.ourInputFunction} value="TLogin"/>
+				<button className="buttonTeacher indexButton"/>
                 <div className="textUnderIndexButton">Teacher</div>
             </NavLink>
         </div>
         <div className="teacherStudentCircles">
             <NavLink to="/login/student" className="studentDiv">
-				<button className="buttonStudent indexButton" onClick={this.props.ourInputFunction} value="SLogin"/>
+				<button className="buttonStudent indexButton"/>
                 <div className="textUnderIndexButton">Student</div>
             </NavLink>
         </div>

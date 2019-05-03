@@ -9,8 +9,8 @@ import Header from './components/header';
 class Layout extends React.Component {
     state = {
         activeMenu: "Learning",
-        username: this.props.username,
-        token: this.props.token,
+        token: this.props.stateToPass[0],
+        username: this.props.stateToPass[1],
     }
     
     renderSection = () => {
