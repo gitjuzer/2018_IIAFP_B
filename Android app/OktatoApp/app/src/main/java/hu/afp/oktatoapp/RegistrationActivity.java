@@ -57,7 +57,7 @@ public class RegistrationActivity extends AppCompatActivity {
         final RelativeLayout studentButton = findViewById(R.id.studentBtn);
         final RelativeLayout teacherButton = findViewById(R.id.teacherBtn);
         final TextView studentView, teacherView;
-        ImageView teacherLogo, studentLogo, logo;
+        ImageView teacherLogo, studentLogo;
         Button registerButton = findViewById(R.id.registerBtn);
         RelativeLayout myToolbar = findViewById(R.id.myToolbar);
 
@@ -69,7 +69,6 @@ public class RegistrationActivity extends AppCompatActivity {
         studentView.setText(R.string.student);
         teacherView.setText(R.string.teacher);
 
-        logo = findViewById(R.id.logo);
         teacherLogo = teacherButton.findViewById(R.id.logo);
         teacherLogo.setImageDrawable(getDrawable(R.drawable.ic_teacher));
         studentLogo = studentButton.findViewById(R.id.logo);
