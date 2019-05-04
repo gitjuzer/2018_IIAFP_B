@@ -1,16 +1,12 @@
 package hu.afp.oktatoapp;
 
-import android.accounts.Account;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,13 +18,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.common.hash.Hashing;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -118,13 +115,13 @@ public class RegistrationActivity extends AppCompatActivity {
                                 Toast.LENGTH_SHORT);
                         errorToast.show();
                     } else if (teacherButtonIsClicked) {
-                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.Teacher);
+                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.TEACHER);
                         if(succesfulRegistration) {
                             Toast.makeText(getBaseContext(), "Tanárként való regisztráláshoz tudnod kell a " +
                                     "központi kódot.", Toast.LENGTH_SHORT).show();
                         }
                     } else if (studentButtonIsClicked) {
-                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.Student);
+                        sendRegistrationData(realUsername, realEmail, realPassword, realFirstName, realLastName, Role.roleType.STUDENT);
                         if(succesfulRegistration) {
                             Toast.makeText(getBaseContext(), "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
                         }
@@ -139,14 +136,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
-    private void sendRegistrationData(String username, String email, final String password,
+    private void sendRegistrationData(String username, String email,String password,
                                       String firstName, String lastName, final Role.roleType roleType){
         String url = "https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/signup";
-
+        final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("username", username);
-            jsonObject.put("password", password);
+            jsonObject.put("password", hashedPass);
             jsonObject.put("email", email);
             jsonObject.put("first_name", firstName);
             jsonObject.put("last_name", lastName);

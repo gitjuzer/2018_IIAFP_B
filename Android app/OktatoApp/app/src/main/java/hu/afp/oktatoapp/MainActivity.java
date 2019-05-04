@@ -19,12 +19,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.common.hash.Hashing;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -140,12 +142,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendLoginData(String username, String password) {
-
         String url = "https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login";
         JSONObject jsonObject = new JSONObject();
+        final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         try {
             jsonObject.put("username", username);
-            jsonObject.put("password", password);
+            jsonObject.put("password", hashedPass);
 
         } catch (JSONException e) {
             e.printStackTrace();

@@ -2,8 +2,8 @@ package hu.afp.oktatoapp.Classes;
 
 public class Role {
     public enum roleType {
-        Teacher,
-        Student,
+        TEACHER,
+        STUDENT,
         Admin
     }
     private String role_description;
