@@ -59,6 +59,7 @@ public class RegistrationActivity extends AppCompatActivity {
         final TextView studentView, teacherView;
         ImageView teacherLogo, studentLogo, logo;
         Button registerButton = findViewById(R.id.registerBtn);
+        RelativeLayout myToolbar = findViewById(R.id.myToolbar);
 
         studentButton.findViewById(R.id.background).setBackground(getDrawable(R.drawable.disabled_circle));
         teacherButton.findViewById(R.id.background).setBackground(getDrawable(R.drawable.disabled_circle));
@@ -73,6 +74,8 @@ public class RegistrationActivity extends AppCompatActivity {
         teacherLogo.setImageDrawable(getDrawable(R.drawable.ic_teacher));
         studentLogo = studentButton.findViewById(R.id.logo);
         studentLogo.setImageDrawable(getDrawable((R.drawable.ic_student)));
+        ((TextView)myToolbar.findViewById(R.id.title)).setText(R.string.register);
+        ((ImageView)myToolbar.findViewById(R.id.logo)).setImageDrawable(getDrawable(R.drawable.ic_student));
 
         studentButton.setOnClickListener(new View.OnClickListener() {
             @Override
