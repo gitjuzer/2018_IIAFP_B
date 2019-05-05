@@ -2,14 +2,27 @@ import React, { Component } from 'react';
 import './style.css';
 import { NavLink } from 'react-router-dom';
 import Header from '../elements/header';
+import DashboardTeacher from '../LoginedTeacherDash/index';
 
 export default class Tlogin extends Component {
+  constructor(props) {
+    super(props);
+    this.clearToken = this.clearToken.bind(this);
+}
+
   state = {
     username: "",
     password: "",
     token: "",
     accountType: "TEACHER"
 }
+
+clearToken() {
+  this.setState({
+    token: null
+  })
+}
+
 login = () => {
     const data = {
         "username": this.state.username,
@@ -30,7 +43,6 @@ login = () => {
             username: responsejson.data[0].username,
             token: responsejson.data[0].token
         });
-        alert(this.state.token);
       }
       else
       {alert("Wrong username or password!");}
@@ -48,7 +60,8 @@ handlePassword(text)
 }
   
   render() {
-    return (
+    if(!this.state.token){
+   return (
        <React.Fragment>
         <Header />
       <div className="divbox">
@@ -72,4 +85,10 @@ handlePassword(text)
       </React.Fragment>
     )
   }
+  else  {
+    return(
+      <DashboardTeacher stateToPass = {[this.state.token,this.state.username]} clearToken = {this.clearToken}/>
+      )
+  }
+}
 }

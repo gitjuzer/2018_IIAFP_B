@@ -20,7 +20,7 @@ class Learning extends React.Component {
     }
     getDataFromServer = () => {
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/difficulties", {
-            methor: "GET",
+            method: "GET",
             headers: {
                 "Authorization": "Bearer " + this.props.token,
             }
@@ -28,10 +28,11 @@ class Learning extends React.Component {
             .then(response => response.json())
             .then(responsejson => {
                 responseCodeTest(responsejson);
+                console.log(responsejson);
                 this.setState({ difficulties: responsejson.data })
             })
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/game-modes", {
-            methor: "GET",
+            method: "GET",
             headers: {
                 "Authorization": "Bearer " + this.props.token,
             }
@@ -39,10 +40,11 @@ class Learning extends React.Component {
             .then(response => response.json())
             .then(responsejson => {
                 responseCodeTest(responsejson);
+                console.log(responsejson);
                 this.setState({ gamemodes: responsejson.data });
             })
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/game-sessions", {
-            methor: "GET",
+            method: "GET",
             headers: {
                 "Authorization": "Bearer " + this.props.token,
             }
@@ -50,6 +52,7 @@ class Learning extends React.Component {
             .then(response => response.json())
             .then(responsejson => {
                 responseCodeTest(responsejson);
+                console.log(responsejson);
                 this.setState({ gamesessions: responsejson.data });
             })
     };

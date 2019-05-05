@@ -21,3 +21,12 @@ div.learning-dropdown-title{
     margin-bottom: 5px;
     font-weight: bold;
 }
+
+.table{
+    border: 5px solid #3ED443;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;   
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2}

@@ -7,7 +7,14 @@ import DashboardStudent from '../loginedDashboard/index';
 export default class Slogin extends Component {
   constructor(props) {
     super(props);
+    this.clearToken = this.clearToken.bind(this);
 }
+clearToken() {
+  this.setState({
+    token: null
+  })
+}
+
   state = {
     username: "",
     password: "",
@@ -74,7 +81,7 @@ export default class Slogin extends Component {
   }
   else  {
     return(
-      <DashboardStudent stateToPass = {[this.state.token,this.state.username]}/>
+      <DashboardStudent stateToPass = {[this.state.token,this.state.username]} clearToken = {this.clearToken} />
       )
   }
 }
