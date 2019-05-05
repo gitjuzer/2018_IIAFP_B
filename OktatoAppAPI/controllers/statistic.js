@@ -62,13 +62,13 @@ exports.getAllStatistics = (req, res, next)=>{
 }
 
 exports.addNewStatistic = (req, res, next)=>{
-    if(!req.body.gained_points || !req.body.session_name){
+    if(!req.body.gained_points || !req.body.session_id){
         res.status(400).json(message.compose('400','Hibás adatok!'))
     }
     else{
         const gained_points = req.body.gained_points
-        const session_name = req.body.session_name
-        GameSession.getGameSessionByName(session_name, (selectSessionErr, selectSessionRes)=>{
+        const session_id = req.body.session_id
+        GameSession.getGameSessionById(session_id, (selectSessionErr, selectSessionRes)=>{
             if(selectSessionErr || selectSessionRes === null || !selectSessionRes || Object.keys(selectSessionRes).length === 0){
                 res.status(404).json(message.compose('404','Nem található ilyen játékmenet!'))
             }
