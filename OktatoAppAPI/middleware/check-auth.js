@@ -15,23 +15,28 @@ IsAuthorized = (role1, role2, req, res, next)=>{
                 }
                 User.getUserById(decoded.user_id, (err, result1)=>{
                     try{
-                        if(result1[0].account_type === (role1 || role2)){
+                        if(result1[0].account_type == role1 || role2){
+                            console.log('itt alt meg')
                             next()
                         }
                         else{
                             throw new Error()
                         }
                     }catch(error){
+                        console.log('vagy itt')
+                        console.log(result1[0].account_type)
                         return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
                     }
                 })
             }
             else{
+                console.log('asd alt meg')
                 return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
             }
         })
         
     } catch(error){
+        console.log('qqq alt meg')
         return res.status(401).json(message.compose('401','Jogosulatlan hozzáférés!'))
     }
 }
