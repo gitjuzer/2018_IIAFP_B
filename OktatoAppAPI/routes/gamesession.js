@@ -11,6 +11,6 @@ router.get('/:session_id/statistics', checkAuth.IsLoggedIn, statisticsController
 router.get('/:session_id',checkAuth.IsLoggedIn,gamesessionController.select_session_by_sessionid)
 router.get('/:session_id/questions', checkAuth.IsLoggedIn,questionsController.getAllQuestionsBySessionId)
 router.post('/',checkAuth.IsTeacherOrAdmin,gamesessionController.create_gamesession)
-router.delete('/:sessionid',checkAuth.IsTeacherOrAdmin,gamesessionController.delete_gamesession)
-router.put('/:sessionid',checkAuth.IsTeacherOrAdmin,gamesessionController.update_gamesession)
+router.delete('/:sessionid',checkAuth.IsTeacherOrAdmin,gamesessionController.delete_gamesession_by_id)
+router.put('/:sessionid',checkAuth.IsTeacherOrAdmin,gamesessionController.update_gamesession_by_id)
 module.exports = router

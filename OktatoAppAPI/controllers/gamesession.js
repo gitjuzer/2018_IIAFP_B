@@ -77,6 +77,20 @@ exports.delete_gamesession = (req,res,next)=>{
     })
 }
 
+exports.delete_gamesession_by_id = (req,res,next)=>{
+    const session_id = req.params.sessionid
+
+    GameSession.getGameSessionById(session_id,(err,result)=>{
+        if(err || result === null || Object.keys(result).length === 0)
+        {
+            return res.status(404).json(message.compose('404','Nem létező játékmenet!'))
+        }
+        GameSession.deleteGameSession(session_id,(err,result2)=>{
+            res.status(200).json(message.compose('200','Játékmenet sikeresen törölve!'))
+        })
+    })
+}
+
 exports.update_gamesession = (req,res,next)=>{
     const sessionName = req.params.sessionname
     const gameSession = new GameSession(req.body)
@@ -98,6 +112,35 @@ exports.update_gamesession = (req,res,next)=>{
                 }
                 GameSession.modifyGameSession(sessionName,gameSession,(err4,result4)=>{
                     GameSession.getGameSessionByName(sessionName,(err5,result5)=>{
+                            res.status(200).json(message.compose('200','Játékmenet sikeresen módosítva!',result5))
+                    })
+                })
+            })      
+        })
+    })
+}
+
+exports.update_gamesession_by_id = (req,res,next)=>{
+    const session_id = req.params.sessionid
+    const gameSession = new GameSession(req.body)
+
+    GameSession.getGameSessionById(session_id,(err1,result)=>{
+        if(err1 || result === null || Object.keys(result).length === 0)
+        {
+            return res.status(404).json(message.compose('404','Nem létező játékmenet!'))
+        }
+        GameMode.selectById(gameSession.game_id,(err2,result2)=>{
+            if(err2 || result2 === null || Object.keys(result2).length === 0)
+            {
+                return res.status(404).json(message.compose('404','Nem létező játékmód!'))
+            }
+            Difficulty.selectByLevel(gameSession.difficulty_level,(err3,result3)=>{
+                if(err3 || result3 === null || Object.keys(result3).length === 0)
+                {
+                    return res.status(404).json(message.compose('404','Nem létező nehézségi szint!')) 
+                }
+                GameSession.modifyGameSession(sessionId,gameSession,(err4,result4)=>{
+                    GameSession.getGameSessionById(sessionId,(err5,result5)=>{
                             res.status(200).json(message.compose('200','Játékmenet sikeresen módosítva!',result5))
                     })
                 })
