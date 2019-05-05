@@ -1,4 +1,4 @@
-const GameSession = require('../models/gamesession')
+﻿const GameSession = require('../models/gamesession')
 const GameMode = require('../models/gamemode')
 const Difficulty = require('../models/difficulty')
 const message = require('../utilities/jsonmessage')
@@ -34,31 +34,33 @@ exports.select_session_by_sessionid = (req,res,next)=>{
 
 exports.create_gamesession = (req,res,next)=>{
     const gameSession = new GameSession(req.body)
-
     if(!gameSession.session_name || !gameSession.max_points || !gameSession.game_id || !gameSession.difficulty_level)
     {
          res.status(400).json(message.compose('400','Hibás adatok!'))
     }
     else{
     GameSession.getGameSessionByName(gameSession.session_name,(err,result)=>{
-        if(Object.keys(result).length === 1)
-        {
-             res.status(409).json(message.compose('409','Már létezik ilyen nevű játékmenet!'))
-        }
-        else{
             GameMode.selectById(gameSession.game_id,(err,result) =>{
                 if(Object.keys(result).length === 0)
                 {
-                     res.status(404).json(message.compose('404','Nem létezik ilyen nevű játékmód!'))
+                     res.status(404).json(message.compose('404','Nem létezik ilyen játékmód!'))
                 }
                 else{
-                    GameSession.createGameSession(gameSession,(err,result)=>{
+                    Difficulty.selectByLevel(gameSession.difficulty_level,(err3,result3)=>{
+                        if(err3 || result3 === null || Object.keys(result3).length === 0)
+                        {
+                            return res.status(404).json(message.compose('404','Nem létező nehézségi szint!')) 
+                        }
+                        else{
+                        GameSession.createGameSession(gameSession,(err,result)=>{
                         GameSession.getGameSessionById(result,(err,result) =>{
                             res.status(201).json(message.compose('201','A játékmenet sikeresen létrehozva!',result))
+                            })
                         })
-                    })
+                    }
+                })
                 }
-            })}
+            })
         })
     }
 }
