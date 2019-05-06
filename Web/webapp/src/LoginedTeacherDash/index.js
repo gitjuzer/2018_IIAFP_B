@@ -21,7 +21,7 @@ class Layout extends React.Component {
             return (
                 <React.Fragment>
                 <Header title="Teacher Dashboard" username={this.state.username} token={this.state.token} SendTokenClear = {this.SendTokenClear} />
-                   <div>VIP</div>
+                   <div>WIP</div>
                 </React.Fragment>
             );
     }
