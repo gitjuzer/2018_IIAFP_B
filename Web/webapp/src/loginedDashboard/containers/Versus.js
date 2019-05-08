@@ -1,11 +1,11 @@
 import React from 'react'
+import QandA from '../games/QandA';
 
-const Versus = props => {
-  return (
-    <div>
-      Versus
-    </div>
+class Versus extends React.Component  {
+  render(){return (
+    <QandA>
+    </QandA>
   )
 }
-
+}
 export default Versus

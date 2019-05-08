@@ -5,8 +5,7 @@ body{
 }
 .flex-container{
   margin: auto;
-  width: 100%;
-  max-width: 1250px;
+  width: 95%;
   display: flex;
 }
 .main-section{

@@ -1,0 +1,81 @@
+.QAside-bar{
+    height: 120px;
+    padding: 0px 5px 0px 0px;
+    flex-basis: 0;
+    flex-grow: 2;
+    font-size: 1.1rem;
+    
+}
+.QAside-subject{
+    background: #3ED443;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 10px;
+    height: 40%;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.QAside-points{
+    border-collapse: separate;
+    border-spacing: 10px 0;
+    border: solid 3px #3ED443;
+    border-radius: 5px;
+    height: 70%;
+    text-decoration: none;
+    width: 100%;
+    font-weight: bold;
+}
+
+.QAsideflex-container{
+    margin: 0;
+    display: flex;
+  }
+
+.correct{
+    color: #3ED443;
+}
+.incorrect{
+    color:red;
+}
+
+.QAmain-content{
+    border-radius: 5px;
+    border: solid 3px #3ED443;
+    padding: 0;
+    flex-basis: 0;
+    flex-grow: 10;
+    font-size: 1.1rem;
+    height: 100%;
+    
+}
+
+.gameHeader{    
+    padding: 5px 10px 0px 10px;
+    color: white;
+    background: #3ED443;
+    height: 40px;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+.gameContent{
+    padding: 5px 10px 100px 10px;
+    height: 75%;
+}
+
+.gameFooter{
+    padding: 5px 10px 0px 10px;
+    height: 15%;
+}
+
+.gameMode{
+    float: left;
+}
+
+.questionNumbers{
+    float: right;
+}
