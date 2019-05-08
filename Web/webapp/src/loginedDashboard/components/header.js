@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './header.module.css';
-import Dropdown from 'react-bootstrap-dropdown-menu'
+//import Dropdown from 'react-bootstrap-dropdown-menu'
 
 class Header extends Component {
     logout = () => {
@@ -22,18 +22,20 @@ class Header extends Component {
                     </div>
                     <div className={classes.username}>
                         <button onClick={()=>{this.logout()}}> Logout</button>
-                    </div>
-                    <Dropdown username="Teszt">
-                        <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>;
-                </div>
+					</div>
+				</div>
             </header>
         );
     }
 }
 
 export default Header;
+				//</div>
+                    //<Dropdown username="Teszt">
+                        //<Dropdown.Menu>
+                        //<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                        //<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                        //<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        //</Dropdown.Menu>
+                    //</Dropdown>;
+                //</div>
