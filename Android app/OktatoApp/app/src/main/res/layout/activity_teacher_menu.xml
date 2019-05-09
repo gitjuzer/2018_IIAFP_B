@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".TeacherMenu">
 
+    <include
+        android:id="@+id/myToolbar"
+        layout="@layout/mytoolbar"/>
+
     <ImageButton
         android:id="@+id/classes_Button"
         android:layout_width="233dp"
@@ -18,32 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/button_background" />
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/upperToolbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/upperToolbar"
-        app:layout_constraintEnd_toStartOf="@+id/usernameT_TextView"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="@+id/upperToolbar"
-        app:layout_constraintTop_toTopOf="@+id/upperToolbar"
-        app:srcCompat="@drawable/ic_teacher" />
-
     <ImageButton
         android:id="@+id/lessons_Button"
         android:layout_width="233dp"
@@ -53,7 +31,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upperToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar"
         app:srcCompat="@drawable/button_background" />
 
     <ImageButton
@@ -105,20 +83,6 @@
         app:layout_constraintEnd_toEndOf="@+id/statisticT_Button"
         app:layout_constraintTop_toTopOf="@+id/statisticT_Button" />
 
-    <TextView
-        android:id="@+id/usernameT_TextView"
-        android:layout_width="213dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/upperToolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
-        app:layout_constraintStart_toStartOf="@+id/upperToolbar"
-        app:layout_constraintTop_toTopOf="@+id/upperToolbar" />
-
     <ImageView
         android:id="@+id/lessonsIcon_ImgView"
         android:layout_width="46dp"
@@ -156,20 +120,5 @@
         app:layout_constraintStart_toStartOf="@+id/classes_Button"
         app:layout_constraintTop_toTopOf="@+id/classes_Button"
         app:srcCompat="@drawable/ic_classes" />
-
-    <ImageButton
-        android:id="@+id/imageButton_logoutButtonT"
-        android:layout_width="32dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="@+id/upperToolbar"
-        app:layout_constraintEnd_toEndOf="@+id/upperToolbar"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toEndOf="@+id/usernameT_TextView"
-        app:layout_constraintTop_toTopOf="@+id/upperToolbar"
-        app:srcCompat="@drawable/ic_logout" />
 
 </android.support.constraint.ConstraintLayout>

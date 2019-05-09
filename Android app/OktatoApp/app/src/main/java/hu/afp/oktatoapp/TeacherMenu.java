@@ -1,11 +1,16 @@
 package hu.afp.oktatoapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import hu.afp.oktatoapp.Classes.MyToolbarCode;
+import hu.afp.oktatoapp.Classes.Token;
 
 public class TeacherMenu extends AppCompatActivity {
 
@@ -16,9 +21,20 @@ public class TeacherMenu extends AppCompatActivity {
 
         //gombok, textviewok változóba kimentése
         final TextView usernameDisplay;
-        usernameDisplay = findViewById(R.id.usernameT_TextView);
+        ImageView logout;
+        RelativeLayout toolbar = findViewById(R.id.myToolbar);
+        usernameDisplay = toolbar.findViewById(R.id.title);
         usernameDisplay.setText(getIntent().getStringExtra("Username"));
         ImageButton stat;
+
+        logout = toolbar.findViewById(R.id.logout);
+        logout.setVisibility(View.VISIBLE);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyToolbarCode.Logout(v.getContext(),Token.getTokens().get(0).toString());
+            }
+        });
         stat = findViewById(R.id.statisticT_Button);
         stat.setOnClickListener(new View.OnClickListener() {
             @Override

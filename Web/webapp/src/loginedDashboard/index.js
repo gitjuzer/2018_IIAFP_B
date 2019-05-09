@@ -12,6 +12,14 @@ class Layout extends React.Component {
         token: this.props.stateToPass[0],
         username: this.props.stateToPass[1],
     }
+    constructor(props) {
+        super(props)
+    
+        this.SendTokenClear = this.SendTokenClear.bind(this)
+      }
+      SendTokenClear() {
+        this.props.clearToken();
+      }
     
     renderSection = () => {
         switch (this.state.activeMenu) {
@@ -34,7 +42,7 @@ class Layout extends React.Component {
     render() {
             return (
                 <React.Fragment>
-                    <Header title="Student Dashboard" username={this.state.username} />
+                    <Header title="Student Dashboard" username={this.state.username} token={this.state.token} SendTokenClear = {this.SendTokenClear} />
                     <main className="flex-container">
                         <section className="main-section">
                             {this.renderSection()}

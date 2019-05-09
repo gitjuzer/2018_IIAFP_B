@@ -34,6 +34,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import hu.afp.oktatoapp.Classes.Global;
+import hu.afp.oktatoapp.Classes.Role;
 import hu.afp.oktatoapp.Classes.Token;
 
 import static hu.afp.oktatoapp.Classes.Token.Tokens;
@@ -55,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         TextView studentTV, teacherTV;
         Button login, register;
         final LinearLayout teacherID;
-
 
         ableToLogin = false;
         toolbar = findViewById(R.id.myToolbar);
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     String temp1 = username.getText().toString();
                     String temp2 = password.getText().toString();
 
-                    sendLoginData(temp1, temp2);
+                    sendLoginData(temp1, temp2, studentBtnIsClicked ? Role.roleType.STUDENT.toString() : Role.roleType.TEACHER.toString());
 
                     if (!teacherBtnIsClicked && !studentBtnIsClicked) {
                         Toast errorToast = Toast.makeText(MainActivity.this, R.string.error1, Toast.LENGTH_SHORT);
@@ -141,13 +141,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void sendLoginData(String username, String password) {
+    private void sendLoginData(String username, String password, String type) {
         String url = "https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login";
         JSONObject jsonObject = new JSONObject();
         final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         try {
             jsonObject.put("username", username);
             jsonObject.put("password", hashedPass);
+            jsonObject.put("login_type", type);
 
         } catch (JSONException e) {
             e.printStackTrace();
