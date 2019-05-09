@@ -20,7 +20,8 @@ Question.SelectById = (id,result)=>{
     })
 }
 
-Question.selectAllBySessionName = (session_id, result)=>{
+
+Question.selectAllBySessionId = (session_id, result)=>{
     sql.query('SELECT question.id AS question_id, question.question, question.points, game_session.id AS session_id, game_session.session_name FROM question INNER JOIN game_session ON question.game_session_id = game_session.id WHERE game_session.id = ?',session_id, (err, res)=>{
         if(err){
             result(err, null)

@@ -25,14 +25,14 @@ exports.getAllQuestionsBySessionName = (req, res, next)=>{
 }
 exports.getAllQuestionsBySessionId = (req, res, next)=>{
     const session_id = req.params.session_id
-    GameSession.getGameSessionByName(session_id, (selectSessionErr, selectSessionRes)=>{
+    GameSession.getGameSessionById(session_id, (selectSessionErr, selectSessionRes)=>{
         if(selectSessionErr || selectSessionRes === null || Object.keys(selectSessionRes).length === 0)
         {
            return res.status(404).json(message.compose('404','A játékmenet nem létezik!'))
         }
         else{
             const sessionid = selectSessionRes[0].id
-            Question.selectAllBySessionName(sessionid, (selectQuestionErr, selectQuestionRes)=>{
+            Question.selectAllBySessionId(sessionid, (selectQuestionErr, selectQuestionRes)=>{
                 return res.status(200).json(message.compose('200','Játékmenethez tartozó kérdések sikeresen lekérdezve!',selectQuestionRes))
             })
         }
@@ -42,14 +42,13 @@ exports.getAllQuestionsBySessionId = (req, res, next)=>{
 exports.create_new_question = (req,res,next)=>{
     const question = new Question(req.body)
 
-    var sessionname = req.body.session_name
+    var sessionid = req.body.session_id
 
-    GameSession.getGameSessionByName(sessionname,(err,result)=>{
+    GameSession.getGameSessionById(sessionid,(err,result)=>{
         if(err || result === null || Object.keys(result).length === 0)
         {
            return res.status(404).json(message.compose('404','A játékmenet nem létezik!'))
         }
-        const sessionid = result[0].id
         if(result[0].max_points === null)
         {
             result[0].max_points = 0;
@@ -98,13 +97,13 @@ exports.delete_question = (req,res,next)=>{
 exports.modify_question = (req,res,next)=>{
     const id = req.params.id
     const question = new Question(req.body)
-    const session_name = req.body.session_name
+    const session_id = req.body.session_id
     Question.SelectById(id,(err1,result)=>{
         if(err1 || result === null || Object.keys(result).length === 0)
         {
             return res.status(404).json(message.compose('404','Nem létezik ilyen kérdés!'))
         }
-        GameSession.getGameSessionByName(session_name,(err2,result2)=>{
+        GameSession.getGameSessionById(session_id,(err2,result2)=>{
             if(err2 || result2 === null || Object.keys(result2).length === 0)
             {
                 return res.status(404).json(message.compose('404','Nem létezik ilyen játékmenet!'))
