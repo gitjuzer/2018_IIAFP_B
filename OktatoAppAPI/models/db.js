@@ -1,11 +1,10 @@
 const mysql = require('mysql');
 
-//local mysql db connection
 const pool = mysql.createPool({
-    host     : 'eu-cdbr-west-02.cleardb.net',
-    user     : 'bdc3914efce7d4',
-    password : '74899155',
-    database : 'heroku_9f6b4f373cfd5f1',
+    host     : 'kcpgm0ka8vudfq76.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
+    user     : 'xsr7mhrk38tvki9b',
+    password : 'gfk5x28jdwcfgbvt',
+    database : 'q0o8wzvtnt0izlgf',
     timezone : 'utc'
 });
 
@@ -19,7 +18,6 @@ module.exports = {
         var callback = args[args.length-1]; //last arg is callback
         pool.getConnection(function(err, connection) {
         if(err) {
-                console.log(err);
                 return callback(err);
             }
             if(args.length > 2){
@@ -28,7 +26,6 @@ module.exports = {
         connection.query(args[0], sql_args, function(err, results) {
           connection.release(); // always put connection back in pool after last query
           if(err){
-                    console.log(err);
                     return callback(err);
                 }
           callback(null, results);
