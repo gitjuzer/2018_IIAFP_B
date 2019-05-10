@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import { Prompt } from 'react-router';
 //import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './QandA.css'
+import './components/CurrentQuestion.css'
 
 class QandA extends React.Component {
     state ={
@@ -38,21 +39,18 @@ class QandA extends React.Component {
             this.setState({questions : responsejson.data})
             this.setState({currentQuestion: this.state.questions[0]})
             console.table(this.state.currentQuestion)
-            //console.log(this.state.questions); 
-            //console.table(this.state.currentQuestion);
             //console.log(this.state.questions[0]);
            // let tmp = this.state.questions[0].question;
            // this.setState({quest: tmp})
             //console.log(this.state.questions[0].question);
            // console.log(this.state.quest);
-           // console.log(this.state.questions.length);
            console.log(this.state.currentQuestion.question_id)
             }
           else
           {alert("Something went wrong with Authorization! Please try again later");}
         });
-        
-        fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/questions/"+this.state.currentQuestion.question_id+"/wrong-answers", {
+       // fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/questions/"+this.state.currentQuestion.question_id+"/wrong-answers", { 
+        fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/questions/"+21+"/wrong-answers", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
