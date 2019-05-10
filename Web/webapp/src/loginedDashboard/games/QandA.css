@@ -71,6 +71,7 @@
 .gameFooter{
     padding: 5px 10px 0px 10px;
     height: 15%;
+    float: right;
 }
 
 .gameMode{

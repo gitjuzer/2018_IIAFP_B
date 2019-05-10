@@ -13,7 +13,7 @@ class QandA extends React.Component {
         correct:0,
         inCorrect: 0,
 
-        wrongAnswers : {"null":null},
+        wrongAnswers : {},
         correctAnswer : null,
         activeAnswer : null,
         currentAnswer : null
@@ -45,6 +45,7 @@ class QandA extends React.Component {
            // this.setState({quest: tmp})
             //console.log(this.state.questions[0].question);
            // console.log(this.state.quest);
+           //{this.state.wrongAnswers[0].wrong_answer}
             }
           else
           {alert("Something went wrong with Authorization! Please try again later");}
@@ -66,7 +67,7 @@ class QandA extends React.Component {
         .then(responsejson => {
           if (responsejson.status_code === "201" || responsejson.status_code === "200")
             {
-            //console.log(responsejson);  
+            console.table(responsejson.data);  
             this.setState({wrongAnswers : responsejson.data})
             }
           else
@@ -101,18 +102,20 @@ class QandA extends React.Component {
     }
 
     checkIfAnySelected = () =>{
+       
         if(this.state.activeAnswer != null)
         {
             if(this.state.qIndex+1 <= this.state.questions.length){
                 this.checkAnswer();
                 this.setState({qIndex : this.state.qIndex+1})
-                alert("selected");
                 this.setState({currentQuestion : this.state.questions[this.state.qIndex]})
                 this.getCorrectAnswer();
                 this.getWrongAnswers();
+                this.forceUpdate();
             }
             else{
-                alert("tha game is offer");
+                this.getCorrectAnswer();
+                alert("tha game is over");
             }
         }
         else{
@@ -126,19 +129,29 @@ class QandA extends React.Component {
     }
 
     checkAnswer (){
-        if(this.state.currentAnswer === this.state.correctAnswer)
+        if(this.state.currentAnswer == this.state.correctAnswer)
         {
             this.setState({correct :this.state.correct+1})
-            alert("zsamo")
         }
         else{
             this.setState({inCorrect :this.state.inCorrect+1})
         }
     }
     
+    checkStates(){
+        if(this.state.wrongAnswers == null)
+        {
+            this.getWrongAnswers();
+            return false;
+        }
+        else
+        return true;
+    }
+
     unselected = "answer";
     selected = "answer active";
 //this.state.wrongAnswers[0].wrong_answer
+//{this.state.wrongAnswers[0].wrong_answer}
     renderCurrentQuestion = ()=>{
         return(
             <React.Fragment>
@@ -146,18 +159,19 @@ class QandA extends React.Component {
                     <div className="question">{this.state.currentQuestion.question}</div>
                     <div className="answers">
                                     <button className={this.state.activeAnswer === "First" ? this.selected : this.unselected} value={this.state.correctAnswer} onClick={(value) => {this.changeSection("First");  this.setAnswer(value) }}>{this.state.correctAnswer}</button>
-                                    <button className={this.state.activeAnswer === "Second" ? this.selected : this.unselected} value="anyád" onClick={(value) => {this.changeSection("Second");   this.setAnswer(value)}}>2</button>    
+                                    <button className={this.state.activeAnswer === "Second" ? this.selected : this.unselected} value="?xysa" onClick={(value) => {this.changeSection("Second");   this.setAnswer(value)}}></button>    
                                     <br></br>        
                                     <button className={this.state.activeAnswer === "Third" ? this.selected : this.unselected} value="meg neked is" onClick={(value) => {this.changeSection("Third");this.setAnswer(value)}}>3</button>
                                     <button className={this.state.activeAnswer === "Fourth" ? this.selected : this.unselected} value="és neki is" onClick={(value) => {this.changeSection("Fourth");this.setAnswer(value)}}>4</button>
                     </div>
                 </div>
-                <div className="gameFooter"> why u put me down here <button onClick={()=>{this.checkIfAnySelected()}}>Bye</button>
+                <div className="gameFooter"><button className="answer" onClick={()=>{this.checkIfAnySelected()}}>Next Question</button>
                 </div>
             </React.Fragment>
         )}
 
     render() {
+        if(this.checkStates())
         return (
             <div className="QAsideflex-container">
                 <div className="QAside-bar">
@@ -189,6 +203,7 @@ class QandA extends React.Component {
                     {this.renderCurrentQuestion()}
                 </div>
             </div>
-        )}
+        )
+    else{return(<div>anyád</div>)}}
 }
 export default QandA
