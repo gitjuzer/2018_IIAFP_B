@@ -71,7 +71,7 @@ class QandA extends React.Component {
             this.setState({wrongAnswers : responsejson.data})
             }
           else
-          {alert("mi?");}
+          {alert("failed wrong answers");}
         });
 
     }
@@ -93,30 +93,63 @@ class QandA extends React.Component {
           //  console.log(this.state.correctAnswer)
             }
           else
-          {alert("mi?");}
+          {alert("failed correct answer");}
+        });
+    }
+
+    insertScore = () =>{
+        const data = {
+            "gained_points": this.state.correct,
+            "session_id": this.props.session_id
+        };
+
+        fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/statistics", {
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer "+ this.props.token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(responsejson => {
+          if (responsejson.status_code === "201" || responsejson.status_code === "200")
+            {
+            console.log(responsejson);  
+          //  console.log(this.state.correctAnswer)
+            }
+          else
+          {alert(responsejson);}
         });
     }
 
     changeSection = (newSection) => {
         this.setState({ activeAnswer: newSection });
+        console.log(this.state.correct)
     }
 
     checkIfAnySelected = () =>{
        
         if(this.state.activeAnswer != null)
         {
-            if(this.state.qIndex+1 <= this.state.questions.length){
+            if(this.state.qIndex+1 < this.state.questions.length){
                 this.checkAnswer();
                 this.setState({qIndex : this.state.qIndex+1})
+                console.log(this.state.correct)
                 this.setState({currentQuestion : this.state.questions[this.state.qIndex]})
                 this.getCorrectAnswer();
                 this.getWrongAnswers();
                 this.forceUpdate();
             }
-            else{
-                this.getCorrectAnswer();
+            else if(this.state.qIndex+1 === this.state.questions.length){
+                this.checkAnswer();
+                this.insertScore();
                 alert("tha game is over");
+                //insert score and exit session 
+                this.props.eixtGameSess();
+
             }
+            this.setState({activeAnswer : null})
         }
         else{
             alert("Please select an answer first!");
@@ -129,7 +162,7 @@ class QandA extends React.Component {
     }
 
     checkAnswer (){
-        if(this.state.currentAnswer == this.state.correctAnswer)
+        if(this.state.currentAnswer === this.state.correctAnswer)
         {
             this.setState({correct :this.state.correct+1})
         }

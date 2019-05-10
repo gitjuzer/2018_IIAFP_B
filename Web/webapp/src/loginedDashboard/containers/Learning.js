@@ -89,7 +89,8 @@ class Learning extends React.Component {
     constructor(props) {
         super(props)
     
-        this.setGameSessionActive = this.setGameSessionActive.bind(this)
+        this.setGameSessionActive = this.setGameSessionActive.bind(this);
+        this.setGameSessionDeActive = this.setGameSessionDeActive.bind(this);
       }
 
     setGameSessionActive(id,subject){
@@ -99,13 +100,16 @@ class Learning extends React.Component {
             subject: subject,
          });
         console.log(this.state.subject);
-        
-        
     }
 
-    startGameSession(){
-
+    setGameSessionDeActive(){
+        this.setState({ 
+            gamesSessionActive: false,
+            sessionId : null,
+            subject: null,
+         });
     }
+
     render() {
         if(!this.state.gamesSessionActive){
         return (
@@ -122,7 +126,7 @@ class Learning extends React.Component {
     }
     else{
         return(
-             <QandA session_id={this.state.sessionId} subject={this.state.subject} token={this.props.token} ></QandA>
+             <QandA eixtGameSess={this.setGameSessionDeActive} session_id={this.state.sessionId} subject={this.state.subject} token={this.props.token} ></QandA>
         )
     }
 }
