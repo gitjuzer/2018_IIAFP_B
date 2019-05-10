@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import { Prompt } from 'react-router';
 //import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './QandA.css'
@@ -13,7 +13,7 @@ class QandA extends React.Component {
         correct:0,
         inCorrect: 0,
 
-        wrongAnswers : {},
+        wrongAnswers : null,
         correctAnswer : null,
         activeAnswer : null,
         currentAnswer : null
@@ -23,6 +23,7 @@ class QandA extends React.Component {
        this.getQuestions();
     }
 
+    qId = "fuc";
 
     getQuestions = () =>{
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/game-sessions/"+this.props.session_id+"/questions", {
@@ -39,7 +40,8 @@ class QandA extends React.Component {
            // console.log(responsejson);  
             this.setState({questions : responsejson.data})
             this.setState({currentQuestion: this.state.questions[0]})
-            console.table(this.state.currentQuestion)
+            this.qId = responsejson;
+            console.table(this.qId)
             //console.log(this.state.questions[0]);
            // let tmp = this.state.questions[0].question;
            // this.setState({quest: tmp})
@@ -55,7 +57,6 @@ class QandA extends React.Component {
     }
 
     getWrongAnswers = () => {
-       // fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/questions/"+this.state.currentQuestion.question_id+"/wrong-answers", { 
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/questions/"+this.state.currentQuestion.question_id+"/wrong-answers", {
             method: "GET",
             headers: {
@@ -69,12 +70,13 @@ class QandA extends React.Component {
             {
             console.table(responsejson.data);  
             this.setState({wrongAnswers : responsejson.data})
+            console.log(this.state.wrongAnswers[0].wrong_answer)
             }
           else
-          {alert("failed wrong answers");}
+          {console.log("wrong answers not yet recived");}
         });
-
     }
+    
 
     getCorrectAnswer = () => {
         fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/questions/"+this.state.currentQuestion.question_id+"/correct-answer", {
@@ -119,7 +121,7 @@ class QandA extends React.Component {
           //  console.log(this.state.correctAnswer)
             }
           else
-          {alert(responsejson);}
+          {(console.log(responsejson));}
         });
     }
 
@@ -183,25 +185,28 @@ class QandA extends React.Component {
 
     unselected = "answer";
     selected = "answer active";
-//this.state.wrongAnswers[0].wrong_answer
-//{this.state.wrongAnswers[0].wrong_answer}
     renderCurrentQuestion = ()=>{
+        if(this.state.wrongAnswers){
         return(
             <React.Fragment>
                 <div className="gameContent">
                     <div className="question">{this.state.currentQuestion.question}</div>
                     <div className="answers">
                                     <button className={this.state.activeAnswer === "First" ? this.selected : this.unselected} value={this.state.correctAnswer} onClick={(value) => {this.changeSection("First");  this.setAnswer(value) }}>{this.state.correctAnswer}</button>
-                                    <button className={this.state.activeAnswer === "Second" ? this.selected : this.unselected} value="?xysa" onClick={(value) => {this.changeSection("Second");   this.setAnswer(value)}}></button>    
+                                    <button className={this.state.activeAnswer === "Second" ? this.selected : this.unselected} value={this.state.wrongAnswers[0].wrong_answer} onClick={(value) => {this.changeSection("Second");   this.setAnswer(value)}}>{this.state.wrongAnswers[0].wrong_answer}</button>    
                                     <br></br>        
-                                    <button className={this.state.activeAnswer === "Third" ? this.selected : this.unselected} value="meg neked is" onClick={(value) => {this.changeSection("Third");this.setAnswer(value)}}>3</button>
-                                    <button className={this.state.activeAnswer === "Fourth" ? this.selected : this.unselected} value="és neki is" onClick={(value) => {this.changeSection("Fourth");this.setAnswer(value)}}>4</button>
+                                    <button className={this.state.activeAnswer === "Third" ? this.selected : this.unselected} value={this.state.wrongAnswers[1].wrong_answer} onClick={(value) => {this.changeSection("Third");this.setAnswer(value)}}>{this.state.wrongAnswers[1].wrong_answer}</button>
+                                    <button className={this.state.activeAnswer === "Fourth" ? this.selected : this.unselected} value={this.state.wrongAnswers[2].wrong_answer} onClick={(value) => {this.changeSection("Fourth");this.setAnswer(value)}}>{this.state.wrongAnswers[2].wrong_answer}</button>
                     </div>
                 </div>
                 <div className="gameFooter"><button className="answer" onClick={()=>{this.checkIfAnySelected()}}>Next Question</button>
                 </div>
             </React.Fragment>
         )}
+        else{
+            return(<div>Loading dik he</div>)
+        }
+    }
 
     render() {
         if(this.checkStates())
@@ -229,7 +234,7 @@ class QandA extends React.Component {
                 <div className="QAmain-content">
                     <div className="gameHeader">
                         <div className="gameMode">
-                            {this.props.gameMode}                        
+                        Feleletválasztó                      
                         </div>
                         <div className="questionNumbers">{this.state.qIndex+1}/{this.state.questions.length}</div>
                     </div>
@@ -237,6 +242,8 @@ class QandA extends React.Component {
                 </div>
             </div>
         )
-    else{return(<div>anyád</div>)}}
+     else{
+        return(<div>Loading...</div>)
+    }}
 }
 export default QandA

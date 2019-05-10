@@ -19,7 +19,8 @@ class Learning extends React.Component {
 
         gamesSessionActive : false,
         subject: null,
-        sessionId: null
+        sessionId: null,
+        gameModeId : null,
     }
     componentDidMount() {
         this.getDataFromServer();
@@ -74,7 +75,7 @@ class Learning extends React.Component {
     renderGameSessions = (game_id) => {
         if(this.state.selectedLevel.diffculty_name === "Mind"){
             return Array.from(this.state.gamesessions).filter(gamesess => gamesess.game_id === game_id).map(gamesession => {
-                return <Gamesession key={gamesession.id} id={gamesession.id} gameId={gamesession.game_id} setActive={this.setGameSessionActive} name={gamesession.session_name} level={"Level " + gamesession.difficulty_level}/>
+                return <Gamesession key={gamesession.id} id={gamesession.id} gameId={gamesession.game_id} setActive={this.setGameSessionActive} gamemodeId={gamesession.game_id} name={gamesession.session_name} level={"Level " + gamesession.difficulty_level}/>
             });
         }else{
             return Array.from(this.state.gamesessions).filter(gamesess => gamesess.game_id === game_id && gamesess.difficulty_level === this.state.selectedLevel.difficulty_level).map(gamesession => {
@@ -93,11 +94,12 @@ class Learning extends React.Component {
         this.setGameSessionDeActive = this.setGameSessionDeActive.bind(this);
       }
 
-    setGameSessionActive(id,subject){
+    setGameSessionActive(id,subject,gamemodeId){
         this.setState({ 
             gamesSessionActive: true,
             sessionId : id,
             subject: subject,
+            gameModeId: gamemodeId
          });
         console.log(this.state.subject);
     }
@@ -124,11 +126,14 @@ class Learning extends React.Component {
             </div>
         )
     }
-    else{
+    else if(this.state.gameModeId === 1){
         return(
              <QandA eixtGameSess={this.setGameSessionDeActive} session_id={this.state.sessionId} subject={this.state.subject} token={this.props.token} ></QandA>
         )
     }
+    else if(this.state.gameModeId === 31){return(<div>not yet implemneted! kukucs itt még nincs semmi tipli!!</div>)}
+    else if(this.state.gameModeId === 41){return(<div>not yet implemneted! kukucs itt még nincs semmi tipli!!</div>)}
+    else{return(<div>want some fuck? {this.setGameSessionDeActive()}</div>)}
 }
 }
 export default Learning

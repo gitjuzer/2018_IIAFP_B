@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-import { responseCodeTest } from './functions/responseCodeTest';
 import Learning from './containers/Learning';
 import Statics from './containers/Statics';
 import Versus from './containers/Versus';

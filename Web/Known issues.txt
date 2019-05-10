@@ -1,0 +1,6 @@
+no 1: main js unintended underscore
+
+no 2: QandA not working propery:=
+-not displaying last question
+-not increasing points on last question if the user selected the correct answer
+
