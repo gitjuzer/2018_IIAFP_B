@@ -101,7 +101,6 @@ class Learning extends React.Component {
             subject: subject,
             gameModeId: gamemodeId
          });
-        console.log(this.state.subject);
     }
 
     setGameSessionDeActive(){
@@ -128,12 +127,12 @@ class Learning extends React.Component {
     }
     else if(this.state.gameModeId === 1){
         return(
-             <QandA eixtGameSess={this.setGameSessionDeActive} session_id={this.state.sessionId} subject={this.state.subject} token={this.props.token} ></QandA>
+             <QandA exitGameSess={this.setGameSessionDeActive} session_id={this.state.sessionId} subject={this.state.subject} token={this.props.token} ></QandA>
         )
     }
-    else if(this.state.gameModeId === 31){return(<div>not yet implemneted! kukucs itt még nincs semmi tipli!!</div>)}
-    else if(this.state.gameModeId === 41){return(<div>not yet implemneted! kukucs itt még nincs semmi tipli!!</div>)}
-    else{return(<div>want some fuck? {this.setGameSessionDeActive()}</div>)}
+    else if(this.state.gameModeId === 31){return(<div>not yet implemneted!</div>)}
+    else if(this.state.gameModeId === 41){return(<div>not yet implemneted!</div>)}
+    else{return(<div>{this.setGameSessionDeActive()}</div>)}
 }
 }
 export default Learning
