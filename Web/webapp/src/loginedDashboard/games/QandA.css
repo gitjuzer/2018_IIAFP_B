@@ -79,3 +79,11 @@
 .questionNumbers{
     float: right;
 }
+
+.question{
+    height: 50%;
+}
+
+.answers{
+    height: 50%;
+}
