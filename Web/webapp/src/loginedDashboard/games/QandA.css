@@ -63,6 +63,7 @@
   }
 
 .gameContent{
+    text-align: center;
     padding: 5px 10px 100px 10px;
     height: 75%;
 }
@@ -70,6 +71,7 @@
 .gameFooter{
     padding: 5px 10px 0px 10px;
     height: 15%;
+    float: right;
 }
 
 .gameMode{
@@ -78,4 +80,13 @@
 
 .questionNumbers{
     float: right;
+}
+
+.question{
+    height: 50%;
+    padding-bottom: 20px;
+}
+
+.answers{
+    height: 50%;
 }

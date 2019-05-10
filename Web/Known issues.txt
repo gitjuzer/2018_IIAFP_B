@@ -1,0 +1,9 @@
+no 1: main js unintended underscore
+
+no 2: QandA not working propery:=
+/*fixed, avoid state if possible. Variables are the future.
+-not displaying last question
+-not increasing points on last question if the user selected the correct answer
+*/
+-if you score 0 points it will not be inserted> Bad Request / hibás adatok
+
