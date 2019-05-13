@@ -37,8 +37,6 @@ import hu.afp.oktatoapp.Classes.Global;
 import hu.afp.oktatoapp.Classes.Role;
 import hu.afp.oktatoapp.Classes.Token;
 
-import static hu.afp.oktatoapp.Classes.Token.Tokens;
-
 public class MainActivity extends AppCompatActivity {
 
     boolean studentBtnIsClicked;
@@ -156,66 +154,63 @@ public class MainActivity extends AppCompatActivity {
         final String requestBody = jsonObject.toString();
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
+                response -> {
 
-                        int statusCode = 0;
-                        String description;
+                    int statusCode = 0;
+                    String description;
 
-                        int tokenId;
-                        String token;
-                        Date created_at;
-                        Date expires_at;
-                        boolean isActive;
-                        int userId;
-                        String username;
-                        JSONArray responseInJSONArray;
+                    int tokenId;
+                    String token;
+                    Date created_at;
+                    Date expires_at;
+                    boolean isActive;
+                    int userId;
+                    String username1;
+                    JSONArray responseInJSONArray;
 
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
+                    try {
+                        JSONObject jsonObject1 = new JSONObject(response);
 
-                            statusCode = jsonObject.getInt("status_code");
-                            description = jsonObject.getString("description");
+                        statusCode = jsonObject1.getInt("status_code");
+                        description = jsonObject1.getString("description");
 
-                            if (statusCode == 201) {
-                                ableToLogin = true;
-                            }
-
-                            responseInJSONArray = jsonObject.getJSONArray("data");
-                            for (int i = 0; i < responseInJSONArray.length(); i++) {
-
-                                DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH);
-
-                                JSONObject obj = responseInJSONArray.getJSONObject(i);
-
-                                tokenId = obj.getInt("id");
-                                token = obj.getString("token");
-                                created_at = format.parse((obj.getString("created_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
-                                expires_at = format.parse((obj.getString("expires_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
-                                isActive = obj.getInt("is_active") == 1;
-                                username = obj.getString("username");
-
-                                Token tempToken = new Token(tokenId, token, created_at, expires_at, isActive, username);
-                                Tokens.add(tempToken);
-                            }
-                            //TESZT a tokenek adatainak kiiírására
-                               /* List<Token> temp = Token.getTokens();
-                                for (int j = 0; j < temp.size(); j++) {
-                                    Log.d("TOKEN ADATAI:////////////", " " + temp.get(i).getCreated_at() + " " + temp.get(i).getExpires_at());
-                                }*/
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            if (statusCode == 401) {
-                                ableToLogin = false;
-                            }
-                        } catch (ParseException e) {
-                            e.printStackTrace();
+                        if (statusCode == 201) {
+                            ableToLogin = true;
                         }
 
+                        responseInJSONArray = jsonObject1.getJSONArray("data");
+                        for (int i = 0; i < responseInJSONArray.length(); i++) {
 
+                            DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH);
+
+                            JSONObject obj = responseInJSONArray.getJSONObject(i);
+
+                            tokenId = obj.getInt("id");
+                            token = obj.getString("token");
+                            created_at = format.parse((obj.getString("created_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
+                            expires_at = format.parse((obj.getString("expires_at").replaceAll("\\+0([0-9]){1}\\:00", "+0$100")));
+                            isActive = obj.getInt("is_active") == 1;
+                            username1 = obj.getString("username");
+
+                            Token tempToken = new Token(tokenId, token, created_at, expires_at, isActive, username1);
+
+                        }
+                        //TESZT a tokenek adatainak kiiírására
+                           /* List<Token> temp = Token.getTokens();
+                            for (int j = 0; j < temp.size(); j++) {
+                                Log.d("TOKEN ADATAI:////////////", " " + temp.get(i).getCreated_at() + " " + temp.get(i).getExpires_at());
+                            }*/
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        if (statusCode == 401) {
+                            ableToLogin = false;
+                        }
+                    } catch (ParseException e) {
+                        e.printStackTrace();
                     }
+
+
                 },
                 new Response.ErrorListener() {
                     @Override
