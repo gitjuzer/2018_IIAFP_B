@@ -87,4 +87,18 @@ public class TargyValasztoTest {
         int expected = 5;
         assertNotEquals(getSelectedItemPosition, expected);
     }
+
+    @Test
+    public void onStartOk() {
+        int getSelectedItemPosition = 0;
+        int expected = 0;
+        assertEquals(getSelectedItemPosition, expected);
+    }
+
+    @Test
+    public void onStartNemOk() {
+        int getSelectedItemPosition = 1;
+        int expected = 0;
+        assertNotEquals(getSelectedItemPosition, expected);
+    }
 }
