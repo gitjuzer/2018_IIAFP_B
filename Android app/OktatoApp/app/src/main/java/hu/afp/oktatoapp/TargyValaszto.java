@@ -1,5 +1,6 @@
 package hu.afp.oktatoapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,9 +19,18 @@ public class TargyValaszto extends AppCompatActivity {
         setContentView(R.layout.activity_targy_valaszto);
         spinner = findViewById(R.id.spinner);
         String[] targyak = new String[] {"Válasszon tantárgyat a legördülő menüből!", "Történelem", "Matematika", "Magyar nyelv", "Fizika"};
-        ArrayAdapter<String> arrayAdapter =new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, targyak);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, targyak);
         spinner.setAdapter(arrayAdapter);
+        setSpinner();
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        spinner.setSelection(0);
+    }
+
+    protected void setSpinner() {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -54,11 +64,5 @@ public class TargyValaszto extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        spinner.setSelection(0);
     }
 }
