@@ -21,7 +21,21 @@
 }
 .username{
     margin-right: 25px;
-    flex-grow: 1;
+    flex-grow: 1;	
+}
+.username button:hover{
+	background: #428BCA;
+}
+.username button {
+	border: none;
+	color: white;
+	padding: 13px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	background: #3ED443;
+	border-radius: 5px;
 }
 .header i{
     margin-right: 10px;
