@@ -6,7 +6,7 @@ public class Token {
 
     //region privát mezők
     private int tokenId;
-    private String token;
+    private static String token;
     private Date created_at;
     private Date expires_at;
     private boolean isActive;
@@ -20,7 +20,7 @@ public class Token {
     public void setTokenId(int tokenId){
         this.tokenId = tokenId;
     }
-    public String getToken(){
+    public static String getToken(){
         return token;
     }
     public void setToken(String token){

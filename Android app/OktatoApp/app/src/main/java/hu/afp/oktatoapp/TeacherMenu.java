@@ -32,7 +32,7 @@ public class TeacherMenu extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyToolbarCode.Logout(v.getContext(),Token.getTokens().get(0).toString());
+                MyToolbarCode.Logout(v.getContext(), String.valueOf(Token.getToken().indexOf(0)));
             }
         });
         stat = findViewById(R.id.statisticT_Button);
