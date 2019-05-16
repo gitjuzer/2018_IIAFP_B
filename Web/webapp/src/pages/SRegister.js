@@ -41,16 +41,14 @@ export default class SRegister extends Component {
       }
       else if (responsejson.status_code === "409")
       {
+        this.setState({successful : false});
         alert("The user allready exist!");
-        {this.setState({
-          successful : false
-        });}
       }
       else
-      {alert("ehh");}
-      {this.setState({
-        successful : false
-      });}
+      {
+        this.setState({successful : false});
+        alert("ehh");
+      }
     });
 } 
 handleUserName(text)
