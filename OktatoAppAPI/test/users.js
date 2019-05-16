@@ -19,6 +19,17 @@ describe('GET /users', () => {
     })
 })
 
+describe('POST /logout',()=>{
+    it('should\'t let us log out, because we don\'t a valid token', (done)=>{
+        chai.request(server)
+        .post('/OktatoAppAPI/users/logout')
+        .end((err, res)=>{
+            res.should.have.status(401)
+            done()
+        })
+    })
+})
+
 describe('POST /login', () =>{
     it('should let us log in, and return a valid token', (done)=>{
         chai.request(server)
@@ -31,4 +42,29 @@ describe('POST /login', () =>{
         })
     })
 })
+
+describe('POST /logout', () =>{
+    var token;
+    it('should let us log in', (done) =>{
+        chai.request(server)
+        .post('/OktatoAppAPI/users/login')
+        .set('Content-Type','application/json')
+        .send({username: 'unittest', password:'unittest', login_type: 'ADMIN'})
+        .end((err,res)=>{
+            res.should.have.status(201)
+            token = res.body.data[0].token
+            done()
+        })
+    })
+    it('fetch all the users data', (done)=>{
+        chai.request(server)
+        .get('/OktatoAppAPI/users')
+        .set('Authorization','Bearer '+token)
+        .end((err,res)=>{
+            res.should.have.status(200)
+            done()
+        })
+    })
+})
+
 
