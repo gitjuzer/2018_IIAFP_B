@@ -1,10 +1,7 @@
-let User = require('../controllers/user')
-
 let chai = require('chai')
 let chaiHttp = require('chai-http')
 let server = require('../server')
 let should = chai.should()
-let expect = chai.expect()
 
 chai.use(chaiHttp);
 
@@ -31,7 +28,7 @@ describe('POST /logout',()=>{
 })
 
 describe('POST /login', () =>{
-    it('should let us log in, and return a valid token', (done)=>{
+    it('should let us log in', (done)=>{
         chai.request(server)
         .post('/OktatoAppAPI/users/login')
         .set('Content-Type','application/json')
@@ -43,7 +40,7 @@ describe('POST /login', () =>{
     })
 })
 
-describe('POST /logout', () =>{
+describe('GET /users', () =>{
     var token;
     it('should let us log in', (done) =>{
         chai.request(server)
@@ -67,4 +64,27 @@ describe('POST /logout', () =>{
     })
 })
 
+describe('POST /logout',()=>{
+    var token;
+    it('should let us log in', (done) =>{
+        chai.request(server)
+        .post('/OktatoAppAPI/users/login')
+        .set('Content-Type','application/json')
+        .send({username: 'unittest', password:'unittest', login_type: 'ADMIN'})
+        .end((err,res)=>{
+            res.should.have.status(201)
+            token = res.body.data[0].token
+            done()
+        })
+    })
+    it('should let us log out, because we have a valid token', (done)=>{
+        chai.request(server)
+        .post('/OktatoAppAPI/users/logout')
+        .set('Authorization','Bearer '+token)
+        .end((err, res)=>{
+            res.should.have.status(200)
+            done()
+        })
+    })
+})
 
