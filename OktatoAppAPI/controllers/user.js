@@ -49,8 +49,6 @@ exports.login = (req,res,next)=>{
     }
     User.getUserByUsernameWithPassword(req.body.username, (err, result)=>{
         const user = result;
-        console.log(user[0])
-        console.log(login_type)
         if (!user ||  user.length < 1){
             return res.status(401).json(message.compose('401','Sikertelen bejelentkezés!'))
         }
