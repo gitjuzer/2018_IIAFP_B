@@ -18,6 +18,7 @@ GameSession.getAllGameSession = (result)=>{
         }
         else{
             result(null,res)
+            
         }
     })
 }
