@@ -11,7 +11,6 @@ test('Tests registration with inCorrect data', () => {
     expect(instance.state.sucessful).toBeNull();
 })
 
-//it cant complete fetch, but it should be a working test.
 test('Tests registration with correct data', () => {
     let instance =  shallow(<Register />).instance();
     instance.setState({

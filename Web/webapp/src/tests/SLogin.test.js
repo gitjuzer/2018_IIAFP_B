@@ -11,7 +11,6 @@ test('Tests token after login with incorrect data', () => {
     expect(instance.state.token).toBeNull();
 })
 
-//it can call login method, but the fetch will kill it or idk.
 test('Tests token after login with correct data', () => {
     let instance =  shallow(<Login />).instance();
     instance.setState({username: "upsi",  password: "1234", accountType: "STUDENT"});
