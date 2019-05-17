@@ -28,6 +28,27 @@ describe('POST /logout',()=>{
             done()
         })
     })
+    var token;
+    it('should let us log in', (done) =>{
+        chai.request(server)
+        .post('/OktatoAppAPI/users/login')
+        .set('Content-Type','application/json')
+        .send({username: 'unittest', password:'unittest', login_type: 'ADMIN'})
+        .end((err,res)=>{
+            res.should.have.status(201)
+            token = res.body.data[0].token
+            done()
+        })
+    })
+    it('should let us log out', (done)=>{
+        chai.request(server)
+        .post('/OktatoAppAPI/users/logout')
+        .set('Authorization','Bearer '+token)
+        .end((err,res)=>{
+            res.should.have.status(200)
+            done()
+        })
+    })
 })
 
 describe('POST /login', () =>{
@@ -42,29 +63,4 @@ describe('POST /login', () =>{
         })
     })
 })
-
-describe('POST /logout', () =>{
-    var token;
-    it('should let us log in', (done) =>{
-        chai.request(server)
-        .post('/OktatoAppAPI/users/login')
-        .set('Content-Type','application/json')
-        .send({username: 'unittest', password:'unittest', login_type: 'ADMIN'})
-        .end((err,res)=>{
-            res.should.have.status(201)
-            token = res.body.data[0].token
-            done()
-        })
-    })
-    it('fetch all the users data', (done)=>{
-        chai.request(server)
-        .get('/OktatoAppAPI/users')
-        .set('Authorization','Bearer '+token)
-        .end((err,res)=>{
-            res.should.have.status(200)
-            done()
-        })
-    })
-})
-
 
