@@ -5,13 +5,13 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-test('Hamis adatokkal való tesztelés (regisztráció)', () => {
+test('Olyan adatokkal való regisztráció amely az adatbázis nem tud elfogadni', () => {
     let instance =  shallow(<Register />).instance();
     instance.register();
     expect(instance.state.sucessful).toBeNull();
 })
 
-test('Valós adatokkal való tesztelés (regisztráció)', () => {
+test('Olyan adatokkal való regisztráció amely az adatbázis el tud fogadni', () => {
     let instance =  shallow(<Register />).instance();
     instance.setState({
         "username": "mekater",
@@ -34,9 +34,9 @@ test('Valós adatokkal való tesztelés (regisztráció)', () => {
         "password": "Metaker",
         "first_name": "Meka",
         "last_name": "Mater",
-        "account_type": "UNDEFINED"
+        "account_type": ""
     });
     instance.register();
     console.log(instance.state.sucessful);
-    expect(instance.state.sucessful).not.toEqual(false);
+    expect(instance.state.sucessful).not.toEqual(true);
   })
