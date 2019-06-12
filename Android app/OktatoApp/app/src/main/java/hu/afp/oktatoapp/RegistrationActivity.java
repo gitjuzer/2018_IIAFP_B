@@ -141,12 +141,11 @@ public class RegistrationActivity extends AppCompatActivity {
     private void sendRegistrationData(String username, String email,String password,
                                       String firstName, String lastName, final Role.roleType roleType){
         String url = "https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/signup";
-        final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("username", username);
-            jsonObject.put("password", hashedPass);
-            jsonObject.put("email", email);
+            jsonObject.put("password", passwordHasher(password));
+            jsonObject.put("email", isCorrectEmail(email) ? email:"example@gmail.com");
             jsonObject.put("first_name", firstName);
             jsonObject.put("last_name", lastName);
             jsonObject.put("account_type", roleType);
@@ -250,5 +249,11 @@ public class RegistrationActivity extends AppCompatActivity {
         Log.d("POST_REQ", " "+ requestBody);
     }
 
+    boolean isCorrectEmail(String value){
+        return "gmail.com".equals(value.split("@")[1]);
+    }
 
+    public String passwordHasher(String plainText){
+        return Hashing.sha256().hashString(plainText, StandardCharsets.UTF_8).toString();
+    }
 }

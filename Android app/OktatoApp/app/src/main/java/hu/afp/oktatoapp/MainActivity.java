@@ -143,14 +143,7 @@ public class MainActivity extends AppCompatActivity {
         String url = "https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/login";
         JSONObject jsonObject = new JSONObject();
         final String hashedPass = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
-        try {
-            jsonObject.put("username", username);
-            jsonObject.put("password", hashedPass);
-            jsonObject.put("login_type", type);
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        jsonObject = CreateNewUser(username, hashedPass, type);
         final String requestBody = jsonObject.toString();
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
@@ -241,5 +234,21 @@ public class MainActivity extends AppCompatActivity {
         };
         queue.add(postRequest);
         Log.d("POST_REQ", " " + requestBody);
+    }
+
+    public JSONObject CreateNewUser(String username, String password, String type) {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("username", username);
+            jsonObject.put("password", password);
+            if ("TEACHER".equals(type) || "STUDENT".equals(type) || "Admin".equals(type)) {
+                jsonObject.put("login_type", type);
+                return jsonObject;
+            }
+            return null;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

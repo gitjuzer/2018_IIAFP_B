@@ -32,4 +32,27 @@ public class RegistrationActivityTest {
     public void tearDown() throws Exception {
         registrationActivity = null;
     }
+
+    //Email validation tests
+
+    @Test
+    public void isIncorrectEmailTest() throws Exception{
+        setUp();
+        assertFalse(registrationActivity.isCorrectEmail("somethink@freemail.hu"));
+    }
+
+    @Test
+    public void isCorrectEmailTest() throws Exception{
+        setUp();
+        assertTrue(registrationActivity.isCorrectEmail("somethink@gmail.com"));
+    }
+
+    //PasswordHasherTest
+    @Test
+    public void isPasswordHasherWorked() throws Exception{
+        setUp();
+        assertFalse("PlainText".equals(registrationActivity.passwordHasher("PlainText")));
+    }
+
+
 }

@@ -35,4 +35,22 @@ public class MainActivityTest {
     public void tearDown() throws Exception {
         mainActivity = null;
     }
+
+
+    //Role Type tests
+
+    /*
+    @Test
+    public void RoleTypeTestWithInvalidData() throws Exception{
+        setUp();
+        assertNotNull(mainActivity.CreateNewUser("Username","password","ExampleRole"));
+    }*/
+
+    @Test
+    public void RoleTypeTest() throws Exception{
+        setUp();
+        assertNotNull(mainActivity.CreateNewUser("Username","password","STUDENT"));
+    }
+
+
 }
