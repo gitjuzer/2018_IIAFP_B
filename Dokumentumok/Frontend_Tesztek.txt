@@ -1,0 +1,28 @@
+Tanár belépés
+	3 tests
+		1: Teszt sikertelen bejelentkezés után
+Ha egy felhasználó bármelyik csoportba is tartozik, legyen az Student (értsd: tanuló) vagy Teacher (értsd: tanár)
+ez a teszt azt vizsgálja, hogy ha valaki sikeretelnül jelentkezik be, (értsd: rossz felhasználónév vagy email cím és vagy rossz jelszó használata)
+akkor be-e tud lépni a kezelõfelületre (értsd: az a felület amelyen a belépés után átirányít bennünket.
+		2: Teszt sikeres bejelentkezés után
+Ha egy felhasználó be akar jelentkezni (értsd: tanár) akkor megvizsgálja, az adatait
+(értsd: felhasználónév, jelszó, accountType (értsd: fióktípus)), majd ezek elvégzése során (értsd: helyes adatok megadása során)
+kap-e tokent (értsd: egy random generált szöveg) és az a token érvényes lesz.
+		3: Teszt mikor a felhasználói fiók típusa nem meghatározott vagy UNDEFINED (értsd: nincs definiálva)
+Ha egy felhasználó be akar jelentkezni (értsd: undefined) mivel nincs ilyen fióktípus, ezért nem is enged bejelentkeztetni
+hiába írtunk jó adatokat, a fióktípus nem egyezik.
+Tanár regisztráció
+	3 tests
+		1:Olyan adatokkal való regisztráció tesztelés amely az adatbázis nem tud elfogadni (értsd: a formátum nem egyezik, vagy túl hosszú a szöveg)
+Ha egy felhasználó véletlenül vagy véltve elhibázza a regisztrációs adatait (értsd: 2 000 000 000 karakter hosszú felhasználói nevet add meg magának)
+akkor a regisztráció el lesz utasítva, és visszatér egy hibaüzenettel (értsd: attól függ mi volt a hiba, olyan hibaüzenetet fog kapni)
+és a regisztráció sikertelen lesz.
+		2:Olyan adatokkal való regisztráció tesztelés amely az adatbázis el tud fogadni (értsd: minden ott van ahol kellene)
+Ha egy felhasználó olyan sikeresen regisztrálja magát az oldalra, akkor az adatok rögzíve lesznek az adatbázisban, és a regisztráció
+hibaüzenet nélkül sikeres lesz, és be tud lépni a megadott adatokkal (értsd: felhasználónév és jelszó páros) a kezelõfelületre.
+		3:Olyan adatokkal való regisztráció tesztelés amely az fióktípus nincs definiálva
+Ha az adatbázis során olyan probléma lép fel hogy nem fogadja el a fióktípust akkor az nem vivõdik fel az adatbázisban, és mivel
+hogy a fióktípus mezõ not null (értsd: nem lehet üres a mezõ) ezért az adatbázis elutasítja, és eldobja az adatot, és a regisztráció sikertelen lesz
+
+
+Ezek a tesztelések a várt eredményt akarják szembevinni

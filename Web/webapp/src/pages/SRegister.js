@@ -11,6 +11,7 @@ export default class SRegister extends Component {
     firstName: "",
     lastName: "",
     accountType: "STUDENT" ,
+    successful: false
   }
 
   register = () => {
@@ -34,15 +35,20 @@ export default class SRegister extends Component {
       if (responsejson.status_code === "201" || responsejson.status_code === "200")
         {this.setState({
             username: responsejson.data[0].username,
+            successful : true
         });
         alert("Successful registration!");
       }
       else if (responsejson.status_code === "409")
       {
+        this.setState({successful : false});
         alert("The user allready exist!");
       }
       else
-      {alert("ehh");}
+      {
+        this.setState({successful : false});
+        alert("ehh");
+      }
     });
 } 
 handleUserName(text)

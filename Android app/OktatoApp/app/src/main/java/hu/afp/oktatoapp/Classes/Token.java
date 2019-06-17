@@ -1,19 +1,16 @@
 package hu.afp.oktatoapp.Classes;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class Token {
 
     //region privát mezők
     private int tokenId;
-    private String token;
+    private static String token;
     private Date created_at;
     private Date expires_at;
     private boolean isActive;
     private String username;
-    public static List<Token> Tokens = new ArrayList<>();
     //endregion
 
     //region propertyk, get, set
@@ -23,7 +20,7 @@ public class Token {
     public void setTokenId(int tokenId){
         this.tokenId = tokenId;
     }
-    public String getToken(){
+    public static String getToken(){
         return token;
     }
     public void setToken(String token){
@@ -52,21 +49,6 @@ public class Token {
     }
     public void setUsername(String username){
         this.username = username;
-    }
-    public static List<Token> getTokens(){
-        return Tokens;
-    }
-
-    public static String getTokenByUsername(String username){
-        String tempToken = "";
-        for (int i = 0; i < Tokens.size(); i++) {
-            if(Tokens.get(i).username.equals(username)){
-                tempToken = Tokens.get(i).token;
-                break;
-            }
-            break;
-        }
-        return tempToken;
     }
     //endregion
 

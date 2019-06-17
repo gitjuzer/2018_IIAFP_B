@@ -23,4 +23,6 @@ var ip = require('ip');
 const http_port = process.env.PORT || 3000
 const http_server = http.createServer(app)
 console.log('HTTP server is listening on '+ ip.address() +':' + http_port)
-http_server.listen(http_port)
+server = http_server.listen(http_port)
+
+module.exports = server

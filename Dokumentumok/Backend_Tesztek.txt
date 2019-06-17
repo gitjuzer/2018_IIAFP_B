@@ -1,0 +1,24 @@
+-test/users.js
+	.-GET /users
+		-Akkor teljesül a teszt ha 401-es status_code-ot kapunk, mert nincs érvényes token elküldve a header-ben.
+	.-POST /logout
+		-Akkor teljesül ha:
+			401-es status_code-ot kapunk mert a kijelentkezéshez nem küldtünk érvényes tokent.
+			201-es status_code-ot kapunk mert sikeresen bejelentkeztünk
+			200-as status_code-ot kapunk mert sikeresen kijelentkeztünk
+	.-POST /login
+		-Akkor teljesül ha 201-es status_code-ot kapunk mert érvényes felhasználónevet,jelszót és login_type-ot küldtünk
+
+-test/gamesession.js
+	.-GET /gamesessions(Összes gamesession)
+		-Akkor teljesül ha:
+			201-es status_code-ot kapunk mert sikeresen bejelentkeztünk.
+			200-as status_code-ot kapunk mert a json objektumok struktúrája tartalmazza a megfelelõ attribútumokat
+			401-es status_code-ot kapunk mert kéréshez nem küldtünk érvényes tokent.
+	.-GET /gamesessions/:id
+		-Akkor teljesül ha:
+			201-es status_code-ot kapunk mert sikeresen bejelentkeztünk.
+			200-as status_code-ot kapunk mert a json objektum a megfelelõ id alapján tér vissza és tartalmazza a megfelelõ attributumokat.
+			404-es status_code-ot kapunk mert a megadott paraméter helytelen.
+
+
