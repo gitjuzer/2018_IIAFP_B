@@ -16,12 +16,46 @@ class Layout extends React.Component {
       SendTokenClear() {
         this.props.clearToken();
       }
-    
+    renderSection = () => {
+        switch (this.state.activeMenu) {
+            case "Classes":
+                return <Classes token={this.state.token} />
+            case "Statics":
+                return <Statics token={this.state.token} />
+            case "Games":
+                return <Games token={this.state.token} />
+            default:
+                return <div></div>;
+        }
+    }  
+    changeSection = (newSection) => {
+        this.setState({ activeMenu: newSection });
+    }
+
+    unselected = "side-bar-button";
+    selected = "side-bar-button active";
+
     render() {
             return (
                 <React.Fragment>
                 <Header title="Teacher Dashboard" username={this.state.username} token={this.state.token} SendTokenClear = {this.SendTokenClear} />
-                   <div>WIP</div>
+                  <main className="flex-container">
+                        <section className="main-section">
+                            {this.renderSection()}
+                        </section>
+                        <aside className="side-bar">
+                            <div className="side-bar-title">Menu</div>
+                            <button className={this.state.activeMenu === "Classes" ? this.selected : this.unselected} onClick={() => this.changeSection("Classes")}>
+                                <i className="far fa-lightbulb fa-2x"></i>Classes
+                            </button>
+                            <button className={this.state.activeMenu === "Statics" ? this.selected : this.unselected} onClick={() => this.changeSection("Statics")}>
+                                <i className="fas fa-chart-bar fa-2x"></i>Statics
+                            </button>
+                            <button className={this.state.activeMenu === "Games" ? this.selected : this.unselected} onClick={() => this.changeSection("Games")}>
+                                <i className="fas fa-gamepad fa-2x"></i>Games
+                            </button>
+                        </aside>
+                    </main>
                 </React.Fragment>
             );
     }
