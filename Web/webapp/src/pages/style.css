@@ -56,13 +56,15 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 	margin: auto;
-	max-width: 500px;
+	/* max-width: 500px; */
 	text-align:center;  
 	border-radius: 20px;
 	border-style: solid;
 	border-width: 2px;
 	border-color:rgba(0, 0, 0, 0.07);
 	box-shadow: 10px 10px 25px 0px rgb(50, 133, 65);
+	display: block;
+    overflow: hidden;
 }
 .header{
 	border-radius: 20px 20px 0px 0px;
@@ -164,10 +166,13 @@ body {
 .input-field{
 	border-top-right-radius: 5px;
 	border-bottom-right-radius:5px;
-	width: 100%;
+	/* width: 100%; */
 	padding: 10px 10px 10px 5px;
 	outline: none;
 	font-size: 15px;
+	/* display: inline-block; */
+	width: 100%;
+    box-sizing:border-box;
 }
 
 .input-field:focus{
