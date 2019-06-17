@@ -18,8 +18,8 @@ class Layout extends React.Component {
       }
     renderSection = () => {
         switch (this.state.activeMenu) {
-            case "Classes":
-                return <Classes token={this.state.token} />
+            case "Classrooms":
+                return <Classrooms token={this.state.token} />
             case "Statics":
                 return <Statics token={this.state.token} />
             case "Games":
@@ -45,8 +45,8 @@ class Layout extends React.Component {
                         </section>
                         <aside className="side-bar">
                             <div className="side-bar-title">Menu</div>
-                            <button className={this.state.activeMenu === "Classes" ? this.selected : this.unselected} onClick={() => this.changeSection("Classes")}>
-                                <i className="far fa-lightbulb fa-2x"></i>Classes
+                            <button className={this.state.activeMenu === "Classrooms" ? this.selected : this.unselected} onClick={() => this.changeSection("Classrooms")}>
+                                <i className="far fa-lightbulb fa-2x"></i>Classrooms
                             </button>
                             <button className={this.state.activeMenu === "Statics" ? this.selected : this.unselected} onClick={() => this.changeSection("Statics")}>
                                 <i className="fas fa-chart-bar fa-2x"></i>Statics
