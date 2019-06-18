@@ -38,7 +38,7 @@ class Games extends React.Component {
       game_id: this.state.game_id,
       difficulty_level: this.state.difficulty_level
     };
-    fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/gamessession", {
+    fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/gamesession", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -69,7 +69,7 @@ class Games extends React.Component {
       difficulty_level: this.state.difficulty_level
     };
     
-    fetch(`https://oktatoappapi.herokuapp.com/OktatoAppAPI/gamessession/${this.data.game_id}`, {
+    fetch(`https://oktatoappapi.herokuapp.com/OktatoAppAPI/gamesession/${this.data.game_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -99,7 +99,7 @@ class Games extends React.Component {
       game_id: this.state.game_id,
       difficulty_level: this.state.difficulty_level
     };
-    fetch(`https://oktatoappapi.herokuapp.com/OktatoAppAPI/gamessession/${this.data.game_id}`, {
+    fetch(`https://oktatoappapi.herokuapp.com/OktatoAppAPI/gamesession/${this.data.game_id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
