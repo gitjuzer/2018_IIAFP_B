@@ -29,11 +29,11 @@ class Classrooms extends React.Component {
       });
     //Current student
   };
-  createClassroom = name => {
+  createClassroom = () => {
     const data = {
       newClassname: this.state.newClassName
     };
-    fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/users/signup", {
+    fetch("https://oktatoappapi.herokuapp.com/OktatoAppAPI/classroom", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -54,7 +54,7 @@ class Classrooms extends React.Component {
         }
       });
   };
-  deleteClassroom = (id) => {
+  deleteClassroom = () => {
     const data = {
       id: this.state.class_id
     };
