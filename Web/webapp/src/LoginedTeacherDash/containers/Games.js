@@ -23,7 +23,7 @@ class Classrooms extends React.Component {
       .then(responsejson => {
         console.log(responsejson);
         //responseCodeTest(responsejson);
-        this.setState({ statistics: responsejson.data });
+        this.setState({ games: responsejson.data });
       });
   };
   createGameSession = () =>{
