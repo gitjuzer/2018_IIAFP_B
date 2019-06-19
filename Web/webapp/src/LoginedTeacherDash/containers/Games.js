@@ -6,7 +6,7 @@ import QandA from "../games/QandA";
 
 class Games extends React.Component {
   state = {
-    games: null,
+    games: {},
     gameSession: {
       session_name: "",
       max_points: null,
