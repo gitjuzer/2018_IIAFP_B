@@ -1,5 +1,8 @@
 import React from 'react';
 import Header from '../loginedDashboard/components/header';
+import Classrooms from './containers/Classrooms';
+import Games from './containers/Games';
+import Statics from './containers/Statics';
 
 
 class Layout extends React.Component {
