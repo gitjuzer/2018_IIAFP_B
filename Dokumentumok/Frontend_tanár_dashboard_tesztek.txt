@@ -1,0 +1,24 @@
+Tanár statisztikák:
+    2 teszt:
+        1. Sikeresen megjelenik-e a React konponens
+            Ha bármi hiba lenne a konponens kódjában, akkor ebben a tesztben ez azonnal feltünne.
+        2. Az adatok sikeres lekérdezése a szerverről
+            Ha valami hiba van a lekérdezésben vagy az URIban akkor ez a teszt nem lesz sikeres.
+
+Tanár tesztek:
+    5 teszt:
+        1. Sikeresen megjelenik-e a React konponens
+            Ha bármi hiba lenne a konponens kódjában, akkor ebben a tesztben ez azonnal feltünne.
+        2. Az adatok sikeres lekérdezése a szerverről
+            Ha valami hiba van a lekérdezésben vagy az URIban vagy a szerver nem küld vissza 
+            adatot akkor ez a teszt nem lesz sikeres.
+        3. Új tesztek létehozásának működése
+            Ha nem megfelelően kapcsolúdikunk a szerverhez vagy nem megfelelő adatokat
+            küldünk, akkor nem megy át a teszt.
+        4. Létező tesztek frissítésének működése
+            Ha nem megfelelően kapcsolúdikunk a szerverhez vagy nem megfelelő adatokat
+            küldünk, akkor nem megy át a teszt.
+        5. Létező tesztek törlésének működése
+            Ha nem megfelelően kapcsolúdikunk a szerverhez vagy nem megfelelő adatokat
+            küldünk, akkor nem megy át a teszt.
+        
