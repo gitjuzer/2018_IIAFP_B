@@ -1,0 +1,5 @@
+## Test gamemode
+    Ellenőrzi, hogy a Learning react komponens tartalmazza-e a Gamemode komponenst, mi a játékok indításához szükséges.
+    Gamemode komponens nélkül, játék nem indítható, így fontos, hogy megjelenjen a dashboard-on.
+## Test gamemode1
+    Megnézi, hogy a Learningon belül, ki fog-e renderelődni a QandA komponens, ami a feleletválasztós játék mód.
