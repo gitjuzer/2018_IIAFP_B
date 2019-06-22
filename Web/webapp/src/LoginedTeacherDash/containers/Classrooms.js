@@ -1,8 +1,8 @@
 import React from "react";
-import "./Learning.css";
+import "../../loginedDashboard/containers/Learning.css";
 //import { responseCodeTest } from '../functions/responseCodeTest';
-import Gamemode from "../components/gamemode";
-import QandA from "../games/QandA";
+import Gamemode from "../../loginedDashboard/components/gamemode";
+import QandA from "../../loginedDashboard/games/QandA";
 
 class Classrooms extends React.Component {
   state = {

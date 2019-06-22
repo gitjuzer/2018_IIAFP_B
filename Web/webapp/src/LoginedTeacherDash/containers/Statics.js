@@ -1,7 +1,7 @@
 import React from 'react';
-import './Learning.css';
+import '../../loginedDashboard/containers/Learning.css';
 //import { responseCodeTest } from '../functions/responseCodeTest';
-import Stat from '../loginedDashboard/components/stat';
+import Stat from '../../loginedDashboard/components/stat';
 
 class Statics extends React.Component {
 state = {
