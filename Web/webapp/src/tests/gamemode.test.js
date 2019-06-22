@@ -23,3 +23,8 @@ test('Test gamemmode3', () => {
   const wrapper = shallow(<Learning />);
   expect(wrapper.contains(<QandA />)).toEqual(false);
 })
+
+test('Test gamemmode3', () => {
+  const wrapper = shallow(<Learning />);
+  expect(wrapper.contains(<Gamesession />)).toEqual(false);
+})
